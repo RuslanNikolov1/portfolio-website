@@ -1,0 +1,116 @@
+'use client';
+
+import { motion } from 'framer-motion';
+import { Github, Linkedin, Mail, Music, Heart } from 'lucide-react';
+import { socialLinks } from '@/data';
+import styles from './Footer.module.scss';
+
+const Footer = () => {
+  const currentYear = new Date().getFullYear();
+
+  const getIcon = (iconName: string) => {
+    switch (iconName) {
+      case 'mail':
+        return <Mail size={20} />;
+      case 'github':
+        return <Github size={20} />;
+      case 'linkedin':
+        return <Linkedin size={20} />;
+      case 'music':
+        return <Music size={20} />;
+      default:
+        return null;
+    }
+  };
+
+  return (
+    <footer className={styles.footer}>
+      <div className={styles.container}>
+        <motion.div
+          className={styles.content}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
+          <div className={styles.brand}>
+            <div className={styles.logo}>
+              <span className={styles.logoText}>RN</span>
+            </div>
+            <h3 className={styles.brandName}>Ruslan Nikolov</h3>
+            <p className={styles.brandDescription}>
+              Senior Frontend Developer • Freelancer • Electronic Music Producer
+            </p>
+          </div>
+
+          <div className={styles.links}>
+            <div className={styles.linkGroup}>
+              <h4 className={styles.linkTitle}>Navigation</h4>
+              <div className={styles.linkList}>
+                <a href="#projects" className={styles.link}>Projects</a>
+                <a href="#skills" className={styles.link}>Skills</a>
+                <a href="#about" className={styles.link}>About</a>
+                <a href="#contact" className={styles.link}>Contact</a>
+              </div>
+            </div>
+
+            <div className={styles.linkGroup}>
+              <h4 className={styles.linkTitle}>Connect</h4>
+              <div className={styles.socialLinks}>
+                {socialLinks.map((link, index) => (
+                  <motion.a
+                    key={link.name}
+                    href={link.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={styles.socialLink}
+                    whileHover={{ 
+                      scale: 1.1,
+                      y: -2
+                    }}
+                    whileTap={{ scale: 0.95 }}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                  >
+                    {getIcon(link.icon)}
+                    <span>{link.name}</span>
+                  </motion.a>
+                ))}
+              </div>
+            </div>
+          </div>
+        </motion.div>
+
+        <motion.div
+          className={styles.bottom}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.8, delay: 0.3 }}
+          viewport={{ once: true }}
+        >
+          <div className={styles.copyright}>
+            <p>
+              © {currentYear} Ruslan Nikolov. Made with{' '}
+              <motion.span
+                animate={{ scale: [1, 1.2, 1] }}
+                transition={{ duration: 1, repeat: Infinity }}
+                className={styles.heart}
+              >
+                <Heart size={16} fill="currentColor" />
+              </motion.span>{' '}
+              and lots of coffee ☕
+            </p>
+          </div>
+          
+          <div className={styles.tech}>
+            <p>Built with Next.js, TypeScript, and Framer Motion</p>
+          </div>
+        </motion.div>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;

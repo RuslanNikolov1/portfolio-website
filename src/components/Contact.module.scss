@@ -1,0 +1,460 @@
+@import "../styles/variables";
+
+// SASS Variables
+$background: #0F172A;
+$background-secondary: #1E293B;
+$foreground: #F9FAFB;
+$muted: #94A3B8;
+$primary: #2563EB;
+$secondary: #FACC15;
+$accent: #10B981;
+$card-bg: #1E293B;
+$border: #334155;
+$font-rubik: 'Rubik', sans-serif;
+$font-satoshi: 'Satoshi', sans-serif;
+$font-weight-bold: 700;
+$font-weight-semibold: 600;
+
+.contact {
+  padding: 6rem 0;
+  background: #A78BFA; // lighter purple background
+  position: relative;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  position: relative;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.title {
+  font-family: $font-rubik;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: $font-weight-bold;
+  color: $secondary;
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  font-family: $font-satoshi;
+  font-size: 1.2rem;
+  color: $muted;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  margin-bottom: 4rem;
+}
+
+.contactInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.infoCard {
+  background: transparent; // transparent background
+  border-radius: 20px;
+  padding: 2.5rem;
+  border: 2px solid #0b8e8c; // darker turquoise border
+  height: fit-content;
+  position: relative;
+  overflow: hidden;
+}
+
+.infoCard::before { display: none; }
+
+.infoTitle {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #0b8e8c; // darker turquoise text
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+.infoDescription {
+  color: #0b8e8c; // darker turquoise text
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.socialLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.socialLink {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: transparent;
+  border-radius: 15px;
+  border: 1px solid #0b8e8c;
+  text-decoration: none;
+  color: #0b8e8c; // darker turquoise text
+  transition: all 0.3s ease;
+}
+
+.socialLink:hover { border-color: #096e6c; color: #096e6c; }
+
+.socialIcon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: transparent;
+  border: 1px solid #0b8e8c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0b8e8c;
+}
+
+.socialName {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.emailSection {
+  position: relative;
+  z-index: 1;
+}
+
+.emailCard {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: transparent;
+  border-radius: 15px;
+  border: 1px solid #0b8e8c;
+}
+
+.emailLabel {
+  color: #0b8e8c;
+  font-size: 0.9rem;
+  margin: 0 0 0.25rem 0;
+}
+
+.emailLink {
+  color: #0b8e8c; // darker turquoise email/links
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.emailLink:hover { color: #096e6c; text-shadow: none; }
+
+.services {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid $border;
+}
+
+.servicesTitle {
+  font-family: $font-rubik;
+  font-size: 1.2rem;
+  font-weight: $font-weight-semibold;
+  color: #0b8e8c;
+  margin-bottom: 1.5rem;
+}
+
+.serviceList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.serviceItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1rem;
+  background: transparent;
+  border-radius: 12px;
+  border: 1px solid #0b8e8c;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    background: rgba(11, 142, 140, 0.12);
+    border-color: #096e6c;
+    transform: translateY(-2px);
+  }
+}
+
+.serviceIcon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.serviceItem div {
+  flex: 1;
+}
+
+.serviceItem strong { color: #0b8e8c; }
+
+.serviceItem p { color: #0b8e8c; }
+
+.formSection {
+  display: flex;
+  flex-direction: column;
+}
+
+.form {
+  background: url('/Kittens.png') center/cover no-repeat; // kittens background on form only
+  border-radius: 20px;
+  padding: 2.5rem;
+  border: 1px solid $border;
+  position: relative;
+  overflow: hidden;
+}
+
+.form::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.1) 0%, rgba(16, 185, 129, 0.1) 100%);
+  opacity: 0.5;
+}
+
+.formGroup {
+  margin-bottom: 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.label {
+  display: block;
+  color: #ffffff; // force white labels
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.input,
+.textarea {
+  width: 100%;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.05); // Dark background
+  border: 2px solid $border;
+  border-radius: 15px;
+  color: #ffffff; // force white input text
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  font-family: inherit;
+}
+
+.input:focus,
+.textarea:focus {
+  outline: none;
+  border-color: $primary; // Blue focus border
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.input::placeholder,
+.textarea::placeholder {
+  color: #ffffff; // make placeholders white
+}
+
+.textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.error {
+  color: #ffffff; // errors also white per request
+  font-size: 0.8rem;
+  margin-top: 0.25rem;
+  display: block;
+}
+
+.submitButton {
+  width: 100%;
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, $color-blue 0%, $color-green-accent 100%); // Blue → strategic green gradient
+  color: #ffffff; // white text inside the form
+  border: none;
+  border-radius: 15px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 0 20px rgba(16, 185, 129, 0.3);
+}
+
+.submitButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 30px rgba(16, 185, 129, 0.5); // Strategic green accent glow on hover
+  background: linear-gradient(135deg, $color-green-accent 0%, $color-yellow 100%);
+}
+
+.floatingCta {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 2000; // ensure on top
+}
+
+.workWithMeButton {
+  position: relative;
+  padding: 1rem 2rem;
+  background: #8B5CF6; // purple background
+  color: #ffffff; // white letters
+  border: 2px solid #ffffff; // subtle white outline for contrast
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(139, 92, 246, 0.35);
+  z-index: 2001;
+}
+
+.workWithMeButton::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: conic-gradient(from 0deg, transparent, #ffffff, transparent);
+  border-radius: 50px;
+  z-index: -1;
+  animation: rotate 2s linear infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.pulse { display: none; }
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.4);
+    opacity: 0;
+  }
+}
+
+@media (max-width: 968px) {
+  .content {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  
+  .floatingCta {
+    bottom: 1rem;
+    right: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact {
+    padding: 4rem 0;
+  }
+  
+  .container {
+    padding: 0 1rem;
+  }
+  
+  .infoCard,
+  .form {
+    padding: 2rem;
+  }
+  
+  .socialLinks {
+    gap: 0.75rem;
+  }
+  
+  .socialLink {
+    padding: 0.75rem;
+  }
+  
+  .socialIcon {
+    width: 35px;
+    height: 35px;
+  }
+  
+  .workWithMeButton {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.9rem;
+  }
+  
+  .services {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+  }
+  
+  .serviceList {
+    gap: 0.8rem;
+  }
+  
+  .serviceItem {
+    padding: 0.8rem;
+  }
+  
+  .serviceIcon {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .infoCard,
+  .form {
+    padding: 1.5rem;
+  }
+  
+  .emailCard {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+  }
+  
+  .floatingCta {
+    bottom: 0.5rem;
+    right: 0.5rem;
+  }
+  
+  .workWithMeButton {
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+  }
+}

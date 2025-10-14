@@ -1,0 +1,391 @@
+@import "../styles/variables";
+
+// SASS Variables
+$background: #0F172A;
+$background-secondary: #1E293B;
+$foreground: #F9FAFB;
+$muted: #94A3B8;
+$primary: #2563EB;
+$secondary: #FACC15;
+$accent: #10B981;
+$card-bg: #1E293B;
+$border: #334155;
+$color-bg: #0F172A;
+$color-surface: #1E293B;
+$color-text: #F9FAFB;
+$color-text-muted: #94A3B8;
+$color-blue: #2563EB;
+$color-green: #10B981;
+$color-yellow: #FACC15;
+$font-rubik: 'Rubik', sans-serif;
+$font-satoshi: 'Satoshi', sans-serif;
+$font-weight-bold: 700;
+
+.projects {
+  padding: 6rem 0;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url('/Mountain Landscape.avif') center/cover no-repeat,
+    linear-gradient(135deg, $background 0%, $background-secondary 100%);
+  position: relative;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.title {
+  font-family: $font-rubik;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: $font-weight-bold;
+  color: $foreground;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, $foreground 0%, $primary 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.subtitle {
+  font-family: $font-satoshi;
+  font-size: 1.2rem;
+  color: $muted;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+// New showcase layout
+.showcase {
+  display: grid;
+  grid-template-columns: 0.8fr 2fr;
+  gap: 2rem;
+  background: #ffffff;
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+}
+
+.leftPanel {
+  display: flex;
+  flex-direction: column;
+}
+
+.leftButtons {
+  margin-top: auto;
+  display: flex;
+  gap: 1rem;
+}
+
+.rightPanel {
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 16px;
+  padding: 1rem;
+}
+
+.preview {
+  height: 480px;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #000;
+  display: grid;
+  place-items: center;
+  border: 2px solid #0a2a5e; // dark blue border
+}
+
+.previewPlaceholder {
+  color: #cbd5e1;
+  font-family: $font-satoshi;
+  letter-spacing: 1px;
+}
+
+.thumbnails {
+  display: grid;
+  grid-template-columns: repeat(9, minmax(0, 1fr));
+  gap: 0.75rem;
+  align-items: center;
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background: #ffffff; // white background behind thumbnails
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  border-radius: 12px;
+}
+
+.thumb {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 10px;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.thumb:hover {
+  transform: translateY(-2px);
+  border-color: $secondary;
+}
+
+.thumbActive {
+  border-color: $primary;
+  box-shadow: 0 0 20px rgba(37,99,235,0.3);
+}
+
+.thumbPlaceholder {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  color: #94a3b8;
+  background: url('/Hero Banner.png') center/cover no-repeat;
+}
+
+// preview grid removed
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.card {
+  background: $card-bg; // Vibrant surface color
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid rgba(93, 183, 255, 0.3);
+  transition: all 0.3s ease;
+  position: relative;
+  box-shadow: 0 0 20px rgba(93, 183, 255, 0.1);
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.1) 0%, rgba(16, 185, 129, 0.1) 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+
+.card:hover {
+  border-color: $color-yellow; // Vibrant yellow border glow
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 0 0 40px rgba(255, 214, 68, 0.4);
+  transform: translateY(-8px);
+}
+
+.imageContainer {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+.imagePlaceholder {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, $primary 0%, $accent 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 0.9rem;
+  text-align: center;
+  position: relative;
+}
+
+.imagePlaceholder::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  opacity: 0.3;
+}
+
+.categoryBadge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  z-index: 2;
+}
+
+.content {
+  padding: 2rem;
+  position: relative;
+  z-index: 2;
+}
+
+.projectTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #0f172a; // slate-900 on white
+  margin-bottom: 1rem;
+}
+
+.description {
+  color: #334155; // slate-600 on white
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+}
+
+.technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.techBadge {
+  padding: 0.4rem 0.8rem;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  
+      // Vibrant green for dev-related tech (React, TypeScript)
+      &.dev {
+        background: rgba(124, 255, 178, 0.3);
+        color: $color-green;
+        border: 1px solid $color-green;
+        box-shadow: 0 0 10px rgba(124, 255, 178, 0.2);
+      }
+      
+      // Vibrant blue for design tools (Figma, Stitch)
+      &.design {
+        background: rgba(93, 183, 255, 0.3);
+        color: $color-blue;
+        border: 1px solid $color-blue;
+        box-shadow: 0 0 10px rgba(93, 183, 255, 0.2);
+      }
+}
+
+.buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.liveButton,
+.codeButton {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1.5rem;
+  border-radius: 25px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  flex: 1;
+  justify-content: center;
+}
+
+.liveButton {
+  background: linear-gradient(135deg, $color-green-accent 0%, $color-blue 100%); // Strategic green accent for "live" status
+  color: $color-bg;
+  border: none;
+  box-shadow: 0 0 15px rgba(16, 185, 129, 0.3);
+  
+      &:hover {
+        background: linear-gradient(135deg, $color-green-accent 0%, $color-yellow 100%);
+        box-shadow: 0 0 25px rgba(16, 185, 129, 0.5);
+        transform: translateY(-2px);
+      }
+}
+
+.codeButton {
+  background: transparent;
+  color: #0f172a;
+  border: 2px solid rgba(37, 99, 235, 0.25);
+  box-shadow: 0 0 6px rgba(93, 183, 255, 0.15);
+  
+      &:hover {
+        border-color: $color-yellow; // Vibrant yellow border on hover
+        color: $color-yellow;
+        box-shadow: 0 0 25px rgba(255, 214, 68, 0.4);
+        background: rgba(255, 214, 68, 0.1);
+        transform: translateY(-2px);
+      }
+}
+
+@media (max-width: 768px) {
+  .projects {
+    padding: 4rem 0;
+  }
+  
+  .container {
+    padding: 0 1rem;
+  }
+  
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .showcase {
+    grid-template-columns: 1fr;
+  }
+  .thumbnails {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .preview {
+    height: 320px;
+  }
+  
+  .card {
+    margin: 0 0.5rem;
+  }
+  
+  .content {
+    padding: 1.5rem;
+  }
+  
+  .buttons {
+    flex-direction: column;
+  }
+  
+  .liveButton,
+  .codeButton {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .card {
+    margin: 0;
+  }
+  
+  .imageContainer {
+    height: 150px;
+  }
+}

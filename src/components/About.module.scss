@@ -1,0 +1,460 @@
+@import "../styles/variables";
+
+.about {
+  padding: 6rem 0;
+  background: linear-gradient(135deg, $background 0%, $background-secondary 100%);
+  position: relative;
+  
+  // Decorative gradient shapes
+  &::before {
+    content: '';
+    position: absolute;
+    top: 20%;
+    left: -10%;
+    width: 200px;
+    height: 200px;
+        background: radial-gradient(circle, rgba(93, 183, 255, 0.1) 0%, transparent 70%);
+    border-radius: 50%;
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 20%;
+    right: -10%;
+    width: 150px;
+    height: 150px;
+        background: radial-gradient(circle, rgba(124, 255, 178, 0.1) 0%, transparent 70%);
+    border-radius: 50%;
+    animation: float 8s ease-in-out infinite reverse;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(180deg);
+  }
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.title {
+  font-family: $font-rubik;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: $font-weight-bold;
+  color: $foreground;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, $foreground 0%, $primary 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.subtitle {
+  font-family: $font-satoshi;
+  font-size: 1.2rem;
+  color: $muted;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+// New timeline layout
+.timelineLayout {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.profile {
+  position: sticky;
+  top: 2rem;
+}
+
+.profileImg {
+  width: 100%;
+  max-width: 520px;
+  border-radius: 16px;
+  border: 1px solid $border;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+}
+
+.timeline {
+  position: relative;
+  padding-left: 2rem;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 0.75rem;
+  top: 0.25rem;
+  bottom: 0.25rem;
+  width: 2px;
+  background: linear-gradient(180deg, $primary, $accent);
+  opacity: 0.6;
+}
+
+.timelineItem {
+  position: relative;
+  margin-bottom: 1.75rem;
+}
+
+.timelineMarker {
+  position: absolute;
+  left: -0.1rem;
+  top: 0.4rem;
+  width: 12px;
+  height: 12px;
+  border-radius: 999px;
+  background: $secondary;
+  box-shadow: 0 0 12px rgba(250, 204, 21, 0.5);
+}
+
+.timelineContent {
+  background: $card-bg;
+  border: 1px solid $border;
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+}
+
+.timelineHeader {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  margin-bottom: 0.25rem;
+}
+
+.timelineYear {
+  color: $secondary;
+  font-weight: 700;
+  font-family: $font-rubik;
+}
+
+.timelineTitle {
+  color: $foreground;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.textContent {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+.avatar {
+  position: relative;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// Avatar styles are now handled by AnimatedAvatar component
+
+.text {
+  flex: 1;
+}
+
+.paragraph {
+  font-size: 1.1rem;
+  color: $muted; // Muted gray subtext
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.paragraph strong {
+  color: $foreground; // White main text
+  font-weight: 600;
+}
+
+// Accent underline for key phrases
+.paragraph:nth-child(2)::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, $secondary 0%, $primary 100%);
+  border-radius: 2px;
+  animation: underlineGlow 3s ease-in-out infinite;
+}
+
+@keyframes underlineGlow {
+  0%, 100% {
+    opacity: 0.6;
+    transform: scaleX(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scaleX(1.2);
+  }
+}
+
+.cta {
+  margin-top: 2rem;
+}
+
+.contactButton {
+  padding: 1rem 2rem;
+  background: $primary;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cvSection {
+  position: sticky;
+  top: 2rem;
+}
+
+.cvCard {
+  background: $card-bg;
+  border-radius: 20px;
+  padding: 2rem;
+  border: 1px solid $border;
+  position: relative;
+  overflow: hidden;
+}
+
+.cvCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.1) 0%, rgba(16, 185, 129, 0.1) 100%);
+  opacity: 0.5;
+}
+
+.cvTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: $foreground;
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+.cvDescription {
+  color: $muted;
+  margin-bottom: 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.cvExample {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+  z-index: 1;
+}
+
+.cvHeader {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid $border;
+}
+
+.cvAvatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: $primary;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.cvInfo h4 {
+  color: $foreground;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0 0 0.25rem 0;
+}
+
+.cvInfo p {
+  color: $muted;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.cvContent {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.cvSection h5 {
+  color: $foreground;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.cvSection ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.cvSection li {
+  color: $muted;
+  font-size: 0.9rem;
+  margin-bottom: 0.25rem;
+  padding-left: 1rem;
+  position: relative;
+}
+
+.cvSection li::before {
+  content: '•';
+  color: $primary;
+  position: absolute;
+  left: 0;
+}
+
+.skillTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.skillTags span {
+  background: $primary;
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.downloadButton {
+  width: 100%;
+  padding: 1rem;
+  background: linear-gradient(135deg, $color-blue 0%, $color-green-accent 100%); // Strategic green accent for positive action
+  color: $color-bg;
+  border: none;
+  border-radius: 15px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  text-decoration: none;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 0 15px rgba(16, 185, 129, 0.3);
+  
+  &:hover {
+    background: linear-gradient(135deg, $color-green-accent 0%, $color-yellow 100%);
+    box-shadow: 0 0 25px rgba(16, 185, 129, 0.5);
+    transform: translateY(-2px);
+  }
+}
+
+@media (max-width: 968px) {
+  .content { grid-template-columns: 1fr; gap: 3rem; }
+  .timelineLayout { grid-template-columns: 1fr; }
+  .profile { position: static; }
+  
+  .cvSection {
+    position: static;
+  }
+}
+
+@media (max-width: 768px) {
+  .about {
+    padding: 4rem 0;
+  }
+  
+  .container {
+    padding: 0 1rem;
+  }
+  
+  .textContent {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .avatar {
+    align-self: center;
+  }
+  
+  .dragonAvatar {
+    width: 100px;
+    height: 100px;
+    font-size: 2.5rem;
+  }
+  
+  .paragraph {
+    font-size: 1rem;
+  }
+  
+  .cvCard {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .cvExample {
+    padding: 1rem;
+  }
+  
+  .cvHeader {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+  }
+  
+  .skillTags {
+    justify-content: center;
+  }
+}

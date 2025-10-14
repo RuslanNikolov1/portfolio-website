@@ -1,0 +1,33 @@
+// SASS Variables - Vibrant Digital Pulse Palette
+$color-bg: #0d0f11;           // dark base
+$color-surface: #171a1e;      // card/background surface
+$color-yellow: #FFD644;       // main CTA / glow color
+$color-green: #7CFFB2;        // success / active / accent
+$color-green-accent: #10B981; // strategic green accent
+$color-blue: #5DB7FF;         // highlights / links / dividers
+$color-text: #F5F7FA;         // main text
+$color-text-muted: #A0A4AB;   // secondary text
+
+// Legacy variable mapping for compatibility
+$background: $color-bg;
+$background-secondary: $color-surface;
+$foreground: $color-text;
+$muted: $color-text-muted;
+$primary: $color-blue;
+$secondary: $color-yellow;
+$accent: $color-green;
+$card-bg: $color-surface;
+$border: rgba(93, 183, 255, 0.2);
+$text-muted: $color-text-muted;
+$slate-dark: $color-surface;
+
+// Typography System
+$font-rubik: 'Rubik', sans-serif;
+$font-satoshi: 'Satoshi', sans-serif;
+
+// Font weights
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
