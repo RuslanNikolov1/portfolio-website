@@ -174,6 +174,11 @@ const Navigation = () => {
             aria-label="Music player"
           >
             <div className={styles.trackInfo}>
+              {true && (
+                <div className={styles.coverArt} aria-hidden="true">
+                  <img src="/Hopeful emotions pic.png" alt="" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                </div>
+              )}
               <div className={styles.trackTitle}>Hopeful Emotions</div>
               <div className={styles.trackArtist}>Ruslan Nikolov</div>
             </div>

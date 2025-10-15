@@ -329,14 +329,14 @@ $font-weight-bold: 700;
 }
 
 .liveButton {
-  background: linear-gradient(135deg, #34D399 0%, #60A5FA 50%, #FACC15 100%); // brighter gradient
+  background: linear-gradient(135deg, #34D399 0%, #60A5FA 100%); // blue-green only
   color: #0b0f14; // deeper contrast for readability
   border: 2px solid rgba(255, 255, 255, 0.8);
   box-shadow: 0 0 24px rgba(250, 204, 21, 0.45), 0 0 18px rgba(96, 165, 250, 0.35);
   
       &:hover {
-        background: linear-gradient(135deg, #34D399 0%, #60A5FA 35%, #FACC15 100%);
-        box-shadow: 0 0 35px rgba(250, 204, 21, 0.6), 0 0 22px rgba(96, 165, 250, 0.45);
+        background: linear-gradient(135deg, #2ec29f 0%, #60A5FA 100%);
+        box-shadow: 0 0 35px rgba(96, 165, 250, 0.45), 0 0 22px rgba(46, 194, 159, 0.45);
         transform: translateY(-2px);
       }
 }
