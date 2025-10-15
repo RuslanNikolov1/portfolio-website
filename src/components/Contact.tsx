@@ -1,8 +1,9 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import { useState, useEffect } from 'react';
 import { useForm } from 'react-hook-form';
-import { Mail, Github, Linkedin, Music, Send, MessageCircle } from 'lucide-react';
+import { Mail, Github, Linkedin, Music, Send, MessageCircle, ArrowUp } from 'lucide-react';
 import { socialLinks } from '@/data';
 import styles from './Contact.module.scss';
 
@@ -15,6 +16,27 @@ interface ContactFormData {
 
 const Contact = () => {
   const { register, handleSubmit, formState: { errors }, reset } = useForm<ContactFormData>();
+  const [isAtBottom, setIsAtBottom] = useState(false);
+  const [showUpArrow, setShowUpArrow] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      const windowHeight = window.innerHeight;
+      const documentHeight = document.documentElement.scrollHeight;
+      const contactTop = document.getElementById('contact')?.offsetTop ?? 0;
+
+      // Show arrow once at contact section or further down
+      setShowUpArrow(scrollTop + 50 >= contactTop);
+      // Also track near-bottom state if needed later
+      setIsAtBottom(scrollTop + windowHeight >= documentHeight - 100);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Check initial state
+    
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const onSubmit = async (data: ContactFormData) => {
     // Here you would typically send the data to your backend or email service
@@ -49,7 +71,10 @@ const Contact = () => {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <h2 className={styles.title}>Ready to Start Your Project?</h2>
+          <div className={styles.emojiTitle}>
+            <div className={styles.emoji}>📧</div>
+            <h2 className={styles.title}>Ready to Start Your Project?</h2>
+          </div>
           <p className={styles.subtitle}>
             Based in Sofia, Bulgaria • Available for remote work worldwide<br/>
             Whether you&apos;re a hiring manager looking for a senior developer or a business owner needing a custom solution, 
@@ -67,12 +92,6 @@ const Contact = () => {
           >
             <div className={styles.infoCard}>
               <h3 className={styles.infoTitle}>Professional Services</h3>
-              <p className={styles.infoDescription}>
-                <strong>For Hiring Managers:</strong> Senior Frontend Developer with 7+ years experience, including 5 years at EPAM Systems, 
-                now seeking to return to a big company to grow further in software development.<br/><br/>
-                <strong>For Business Owners:</strong> Freelance development services, custom web applications, and user-centric solutions 
-                that create value for ordinary people.
-              </p>
 
               <div className={styles.socialLinks}>
                 {socialLinks.map((link, index) => (
@@ -115,32 +134,6 @@ const Contact = () => {
                 </div>
               </div>
 
-              <div className={styles.services}>
-                <h4 className={styles.servicesTitle}>What I Offer</h4>
-                <div className={styles.serviceList}>
-                  <div className={styles.serviceItem}>
-                    <span className={styles.serviceIcon}>💻</span>
-                    <div>
-                      <strong>Frontend Development</strong>
-                      <p>React, TypeScript, Next.js, Modern Web Technologies</p>
-                    </div>
-                  </div>
-                  <div className={styles.serviceItem}>
-                    <span className={styles.serviceIcon}>🎨</span>
-                    <div>
-                      <strong>UI/UX Design</strong>
-                      <p>User-centered design, Prototyping, Design Systems</p>
-                    </div>
-                  </div>
-                  <div className={styles.serviceItem}>
-                    <span className={styles.serviceIcon}>🚀</span>
-                    <div>
-                      <strong>Project Delivery</strong>
-                      <p>Agile methodology, Client communication, Quality assurance</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
             </div>
           </motion.div>
 
@@ -232,25 +225,41 @@ const Contact = () => {
 
         <motion.div
           className={styles.floatingCta}
-          initial={{ opacity: 0, scale: 0.8 }}
+          initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8, delay: 0.5 }}
+          transition={{ duration: 0.4 }}
           viewport={{ once: true }}
         >
+          {showUpArrow && (
+            <motion.button
+              type="button"
+              aria-label="Scroll to top"
+              className={styles.scrollArrow}
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: 20 }}
+              transition={{ duration: 0.3 }}
+              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+            >
+              <ArrowUp size={20} />
+            </motion.button>
+          )}
           <motion.button
             className={styles.workWithMeButton}
             whileHover={{ 
-              scale: 1.1,
-              boxShadow: '0 0 40px rgba(250, 204, 21, 0.6)'
+              scale: 1.06,
+              boxShadow: '0 0 40px rgba(139, 92, 246, 0.6)'
             }}
-            whileTap={{ scale: 0.9 }}
+            whileTap={{ scale: 0.94 }}
             onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
           >
             <span>Work with me</span>
-            <div className={styles.pulse} />
           </motion.button>
         </motion.div>
       </div>
+      
+      {/* White divider after contact form */}
+      <div className={styles.bottomDivider}></div>
     </section>
   );
 };

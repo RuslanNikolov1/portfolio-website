@@ -24,7 +24,9 @@ $slate-dark: #1E293B;
 
 .skills {
   padding: 3rem 0; // shorter section
-  background: linear-gradient(90deg, #0a2a5e 0%, #10B981 100%); // blue to green gradient
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+    linear-gradient(90deg, #1e40af 0%, #059669 100%); // brighter blue to green gradient
   position: relative;
 }
 
@@ -35,7 +37,7 @@ $slate-dark: #1E293B;
   left: 50%;
   transform: translateX(-50%);
   width: 100vw; // full-bleed divider spanning viewport
-  height: 14px; // thick white divider
+  height: 8px; // thinner white divider
   background: #ffffff;
   z-index: 0;
   pointer-events: none;
@@ -51,22 +53,31 @@ $slate-dark: #1E293B;
   margin-bottom: 2rem; // tighter spacing
 }
 
+.emojiTitle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.emoji {
+  font-size: 4.5rem;
+  margin-bottom: 0.5rem;
+  line-height: 1;
+}
+
 .title {
   font-family: $font-rubik;
   font-size: clamp(2.5rem, 5vw, 4rem);
   font-weight: $font-weight-bold;
-  color: $foreground;
+  color: #ffffff;
   margin-bottom: 1rem;
-  background: linear-gradient(135deg, $foreground 0%, $primary 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
 }
 
 .subtitle {
   font-family: $font-satoshi;
   font-size: 1.2rem;
-  color: $muted;
+  color: #ffffff;
   max-width: 600px;
   margin: 0 auto;
   line-height: 1.6;
@@ -90,7 +101,7 @@ $slate-dark: #1E293B;
   width: 100vw; // break out of the centered container
   margin-left: calc(50% - 50vw);
   overflow: visible;
-  z-index: 2;
+  z-index: -1; // Put avatar behind skill cards
 }
 
 .dividerAvatar img {
@@ -100,6 +111,74 @@ $slate-dark: #1E293B;
   border-radius: 50%;
   border: none;
   box-shadow: none;
+}
+
+.avatarVideo {
+  width: min(750px, 65vw); // match the image sizing
+  height: auto;
+  max-width: none; // prevent container constraints
+  border-radius: 50%;
+  border: none;
+  box-shadow: none;
+  object-fit: cover;
+}
+
+.dividerAvatarFirst {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 0;
+  position: relative;
+  width: 100vw; // break out of the centered container
+  margin-left: calc(50% - 50vw);
+  overflow: visible;
+  z-index: 2;
+  transform: translateY(-20px); // lift slightly up
+}
+
+.dividerAvatarFirst img {
+  width: min(700px, 60vw); // slightly larger avatar size
+  height: auto;
+  max-width: none; // prevent container constraints
+  border-radius: 50%;
+  border: none;
+  box-shadow: none; // remove background glow
+  transition: all 0.3s ease;
+}
+
+.dividerAvatarFirst img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 40px rgba(255, 255, 255, 0.3);
+}
+
+.dividerAvatar2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 0;
+  position: relative;
+  width: 100vw; // break out of the centered container
+  margin-left: calc(50% - 50vw);
+  overflow: visible;
+  z-index: 2;
+  transform: translateY(-20px); // lift slightly up
+}
+
+.dividerAvatar2 img {
+  width: min(450px, 40vw); // smaller avatar, responsive cap
+  height: auto;
+  max-width: none; // prevent container constraints
+  border-radius: 50%;
+  border: none;
+  box-shadow: none;
+}
+
+.dividerAvatarContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-left: 39vw;
 }
 
 .category {
@@ -254,25 +333,6 @@ $slate-dark: #1E293B;
   box-shadow: 0 0 10px rgba(93, 183, 255, 0.4);
 }
 
-.progressFill::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-  animation: shimmer 2s infinite;
-}
-
-@keyframes shimmer {
-  0% {
-    transform: translateX(-100%);
-  }
-  100% {
-    transform: translateX(100%);
-  }
-}
 
 .summary {
   text-align: center;

@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import styles from './Projects.module.scss';
+import styles from './Feedbacks.module.scss';
 
 const Feedbacks = () => {
   const container = {
@@ -57,7 +57,7 @@ const Feedbacks = () => {
   ];
 
   return (
-    <section id="feedbacks" className={styles.projects}>
+    <section id="feedbacks" className={styles.feedbacks}>
       <div className={styles.container}>
         <motion.div
           className={styles.header}
@@ -66,7 +66,10 @@ const Feedbacks = () => {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <h2 className={styles.title}>What People Say</h2>
+          <div className={styles.emojiTitle}>
+            <div className={styles.emoji}>💬</div>
+            <h2 className={styles.title}>What People Say</h2>
+          </div>
           <p className={styles.subtitle}>A few words from clients and teammates</p>
         </motion.div>
 

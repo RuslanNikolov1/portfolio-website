@@ -1,0 +1,172 @@
+@import "../styles/variables";
+
+// SASS Variables
+$background: #0F172A;
+$background-secondary: #1E293B;
+$foreground: #F9FAFB;
+$muted: #94A3B8;
+$primary: #2563EB;
+$secondary: #FACC15;
+$accent: #10B981;
+$card-bg: #ffffff;
+$border: #E5E7EB;
+$color-bg: #0F172A;
+$color-surface: #1E293B;
+$color-text: #1F2937;
+$color-text-muted: #6B7280;
+$color-blue: #2563EB;
+$color-green: #10B981;
+$color-yellow: #FACC15;
+$font-rubik: 'Rubik', sans-serif;
+$font-satoshi: 'Satoshi', sans-serif;
+$font-weight-bold: 700;
+
+.feedbacks {
+  padding: 6rem 0;
+  background:
+    linear-gradient(rgba(37, 99, 235, 0.2), rgba(37, 99, 235, 0.2)),
+    linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url('/People Coding.jpg') center/cover no-repeat,
+    linear-gradient(135deg, $background 0%, $background-secondary 100%);
+  position: relative;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.emojiTitle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.emoji {
+  font-size: 4.5rem;
+  margin-bottom: 0.5rem;
+  line-height: 1;
+}
+
+.title {
+  font-family: $font-rubik;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: $font-weight-bold;
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  font-family: $font-satoshi;
+  font-size: 1.2rem;
+  color: #ffffff;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+.card {
+  background: $card-bg;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  border: 1px solid $border;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, $primary, $accent);
+  }
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+}
+
+.projectTitle {
+  font-family: $font-rubik;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: $color-text;
+  margin-bottom: 0.5rem;
+}
+
+.description {
+  font-family: $font-satoshi;
+  font-size: 1rem;
+  color: $color-text-muted;
+  line-height: 1.6;
+  margin: 0;
+}
+
+// Responsive adjustments
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .feedbacks {
+    padding: 4rem 0;
+  }
+  
+  .container {
+    padding: 0 1rem;
+  }
+  
+  .card {
+    padding: 1.5rem;
+  }
+  
+  .title {
+    font-size: clamp(2rem, 8vw, 3rem);
+  }
+  
+  .subtitle {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .card {
+    padding: 1.25rem;
+  }
+}

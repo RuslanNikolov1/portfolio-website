@@ -24,10 +24,23 @@ $font-weight-bold: 700;
 .projects {
   padding: 6rem 0;
   background:
-    linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
     url('/Mountain Landscape.avif') center/cover no-repeat,
     linear-gradient(135deg, $background 0%, $background-secondary 100%);
   position: relative;
+}
+
+
+.projects::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw; // full-bleed divider spanning viewport
+  height: 8px; // thinner white divider
+  background: #ffffff;
+  z-index: 0;
+  pointer-events: none;
 }
 
 .container {
@@ -41,22 +54,31 @@ $font-weight-bold: 700;
   margin-bottom: 4rem;
 }
 
+.emojiTitle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.emoji {
+  font-size: 4.5rem;
+  margin-bottom: 0.5rem;
+  line-height: 1;
+}
+
 .title {
   font-family: $font-rubik;
   font-size: clamp(2.5rem, 5vw, 4rem);
   font-weight: $font-weight-bold;
-  color: $foreground;
+  color: #ffffff;
   margin-bottom: 1rem;
-  background: linear-gradient(135deg, $foreground 0%, $primary 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
 }
 
 .subtitle {
   font-family: $font-satoshi;
   font-size: 1.2rem;
-  color: $muted;
+  color: #ffffff;
   max-width: 600px;
   margin: 0 auto;
   line-height: 1.6;
@@ -67,7 +89,7 @@ $font-weight-bold: 700;
   display: grid;
   grid-template-columns: 0.8fr 2fr;
   gap: 2rem;
-  background: #ffffff;
+  background: #e8f5e8; // green background
   border: 1px solid rgba(15, 23, 42, 0.12);
   border-radius: 20px;
   padding: 2rem;
@@ -146,7 +168,7 @@ $font-weight-bold: 700;
   display: grid;
   place-items: center;
   color: #94a3b8;
-  background: url('/Hero Banner.png') center/cover no-repeat;
+  background: url('/Thumbnail-1.png') center/cover no-repeat; // replaced missing Hero Banner.png
 }
 
 // preview grid removed
@@ -307,14 +329,14 @@ $font-weight-bold: 700;
 }
 
 .liveButton {
-  background: linear-gradient(135deg, $color-green-accent 0%, $color-blue 100%); // Strategic green accent for "live" status
-  color: $color-bg;
-  border: none;
-  box-shadow: 0 0 15px rgba(16, 185, 129, 0.3);
+  background: linear-gradient(135deg, #34D399 0%, #60A5FA 50%, #FACC15 100%); // brighter gradient
+  color: #0b0f14; // deeper contrast for readability
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 24px rgba(250, 204, 21, 0.45), 0 0 18px rgba(96, 165, 250, 0.35);
   
       &:hover {
-        background: linear-gradient(135deg, $color-green-accent 0%, $color-yellow 100%);
-        box-shadow: 0 0 25px rgba(16, 185, 129, 0.5);
+        background: linear-gradient(135deg, #34D399 0%, #60A5FA 35%, #FACC15 100%);
+        box-shadow: 0 0 35px rgba(250, 204, 21, 0.6), 0 0 22px rgba(96, 165, 250, 0.45);
         transform: translateY(-2px);
       }
 }

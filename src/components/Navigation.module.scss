@@ -10,6 +10,7 @@ $border: #334155;
 $font-rubik: 'Rubik', sans-serif;
 $font-satoshi: 'Satoshi', sans-serif;
 $font-weight-bold: 700;
+$font-weight-semibold: 600;
 $font-weight-medium: 500;
 
 .nav {
@@ -18,17 +19,18 @@ $font-weight-medium: 500;
   left: 0;
   right: 0;
   z-index: 1000;
-  background: transparent; // transparent header background
+  background: #0f1a4a; // darker blue header background
   backdrop-filter: none; // remove blur
   border-bottom: 0; // we'll render a wavy white edge instead
   overflow: visible;
   transition: all 0.3s ease;
+  height: 75px; // Decreased header height
 }
 
 .nav::after { display: none; }
 
 .nav.scrolled {
-  background: #19296c; // match 7 years / 18 projects color when scrolled
+  background: #0f1a4a; // match 7 years / 18 projects color when scrolled
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
@@ -39,17 +41,30 @@ $font-weight-medium: 500;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;
+  z-index: 1001; // Above the header background
+  height: 75px; // Match header height
+}
+
+.rightSection {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+  z-index: 1002;
 }
 
 .logo {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
   cursor: pointer;
   transition: all 0.3s ease;
+  position: relative;
+  z-index: 1002; // Above container
 }
 
 .logo:hover {
@@ -75,6 +90,8 @@ $font-weight-medium: 500;
   display: flex;
   align-items: center;
   gap: 2rem;
+  position: relative;
+  z-index: 1002; // Above container
 }
 
 
@@ -108,6 +125,28 @@ $font-weight-medium: 500;
   left: 100%;
 }
 
+.navItemActive {
+  color: #ffffff !important;
+  position: relative;
+}
+
+.navItemActive::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #ffffff;
+  border-radius: 0;
+  box-shadow: 
+    0 0 10px #ffffff,
+    0 0 20px #ffffff,
+    0 0 30px #ffffff,
+    inset 0 0 5px #ffffff;
+  filter: brightness(1.5) contrast(1.2);
+}
+
 .navItem:hover {
   color: $primary;
   background: rgba(37, 99, 235, 0.1);
@@ -122,11 +161,155 @@ $font-weight-medium: 500;
   padding: 0.5rem;
   border-radius: 8px;
   transition: all 0.3s ease;
+  position: relative;
+  z-index: 1002; // Above container
 }
 
 .mobileToggle:hover {
   background: rgba(37, 99, 235, 0.1);
   color: $primary;
+}
+
+// Music Player Styles
+.musicPlayer {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: linear-gradient(135deg, #20B2AA 0%, #00CED1 100%);
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  box-shadow: 
+    0 4px 15px rgba(32, 178, 170, 0.3),
+    0 0 20px rgba(0, 206, 209, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.musicPlayer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.6s;
+}
+
+.musicPlayer:hover::before {
+  left: 100%;
+}
+
+.musicPlayer:hover {
+  transform: translateY(-2px);
+  box-shadow: 
+    0 6px 20px rgba(32, 178, 170, 0.4),
+    0 0 30px rgba(0, 206, 209, 0.3);
+}
+
+.trackInfo {
+  display: flex;
+  flex-direction: column;
+  min-width: 120px;
+}
+
+.trackTitle {
+  font-family: $font-satoshi;
+  font-size: 0.8rem;
+  font-weight: $font-weight-semibold;
+  color: #ffffff;
+  line-height: 1.2;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.trackArtist {
+  font-family: $font-satoshi;
+  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.2;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.playButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  color: #ffffff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(5px);
+}
+
+.playButton:hover {
+  background: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+}
+
+.volumeControl {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.volumeSlider {
+  width: 40px;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 2px;
+  outline: none;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.volumeSlider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 12px;
+  height: 12px;
+  background: #ffffff;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.volumeSlider::-moz-range-thumb {
+  width: 12px;
+  height: 12px;
+  background: #ffffff;
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.visualizer {
+  display: flex;
+  align-items: end;
+  gap: 2px;
+  height: 20px;
+  margin-left: 0.5rem;
+}
+
+.bar {
+  width: 3px;
+  background: linear-gradient(to top, #ffffff, rgba(255, 255, 255, 0.6));
+  border-radius: 1.5px;
+  transition: all 0.3s ease;
 }
 
 @media (max-width: 768px) {
@@ -136,7 +319,7 @@ $font-weight-medium: 500;
   
   .menu {
     position: fixed;
-    top: 70px;
+    top: 75px;
     left: 0;
     right: 0;
     background: rgba(15, 23, 42, 0.98);
@@ -164,6 +347,9 @@ $font-weight-medium: 500;
     font-size: 1.1rem;
   }
   
+  .musicPlayer {
+    display: none; // Hide music player on mobile
+  }
   
   .mobileToggle {
     display: block;
@@ -172,12 +358,12 @@ $font-weight-medium: 500;
 
 @media (max-width: 480px) {
   .container {
-    height: 60px;
+    height: 65px;
   }
   
   .logo {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
   }
   
   .logoText {
@@ -185,6 +371,6 @@ $font-weight-medium: 500;
   }
   
   .menu {
-    top: 60px;
+    top: 65px;
   }
 }

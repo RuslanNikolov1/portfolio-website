@@ -17,9 +17,34 @@ $font-weight-semibold: 600;
 
 .contact {
   padding: 6rem 0;
-  background: #A78BFA; // lighter purple background
+  background: linear-gradient(90deg, #1D4ED8 0%, #7C3AED 100%); // more saturated blue to more saturated purple gradient
   position: relative;
   min-height: 100vh;
+}
+
+.contact::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw; // full-bleed divider spanning viewport
+  height: 8px; // thinner white divider
+  background: #ffffff;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.bottomDivider {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw; // full-bleed divider spanning viewport
+  height: 8px; // white divider
+  background: #ffffff;
+  z-index: 0;
+  pointer-events: none;
 }
 
 .container {
@@ -34,18 +59,31 @@ $font-weight-semibold: 600;
   margin-bottom: 4rem;
 }
 
+.emojiTitle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.emoji {
+  font-size: 4.5rem;
+  margin-bottom: 0.5rem;
+  line-height: 1;
+}
+
 .title {
   font-family: $font-rubik;
   font-size: clamp(2.5rem, 5vw, 4rem);
   font-weight: $font-weight-bold;
-  color: $secondary;
+  color: #ffffff;
   margin-bottom: 1rem;
 }
 
 .subtitle {
   font-family: $font-satoshi;
   font-size: 1.2rem;
-  color: $muted;
+  color: #ffffff;
   max-width: 600px;
   margin: 0 auto;
   line-height: 1.6;
@@ -64,13 +102,17 @@ $font-weight-semibold: 600;
 }
 
 .infoCard {
-  background: transparent; // transparent background
+  background: 
+    linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url('/RuslanAvatar.png') center/cover no-repeat;
   border-radius: 20px;
   padding: 2.5rem;
-  border: 2px solid #0b8e8c; // darker turquoise border
-  height: fit-content;
+  border: 2px solid #ffffff; // white border
+  height: 100%; // match form height
   position: relative;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
 .infoCard::before { display: none; }
@@ -78,14 +120,14 @@ $font-weight-semibold: 600;
 .infoTitle {
   font-size: 1.8rem;
   font-weight: 700;
-  color: #0b8e8c; // darker turquoise text
+  color: #ffffff; // white text
   margin-bottom: 1rem;
   position: relative;
   z-index: 1;
 }
 
 .infoDescription {
-  color: #0b8e8c; // darker turquoise text
+  color: #ffffff; // white text
   line-height: 1.6;
   margin-bottom: 2rem;
   position: relative;
@@ -108,9 +150,9 @@ $font-weight-semibold: 600;
   padding: 1rem;
   background: transparent;
   border-radius: 15px;
-  border: 1px solid #0b8e8c;
+  border: 1px solid #ffffff; // white border
   text-decoration: none;
-  color: #0b8e8c; // darker turquoise text
+  color: #ffffff; // white text
   transition: all 0.3s ease;
 }
 
@@ -121,11 +163,11 @@ $font-weight-semibold: 600;
   height: 40px;
   border-radius: 50%;
   background: transparent;
-  border: 1px solid #0b8e8c;
+  border: 1px solid #ffffff; // white border
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #0b8e8c;
+  color: #ffffff; // white icons
 }
 
 .socialName {
@@ -149,13 +191,13 @@ $font-weight-semibold: 600;
 }
 
 .emailLabel {
-  color: #0b8e8c;
+  color: #ffffff; // white text
   font-size: 0.9rem;
   margin: 0 0 0.25rem 0;
 }
 
 .emailLink {
-  color: #0b8e8c; // darker turquoise email/links
+  color: #ffffff; // white email/links
   text-decoration: none;
   font-weight: 600;
   font-size: 1rem;
@@ -174,7 +216,7 @@ $font-weight-semibold: 600;
   font-family: $font-rubik;
   font-size: 1.2rem;
   font-weight: $font-weight-semibold;
-  color: #0b8e8c;
+  color: #ffffff; // white text
   margin-bottom: 1.5rem;
 }
 
@@ -210,9 +252,9 @@ $font-weight-semibold: 600;
   flex: 1;
 }
 
-.serviceItem strong { color: #0b8e8c; }
+.serviceItem strong { color: #ffffff; } // white text
 
-.serviceItem p { color: #0b8e8c; }
+.serviceItem p { color: #ffffff; } // white text
 
 .formSection {
   display: flex;
@@ -223,9 +265,12 @@ $font-weight-semibold: 600;
   background: url('/Kittens.png') center/cover no-repeat; // kittens background on form only
   border-radius: 20px;
   padding: 2.5rem;
-  border: 1px solid $border;
+  border: 2px solid #ffffff; // white border
   position: relative;
   overflow: hidden;
+  height: 100%; // match info card height
+  display: flex;
+  flex-direction: column;
 }
 
 .form::before {
@@ -235,8 +280,8 @@ $font-weight-semibold: 600;
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg, rgba(37, 99, 235, 0.1) 0%, rgba(16, 185, 129, 0.1) 100%);
-  opacity: 0.5;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.2) 100%);
+  opacity: 1;
 }
 
 .formGroup {
@@ -247,8 +292,8 @@ $font-weight-semibold: 600;
 
 .label {
   display: block;
-  color: #ffffff; // force white labels
-  font-weight: 600;
+  color: #ffffff; // white labels
+  font-weight: 700; // bolder font weight
   margin-bottom: 0.5rem;
   font-size: 0.9rem;
 }
@@ -258,12 +303,18 @@ $font-weight-semibold: 600;
   width: 100%;
   padding: 1rem;
   background: rgba(255, 255, 255, 0.05); // Dark background
-  border: 2px solid $border;
+  border: 2px solid #ffffff; // white border
   border-radius: 15px;
-  color: #ffffff; // force white input text
+  color: #ffffff; // white input text
   font-size: 1rem;
   transition: all 0.3s ease;
   font-family: inherit;
+}
+
+.input::selection,
+.textarea::selection {
+  background: #8B5CF6; // purple selection background
+  color: #ffffff; // white text on selection
 }
 
 .input:focus,
@@ -275,7 +326,8 @@ $font-weight-semibold: 600;
 
 .input::placeholder,
 .textarea::placeholder {
-  color: #ffffff; // make placeholders white
+  color: #ffffff; // white placeholders
+  opacity: 0.7; // slightly transparent for better UX
 }
 
 .textarea {
@@ -321,6 +373,9 @@ $font-weight-semibold: 600;
   bottom: 2rem;
   right: 2rem;
   z-index: 2000; // ensure on top
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
 }
 
 .workWithMeButton {
@@ -328,7 +383,7 @@ $font-weight-semibold: 600;
   padding: 1rem 2rem;
   background: #8B5CF6; // purple background
   color: #ffffff; // white letters
-  border: 2px solid #ffffff; // subtle white outline for contrast
+  border: 2px solid #ffffff; // white border
   border-radius: 50px;
   font-size: 1rem;
   font-weight: 700;
@@ -340,24 +395,26 @@ $font-weight-semibold: 600;
 }
 
 .workWithMeButton::before {
-  content: '';
-  position: absolute;
-  top: -2px;
-  left: -2px;
-  right: -2px;
-  bottom: -2px;
-  background: conic-gradient(from 0deg, transparent, #ffffff, transparent);
-  border-radius: 50px;
-  z-index: -1;
-  animation: rotate 2s linear infinite;
+  display: none;
 }
 
-@keyframes rotate {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
+.scrollArrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: #20B2AA; // turquoise
+  color: #0d0f11; // dark text for contrast
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgba(32, 178, 170, 0.35);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 30px rgba(32, 178, 170, 0.6);
   }
 }
 
@@ -382,7 +439,13 @@ $font-weight-semibold: 600;
   
   .floatingCta {
     bottom: 1rem;
-    right: 1rem;
+    left: 1rem;
+    gap: 0.5rem;
+  }
+  
+  .scrollArrow {
+    width: 35px;
+    height: 35px;
   }
 }
 
@@ -416,6 +479,11 @@ $font-weight-semibold: 600;
   .workWithMeButton {
     padding: 0.75rem 1.5rem;
     font-size: 0.9rem;
+  }
+  
+  .scrollArrow {
+    width: 32px;
+    height: 32px;
   }
   
   .services {

@@ -1,14 +1,83 @@
 'use client';
 
+import React from 'react';
 import { motion } from 'framer-motion';
-import { Code, Palette, Music } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { 
+  Code, Palette, Music, 
+  Atom, 
+  FileCode, 
+  Globe, 
+  FileText, 
+  Layers, 
+  Palette as PaletteIcon,
+  Zap,
+  Users,
+  Target,
+  Lightbulb,
+  Headphones,
+  Volume2,
+  Music2,
+  Mic,
+  Sparkles
+} from 'lucide-react';
 import { skills } from '@/data';
 import styles from './Skills.module.scss';
 
 const Skills = () => {
+  const [isClient, setIsClient] = useState(false);
+  
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
   const skillCategories = {
     frontend: { icon: Code, title: 'Technical Skills', color: '#10B981' },
     design: { icon: Palette, title: 'Soft Skills', color: '#2563EB' }
+  };
+
+  const skillIcons = {
+    // Frontend Skills
+    'React': Atom,
+    'TypeScript': FileCode,
+    'Next.js': Globe,
+    'JavaScript': FileText,
+    'HTML/CSS': Layers,
+    'SASS/SCSS': PaletteIcon,
+    'Tailwind CSS': Zap,
+    'Framer Motion': Sparkles,
+    'Redux': Code,
+    'Material UI': PaletteIcon,
+    'Mapbox': Globe,
+    'Web Audio API': Volume2,
+    
+    // Backend & API Skills
+    'REST API': Globe,
+    'GraphQL': Code,
+    
+    // Development Tools
+    'Git': Code,
+    'CI/CD': Zap,
+    'Webpack': Code,
+    'Vite': Zap,
+    'AI-assisted Development': Sparkles,
+    
+    // Soft Skills
+    'Problem-Solving & Critical Thinking': Lightbulb,
+    'Adaptability & Continuous Learning': Target,
+    'Time Management & Prioritization': Zap,
+    'Attention to Detail': Lightbulb,
+    'Empathy & User-Centric Mindset': Users,
+    'Collaboration in Agile Teams': Users,
+    'Mentorship & Knowledge Sharing': Users,
+    
+    // Music Skills
+    'Ableton Live': Headphones,
+    'Electronic Music': Music2,
+    'Sound Design': Volume2,
+    'Music Composition': Music,
+    'Audio Mixing': Mic,
+    'Creative Process': Sparkles
   };
 
   const containerVariants = {
@@ -40,7 +109,10 @@ const Skills = () => {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <h2 className={styles.title}>Skills & Expertise</h2>
+          <div className={styles.emojiTitle}>
+            <div className={styles.emoji}>⚡</div>
+            <h2 className={styles.title}>Skills & Expertise</h2>
+          </div>
           <p className={styles.subtitle}>
             {/* Subtitle removed as requested */}
           </p>
@@ -58,9 +130,8 @@ const Skills = () => {
             const IconComponent = category.icon;
 
             return (
-              <>
+              <React.Fragment key={categoryKey}>
                 <motion.div
-                  key={categoryKey}
                   className={`${styles.category} ${styles.categoryLight}`}
                   variants={itemVariants}
                 >
@@ -89,7 +160,21 @@ const Skills = () => {
                         viewport={{ once: true }}
                       >
                         <div className={styles.skillHeader}>
-                          <span className={styles.skillName}>{skill.name}</span>
+                          <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                            {skillIcons[skill.name as keyof typeof skillIcons] && (
+                              <div style={{ 
+                                display: 'flex', 
+                                alignItems: 'center', 
+                                justifyContent: 'center',
+                                width: '20px',
+                                height: '20px',
+                                color: category.color
+                              }}>
+                                {React.createElement(skillIcons[skill.name as keyof typeof skillIcons], { size: 16 })}
+                              </div>
+                            )}
+                            <span className={styles.skillName}>{skill.name}</span>
+                          </div>
                           <span className={styles.skillLevel}>{skill.level}%</span>
                         </div>
                         
@@ -109,11 +194,18 @@ const Skills = () => {
                 </motion.div>
 
                 {categoryKey === 'frontend' && (
-                  <div className={styles.dividerAvatar}>
-                    <img src="/FB_Avatar.png" alt="Avatar" />
+                  <div className={styles.dividerAvatarContainer}>
+                    <div className={styles.dividerAvatar}>
+                    </div>
+                    <div className={styles.dividerAvatarFirst}>
+                      <img src="/FB_Avatar.png" alt="Avatar 1" />
+                    </div>
+                    <div className={styles.dividerAvatar2}>
+                      <img src="/FB_Avatar 2.png" alt="Avatar 2" />
+                    </div>
                   </div>
                 )}
-              </>
+              </React.Fragment>
             );
           })}
         </motion.div>
