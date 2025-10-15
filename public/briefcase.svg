@@ -1,3 +1,22 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#4B5563">
-  <path d="M10 4h4a2 2 0 012 2v1h1a3 3 0 013 3v7a3 3 0 01-3 3H6a3 3 0 01-3-3V10a3 3 0 013-3h1V6a2 2 0 012-2zm4 3V6a1 1 0 00-1-1h-2a1 1 0 00-1 1v1h4zm-9 5v4a1 1 0 001 1h14a1 1 0 001-1v-4h-5v1a1 1 0 01-1 1H9a1 1 0 01-1-1v-1H5zm6 0v1h2v-1h-2z"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+  <defs>
+    <linearGradient id="briefcaseGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3B82F6;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#8B5CF6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#EC4899;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="handleGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#F59E0B;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#EF4444;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Main briefcase body with gradient -->
+  <path d="M10 4h4a2 2 0 012 2v1h1a3 3 0 013 3v7a3 3 0 01-3 3H6a3 3 0 01-3-3V10a3 3 0 013-3h1V6a2 2 0 012-2zm4 3V6a1 1 0 00-1-1h-2a1 1 0 00-1 1v1h4z" fill="url(#briefcaseGradient)" stroke="#1F2937" stroke-width="0.5"/>
+  
+  <!-- Handle with gradient -->
+  <path d="M5 12v4a1 1 0 001 1h14a1 1 0 001-1v-4h-5v1a1 1 0 01-1 1H9a1 1 0 01-1-1v-1H5z" fill="url(#handleGradient)" stroke="#1F2937" stroke-width="0.5"/>
+  
+  <!-- Handle grip -->
+  <path d="M6 0v1h2v-1h-2z" fill="#F59E0B" stroke="#1F2937" stroke-width="0.3"/>
 </svg>

@@ -32,6 +32,11 @@ export const metadata: Metadata = {
     "portfolio"
   ],
   authors: [{ name: "Ruslan Nikolov" }],
+  icons: {
+    icon: "/briefcase.svg",
+    shortcut: "/briefcase.svg",
+    apple: "/briefcase.svg",
+  },
   openGraph: {
     title: "Ruslan Nikolov - Senior Frontend Developer & UI Designer",
     description: "7+ years experience | React, TypeScript, Next.js | Available for hire",
