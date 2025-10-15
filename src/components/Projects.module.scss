@@ -357,58 +357,241 @@ $font-weight-bold: 700;
       }
 }
 
+// Tablet optimizations (768px - 1024px)
+@media (max-width: 1024px) and (min-width: 769px) {
+  .projects {
+    padding: 5rem 0;
+  }
+  
+  .container {
+    padding: 0 1.5rem;
+  }
+  
+  .showcase {
+    gap: 1.5rem;
+    padding: 1.5rem;
+  }
+  
+  .preview {
+    height: 400px;
+  }
+  
+  .thumbnails {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 0.5rem;
+  }
+  
+  .projectTitle {
+    font-size: 1.3rem;
+  }
+  
+  .description {
+    font-size: 0.9rem;
+  }
+}
+
+// Mobile optimizations (768px and below)
 @media (max-width: 768px) {
   .projects {
-    padding: 4rem 0;
+    padding: 3rem 0;
   }
   
   .container {
     padding: 0 1rem;
   }
   
-  .grid {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
+  .header {
+    margin-bottom: 2.5rem;
   }
-
+  
+  .emoji {
+    font-size: 3.5rem;
+  }
+  
+  .title {
+    font-size: clamp(2rem, 6vw, 2.8rem);
+  }
+  
+  .subtitle {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+  
   .showcase {
     grid-template-columns: 1fr;
-  }
-  .thumbnails {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-  .preview {
-    height: 320px;
-  }
-  
-  .card {
-    margin: 0 0.5rem;
-  }
-  
-  .content {
+    gap: 1.5rem;
     padding: 1.5rem;
+    border-radius: 16px;
   }
   
-  .buttons {
+  .leftPanel {
+    order: 2;
+  }
+  
+  .rightPanel {
+    order: 1;
+    margin-bottom: 1rem;
+  }
+  
+  .preview {
+    height: 280px;
+    border-radius: 12px;
+  }
+  
+  .projectTitle {
+    font-size: 1.4rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  .description {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+  }
+  
+  .technologies {
+    margin-bottom: 1.5rem;
+    gap: 0.4rem;
+  }
+  
+  .techBadge {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.75rem;
+    border-radius: 12px;
+  }
+  
+  .leftButtons {
     flex-direction: column;
+    gap: 0.8rem;
   }
   
   .liveButton,
   .codeButton {
-    width: 100%;
+    padding: 0.9rem 1.2rem;
+    font-size: 0.9rem;
+    border-radius: 20px;
+    min-height: 48px; // Better touch target
+  }
+  
+  .thumbnails {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.6rem;
+    padding: 0.8rem;
+    margin-top: 1.2rem;
+  }
+  
+  .thumb {
+    border-radius: 8px;
+    min-height: 60px; // Better touch target
+  }
+  
+  .thumb:hover {
+    transform: translateY(-1px); // Reduced movement for mobile
+  }
+  
+  .thumbActive {
+    box-shadow: 0 0 15px rgba(32, 178, 170, 0.3);
   }
 }
 
+// Small mobile optimizations (480px and below)
 @media (max-width: 480px) {
-  .grid {
-    grid-template-columns: 1fr;
+  .projects {
+    padding: 2.5rem 0;
   }
   
-  .card {
-    margin: 0;
+  .container {
+    padding: 0 0.8rem;
   }
   
-  .imageContainer {
-    height: 150px;
+  .header {
+    margin-bottom: 2rem;
+  }
+  
+  .emoji {
+    font-size: 3rem;
+  }
+  
+  .title {
+    font-size: clamp(1.8rem, 8vw, 2.4rem);
+  }
+  
+  .subtitle {
+    font-size: 0.9rem;
+    padding: 0 0.5rem;
+  }
+  
+  .showcase {
+    padding: 1.2rem;
+    border-radius: 12px;
+  }
+  
+  .preview {
+    height: 240px;
+    border-radius: 10px;
+  }
+  
+  .projectTitle {
+    font-size: 1.2rem;
+    margin-bottom: 0.6rem;
+  }
+  
+  .description {
+    font-size: 0.85rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  .technologies {
+    margin-bottom: 1.2rem;
+    gap: 0.3rem;
+  }
+  
+  .techBadge {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.7rem;
+    border-radius: 10px;
+  }
+  
+  .liveButton,
+  .codeButton {
+    padding: 0.8rem 1rem;
+    font-size: 0.85rem;
+    min-height: 44px; // iOS minimum touch target
+  }
+  
+  .thumbnails {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.5rem;
+    padding: 0.6rem;
+  }
+  
+  .thumb {
+    min-height: 50px;
+    border-radius: 6px;
+  }
+}
+
+// Extra small screens (360px and below)
+@media (max-width: 360px) {
+  .container {
+    padding: 0 0.6rem;
+  }
+  
+  .showcase {
+    padding: 1rem;
+  }
+  
+  .preview {
+    height: 200px;
+  }
+  
+  .thumbnails {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.4rem;
+  }
+  
+  .techBadge {
+    font-size: 0.65rem;
+    padding: 0.2rem 0.4rem;
   }
 }

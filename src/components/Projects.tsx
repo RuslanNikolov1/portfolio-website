@@ -136,6 +136,7 @@ const Projects = () => {
                     loop
                     muted
                     playsInline
+                    preload="metadata"
                     style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                   >
                     Your browser does not support the video tag.
@@ -145,6 +146,7 @@ const Projects = () => {
                     key={selected.id}
                     src={selected.previewUrl}
                     alt={selected.title}
+                    loading="lazy"
                     style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                   />
                 )
@@ -175,23 +177,23 @@ const Projects = () => {
             >
               <div className={styles.thumbPlaceholder}>
                 {idx === 0 ? (
-                  <img src="/Thumbnail-1.png" alt="Thumbnail 1" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                  <img src="/Thumbnail-1.png" alt="Thumbnail 1" loading="lazy" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                 ) : idx === 1 ? (
-                  <img src="/Thumbnail - 7.png" alt="Thumbnail 7" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                  <img src="/Thumbnail - 7.png" alt="Thumbnail 7" loading="lazy" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                 ) : idx === 2 ? (
-                  <img src="/Thumbnail-3.png" alt="Thumbnail 3" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                  <img src="/Thumbnail-3.png" alt="Thumbnail 3" loading="lazy" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                 ) : idx === 3 ? (
-                  <img src="/Thumbnail-8.png" alt="Thumbnail 8" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                  <img src="/Thumbnail-8.png" alt="Thumbnail 8" loading="lazy" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                 ) : idx === 4 ? (
-                  <img src="/Thumbnail-4.png" alt="Thumbnail 4" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                  <img src="/Thumbnail-4.png" alt="Thumbnail 4" loading="lazy" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                 ) : idx === 5 ? (
-                  <img src="/Thumbnail-5.png" alt="Thumbnail 5" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                  <img src="/Thumbnail-5.png" alt="Thumbnail 5" loading="lazy" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                 ) : idx === 6 ? (
-                  <img src="/Thumbnail-6.png" alt="Thumbnail 6" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                  <img src="/Thumbnail-6.png" alt="Thumbnail 6" loading="lazy" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                 ) : idx === 7 ? (
-                  <img src="/Thumbnail-2.png" alt="Thumbnail 2" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                  <img src="/Thumbnail-2.png" alt="Thumbnail 2" loading="lazy" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                 ) : idx === 8 ? (
-                  <img src="/Thumbnail-9.png" alt="Thumbnail 9" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                  <img src="/Thumbnail-9.png" alt="Thumbnail 9" loading="lazy" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                 ) : (
                   idx + 1
                 )}
