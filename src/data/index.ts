@@ -13,46 +13,16 @@ export const projects: Project[] = [
   },
   {
     id: '2',
-    title: 'AGB Finance',
-    description: 'Developed a polished front-end prototype for a mortgage loan service, designed to make applying for a mortgage simple, transparent, and accessible. The interface emphasizes clarity in showing loan options, payment schedules, and interest rates, with intuitive controls and responsive layout that works well across devices. My aim was to reduce friction, build trust through clean design, and help users make informed financial decisions.',
-    technologies: ['React', 'Sass'],
-    imageUrl: '/projects/agb.png',
-    liveUrl: 'https://agb-prototype-1-s7hr.vercel.app/',
-    codeUrl: 'https://github.com/RuslanNikolov1/agb-prototype-1',
+    title: 'DefiLlama-Dashboard',
+    description: 'A full-stack web app that visualizes real-time DeFi data using custom APIs and interactive charts. I built both the backend for data aggregation and the frontend dashboard for exploring protocol stats and market trends.',
+    technologies: ['React Query', 'React Table', 'Axios', 'React', 'Recharts', 'Sass', 'TypeScript'],
+    imageUrl: '/projects/defillama.png',
+    liveUrl: 'https://defi-llama-dashboard-backend.vercel.app/',
+    codeUrl: 'https://github.com/RuslanNikolov1',
     category: 'web'
   },
   {
     id: '3',
-    title: 'Ambra Restaurant',
-    description: 'A modern prototype for Ambra, a fine-dining restaurant concept. I designed and built the front-end with a focus on visual storytelling, immersive imagery, and intuitive navigation. Features include a dynamic menu, gallery showcase, reservation call-to-action, and responsive design across devices. Goal: evoke elegance & appetite while keeping UX seamless.',
-    technologies: ['HTML', 'CSS'],
-    imageUrl: '/projects/ambra.png',
-    liveUrl: 'https://ambra-prototype.vercel.app/',
-    codeUrl: 'https://github.com/RuslanNikolov1/ambra-prototype',
-    category: 'web'
-  },
-  {
-    id: '4',
-    title: 'AMTP Association',
-    description: 'A comprehensive web application for the Public Transport Association, providing detailed information on transport policies, projects, events, and news. The app allows members and the public to easily explore resources, stay updated on initiatives, and engage with the association\'s activities. Designed with a clean, responsive interface, this project highlights my ability to create informative, user-friendly web solutions tailored to organizational needs.',
-    technologies: ['React', 'React-router', 'Sass', 'TypeScript'],
-    imageUrl: '/projects/association.png',
-    liveUrl: 'https://association-app-nyop.vercel.app/',
-    codeUrl: 'https://github.com/RuslanNikolov1/association-app',
-    category: 'web'
-  },
-  {
-    id: '5',
-    title: 'Custom Wallets',
-    description: 'A digital presentation of a custom physical wallet line designed to merge craftsmanship with modern aesthetics. The site highlights each wallet\'s materials, structure, and concept through minimalist layout, smooth scrolling, and responsive visuals. Built to emphasize both the tactile quality of the products and the clarity of their design story.',
-    technologies: ['React', 'Sass', 'TypeScript'],
-    imageUrl: '/projects/wallets.png',
-    liveUrl: 'https://wallets-prototype.vercel.app/',
-    codeUrl: 'https://github.com/RuslanNikolov1/wallets-prototype',
-    category: 'web'
-  },
-  {
-    id: '6',
     title: 'Astrology App',
     description: 'A modern web application that visualizes astrology data and zodiac insights through a clean, responsive interface. Users can explore personalized birth charts, learn about star alignments, and view dynamic horoscope visuals. Designed with an emphasis on clarity, interactivity, and smooth user experience across all devices.',
     technologies: ['React', 'Sass'],
@@ -62,23 +32,53 @@ export const projects: Project[] = [
     category: 'web'
   },
   {
+    id: '4',
+    title: 'AGB Finance',
+    description: 'Developed a polished front-end prototype for a mortgage loan service, designed to make applying for a mortgage simple, transparent, and accessible. The interface emphasizes clarity in showing loan options, payment schedules, and interest rates, with intuitive controls and responsive layout that works well across devices. My aim was to reduce friction, build trust through clean design, and help users make informed financial decisions.',
+    technologies: ['React', 'Sass'],
+    imageUrl: '/projects/agb.png',
+    liveUrl: 'https://agb-prototype-1-s7hr.vercel.app/',
+    codeUrl: 'https://github.com/RuslanNikolov1/agb-prototype-1',
+    category: 'web'
+  },
+  {
+    id: '5',
+    title: 'Ambra Restaurant',
+    description: 'A modern prototype for Ambra, a fine-dining restaurant concept. I designed and built the front-end with a focus on visual storytelling, immersive imagery, and intuitive navigation. Features include a dynamic menu, gallery showcase, reservation call-to-action, and responsive design across devices. Goal: evoke elegance & appetite while keeping UX seamless.',
+    technologies: ['HTML', 'CSS'],
+    imageUrl: '/projects/ambra.png',
+    liveUrl: 'https://ambra-prototype.vercel.app/',
+    codeUrl: 'https://github.com/RuslanNikolov1/ambra-prototype',
+    category: 'web'
+  },
+  {
+    id: '6',
+    title: 'AMTP Association',
+    description: 'A comprehensive web application for the Public Transport Association, providing detailed information on transport policies, projects, events, and news. The app allows members and the public to easily explore resources, stay updated on initiatives, and engage with the association\'s activities. Designed with a clean, responsive interface, this project highlights my ability to create informative, user-friendly web solutions tailored to organizational needs.',
+    technologies: ['React', 'React-router', 'Sass', 'TypeScript'],
+    imageUrl: '/projects/association.png',
+    liveUrl: 'https://association-app-nyop.vercel.app/',
+    codeUrl: 'https://github.com/RuslanNikolov1/association-app',
+    category: 'web'
+  },
+  {
     id: '7',
+    title: 'Custom Wallets',
+    description: 'A digital presentation of a custom physical wallet line designed to merge craftsmanship with modern aesthetics. The site highlights each wallet\'s materials, structure, and concept through minimalist layout, smooth scrolling, and responsive visuals. Built to emphasize both the tactile quality of the products and the clarity of their design story.',
+    technologies: ['React', 'Sass', 'TypeScript'],
+    imageUrl: '/projects/wallets.png',
+    liveUrl: 'https://wallets-prototype.vercel.app/',
+    codeUrl: 'https://github.com/RuslanNikolov1/wallets-prototype',
+    category: 'web'
+  },
+  {
+    id: '8',
     title: 'Ash-services',
     description: 'A sleek prototype site exploring the identity and aesthetic of ASH through clean design, bold typography, and immersive imagery. The layout emphasizes visual hierarchy, minimalism, and high-contrast elements to communicate a strong brand personality. Built to look elegant, responsive, and intuitive, the prototype enhances user engagement with smooth transitions and refined visual details.',
     technologies: ['HTML', 'CSS'],
     imageUrl: '/projects/ash.png',
     liveUrl: 'https://ash-prototype.vercel.app/',
     codeUrl: 'https://github.com/RuslanNikolov1/ash-prototype',
-    category: 'web'
-  },
-  {
-    id: '8',
-    title: 'DefiLlama-Dashboard',
-    description: 'A full-stack web app that visualizes real-time DeFi data using custom APIs and interactive charts. I built both the backend for data aggregation and the frontend dashboard for exploring protocol stats and market trends.',
-    technologies: ['React Query', 'React Table', 'Axios', 'React', 'Recharts', 'Sass', 'TypeScript'],
-    imageUrl: '/projects/defillama.png',
-    liveUrl: 'https://defi-llama-dashboard-backend.vercel.app/',
-    codeUrl: 'https://github.com/RuslanNikolov1',
     category: 'web'
   },
   {

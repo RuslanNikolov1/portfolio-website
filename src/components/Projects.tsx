@@ -16,33 +16,33 @@ const SHOWCASE_ITEMS = projects.slice(0, 9).map((project, index) => ({
     'Highlights: interactive building layout, property listings, floor plans',
     'Stack: Three.js, Framer Motion, React, Sass, TypeScript',
   ] : index === 1 ? [
-    'Goal: make mortgage applications simple, transparent, and accessible',
-    'Highlights: loan options clarity, payment schedules, interest rates, intuitive controls',
-    'Stack: React, Sass',
-  ] : index === 2 ? [
-    'Goal: evoke elegance & appetite while keeping UX seamless',
-    'Highlights: visual storytelling, immersive imagery, dynamic menu, gallery showcase',
-    'Stack: HTML, CSS',
-  ] : index === 3 ? [
-    'Goal: provide comprehensive information on transport policies and initiatives',
-    'Highlights: transport policies, projects, events, news, member engagement',
-    'Stack: React, React-router, Sass, TypeScript',
-  ] : index === 4 ? [
-    'Goal: visualize astrology data and zodiac insights through clean interface',
-    'Highlights: personalized birth charts, star alignments, dynamic horoscope visuals',
-    'Stack: React, Sass',
-  ] : index === 5 ? [
-    'Goal: merge craftsmanship with modern aesthetics through digital presentation',
-    'Highlights: minimalist layout, smooth scrolling, responsive visuals, tactile quality emphasis',
-    'Stack: React, Sass, TypeScript',
-  ] : index === 6 ? [
-    'Goal: explore ASH identity through clean design and bold typography',
-    'Highlights: visual hierarchy, minimalism, high-contrast elements, smooth transitions',
-    'Stack: HTML, CSS',
-  ] : index === 7 ? [
     'Goal: visualize real-time DeFi data with interactive charts',
     'Highlights: custom APIs, data aggregation, protocol stats, market trends',
     'Stack: React Query, React Table, Axios, Recharts, Sass, TypeScript',
+  ] : index === 2 ? [
+    'Goal: visualize astrology data and zodiac insights through clean interface',
+    'Highlights: personalized birth charts, star alignments, dynamic horoscope visuals',
+    'Stack: React, Sass',
+  ] : index === 3 ? [
+    'Goal: make mortgage applications simple, transparent, and accessible',
+    'Highlights: loan options clarity, payment schedules, interest rates, intuitive controls',
+    'Stack: React, Sass',
+  ] : index === 4 ? [
+    'Goal: evoke elegance & appetite while keeping UX seamless',
+    'Highlights: visual storytelling, immersive imagery, dynamic menu, gallery showcase',
+    'Stack: HTML, CSS',
+  ] : index === 5 ? [
+    'Goal: provide comprehensive information on transport policies and initiatives',
+    'Highlights: transport policies, projects, events, news, member engagement',
+    'Stack: React, React-router, Sass, TypeScript',
+  ] : index === 6 ? [
+    'Goal: merge craftsmanship with modern aesthetics through digital presentation',
+    'Highlights: minimalist layout, smooth scrolling, responsive visuals, tactile quality emphasis',
+    'Stack: React, Sass, TypeScript',
+  ] : index === 7 ? [
+    'Goal: explore ASH identity through clean design and bold typography',
+    'Highlights: visual hierarchy, minimalism, high-contrast elements, smooth transitions',
+    'Stack: HTML, CSS',
   ] : [
     'Goal: showcase modern web experiences with thoughtful user flows',
     'Highlights: seamless responsive interfaces, design and functionality connection, precise attention to detail',
@@ -52,14 +52,14 @@ const SHOWCASE_ITEMS = projects.slice(0, 9).map((project, index) => ({
   liveUrl: project.liveUrl,
   codeUrl: project.codeUrl,
   previewUrl: index === 0 ? "/Knyazhevo app.mp4" 
-    : index === 1 ? "/Preview-Video 7.mp4" 
-    : index === 2 ? "/Preview-Video-3.mp4" 
-    : index === 3 ? "/Preview-Video-8.mp4" 
-    : index === 4 ? "/Preview-4.mp4" 
-    : index === 5 ? "/Preview-Video-5.mp4" 
-    : index === 6 ? "/Preview-Video-6.mp4" 
-    : index === 7 ? "/Preview-Video 2.mp4" 
-    : "/projects/ambra.png", // Video for Knyazhevo, AGB, Ambra, AMTP, Astrology, Wallets, Ash, and DefiLlama; image for others
+    : index === 1 ? "/Preview-Video 2.mp4" 
+    : index === 2 ? "/Preview-4.mp4" 
+    : index === 3 ? "/Preview-Video 7.mp4" 
+    : index === 4 ? "/Preview-Video-3.mp4" 
+    : index === 5 ? "/Preview-Video-8.mp4" 
+    : index === 6 ? "/Preview-Video-5.mp4" 
+    : index === 7 ? "/Preview-Video-6.mp4" 
+    : "/projects/ambra.png", // Video for all projects except portfolio
   thumbUrl: project.imageUrl
 }));
 
@@ -179,19 +179,19 @@ const Projects = () => {
                 {idx === 0 ? (
                   <img src="/Thumbnail-1.png" alt="Thumbnail 1" loading="lazy" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                 ) : idx === 1 ? (
-                  <img src="/Thumbnail - 7.png" alt="Thumbnail 7" loading="lazy" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-                ) : idx === 2 ? (
-                  <img src="/Thumbnail-3.png" alt="Thumbnail 3" loading="lazy" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-                ) : idx === 3 ? (
-                  <img src="/Thumbnail-8.png" alt="Thumbnail 8" loading="lazy" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-                ) : idx === 4 ? (
-                  <img src="/Thumbnail-4.png" alt="Thumbnail 4" loading="lazy" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-                ) : idx === 5 ? (
-                  <img src="/Thumbnail-5.png" alt="Thumbnail 5" loading="lazy" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-                ) : idx === 6 ? (
-                  <img src="/Thumbnail-6.png" alt="Thumbnail 6" loading="lazy" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-                ) : idx === 7 ? (
                   <img src="/Thumbnail-2.png" alt="Thumbnail 2" loading="lazy" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                ) : idx === 2 ? (
+                  <img src="/Thumbnail-4.png" alt="Thumbnail 4" loading="lazy" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                ) : idx === 3 ? (
+                  <img src="/Thumbnail - 7.png" alt="Thumbnail 7" loading="lazy" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                ) : idx === 4 ? (
+                  <img src="/Thumbnail-3.png" alt="Thumbnail 3" loading="lazy" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                ) : idx === 5 ? (
+                  <img src="/Thumbnail-8.png" alt="Thumbnail 8" loading="lazy" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                ) : idx === 6 ? (
+                  <img src="/Thumbnail-5.png" alt="Thumbnail 5" loading="lazy" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                ) : idx === 7 ? (
+                  <img src="/Thumbnail-6.png" alt="Thumbnail 6" loading="lazy" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                 ) : idx === 8 ? (
                   <img src="/Thumbnail-9.png" alt="Thumbnail 9" loading="lazy" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                 ) : (

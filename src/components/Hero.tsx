@@ -29,7 +29,6 @@ const Hero = () => {
               loop 
               playsInline
               preload="metadata"
-              poster="/Thumbnail - 7.png"
               onError={() => {
                 setVideoError(true);
               }}
