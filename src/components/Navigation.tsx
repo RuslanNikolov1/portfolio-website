@@ -179,8 +179,10 @@ const Navigation = () => {
                   <img src="/Hopeful emotions pic.png" alt="" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                 </div>
               )}
-              <div className={styles.trackTitle}>Hopeful Emotions</div>
-              <div className={styles.trackArtist}>Ruslan Nikolov</div>
+              <div className={styles.trackText}>
+                <div className={styles.trackTitle}>Hopeful Emotions</div>
+                <div className={styles.trackArtist}>Ruslan Nikolov</div>
+              </div>
             </div>
             <div className={styles.controls}>
               <motion.button

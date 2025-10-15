@@ -21,33 +21,51 @@ const Hero = () => {
     <section className={styles.hero} aria-label="Hero section">
       <div className={styles.background} role="img" aria-label="Animated background video">
         {isClient ? (
-          <video 
-            className={styles.heroVideo}
-            autoPlay 
-            muted 
-            loop 
-            playsInline
-            preload="auto"
-            onError={(e) => {
-              console.error('Video failed to load:', e);
-              console.error('Video element:', e.target);
-              setVideoError(true);
-            }}
-            onCanPlay={() => {
-              console.log('Video can play successfully');
-              setVideoError(false);
-            }}
-            onLoadStart={() => {
-              console.log('Video loading started');
-            }}
-            onLoadedData={() => {
-              console.log('Video data loaded');
-            }}
-            aria-label="Background animation video"
-          >
-            <source src="/TensorPix - Hero Animated.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
+          !videoError ? (
+            <video 
+              className={styles.heroVideo}
+              autoPlay 
+              muted 
+              loop 
+              playsInline
+              preload="metadata"
+              poster="/Thumbnail - 7.png"
+              onError={() => {
+                setVideoError(true);
+              }}
+              onCanPlay={() => {
+                setVideoError(false);
+              }}
+              aria-label="Background animation video"
+            >
+              <source src="/TensorPix - Hero Animated.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          ) : (
+            <div className={styles.heroVideo} style={{ 
+              background: `
+                linear-gradient(135deg, #0F172A 0%, #1E293B 50%, #0F172A 100%),
+                radial-gradient(ellipse at 20% 30%, rgba(37, 99, 235, 0.15) 0%, transparent 60%),
+                radial-gradient(ellipse at 80% 70%, rgba(16, 185, 129, 0.1) 0%, transparent 60%)
+              `,
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              color: '#94A3B8',
+              position: 'relative'
+            }}>
+              <div style={{
+                position: 'absolute',
+                top: 0,
+                left: 0,
+                right: 0,
+                bottom: 0,
+                background: 'url("data:image/svg+xml,%3Csvg viewBox=\'0 0 256 256\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cfilter id=\'noiseFilter\'%3E%3CfeTurbulence type=\'fractalNoise\' baseFrequency=\'0.9\' numOctaves=\'4\' stitchTiles=\'stitch\'/%3E%3C/filter%3E%3Crect width=\'100%25\' height=\'100%25\' filter=\'url(%23noiseFilter)\'/%3E%3C/svg%3E")',
+                opacity: 0.03
+              }} />
+              Video unavailable
+            </div>
+          )
         ) : (
           <div className={styles.heroVideo} style={{ 
             background: `
@@ -71,32 +89,6 @@ const Hero = () => {
               opacity: 0.03
             }} />
             {videoError ? 'Video unavailable' : 'Loading video...'}
-          </div>
-        )}
-        
-        {videoError && (
-          <div className={styles.heroVideo} style={{ 
-            background: `
-              linear-gradient(135deg, #0F172A 0%, #1E293B 50%, #0F172A 100%),
-              radial-gradient(ellipse at 20% 30%, rgba(37, 99, 235, 0.15) 0%, transparent 60%),
-              radial-gradient(ellipse at 80% 70%, rgba(16, 185, 129, 0.1) 0%, transparent 60%)
-            `,
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            color: '#94A3B8',
-            position: 'relative'
-          }}>
-            <div style={{
-              position: 'absolute',
-              top: 0,
-              left: 0,
-              right: 0,
-              bottom: 0,
-              background: 'url("data:image/svg+xml,%3Csvg viewBox=\'0 0 256 256\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cfilter id=\'noiseFilter\'%3E%3CfeTurbulence type=\'fractalNoise\' baseFrequency=\'0.9\' numOctaves=\'4\' stitchTiles=\'stitch\'/%3E%3C/filter%3E%3Crect width=\'100%25\' height=\'100%25\' filter=\'url(%23noiseFilter)\'/%3E%3C/svg%3E")',
-              opacity: 0.03
-            }} />
-            Video unavailable
           </div>
         )}
         

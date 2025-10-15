@@ -58,7 +58,8 @@ const SHOWCASE_ITEMS = projects.slice(0, 9).map((project, index) => ({
     : index === 4 ? "/Preview-4.mp4" 
     : index === 5 ? "/Preview-Video-5.mp4" 
     : index === 6 ? "/Preview-Video-6.mp4" 
-    : "/projects/ambra.png", // Video for Knyazhevo, AGB, Ambra, AMTP, Astrology, Wallets, and Ash, image for others
+    : index === 7 ? "/Preview-Video 2.mp4" 
+    : "/projects/ambra.png", // Video for Knyazhevo, AGB, Ambra, AMTP, Astrology, Wallets, Ash, and DefiLlama; image for others
   thumbUrl: project.imageUrl
 }));
 
@@ -92,13 +93,7 @@ const Projects = () => {
           <div className={styles.leftPanel}>
             <h3 className={styles.projectTitle}>{selected.title}</h3>
             <p className={styles.description}>{selected.description}</p>
-            {selected.details && (
-              <ul style={{ color: '#94A3B8', marginBottom: '1.25rem', paddingLeft: '1.25rem' }}>
-                {selected.details.map((d, i) => (
-                  <li key={i} style={{ marginBottom: '0.35rem' }}>{d}</li>
-                ))}
-              </ul>
-            )}
+            {/* Details list removed as requested */}
             <div className={styles.technologies}>
               {selected.technologies.map((t, idx) => (
                 <span key={idx} className={`${styles.techBadge} dev`}>{t}</span>

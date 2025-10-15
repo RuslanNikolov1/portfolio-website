@@ -89,7 +89,7 @@ $font-weight-bold: 700;
   display: grid;
   grid-template-columns: 0.8fr 2fr;
   gap: 2rem;
-  background: #e8f5e8; // green background
+  background: #EAF4FF; // very light blue background
   border: 1px solid rgba(15, 23, 42, 0.12);
   border-radius: 20px;
   padding: 2rem;
@@ -181,7 +181,7 @@ $font-weight-bold: 700;
 }
 
 .card {
-  background: $card-bg; // Vibrant surface color
+  background: #E8FFFB; // very light turquoise card background
   border-radius: 20px;
   overflow: hidden;
   border: 1px solid rgba(93, 183, 255, 0.3);
@@ -291,20 +291,19 @@ $font-weight-bold: 700;
   text-transform: uppercase;
   letter-spacing: 0.3px;
   
-      // Vibrant green for dev-related tech (React, TypeScript)
+      // Darker badges as requested
       &.dev {
-        background: rgba(124, 255, 178, 0.3);
-        color: $color-green;
-        border: 1px solid $color-green;
-        box-shadow: 0 0 10px rgba(124, 255, 178, 0.2);
+        background: #0f172a; // slate-900
+        color: #e2e8f0; // slate-200
+        border: 1px solid #1f2937; // slate-800
+        box-shadow: none;
       }
       
-      // Vibrant blue for design tools (Figma, Stitch)
       &.design {
-        background: rgba(93, 183, 255, 0.3);
-        color: $color-blue;
-        border: 1px solid $color-blue;
-        box-shadow: 0 0 10px rgba(93, 183, 255, 0.2);
+        background: #0f172a; // slate-900
+        color: #e2e8f0; // slate-200
+        border: 1px solid #1f2937; // slate-800
+        box-shadow: none;
       }
 }
 

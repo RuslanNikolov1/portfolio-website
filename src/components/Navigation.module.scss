@@ -222,8 +222,14 @@ $font-weight-medium: 500;
 
 .trackInfo {
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
   min-width: 120px;
+}
+
+.trackText {
+  display: flex;
+  flex-direction: column;
 }
 
 .trackTitle {
