@@ -24,6 +24,12 @@ $font-weight-bold: 700;
 .projects {
   padding: 6rem 0;
   background:
+    radial-gradient(ellipse at center,
+      rgba(0, 0, 0, 0.7) 0%,       // very dark center
+      rgba(0, 0, 0, 0.4) 35%,
+      rgba(0, 0, 0, 0.15) 65%,
+      rgba(255, 255, 255, 0.18) 100% // bright edges for strong contrast
+    ),
     url('/Mountain Landscape.avif') center/cover no-repeat,
     linear-gradient(135deg, $background 0%, $background-secondary 100%);
   position: relative;
@@ -87,13 +93,20 @@ $font-weight-bold: 700;
 // New showcase layout
 .showcase {
   display: grid;
-  grid-template-columns: 0.8fr 2fr;
-  gap: 2rem;
+  grid-template-columns: auto 1fr auto;
+  gap: 0.5rem;
   background: #EAF4FF; // very light blue background
-  border: 1px solid rgba(15, 23, 42, 0.12);
+  border: 4.5px solid #18314f;
   border-radius: 20px;
-  padding: 2rem;
+  padding: 2rem 1rem;
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+  align-items: center;
+}
+
+.showcaseContent {
+  display: grid;
+  grid-template-columns: 1fr 2.5fr; // wider content span
+  gap: 2rem;
 }
 
 .leftPanel {
@@ -105,6 +118,61 @@ $font-weight-bold: 700;
   margin-top: auto;
   display: flex;
   gap: 1rem;
+}
+
+.navArrow {
+  background: #20B2AA; // turquoise fill
+  border: 2px solid #20B2AA;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #ffffff; // white text on turquoise background
+  box-shadow: 0 4px 12px rgba(32, 178, 170, 0.3);
+  position: relative;
+  
+  // Position arrows so their center aligns with the showcase border
+  &:first-child {
+    transform: translateX(-35px); // Move left arrow a bit more inside
+  }
+  
+  &:last-child {
+    transform: translateX(35px); // Move right arrow a bit more inside
+  }
+  
+  &:hover {
+    background: #00CED1; // lighter turquoise on hover
+    border-color: #ffffff; // white border on hover
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 206, 209, 0.4);
+    
+    // Maintain horizontal positioning on hover
+    &:first-child {
+      transform: translateX(-35px) translateY(-2px);
+    }
+    
+    &:last-child {
+      transform: translateX(35px) translateY(-2px);
+    }
+  }
+  
+  &:active {
+    transform: translateY(0);
+    
+    // Maintain horizontal positioning on active
+    &:first-child {
+      transform: translateX(-35px);
+    }
+    
+    &:last-child {
+      transform: translateX(35px);
+    }
+  }
 }
 
 .rightPanel {
@@ -138,13 +206,13 @@ $font-weight-bold: 700;
   margin-top: 1.5rem;
   padding: 1rem;
   background: #ffffff; // white background behind thumbnails
-  border: 1px solid rgba(15, 23, 42, 0.12);
+  border: 3px solid rgba(15, 23, 42, 0.12);
   border-radius: 12px;
 }
 
 .thumb {
   background: transparent;
-  border: 3px solid #20B2AA; // turquoise border
+  border: 3.75px solid #20B2AA; // turquoise border
   border-radius: 10px;
   width: 100%;
   aspect-ratio: 16 / 9;
@@ -153,14 +221,15 @@ $font-weight-bold: 700;
 }
 
 .thumb:hover {
-  transform: translateY(-2px);
+  transform: translateY(-2px) scale(1.05); // scale up on hover
   border-color: #00CED1; // darker turquoise on hover
   box-shadow: 0 4px 8px rgba(32, 178, 170, 0.3);
 }
 
 .thumbActive {
-  border-color: #20B2AA; // turquoise for active state
-  box-shadow: 0 0 20px rgba(32, 178, 170, 0.4);
+  border-color: #FACC15; // yellow for active state
+  box-shadow: 0 0 20px rgba(250, 204, 21, 0.6);
+  background: rgba(250, 204, 21, 0.1); // subtle yellow background
 }
 
 .thumbPlaceholder {
@@ -185,7 +254,7 @@ $font-weight-bold: 700;
   background: #E8FFFB; // very light turquoise card background
   border-radius: 20px;
   overflow: hidden;
-  border: 1px solid rgba(93, 183, 255, 0.3);
+  border: 1x solid rgba(93, 183, 255, 0.3);
   transition: all 0.3s ease;
   position: relative;
   box-shadow: 0 0 20px rgba(93, 183, 255, 0.1);
@@ -422,6 +491,15 @@ $font-weight-bold: 700;
     gap: 1.5rem;
     padding: 1.5rem;
     border-radius: 16px;
+  }
+  
+  .showcaseContent {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .navArrow {
+    display: none; // Hide arrows on mobile for cleaner layout
   }
   
   .leftPanel {

@@ -131,6 +131,30 @@ $font-weight-bold: 700;
   margin: 0;
 }
 
+/* Make feedback quote text cursive */
+.card .description {
+  font-style: italic;
+}
+
+.nameLink {
+  color: $color-text;
+  text-decoration: none;
+  border-bottom: 1px dashed rgba(37, 99, 235, 0.4);
+  transition: color 0.2s ease, border-color 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+
+  &:hover {
+    color: $primary;
+    border-color: $primary;
+  }
+}
+
+.nameIcon {
+  color: $primary;
+}
+
 // Responsive adjustments
 @media (max-width: 1024px) {
   .grid {

@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import styles from './Feedbacks.module.scss';
+import { Linkedin } from 'lucide-react';
 
 const Feedbacks = () => {
   const container = {
@@ -22,37 +23,43 @@ const Feedbacks = () => {
       name: 'Client A',
       role: 'Product Owner',
       quote: 'Ruslan delivered high-quality work on time. Great eye for UX details.',
-      avatarUrl: 'https://i.pravatar.cc/150?img=11'
+      avatarUrl: 'https://i.pravatar.cc/150?img=11',
+      linkedinUrl: 'https://www.linkedin.com/in/client-a'
     },
     {
       name: 'Client B',
       role: 'Founder',
       quote: 'Very proactive and communicative. Turned vague ideas into polished features.',
-      avatarUrl: 'https://i.pravatar.cc/150?img=12'
+      avatarUrl: 'https://i.pravatar.cc/150?img=12',
+      linkedinUrl: 'https://www.linkedin.com/in/client-b'
     },
     {
       name: 'Client C',
       role: 'CTO',
       quote: 'Clean code, thoughtful architecture, and reliable delivery across sprints.',
-      avatarUrl: 'https://i.pravatar.cc/150?img=13'
+      avatarUrl: 'https://i.pravatar.cc/150?img=13',
+      linkedinUrl: 'https://www.linkedin.com/in/client-c'
     },
     {
       name: 'Teammate D',
       role: 'Senior Engineer',
       quote: 'Collaborative and adaptive. Quickly picks up domain and contributes effectively.',
-      avatarUrl: 'https://i.pravatar.cc/150?img=14'
+      avatarUrl: 'https://i.pravatar.cc/150?img=14',
+      linkedinUrl: 'https://www.linkedin.com/in/teammate-d'
     },
     {
       name: 'Manager E',
       role: 'Engineering Manager',
       quote: 'Excellent ownership and communication with stakeholders. Strong frontend skills.',
-      avatarUrl: 'https://i.pravatar.cc/150?img=15'
+      avatarUrl: 'https://i.pravatar.cc/150?img=15',
+      linkedinUrl: 'https://www.linkedin.com/in/manager-e'
     },
     {
       name: 'Client F',
       role: 'Director',
       quote: 'Understands business needs and delivers user-centric solutions consistently.',
-      avatarUrl: 'https://i.pravatar.cc/150?img=16'
+      avatarUrl: 'https://i.pravatar.cc/150?img=16',
+      linkedinUrl: 'https://www.linkedin.com/in/client-f'
     }
   ];
 
@@ -92,7 +99,12 @@ const Feedbacks = () => {
                     style={{ borderRadius: '9999px', objectFit: 'cover' }}
                   />
                   <div>
-                    <h3 className={styles.projectTitle} style={{ margin: 0 }}>{f.name}</h3>
+                    <h3 className={styles.projectTitle} style={{ margin: 0 }}>
+                      <a href={f.linkedinUrl} target="_blank" rel="noopener noreferrer" className={styles.nameLink}>
+                        {f.name}
+                        <Linkedin size={16} className={styles.nameIcon} />
+                      </a>
+                    </h3>
                     <p className={styles.description} style={{ margin: 0 }}><em>{f.role}</em></p>
                   </div>
                 </div>

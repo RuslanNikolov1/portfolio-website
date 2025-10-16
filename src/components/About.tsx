@@ -12,6 +12,9 @@ const About = () => {
   return (
     <section id="about" className={styles.about}>
       <div className={styles.container}>
+      <div className={styles.overlay}></div>
+      
+
         <div className={styles.timelineLayout}>
           <motion.div
             className={styles.profile}
@@ -82,9 +85,11 @@ const About = () => {
               🎧 Outside of work, I am passionate about <strong>music</strong>. I produce electronic music across different genres—techno, breakbeat, house, dub, drum and bass, psy‑trance, trip‑hop, ambient, but also jazz, funk, and bossa nova. I try to mix interesting melodies, beats and emotions, and try to keep it interesting at all times. <a href="https://soundcloud.com/ruslan-nikolov-323139497" target="_blank" rel="noopener noreferrer">SoundCloud</a>. I publish my own tracks independently, and the feedback that I receive is very positive. Favourite musicians: Thievery Corporation, Deadmau5, Flume, Calibre. Worth checking out.
             </p>
             <div className={styles.musicImagesRow}>
-              <img src="/Music-1.jpg" alt="Music 1" className={styles.musicImage} />
-              <img src="/Music-2.jpg" alt="Music 2" className={styles.musicImage} />
-              <img src="/Music-3.png" alt="Music 3" className={styles.musicImage} />
+              <div className={styles.imagesContainer}>
+                <img src="/Music-1.jpg" alt="Music 1" className={styles.musicImage} />
+                <img src="/Music-2.jpg" alt="Music 2" className={styles.musicImage} />
+                <img src="/Music-3.png" alt="Music 3" className={styles.musicImage} />
+              </div>
             </div>
           </div>
 
@@ -97,9 +102,11 @@ const About = () => {
               🏃‍♂️ I also love doing <strong>sports</strong>. I have trained karate and volleyball when I was in school. At all times I have been parallely doing calisthenics and going to the gym, I am now mainly focused on basketball and crossfit and table‑tennis. The sportsmen I admire are Lionel Messi, Nikola Jokic (basketball), Stephen Curry, Raphael Nadal, Roger Federer, Simon Gauzy (table tennis).
             </p>
             <div className={styles.sportsImagesRow}>
-              <img src="/Sports-1.jpg" alt="Sports 1" className={styles.sportsImage} />
-              <img src="/Sports-2.webp" alt="Sports 2" className={styles.sportsImage} />
-              <img src="/Sports-3.jpg" alt="Sports 3" className={styles.sportsImage} />
+              <div className={styles.imagesContainer}>
+                <img src="/Sports-1.jpg" alt="Sports 1" className={styles.sportsImage} />
+                <img src="/Sports-2.webp" alt="Sports 2" className={styles.sportsImage} />
+                <img src="/Sports-3.jpg" alt="Sports 3" className={styles.sportsImage} />
+              </div>
             </div>
           </div>
 
@@ -110,12 +117,14 @@ const About = () => {
             </div>
             <p className={styles.paragraph}>
               📖 I also enjoy <strong>reading</strong>. I recently finished a great book by historian Yuval Noah Harari called <strong>Homo Deus</strong>. It&apos;s a story of mankind, its past, present and future in a very pleasant and engaging manner. It goes through all the important topics and it fills your knowledge gaps effortlessly. I started reading <strong>Homo Sapiens</strong>. It&apos;s by the same author, but it&apos;s more focused on the past of our species.
-              My intellectual interests include <strong>psychology, philosophy and physics</strong>. I also love <strong>comedy</strong>, and some would say I have a decent sense of humour.
+              My intellectual interests include <strong>psychology, philosophy and physics</strong>. I also love <strong>comedy</strong>, and some would say I even have a decent sense of humour.
             </p>
             <div className={styles.readingImagesRow}>
-              <img src="/Reading-1.jpg" alt="Reading 1" className={styles.readingImage} />
-              <img src="/Reading-2.jpg" alt="Reading 2" className={styles.readingImage} />
-              <img src="/Reading-3.jpg" alt="Reading 3" className={styles.readingImage} />
+              <div className={styles.imagesContainer}>
+                <img src="/Reading-1.jpg" alt="Reading 1" className={styles.readingImage} />
+                <img src="/Reading-2.jpg" alt="Reading 2" className={styles.readingImage} />
+                <img src="/Reading-3.jpg" alt="Reading 3" className={styles.readingImage} />
+              </div>
             </div>
           </div>
 
@@ -126,15 +135,18 @@ const About = () => {
               <h3 className={styles.sectionTitle}>Art</h3>
             </div>
             <p className={styles.paragraph}>
-              Additionally I like good <strong>art</strong>. My favourite styles are impressionism, surrealism, fantasy and sci-fi. Favourite artists include: Impressionists: Claude Monet, Édouard Manet; surrealists: Salvador Dali, Zdzisław Beksiński, Alex Grey, Vladimir Kush; Sci-fi: Moebius. Furthermore I like going out with friends and socializing. I love walking int he centre and sea garden and visiting theatres
+              Additionally I like good <strong>art</strong>. My favourite styles are impressionism, surrealism, fantasy and sci-fi. Favourite artists include: Impressionists: Claude Monet, Édouard Manet; surrealists: Salvador Dali, Zdzisław Beksiński, Alex Grey, Vladimir Kush; Sci-fi: Moebius. I have also drawn Greek and Roman capitals and explored color compositions. Furthermore I like going out with friends and socializing. I love walking in the centre and sea garden and visiting theatres.
             </p>
             <div className={styles.artImagesRow}>
-              <img src="/Art-1.jpeg" alt="Art 1" className={styles.artImage} />
-              <img src="/Art-2.jpg" alt="Art 2" className={styles.artImage} />
-              <img src="/Art-3.webp" alt="Art 3" className={styles.artImage} />
+              <div className={styles.imagesContainer}>
+                <img src="/Art-1.jpeg" alt="Art 1" className={styles.artImage} />
+                <img src="/Art-2.jpg" alt="Art 2" className={styles.artImage} />
+                <img src="/Art-3.webp" alt="Art 3" className={styles.artImage} />
+              </div>
             </div>
           </div>
         </div>
+        <div className={styles.bottomDivider} />
       </div>
     </section>
   );

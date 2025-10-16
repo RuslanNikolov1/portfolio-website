@@ -76,7 +76,7 @@ const Contact = () => {
             <h2 className={styles.title}>Ready to Start Your Project?</h2>
           </div>
           <p className={styles.subtitle}>
-            Based in Sofia, Bulgaria • Available for remote work worldwide<br/>
+            Based in Burgas, Bulgaria • Available for remote work worldwide<br/>
             Whether you&apos;re a hiring manager looking for a senior developer or a business owner needing a custom solution, 
             I&apos;m here to help bring your vision to life with professional expertise and creative innovation.
           </p>

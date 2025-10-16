@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { ExternalLink, Github } from 'lucide-react';
+import { ExternalLink, Github, ChevronLeft, ChevronRight } from 'lucide-react';
 import { projects } from '@/data';
 import styles from './Projects.module.scss';
 
@@ -72,6 +72,14 @@ const Projects = () => {
     setIsClient(true);
   }, []);
 
+  const goToPrevious = () => {
+    setSelectedIndex((prev) => (prev === 0 ? SHOWCASE_ITEMS.length - 1 : prev - 1));
+  };
+
+  const goToNext = () => {
+    setSelectedIndex((prev) => (prev === SHOWCASE_ITEMS.length - 1 ? 0 : prev + 1));
+  };
+
   return (
     <section id="projects" className={styles.projects}>
       <div className={styles.container}>
@@ -88,84 +96,6 @@ const Projects = () => {
           </div>
           <p className={styles.subtitle}>Select one of my signature designs</p>
         </motion.div>
-
-        <div className={styles.showcase}>
-          <div className={styles.leftPanel}>
-            <h3 className={styles.projectTitle}>{selected.title}</h3>
-            <p className={styles.description}>{selected.description}</p>
-            {/* Details list removed as requested */}
-            <div className={styles.technologies}>
-              {selected.technologies.map((t, idx) => (
-                <span key={idx} className={`${styles.techBadge} dev`}>{t}</span>
-              ))}
-            </div>
-            <div className={styles.leftButtons}>
-              <motion.a
-                href={selected.liveUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={styles.liveButton}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <ExternalLink size={16} />
-                Visit Project
-              </motion.a>
-              <motion.a
-                href={selected.codeUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={styles.codeButton}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <Github size={16} />
-                View Code
-              </motion.a>
-            </div>
-          </div>
-
-          <div className={styles.rightPanel}>
-            <div className={styles.preview}>
-              {isClient ? (
-                selected.previewUrl.endsWith('.mp4') ? (
-                  <video
-                    key={selected.id}
-                    src={selected.previewUrl}
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                    preload="metadata"
-                    style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                  >
-                    Your browser does not support the video tag.
-                  </video>
-                ) : (
-                  <img
-                    key={selected.id}
-                    src={selected.previewUrl}
-                    alt={selected.title}
-                    loading="lazy"
-                    style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                  />
-                )
-              ) : (
-                <div style={{ 
-                  width: '100%', 
-                  height: '100%', 
-                  backgroundColor: '#000', 
-                  display: 'flex', 
-                  alignItems: 'center', 
-                  justifyContent: 'center',
-                  color: '#fff'
-                }}>
-                  Loading preview...
-                </div>
-              )}
-            </div>
-          </div>
-        </div>
 
         <div className={styles.thumbnails}>
           {SHOWCASE_ITEMS.map((item, idx) => (
@@ -200,6 +130,102 @@ const Projects = () => {
               </div>
             </button>
           ))}
+        </div>
+
+        <div className={styles.showcase}>
+          <button 
+            className={styles.navArrow} 
+            onClick={goToPrevious}
+            aria-label="Previous project"
+          >
+            <ChevronLeft size={24} />
+          </button>
+          
+          <div className={styles.showcaseContent}>
+            <div className={styles.leftPanel}>
+              <h3 className={styles.projectTitle}>{selected.title}</h3>
+              <p className={styles.description}>{selected.description}</p>
+              {/* Details list removed as requested */}
+              <div className={styles.technologies}>
+                {selected.technologies.map((t, idx) => (
+                  <span key={idx} className={`${styles.techBadge} dev`}>{t}</span>
+                ))}
+              </div>
+              <div className={styles.leftButtons}>
+                <motion.a
+                  href={selected.liveUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.liveButton}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <ExternalLink size={16} />
+                  Visit Project
+                </motion.a>
+                <motion.a
+                  href={selected.codeUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.codeButton}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <Github size={16} />
+                  View Code
+                </motion.a>
+              </div>
+            </div>
+
+            <div className={styles.rightPanel}>
+              <div className={styles.preview}>
+                {isClient ? (
+                  selected.previewUrl.endsWith('.mp4') ? (
+                    <video
+                      key={selected.id}
+                      src={selected.previewUrl}
+                      autoPlay
+                      loop
+                      muted
+                      playsInline
+                      preload="metadata"
+                      style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                    >
+                      Your browser does not support the video tag.
+                    </video>
+                  ) : (
+                    <img
+                      key={selected.id}
+                      src={selected.previewUrl}
+                      alt={selected.title}
+                      loading="lazy"
+                      style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                    />
+                  )
+                ) : (
+                  <div style={{ 
+                    width: '100%', 
+                    height: '100%', 
+                    backgroundColor: '#000', 
+                    display: 'flex', 
+                    alignItems: 'center', 
+                    justifyContent: 'center',
+                    color: '#fff'
+                  }}>
+                    Loading preview...
+                  </div>
+                )}
+              </div>
+            </div>
+          </div>
+          
+          <button 
+            className={styles.navArrow} 
+            onClick={goToNext}
+            aria-label="Next project"
+          >
+            <ChevronRight size={24} />
+          </button>
         </div>
 
         {/* preview grid removed */}

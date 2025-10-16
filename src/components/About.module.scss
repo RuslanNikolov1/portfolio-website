@@ -3,15 +3,36 @@
 .about {
   padding: 6rem 0;
   background: 
-    linear-gradient(rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)),
+    linear-gradient(rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.05)),
     url('/Burgas_pic.jpg') center/cover no-repeat;
   position: relative;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(5px); /* Blur intensity */
 }
 
 .about::before {
   content: '';
   position: absolute;
   top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw; // full-bleed divider spanning viewport
+  height: 8px; // thinner white divider
+  background: #ffffff;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.bottomDivider {
+  content: '';
+  position: absolute;
+  bottom: 0;
   left: 50%;
   transform: translateX(-50%);
   width: 100vw; // full-bleed divider spanning viewport
@@ -63,6 +84,41 @@
   padding: 0 2rem;
 }
 
+.header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.emojiTitle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.emoji {
+  font-size: 5.5rem; // increased from 4.5rem
+  margin-bottom: 0.5rem;
+  line-height: 1;
+}
+
+.title {
+  font-family: $font-rubik;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: $font-weight-bold;
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  font-family: $font-satoshi;
+  font-size: 1.2rem;
+  color: #ffffff;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
 
 .content {
   display: grid;
@@ -89,7 +145,7 @@
   width: 100%;
   max-width: 520px;
   border-radius: 16px;
-  border: 3px solid #1e293b;
+  border: 5px solid #1e293b; // revert to original dark border
   box-shadow: 0 10px 30px rgba(0,0,0,0.35);
 }
 
@@ -182,7 +238,11 @@
 }
 
 .musicContainer {
-  background: rgba(139, 92, 246, 0.8); // Purple background with transparency
+  background: linear-gradient(
+    to bottom,         /* Direction: top → bottom */
+    #4B0082,           /* Dark purple at top */
+    #9B59B6            /* Light purple at bottom */
+  );
   border-radius: 16px;
   padding: 2rem;
   margin-bottom: 1.5rem;
@@ -192,7 +252,12 @@
 }
 
 .sportsContainer {
-  background: rgba(34, 139, 34, 0.8); // Green background with transparency
+  background: linear-gradient(
+  to bottom,
+  #006400 0%,    /* dark saturated green */
+  #008000 50%,   /* medium green */
+  #00FF7F 100%   /* bright green */
+);
   border-radius: 16px;
   padding: 2rem;
   margin-bottom: 1.5rem;
@@ -330,7 +395,11 @@
 }
 
 .readingContainer {
-  background: rgba(139, 92, 246, 0.8); // Purple background with transparency
+  background: linear-gradient(
+    to bottom,         /* Direction: top → bottom */
+    #4B0082,           /* Dark purple at top */
+    #9B59B6           /* Light purple at bottom */
+  ); // Purple background with transparency
   border-radius: 16px;
   padding: 2rem;
   margin-bottom: 1.5rem;
@@ -340,7 +409,12 @@
 }
 
 .artContainer {
-  background: rgba(34, 139, 34, 0.8); // Green background with transparency
+  background: linear-gradient(
+  to bottom,
+  #006400 0%,    /* dark saturated green */
+  #008000 50%,   /* medium green */
+  #00FF7F 100%   /* bright green */
+);
   border-radius: 16px;
   padding: 2rem;
   margin-bottom: 1.5rem;
@@ -576,6 +650,29 @@
   }
 }
 
+.imagesContainer {
+  background: #0F172A; // default solid dark color (overridden per section below)
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  padding: 1rem;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Section-themed solid backgrounds */
+.musicImagesRow .imagesContainer,
+.readingImagesRow .imagesContainer {
+  background: #6c2497; // brighter purple for purple sections
+}
+
+
+.sportsImagesRow .imagesContainer,
+.artImagesRow .imagesContainer {
+  background: #007f00; // brighter green for green sections
+}
+
 @media (max-width: 968px) {
   .content { grid-template-columns: 1fr; gap: 3rem; }
   .timelineLayout { grid-template-columns: 1fr; }
@@ -592,6 +689,23 @@
   }
   
   .container {
+    padding: 0 1rem;
+  }
+  
+  .header {
+    margin-bottom: 2.5rem;
+  }
+  
+  .emoji {
+    font-size: 4.5rem; // increased from 3.5rem
+  }
+  
+  .title {
+    font-size: clamp(2rem, 6vw, 2.8rem);
+  }
+  
+  .subtitle {
+    font-size: 1rem;
     padding: 0 1rem;
   }
   

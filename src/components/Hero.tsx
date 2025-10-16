@@ -91,6 +91,7 @@ const Hero = () => {
           </div>
         )}
         
+        
         <div className={styles.gradient} />
         <div className={styles.noise} />
       </div>

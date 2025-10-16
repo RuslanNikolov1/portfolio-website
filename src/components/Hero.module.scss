@@ -50,6 +50,8 @@ $font-weight-semibold: 600;
   height: 100%;
   object-fit: cover;
   z-index: 0;
+  filter: brightness(1.12) saturate(1.06); // slightly brighten and add a touch of vibrance
+  transition: filter 0.3s ease;
 }
 
 .gradient {
