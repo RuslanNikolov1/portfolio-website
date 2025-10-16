@@ -141,12 +141,13 @@ $font-weight-semibold: 600;
 /* Removed icon row */
 
 .title {
-  font-family: var(--font-display), $font-rubik;
-  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-family: $font-rubik;
+  font-size: clamp($font-size-5xl, 6vw, $font-size-7xl);
   font-weight: $font-weight-bold;
   color: #ffffff;
   margin-bottom: 0;
-  line-height: 1.1;
+  line-height: $line-height-tight;
+  letter-spacing: $letter-spacing-tight;
   position: relative;
   -webkit-text-stroke: 1px #1e3a8a; // Thinner dark blue border around letters
   text-shadow:
@@ -165,11 +166,13 @@ $font-weight-semibold: 600;
 }
 
 .subtitle {
-  font-family: var(--font-display), $font-satoshi;
-  font-size: clamp(1.2rem, 3vw, 1.8rem);
+  font-family: $font-satoshi;
+  font-size: clamp($font-size-lg, 3vw, $font-size-2xl);
   color: #1e3a8a;
   margin-bottom: 1.5rem;
   font-weight: $font-weight-medium;
+  line-height: $line-height-snug;
+  letter-spacing: $letter-spacing-normal;
 }
 
 .inlineSubtitle {
@@ -185,8 +188,9 @@ $font-weight-semibold: 600;
   align-items: center;
   justify-content: center;
   color: #19296c;
-  font-size: clamp(1.5rem, 3vw, 2rem);
-  line-height: 1;
+  font-size: clamp($font-size-xl, 3vw, $font-size-3xl);
+  line-height: $line-height-tight;
+  letter-spacing: $letter-spacing-wide;
   padding: 0; // remove pill padding
   border: none; // remove pill border
   border-radius: 0; // remove rounded shape
@@ -200,10 +204,11 @@ $font-weight-semibold: 600;
 
 .description {
   font-family: $font-satoshi;
-  font-size: clamp(1rem, 2.5vw, 1.3rem);
+  font-size: clamp($font-size-lg, 3vw, $font-size-xl);
   color: #1e3a8a;
   margin-bottom: 2rem;
-  line-height: 1.6;
+  line-height: $line-height-relaxed;
+  letter-spacing: $letter-spacing-normal;
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
@@ -279,18 +284,21 @@ $font-weight-semibold: 600;
 
 .credentialNumber {
   font-family: $font-rubik;
-  font-size: 2.2rem;
+  font-size: $font-size-4xl;
   font-weight: $font-weight-bold;
   color: #ffffff;
-  line-height: 1;
+  line-height: $line-height-tight;
+  letter-spacing: $letter-spacing-tight;
   margin-bottom: 0.5rem;
 }
 
 .credentialLabel {
   font-family: $font-satoshi;
-  font-size: 0.9rem;
+  font-size: $font-size-sm;
   color: #e5e7eb; // slate-200 for contrast on dark card
   font-weight: $font-weight-medium;
+  line-height: $line-height-normal;
+  letter-spacing: $letter-spacing-normal;
 }
 
 .buttons {
@@ -308,8 +316,10 @@ $font-weight-semibold: 600;
   color: $color-bg;
   border: none;
   border-radius: 50px;
-  font-size: 1.1rem;
+  font-size: $font-size-lg;
   font-weight: $font-weight-semibold;
+  line-height: $line-height-tight;
+  letter-spacing: $letter-spacing-wide;
   cursor: pointer;
   transition: all 0.3s ease;
   position: relative;
@@ -345,8 +355,10 @@ $font-weight-semibold: 600;
   color: $color-text;
   border: 2px solid $color-blue; // Vibrant blue border
   border-radius: 50px;
-  font-size: 1.1rem;
+  font-size: $font-size-lg;
   font-weight: $font-weight-semibold;
+  line-height: $line-height-tight;
+  letter-spacing: $letter-spacing-wide;
   cursor: pointer;
   transition: all 0.3s ease;
   box-shadow: 0 0 10px rgba(93, 183, 255, 0.2);

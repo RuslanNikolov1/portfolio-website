@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import styles from './Feedbacks.module.scss';
-import { Linkedin } from 'lucide-react';
+import { Linkedin, MessageCircle } from 'lucide-react';
 
 const Feedbacks = () => {
   const container = {
@@ -74,7 +74,9 @@ const Feedbacks = () => {
           viewport={{ once: true }}
         >
           <div className={styles.emojiTitle}>
-            <div className={styles.emoji}>💬</div>
+            <div className={styles.emoji}>
+              <MessageCircle size={64} />
+            </div>
             <h2 className={styles.title}>What People Say</h2>
           </div>
           <p className={styles.subtitle}>A few words from clients and teammates</p>
@@ -94,8 +96,8 @@ const Feedbacks = () => {
                   <img
                     src={f.avatarUrl}
                     alt={`${f.name} avatar`}
-                    width={48}
-                    height={48}
+                    width={idx === 1 ? 36 : 48}
+                    height={idx === 1 ? 36 : 48}
                     style={{ borderRadius: '9999px', objectFit: 'cover' }}
                   />
                   <div>

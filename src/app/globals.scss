@@ -1,3 +1,5 @@
+@import "../styles/variables";
+
 // Accessibility and Focus Management
 * {
   cursor: none !important;
@@ -143,7 +145,9 @@ body {
   color: var(--color-text);
   font-family: $font-satoshi;
   font-weight: $font-weight-normal;
-  line-height: 1.6;
+  font-size: $font-size-base;
+  line-height: $line-height-normal;
+  letter-spacing: $letter-spacing-normal;
   overflow-x: hidden;
   position: relative;
   transition: background 0.3s ease, color 0.3s ease;
@@ -235,16 +239,62 @@ body::after {
   }
 }
 
-// Typography System Implementation
-h1, h2, h3, .cta, .logo {
+// Typography System Implementation - Optimized Hierarchy
+h1 {
+  font-family: $font-rubik;
+  font-weight: $font-weight-bold;
+  font-size: $font-size-6xl;
+  line-height: $line-height-tight;
+  letter-spacing: $letter-spacing-tight;
+  color: var(--color-text);
+}
+
+h2 {
+  font-family: $font-rubik;
+  font-weight: $font-weight-bold;
+  font-size: $font-size-4xl;
+  line-height: $line-height-snug;
+  letter-spacing: $letter-spacing-normal;
+  color: var(--color-text);
+}
+
+h3 {
   font-family: $font-rubik;
   font-weight: $font-weight-semibold;
+  font-size: $font-size-2xl;
+  line-height: $line-height-snug;
+  letter-spacing: $letter-spacing-normal;
+  color: var(--color-text);
+}
+
+h4 {
+  font-family: $font-rubik;
+  font-weight: $font-weight-semibold;
+  font-size: $font-size-xl;
+  line-height: $line-height-snug;
+  color: var(--color-text);
+}
+
+p {
+  font-family: $font-satoshi;
+  font-weight: $font-weight-normal;
+  font-size: $font-size-base;
+  line-height: $line-height-normal;
+  color: var(--color-text);
+  margin-bottom: 1rem;
 }
 
 small, .meta {
   font-family: $font-satoshi;
-  font-weight: $font-weight-light;
-  color: $text-muted;
+  font-weight: $font-weight-normal;
+  font-size: $font-size-sm;
+  line-height: $line-height-normal;
+  color: var(--color-text-muted);
+}
+
+.cta, .logo {
+  font-family: $font-rubik;
+  font-weight: $font-weight-semibold;
 }
 
 // Typography utility classes

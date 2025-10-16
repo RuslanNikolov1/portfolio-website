@@ -97,26 +97,33 @@
 }
 
 .emoji {
-  font-size: 5.5rem; // increased from 4.5rem
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-bottom: 0.5rem;
-  line-height: 1;
+  line-height: $line-height-tight;
+  color: $secondary;
+  font-size: 6rem;
 }
 
 .title {
   font-family: $font-rubik;
-  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-size: clamp($font-size-4xl, 5vw, $font-size-6xl);
   font-weight: $font-weight-bold;
   color: #ffffff;
   margin-bottom: 1rem;
+  line-height: $line-height-tight;
+  letter-spacing: $letter-spacing-tight;
 }
 
 .subtitle {
   font-family: $font-satoshi;
-  font-size: 1.2rem;
+  font-size: $font-size-xl;
   color: #ffffff;
   max-width: 600px;
   margin: 0 auto;
-  line-height: 1.6;
+  line-height: $line-height-relaxed;
+  letter-spacing: $letter-spacing-normal;
 }
 
 
@@ -215,9 +222,11 @@
 }
 
 .paragraph {
-  font-size: 1.1rem;
+  font-family: $font-satoshi;
+  font-size: $font-size-lg;
   color: #ffffff; // white text
-  line-height: 1.8;
+  line-height: $line-height-relaxed;
+  letter-spacing: $letter-spacing-normal;
   margin-bottom: 1.5rem;
   position: relative;
 }
@@ -445,7 +454,7 @@
 }
 
 .emojiTitle .emoji {
-  font-size: 2.5rem; // Smaller emojis for personal interest containers
+  font-size: 3.5rem; // Slightly smaller emojis for personal interest containers
 }
 
 // Accent underline for key phrases
@@ -697,7 +706,7 @@
   }
   
   .emoji {
-    font-size: 4.5rem; // increased from 3.5rem
+    font-size: 5rem; // increased for better mobile visibility
   }
   
   .title {
@@ -705,7 +714,7 @@
   }
   
   .subtitle {
-    font-size: 1rem;
+    font-size: 1.125rem;
     padding: 0 1rem;
   }
   

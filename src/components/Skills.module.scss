@@ -61,26 +61,33 @@ $slate-dark: #1E293B;
 }
 
 .emoji {
-  font-size: 4.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-bottom: 0.5rem;
   line-height: 1;
+  color: $secondary;
+  font-size: 6rem;
 }
 
 .title {
   font-family: $font-rubik;
-  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-size: clamp($font-size-4xl, 5vw, $font-size-6xl);
   font-weight: $font-weight-bold;
   color: #ffffff;
   margin-bottom: 1rem;
+  line-height: $line-height-tight;
+  letter-spacing: $letter-spacing-tight;
 }
 
 .subtitle {
   font-family: $font-satoshi;
-  font-size: 1.2rem;
+  font-size: $font-size-xl;
   color: #ffffff;
   max-width: 600px;
   margin: 0 auto;
-  line-height: 1.6;
+  line-height: $line-height-relaxed;
+  letter-spacing: $letter-spacing-normal;
 }
 
 .categories {
@@ -136,20 +143,21 @@ $slate-dark: #1E293B;
   transform: translateY(-20px); // lift slightly up
 }
 
-.dividerAvatarFirst img {
-  width: min(700px, 60vw); // slightly larger avatar size
+.dividerAvatarFirst img,
+.dividerAvatarFirst .avatarImage {
+  width: min(800px, 75vw); // even bigger avatar size
   height: auto;
   max-width: none; // prevent container constraints
   border-radius: 50%;
   border: none;
   box-shadow: none; // remove background glow
-  transition: all 0.3s ease;
+  transition: none; // remove transition since no hover effect
+  object-fit: cover;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
 }
 
-.dividerAvatarFirst img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 40px rgba(255, 255, 255, 0.3);
-}
+/* Hover effect removed for first avatar */
 
 .dividerAvatar2 {
   display: flex;
@@ -164,12 +172,16 @@ $slate-dark: #1E293B;
   transform: translateY(-20px); // lift slightly up
 }
 
-.dividerAvatar2 img {
-  width: min(450px, 40vw); // smaller avatar, responsive cap
+.dividerAvatar2 img,
+.dividerAvatar2 .avatarImage {
+  width: min(450px, 50vw); // bigger avatar size
   height: auto;
   max-width: none; // prevent container constraints
   border-radius: 50%;
   border: none;
+  object-fit: cover;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
   box-shadow: none;
 }
 

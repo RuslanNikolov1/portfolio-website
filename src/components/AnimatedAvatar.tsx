@@ -133,7 +133,7 @@ const AnimatedAvatar = ({
 
           {/* Avatar Image */}
           <Image
-            src="/RuslanAvatar.png"
+            src="/Ruslan Profile Pic.jpg"
             alt="Ruslan Nikolov - Frontend Developer, UI Designer & Music Producer"
             fill
             className={styles.avatarImage}

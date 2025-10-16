@@ -21,7 +21,7 @@ $border: rgba(93, 183, 255, 0.2);
 $text-muted: $color-text-muted;
 $slate-dark: $color-surface;
 
-// Typography System
+// Typography System - Optimized Scale
 $font-rubik: 'Rubik', sans-serif;
 $font-satoshi: 'Satoshi', sans-serif;
 
@@ -31,3 +31,30 @@ $font-weight-normal: 400;
 $font-weight-medium: 500;
 $font-weight-semibold: 600;
 $font-weight-bold: 700;
+$font-weight-extrabold: 800;
+
+// Typography Scale - Optimized for readability and hierarchy
+$font-size-xs: 0.75rem;     // 12px - Small labels, captions
+$font-size-sm: 0.875rem;    // 14px - Secondary text, metadata
+$font-size-base: 1rem;      // 16px - Body text, paragraphs
+$font-size-lg: 1.125rem;    // 18px - Large body text, descriptions
+$font-size-xl: 1.25rem;     // 20px - Small headings, card titles
+$font-size-2xl: 1.5rem;     // 24px - Section subtitles
+$font-size-3xl: 1.875rem;   // 30px - Medium headings
+$font-size-4xl: 2.25rem;    // 36px - Large headings
+$font-size-5xl: 3rem;       // 48px - Hero titles (mobile)
+$font-size-6xl: 3.75rem;    // 60px - Hero titles (desktop)
+$font-size-7xl: 4.5rem;     // 72px - Display titles
+
+// Line heights - Optimized for readability
+$line-height-tight: 1.1;    // For large headings
+$line-height-snug: 1.25;    // For medium headings
+$line-height-normal: 1.5;   // For body text
+$line-height-relaxed: 1.625; // For long-form content
+$line-height-loose: 1.75;   // For accessibility
+
+// Letter spacing
+$letter-spacing-tight: -0.025em;
+$letter-spacing-normal: 0;
+$letter-spacing-wide: 0.025em;
+$letter-spacing-wider: 0.05em;

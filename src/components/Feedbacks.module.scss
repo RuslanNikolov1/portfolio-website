@@ -50,26 +50,33 @@ $font-weight-bold: 700;
 }
 
 .emoji {
-  font-size: 4.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 6rem;
   margin-bottom: 0.5rem;
   line-height: 1;
+  color: $secondary;
 }
 
 .title {
   font-family: $font-rubik;
-  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-size: clamp($font-size-4xl, 5vw, $font-size-6xl);
   font-weight: $font-weight-bold;
   color: #ffffff;
   margin-bottom: 1rem;
+  line-height: $line-height-tight;
+  letter-spacing: $letter-spacing-tight;
 }
 
 .subtitle {
   font-family: $font-satoshi;
-  font-size: 1.2rem;
+  font-size: $font-size-xl;
   color: #ffffff;
   max-width: 600px;
   margin: 0 auto;
-  line-height: 1.6;
+  line-height: $line-height-relaxed;
+  letter-spacing: $letter-spacing-normal;
 }
 
 .grid {
@@ -117,17 +124,20 @@ $font-weight-bold: 700;
 
 .projectTitle {
   font-family: $font-rubik;
-  font-size: 1.25rem;
-  font-weight: 600;
+  font-size: $font-size-xl;
+  font-weight: $font-weight-semibold;
   color: $color-text;
   margin-bottom: 0.5rem;
+  line-height: $line-height-snug;
+  letter-spacing: $letter-spacing-normal;
 }
 
 .description {
   font-family: $font-satoshi;
-  font-size: 1rem;
+  font-size: $font-size-base;
   color: $color-text-muted;
-  line-height: 1.6;
+  line-height: $line-height-relaxed;
+  letter-spacing: $letter-spacing-normal;
   margin: 0;
 }
 
@@ -180,7 +190,7 @@ $font-weight-bold: 700;
   }
   
   .subtitle {
-    font-size: 1.1rem;
+    font-size: 1.25rem;
   }
 }
 

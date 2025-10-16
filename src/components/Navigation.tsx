@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
-import { Menu, X, Play, Pause, Volume2 } from 'lucide-react';
+import { Menu, X, Play, Pause, Volume2, Home, Briefcase, Zap, User, Mail } from 'lucide-react';
 import styles from './Navigation.module.scss';
 
 const Navigation = () => {
@@ -70,11 +70,11 @@ const Navigation = () => {
   }, [audioRef, volume]);
 
   const navItems = [
-    { name: '🏠 Home', href: '#hero' },
-    { name: '💼 Projects', href: '#projects' },
-    { name: '⚡ Skills', href: '#skills' },
-    { name: '👨‍💻 About', href: '#about' },
-    { name: '📧 Contact', href: '#contact' }
+    { name: 'Home', href: '#hero', icon: Home },
+    { name: 'Projects', href: '#projects', icon: Briefcase },
+    { name: 'Skills', href: '#skills', icon: Zap },
+    { name: 'About', href: '#about', icon: User },
+    { name: 'Contact', href: '#contact', icon: Mail }
   ];
 
   const scrollToSection = (href: string) => {
@@ -137,6 +137,7 @@ const Navigation = () => {
           {navItems.map((item, index) => {
             const sectionId = item.href.replace('#', '');
             const isActive = activeSection === sectionId;
+            const IconComponent = item.icon;
             
             return (
               <motion.button
@@ -150,7 +151,7 @@ const Navigation = () => {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 role="menuitem"
                 aria-current={isActive ? 'page' : undefined}
-                aria-label={`Navigate to ${item.name.replace(/[🏠💼⚡👨‍💻📧]/g, '').trim()} section`}
+                aria-label={`Navigate to ${item.name} section`}
                 onKeyDown={(e) => {
                   if (e.key === 'Enter' || e.key === ' ') {
                     e.preventDefault();
@@ -158,7 +159,8 @@ const Navigation = () => {
                   }
                 }}
               >
-                {item.name}
+                <IconComponent size={16} />
+                <span>{item.name}</span>
               </motion.button>
             );
           })}

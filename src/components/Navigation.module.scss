@@ -120,6 +120,9 @@ $font-weight-medium: 500;
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .navItem::before {

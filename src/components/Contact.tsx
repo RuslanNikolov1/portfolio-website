@@ -72,7 +72,9 @@ const Contact = () => {
           viewport={{ once: true }}
         >
           <div className={styles.emojiTitle}>
-            <div className={styles.emoji}>📧</div>
+            <div className={styles.emoji}>
+              <Mail size={64} />
+            </div>
             <h2 className={styles.title}>Ready to Start Your Project?</h2>
           </div>
           <p className={styles.subtitle}>

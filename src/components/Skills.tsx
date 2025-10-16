@@ -3,6 +3,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 import { 
   Code, Palette, Music, 
   Atom, 
@@ -19,7 +20,19 @@ import {
   Volume2,
   Music2,
   Mic,
-  Sparkles
+  Sparkles,
+  GitBranch,
+  Settings,
+  Package,
+  Cpu,
+  Crown,
+  MessageCircle,
+  ClipboardList,
+  Clock,
+  Search,
+  Heart,
+  Handshake,
+  GraduationCap
 } from 'lucide-react';
 import { skills } from '@/data';
 import styles from './Skills.module.scss';
@@ -50,26 +63,31 @@ const Skills = () => {
     'Material UI': PaletteIcon,
     'Mapbox': Globe,
     'Web Audio API': Volume2,
+    'Three.js': Cpu,
     
     // Backend & API Skills
     'REST API': Globe,
     'GraphQL': Code,
     
     // Development Tools
-    'Git': Code,
-    'CI/CD': Zap,
-    'Webpack': Code,
+    'Git': GitBranch,
+    'CI/CD': Settings,
+    'Webpack': Package,
     'Vite': Zap,
     'AI-assisted Development': Sparkles,
     
     // Soft Skills
+    'Client-focused problem solving': Target,
+    'Leadership and mentoring': Crown,
+    'Effective communication': MessageCircle,
+    'Strategic project planning': ClipboardList,
     'Problem-Solving & Critical Thinking': Lightbulb,
     'Adaptability & Continuous Learning': Target,
-    'Time Management & Prioritization': Zap,
-    'Attention to Detail': Lightbulb,
-    'Empathy & User-Centric Mindset': Users,
-    'Collaboration in Agile Teams': Users,
-    'Mentorship & Knowledge Sharing': Users,
+    'Time Management & Prioritization': Clock,
+    'Attention to Detail': Search,
+    'Empathy & User-Centric Mindset': Heart,
+    'Collaboration in Agile Teams': Handshake,
+    'Mentorship & Knowledge Sharing': GraduationCap,
     
     // Music Skills
     'Ableton Live': Headphones,
@@ -110,7 +128,9 @@ const Skills = () => {
           viewport={{ once: true }}
         >
           <div className={styles.emojiTitle}>
-            <div className={styles.emoji}>⚡</div>
+            <div className={styles.emoji}>
+              <Zap size={64} />
+            </div>
             <h2 className={styles.title}>Skills & Expertise</h2>
           </div>
           <p className={styles.subtitle}>
@@ -198,10 +218,26 @@ const Skills = () => {
                     <div className={styles.dividerAvatar}>
                     </div>
                     <div className={styles.dividerAvatarFirst}>
-                      <img src="/FB_Avatar.png" alt="Avatar 1" />
+                      <Image 
+                        src="/FB_Avatar 1.png" 
+                        alt="Avatar 1" 
+                        width={700}
+                        height={700}
+                        quality={95}
+                        priority={false}
+                        className={styles.avatarImage}
+                      />
                     </div>
                     <div className={styles.dividerAvatar2}>
-                      <img src="/FB_Avatar 2.png" alt="Avatar 2" />
+                      <Image 
+                        src="/FB_Avatar 2.png" 
+                        alt="Avatar 2" 
+                        width={500}
+                        height={500}
+                        quality={95}
+                        priority={false}
+                        className={styles.avatarImage}
+                      />
                     </div>
                   </div>
                 )}

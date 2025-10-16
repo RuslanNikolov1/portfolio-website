@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { ExternalLink, Github, ChevronLeft, ChevronRight } from 'lucide-react';
+import { ExternalLink, Github, ChevronLeft, ChevronRight, Rocket } from 'lucide-react';
 import { projects } from '@/data';
 import styles from './Projects.module.scss';
 
@@ -59,7 +59,7 @@ const SHOWCASE_ITEMS = projects.slice(0, 9).map((project, index) => ({
     : index === 5 ? "/Preview-Video-8.mp4" 
     : index === 6 ? "/Preview-Video-5.mp4" 
     : index === 7 ? "/Preview-Video-6.mp4" 
-    : "/projects/ambra.png", // Video for all projects except portfolio
+    : "/Thumbnail-9.png", // Use Thumbnail-9 for portfolio website
   thumbUrl: project.imageUrl
 }));
 
@@ -91,7 +91,9 @@ const Projects = () => {
           viewport={{ once: true }}
         >
           <div className={styles.emojiTitle}>
-            <div className={styles.emoji}>🚀</div>
+            <div className={styles.emoji}>
+              <Rocket size={64} />
+            </div>
             <h2 className={styles.title}>Featured Projects</h2>
           </div>
           <p className={styles.subtitle}>Select one of my signature designs</p>
@@ -131,6 +133,8 @@ const Projects = () => {
             </button>
           ))}
         </div>
+
+        <div className={styles.bridge}></div>
 
         <div className={styles.showcase}>
           <button 

@@ -67,26 +67,33 @@ $font-weight-semibold: 600;
 }
 
 .emoji {
-  font-size: 4.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-bottom: 0.5rem;
   line-height: 1;
+  color: $secondary;
+  font-size: 6rem;
 }
 
 .title {
   font-family: $font-rubik;
-  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-size: clamp($font-size-4xl, 5vw, $font-size-6xl);
   font-weight: $font-weight-bold;
   color: #ffffff;
   margin-bottom: 1rem;
+  line-height: $line-height-tight;
+  letter-spacing: $letter-spacing-tight;
 }
 
 .subtitle {
   font-family: $font-satoshi;
-  font-size: 1.2rem;
+  font-size: $font-size-xl;
   color: #ffffff;
   max-width: 600px;
   margin: 0 auto;
-  line-height: 1.6;
+  line-height: $line-height-relaxed;
+  letter-spacing: $letter-spacing-normal;
 }
 
 .content {
@@ -118,18 +125,24 @@ $font-weight-semibold: 600;
 .infoCard::before { display: none; }
 
 .infoTitle {
-  font-size: 1.8rem;
-  font-weight: 700;
+  font-family: $font-rubik;
+  font-size: $font-size-3xl;
+  font-weight: $font-weight-bold;
   color: #ffffff; // white text
   margin-bottom: 1rem;
+  line-height: $line-height-snug;
+  letter-spacing: $letter-spacing-normal;
   position: relative;
   z-index: 1;
 }
 
 .infoDescription {
+  font-family: $font-satoshi;
   color: #ffffff; // white text
-  line-height: 1.6;
+  line-height: $line-height-relaxed;
   margin-bottom: 2rem;
+  font-size: $font-size-base;
+  letter-spacing: $letter-spacing-normal;
   position: relative;
   z-index: 1;
 }
@@ -171,8 +184,11 @@ $font-weight-semibold: 600;
 }
 
 .socialName {
-  font-weight: 600;
-  font-size: 1rem;
+  font-family: $font-satoshi;
+  font-weight: $font-weight-semibold;
+  font-size: $font-size-base;
+  line-height: $line-height-normal;
+  letter-spacing: $letter-spacing-normal;
 }
 
 .emailSection {
@@ -191,16 +207,23 @@ $font-weight-semibold: 600;
 }
 
 .emailLabel {
+  font-family: $font-satoshi;
   color: #ffffff; // white text
-  font-size: 0.9rem;
+  font-size: $font-size-sm;
+  font-weight: $font-weight-medium;
+  line-height: $line-height-normal;
+  letter-spacing: $letter-spacing-normal;
   margin: 0 0 0.25rem 0;
 }
 
 .emailLink {
+  font-family: $font-satoshi;
   color: #ffffff; // white email/links
   text-decoration: none;
-  font-weight: 600;
-  font-size: 1rem;
+  font-weight: $font-weight-semibold;
+  font-size: $font-size-base;
+  line-height: $line-height-normal;
+  letter-spacing: $letter-spacing-normal;
   transition: all 0.3s ease;
 }
 
@@ -292,10 +315,13 @@ $font-weight-semibold: 600;
 
 .label {
   display: block;
+  font-family: $font-satoshi;
   color: #ffffff; // white labels
-  font-weight: 700; // bolder font weight
+  font-weight: $font-weight-semibold;
   margin-bottom: 0.5rem;
-  font-size: 0.9rem;
+  font-size: $font-size-sm;
+  line-height: $line-height-normal;
+  letter-spacing: $letter-spacing-normal;
 }
 
 .input,
@@ -306,9 +332,12 @@ $font-weight-semibold: 600;
   border: 2px solid #ffffff; // white border
   border-radius: 15px;
   color: #ffffff; // white input text
-  font-size: 1rem;
+  font-family: $font-satoshi;
+  font-size: $font-size-base;
+  font-weight: $font-weight-normal;
+  line-height: $line-height-normal;
+  letter-spacing: $letter-spacing-normal;
   transition: all 0.3s ease;
-  font-family: inherit;
 }
 
 .input::selection,
@@ -349,8 +378,11 @@ $font-weight-semibold: 600;
   color: #ffffff; // white text inside the form
   border: none;
   border-radius: 15px;
-  font-size: 1rem;
-  font-weight: 600;
+  font-family: $font-satoshi;
+  font-size: $font-size-base;
+  font-weight: $font-weight-semibold;
+  line-height: $line-height-tight;
+  letter-spacing: $letter-spacing-wide;
   cursor: pointer;
   display: flex;
   align-items: center;
