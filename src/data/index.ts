@@ -108,8 +108,6 @@ export const skills: Skill[] = [
   { name: 'Mapbox', level: 75, years: 1, category: 'frontend', notes: 'Used in the transport project. I use Mapbox for location-based applications because it provides excellent performance, customization options, and real-time data visualization capabilities.' },
   { name: 'Web Audio API', level: 70, years: 1, category: 'frontend', notes: 'Used in various sites. I use Web Audio API to create rich audio experiences in the browser, enabling interactive sound effects and music applications for immersive web experiences.' },
   { name: 'Three.js', level: 75, years: 1, category: 'frontend', notes: 'Used in the Forest Residence Sofia app. I choose Three.js for 3D web experiences because it makes WebGL accessible and allows me to build stunning 3D interfaces impossible with traditional web technologies.' },
-  { name: 'REST API', level: 88, years: 8, category: 'frontend', notes: 'Used in most of the sites. I use REST APIs because they provide a clean, stateless way to exchange data with intuitive, well-documented services that follow HTTP standards.' },
-  { name: 'GraphQL', level: 75, years: 1, category: 'frontend', notes: 'Used once. I use GraphQL when I need to fetch exactly the data I need in a single request, though REST is my go-to for most applications.' },
   { name: 'React Query', level: 85, years: 2, category: 'frontend', notes: 'Revolutionary data fetching and caching library. I use React Query to manage server state, handle loading states, and implement optimistic updates - it eliminates boilerplate code and provides excellent caching strategies.' },
   { name: 'React Table', level: 80, years: 1, category: 'frontend', notes: 'Powerful table library for complex data grids. I used it in the DefiLlama Dashboard to create sortable, filterable tables with custom cell renderers - it provides headless components with complete styling control.' },
   { name: 'Axios', level: 90, years: 5, category: 'frontend', notes: 'My preferred HTTP client for API communication. I use Axios for its clean API, error handling capabilities, interceptors, and ability to work seamlessly with both browser and Node.js environments.' },
@@ -117,6 +115,10 @@ export const skills: Skill[] = [
   { name: 'React Router', level: 85, years: 4, category: 'frontend', notes: 'Essential for single-page application navigation. I use React Router for client-side routing, nested routes, and programmatic navigation - it provides declarative routing that integrates seamlessly with React.' },
   { name: 'Zod', level: 80, years: 2, category: 'frontend', notes: 'TypeScript-first schema validation library. I use Zod for runtime type checking, form validation, and API response validation - it provides excellent TypeScript integration and catches errors at compile and runtime.' },
   { name: 'React Hook Form', level: 85, years: 2, category: 'frontend', notes: 'Performant form library with minimal re-renders. I use it for complex forms with validation, especially in my portfolio contact form - it integrates perfectly with Zod for type-safe validation and provides excellent performance.' },
+  
+  // Backend & APIs
+  { name: 'REST API', level: 88, years: 8, category: 'backend', notes: 'Used in most of the sites. I use REST APIs because they provide a clean, stateless way to exchange data with intuitive, well-documented services that follow HTTP standards.' },
+  { name: 'GraphQL', level: 75, years: 1, category: 'backend', notes: 'Used once. I use GraphQL when I need to fetch exactly the data I need in a single request, though REST is my go-to for most applications.' },
   
   // Development Tools
   { name: 'Git', level: 90, years: 8, category: 'tools', notes: 'Used everytime. Git is essential for version control and collaboration - I use it for tracking changes, branching strategies, and maintaining clean commit history in all my projects.' },
