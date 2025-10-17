@@ -72,10 +72,16 @@ $slate-dark: #1E293B;
 .categories {
   display: grid;
   width: 100%;
-  grid-template-columns: 2fr 2fr minmax(auto, 600px) 2fr 2fr;
-  /* 5 columns: backend, frontend, avatars, soft skills, development tools */
+  grid-template-columns: 2fr 2fr 2fr;
+  /* 3 columns: frontend, middle (backend+avatars+tools), soft skills */
   margin: 2rem 0;
   z-index: 1;
+}
+
+.middleColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
 
@@ -266,7 +272,7 @@ $slate-dark: #1E293B;
   border: 3.5px solid $color-green;
   /* Green accent for backend skills */
   transition: all 0.3s ease;
-  min-height: 600px;
+  min-height: 300px;
   display: flex;
   flex-direction: column;
 }
@@ -307,7 +313,7 @@ $slate-dark: #1E293B;
   border: 3.5px solid $color-yellow;
   /* Yellow accent for development tools */
   transition: all 0.3s ease;
-  min-height: 600px;
+  min-height: 300px;
   display: flex;
   flex-direction: column;
 }
