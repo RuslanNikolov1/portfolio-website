@@ -78,7 +78,7 @@ export default function Home() {
         </section>
       <div style={{ height: 3, background: '#ffffff', width: '100%' }} />
       
-      <motion.section
+        <motion.section
           id="projects"
           aria-label="Projects section"
           initial="hidden"
@@ -88,6 +88,8 @@ export default function Home() {
         >
         <ProjectsLazy />
         </motion.section>
+        
+        <div style={{ height: 3, background: '#ffffff', width: '100%' }} />
         
         <motion.section
           id="skills"

@@ -163,8 +163,8 @@ $font-weight-medium: 500;
 }
 
 .navItem:hover {
-  color: $primary;
-  background: rgba(37, 99, 235, 0.1);
+  color: #20B2AA;
+  background: rgba(32, 178, 170, 0.1);
 }
 
 .mobileToggle {
@@ -181,8 +181,8 @@ $font-weight-medium: 500;
 }
 
 .mobileToggle:hover {
-  background: rgba(37, 99, 235, 0.1);
-  color: $primary;
+  background: rgba(32, 178, 170, 0.1);
+  color: #20B2AA;
 }
 
 // Music Player Styles
@@ -196,7 +196,7 @@ $font-weight-medium: 500;
   box-shadow: 
     0 4px 15px rgba(32, 178, 170, 0.3),
     0 0 20px rgba(0, 206, 209, 0.2);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 2px solid #ffffff;
   backdrop-filter: blur(10px);
   transition: all 0.3s ease;
   position: relative;

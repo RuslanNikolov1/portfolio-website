@@ -4,13 +4,13 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
-import { 
-  Code, Palette, Music, 
-  Atom, 
-  FileCode, 
-  Globe, 
-  FileText, 
-  Layers, 
+import {
+  Code, Palette, Music,
+  Atom,
+  FileCode,
+  Globe,
+  FileText,
+  Layers,
   Palette as PaletteIcon,
   Zap,
   Users,
@@ -40,7 +40,7 @@ import styles from './Skills.module.scss';
 
 const Skills = () => {
   const [isClient, setIsClient] = useState(false);
-  
+
   useEffect(() => {
     setIsClient(true);
   }, []);
@@ -65,11 +65,11 @@ const Skills = () => {
     'Mapbox': Globe,
     'Web Audio API': Volume2,
     'Three.js': Cpu,
-    
+
     // Backend & API Skills
     'REST API': Globe,
     'GraphQL': Code,
-    
+
     // Development Tools
     'Git': GitBranch,
     'CI/CD': Settings,
@@ -83,7 +83,7 @@ const Skills = () => {
     'React Router': Globe,
     'Zod': Shield,
     'React Hook Form': FileText,
-    
+
     // Soft Skills
     'Client-focused problem solving': Target,
     'Leadership and mentoring': Crown,
@@ -96,7 +96,7 @@ const Skills = () => {
     'Empathy & User-Centric Mindset': Heart,
     'Collaboration in Agile Teams': Handshake,
     'Mentorship & Knowledge Sharing': GraduationCap,
-    
+
     // Music Skills
     'Ableton Live': Headphones,
     'Electronic Music': Music2,
@@ -141,9 +141,6 @@ const Skills = () => {
             </div>
             <h2 className={styles.title}>Skills & Expertise</h2>
           </div>
-          <p className={styles.subtitle}>
-            {/* Subtitle removed as requested */}
-          </p>
         </motion.div>
 
         <motion.div
@@ -153,123 +150,172 @@ const Skills = () => {
           whileInView="visible"
           viewport={{ once: true }}
         >
-          {Object.entries(skillCategories).map(([categoryKey, category], index) => {
-            const categorySkills = skills.filter(skill => skill.category === categoryKey);
-            const IconComponent = category.icon;
+          {/* Tech Skills Container */}
+          <motion.div
+            className={`${styles.techSkillsContainer} ${styles.categoryLight}`}
+            variants={itemVariants}
+          >
+            <div className={styles.categoryHeader}>
+              <div
+                className={styles.categoryIcon}
+                style={{ backgroundColor: skillCategories.frontend.color }}
+              >
+                {React.createElement(skillCategories.frontend.icon, { size: 24 })}
+              </div>
+              <h3
+                className={styles.categoryTitle}
+                style={{ color: skillCategories.frontend.color }}
+              >
+                {skillCategories.frontend.title}
+              </h3>
+            </div>
 
-            return (
-              <React.Fragment key={categoryKey}>
+            <div className={styles.skillsGrid}>
+              {skills.filter(skill => skill.category === 'frontend').map((skill, index) => (
                 <motion.div
-                  className={`${styles.category} ${styles.categoryLight}`}
-                  variants={itemVariants}
+                  key={skill.name}
+                  className={styles.skillItem}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  viewport={{ once: true }}
                 >
-                  <div className={styles.categoryHeader}>
-                    <div 
-                      className={styles.categoryIcon}
-                      style={{ backgroundColor: category.color }}
-                    >
-                      <IconComponent size={24} />
-                    </div>
-                    <h3 
-                      className={styles.categoryTitle}
-                      style={{ color: category.color }}
-                    >
-                      {category.title}
-                    </h3>
-                  </div>
-
-                  <div className={styles.skillsGrid}>
-                    {categorySkills.map((skill, index) => (
-                      <motion.div
-                        key={skill.name}
-                        className={styles.skillItem}
-                        whileInView={{ opacity: 1, scale: 1 }}
-                        transition={{ duration: 0.5, delay: index * 0.1 }}
-                        viewport={{ once: true }}
-                      >
-                        <div className={styles.skillHeader}>
-                          <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                            {skillIcons[skill.name as keyof typeof skillIcons] && (
-                              <div style={{ 
-                                display: 'flex', 
-                                alignItems: 'center', 
-                                justifyContent: 'center',
-                                width: '20px',
-                                height: '20px',
-                                color: category.color
-                              }}>
-                                {React.createElement(skillIcons[skill.name as keyof typeof skillIcons], { size: 16 })}
-                              </div>
-                            )}
-                            <span className={styles.skillName}>{skill.name}</span>
-                          </div>
-                          <span className={styles.skillYears}>{skill.years} years</span>
+                  <div className={styles.skillHeader}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                      {skillIcons[skill.name as keyof typeof skillIcons] && (
+                        <div style={{
+                          display: 'flex',
+                          alignItems: 'center',
+                          justifyContent: 'center',
+                          width: '20px',
+                          height: '20px',
+                          color: skillCategories.frontend.color
+                        }}>
+                          {React.createElement(skillIcons[skill.name as keyof typeof skillIcons], { size: 16 })}
                         </div>
-                        {skill.notes && (
-                          <div className={styles.skillNotes}>
-                            {skill.notes}
-                          </div>
-                        )}
-                        
-                      </motion.div>
-                    ))}
+                      )}
+                      <span className={styles.skillName}>{skill.name}</span>
+                    </div>
+                    <span className={styles.skillYears}>{skill.years} years</span>
                   </div>
+                  {skill.notes && (
+                    <div className={styles.skillNotes}>
+                      {skill.notes}
+                    </div>
+                  )}
                 </motion.div>
+              ))}
+            </div>
+          </motion.div>
 
-                {categoryKey === 'frontend' && (
-                  <div className={styles.dividerAvatarContainer}>
-                    <div className={styles.dividerAvatar}>
+          {/* Avatar Container */}
+          <div className={styles.dividerAvatarContainer}>
+            <div className={styles.dividerAvatar}>
+            </div>
+            <div className={styles.dividerAvatarFirst}>
+              <Image
+                src="/FB_Avatar 1.png"
+                alt="Avatar 1"
+                width={450}
+                height={450}
+                quality={95}
+                priority={false}
+                className={styles.avatarImage}
+              />
+            </div>
+            <div className={styles.dividerAvatar2}>
+              <Image
+                src="/FB_Avatar 2.png"
+                alt="Avatar 2"
+                width={400}
+                height={400}
+                quality={95}
+                priority={false}
+                className={styles.avatarImage}
+              />
+            </div>
+            <div className={styles.dividerAvatar3}>
+              <Image
+                src="/FB_Avatar 3.png"
+                alt="Avatar 3"
+                width={380}
+                height={380}
+                quality={95}
+                priority={false}
+                className={styles.avatarImage}
+              />
+            </div>
+            <div className={styles.dividerAvatar4}>
+              <Image
+                src="/FB_Avatar 4.png"
+                alt="Avatar 4"
+                width={320}
+                height={320}
+                quality={95}
+                priority={false}
+                className={styles.avatarImage}
+              />
+            </div>
+          </div>
+
+          {/* Soft Skills Container */}
+          <motion.div
+            className={`${styles.softSkillsContainer} ${styles.categoryLight}`}
+            variants={itemVariants}
+          >
+            <div className={styles.categoryHeader}>
+              <div
+                className={styles.categoryIcon}
+                style={{ backgroundColor: skillCategories.design.color }}
+              >
+                {React.createElement(skillCategories.design.icon, { size: 24 })}
+              </div>
+              <h3
+                className={styles.categoryTitle}
+                style={{ color: skillCategories.design.color }}
+              >
+                {skillCategories.design.title}
+              </h3>
+            </div>
+
+            <div className={styles.skillsGrid}>
+              {skills.filter(skill => skill.category === 'design').map((skill, index) => (
+                <motion.div
+                  key={skill.name}
+                  className={styles.skillItem}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                >
+                  <div className={styles.skillHeader}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                      {skillIcons[skill.name as keyof typeof skillIcons] && (
+                        <div style={{
+                          display: 'flex',
+                          alignItems: 'center',
+                          justifyContent: 'center',
+                          width: '20px',
+                          height: '20px',
+                          color: skillCategories.design.color
+                        }}>
+                          {React.createElement(skillIcons[skill.name as keyof typeof skillIcons], { size: 16 })}
+                        </div>
+                      )}
+                      <span className={styles.skillName}>{skill.name}</span>
                     </div>
-                    <div className={styles.dividerAvatarFirst}>
-                      <Image 
-                        src="/FB_Avatar 1.png" 
-                        alt="Avatar 1" 
-                        width={700}
-                        height={700}
-                        quality={95}
-                        priority={false}
-                        className={styles.avatarImage}
-                      />
-                    </div>
-                    <div className={styles.dividerAvatar2}>
-                      <Image 
-                        src="/FB_Avatar 2.png" 
-                        alt="Avatar 2" 
-                        width={500}
-                        height={500}
-                        quality={95}
-                        priority={false}
-                        className={styles.avatarImage}
-                      />
-                    </div>
-                    <div className={styles.dividerAvatar3}>
-                      <Image 
-                        src="/FB_Avatar 3.png" 
-                        alt="Avatar 3" 
-                        width={400}
-                        height={400}
-                        quality={95}
-                        priority={false}
-                        className={styles.avatarImage}
-                      />
-                    </div>
-                    <div className={styles.dividerAvatar4}>
-                      <Image 
-                        src="/FB_Avatar 4.png" 
-                        alt="Avatar 4" 
-                        width={350}
-                        height={350}
-                        quality={95}
-                        priority={false}
-                        className={styles.avatarImage}
-                      />
-                    </div>
+                    <span className={styles.skillYears}>{skill.years} years</span>
                   </div>
-                )}
-              </React.Fragment>
-            );
-          })}
+                  {skill.notes && (
+                    <div className={styles.skillNotes}>
+                      {skill.notes}
+                    </div>
+                  )}
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
         </motion.div>
+
+
 
         {/* summary removed as requested */}
       </div>
