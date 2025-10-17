@@ -110,7 +110,6 @@ export const skills: Skill[] = [
   { name: 'Three.js', level: 75, years: 1, category: 'frontend', notes: 'Used in the Forest Residence Sofia app. I choose Three.js for 3D web experiences because it makes WebGL accessible and allows me to build stunning 3D interfaces impossible with traditional web technologies.' },
   { name: 'REST API', level: 88, years: 8, category: 'frontend', notes: 'Used in most of the sites. I use REST APIs because they provide a clean, stateless way to exchange data with intuitive, well-documented services that follow HTTP standards.' },
   { name: 'GraphQL', level: 75, years: 1, category: 'frontend', notes: 'Used once. I use GraphQL when I need to fetch exactly the data I need in a single request, though REST is my go-to for most applications.' },
-  { name: 'Git', level: 90, years: 8, category: 'frontend', notes: 'Used everytime. Git is essential for version control and collaboration - I use it for tracking changes, branching strategies, and maintaining clean commit history in all my projects.' },
   { name: 'CI/CD', level: 85, years: 5, category: 'frontend', notes: 'Used Jenkins, Github and Vercel. I use CI/CD to automate my deployment pipeline for faster, more reliable releases, ensuring code quality and reducing manual errors.' },
   { name: 'Webpack', level: 80, years: 5, category: 'frontend', notes: 'Used a lot in the old projects. I use Webpack for complex applications because its module system and plugin ecosystem allow me to optimize builds and handle assets effectively.' },
   { name: 'Vite', level: 85, years: 2, category: 'frontend', notes: 'Used very frequently. I choose Vite for its revolutionary development experience with lightning-fast hot reload, simplicity, and excellent TypeScript support that dramatically improves productivity.' },
@@ -122,6 +121,24 @@ export const skills: Skill[] = [
   { name: 'React Router', level: 85, years: 4, category: 'frontend', notes: 'Essential for single-page application navigation. I use React Router for client-side routing, nested routes, and programmatic navigation - it provides declarative routing that integrates seamlessly with React.' },
   { name: 'Zod', level: 80, years: 2, category: 'frontend', notes: 'TypeScript-first schema validation library. I use Zod for runtime type checking, form validation, and API response validation - it provides excellent TypeScript integration and catches errors at compile and runtime.' },
   { name: 'React Hook Form', level: 85, years: 2, category: 'frontend', notes: 'Performant form library with minimal re-renders. I use it for complex forms with validation, especially in my portfolio contact form - it integrates perfectly with Zod for type-safe validation and provides excellent performance.' },
+  
+  // Backend & API Skills
+  { name: 'Node.js', level: 85, years: 4, category: 'backend', notes: 'Server-side JavaScript runtime. I use Node.js for building scalable backend services, API development, and full-stack applications with JavaScript across the entire stack.' },
+  { name: 'Express.js', level: 80, years: 3, category: 'backend', notes: 'Minimalist web framework for Node.js. I use Express for building RESTful APIs, handling middleware, and creating server-side logic for my full-stack applications.' },
+  { name: 'MongoDB', level: 75, years: 2, category: 'backend', notes: 'NoSQL database for flexible data storage. I use MongoDB for projects requiring dynamic schemas and rapid development, especially when working with JSON-like data structures.' },
+  { name: 'PostgreSQL', level: 70, years: 2, category: 'backend', notes: 'Relational database for structured data. I use PostgreSQL when I need ACID compliance, complex queries, and relational data integrity for enterprise applications.' },
+  { name: 'Firebase', level: 80, years: 3, category: 'backend', notes: 'Google\'s backend-as-a-service platform. I use Firebase for authentication, real-time databases, and hosting, providing rapid development for full-stack applications.' },
+  { name: 'Vercel', level: 90, years: 2, category: 'backend', notes: 'Deployment platform for modern web apps. I use Vercel for seamless deployment, serverless functions, and edge computing, providing excellent performance and developer experience.' },
+  
+  // Development Tools Skills
+  { name: 'Git', level: 90, years: 8, category: 'tools', notes: 'Version control system. I use Git for tracking changes, branching strategies, and collaboration, ensuring clean commit history and efficient team workflows.' },
+  { name: 'GitHub', level: 95, years: 6, category: 'tools', notes: 'Code hosting and collaboration platform. I use GitHub for repository management, pull requests, issue tracking, and showcasing my projects to the developer community.' },
+  { name: 'VS Code', level: 95, years: 5, category: 'tools', notes: 'My primary code editor. I use VS Code for its excellent TypeScript support, extensions ecosystem, integrated terminal, and debugging capabilities that enhance productivity.' },
+  { name: 'Chrome DevTools', level: 90, years: 6, category: 'tools', notes: 'Browser debugging and profiling tools. I use DevTools for performance optimization, debugging JavaScript, analyzing network requests, and testing responsive designs.' },
+  { name: 'Figma', level: 85, years: 3, category: 'tools', notes: 'Design and prototyping tool. I use Figma for UI/UX design, creating wireframes, prototypes, and collaborating with designers on visual specifications.' },
+  { name: 'Postman', level: 80, years: 3, category: 'tools', notes: 'API development and testing platform. I use Postman for testing REST APIs, documenting endpoints, and debugging API integrations during development.' },
+  { name: 'Docker', level: 70, years: 2, category: 'tools', notes: 'Containerization platform. I use Docker for consistent development environments, deployment packaging, and ensuring applications run identically across different systems.' },
+  { name: 'Jest', level: 75, years: 2, category: 'tools', notes: 'JavaScript testing framework. I use Jest for unit testing, integration testing, and ensuring code quality through automated test suites.' },
   
   // Design Skills
   { name: 'Client-focused problem solving', level: 95, years: 6, category: 'design', notes: 'Redesigned Ambra\'s reservation flow to reduce friction. Solved 3D navigation challenges for Forest Residence Sofia to help buyers visualize properties.' },
