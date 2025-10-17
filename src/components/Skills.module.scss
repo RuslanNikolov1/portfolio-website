@@ -72,8 +72,8 @@ $slate-dark: #1E293B;
 .categories {
   display: grid;
   width: 100%;
-  grid-template-columns: 1fr 1fr minmax(auto, 600px) 1fr 1fr;
-  /* 5 columns: backend, frontend, avatars, soft skills, tools */
+  grid-template-columns: 2fr minmax(auto, 600px) 2fr;
+  /* 3 equal columns */
   margin: 2rem 0;
   z-index: 1;
 }
@@ -258,26 +258,13 @@ $slate-dark: #1E293B;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
 }
 
-.backendSkillsContainer {
-  background: rgba(15, 23, 42, 0.85);
-  backdrop-filter: blur(8px);
-  border-radius: 16px;
-  padding: 1.25rem;
-  border: 3.5px solid $color-green;
-  /* Green accent for backend skills */
-  transition: all 0.3s ease;
-  min-height: 600px;
-  display: flex;
-  flex-direction: column;
-}
-
 .techSkillsContainer {
   background: rgba(15, 23, 42, 0.85);
   backdrop-filter: blur(8px);
   border-radius: 16px;
   padding: 1.25rem;
-  border: 3.5px solid $color-blue;
-  /* Blue accent for frontend skills */
+  border: 3.5px solid $color-green;
+  /* Green accent for tech skills */
   transition: all 0.3s ease;
   min-height: 600px;
   display: flex;
@@ -294,19 +281,6 @@ $slate-dark: #1E293B;
   /* Blue accent for soft skills */
   transition: all 0.3s ease;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
-  min-height: 600px;
-  display: flex;
-  flex-direction: column;
-}
-
-.toolsSkillsContainer {
-  background: rgba(15, 23, 42, 0.85);
-  backdrop-filter: blur(8px);
-  border-radius: 16px;
-  padding: 1.25rem;
-  border: 3.5px solid $color-yellow;
-  /* Yellow accent for tools skills */
-  transition: all 0.3s ease;
   min-height: 600px;
   display: flex;
   flex-direction: column;

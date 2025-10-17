@@ -150,51 +150,6 @@ const Skills = () => {
           whileInView="visible"
           viewport={{ once: true }}
         >
-          {/* Backend & API Skills Container */}
-          <motion.div
-            className={`${styles.backendSkillsContainer} ${styles.categoryLight}`}
-            variants={itemVariants}
-          >
-            <div className={styles.categoryHeader}>
-              <div
-                className={styles.categoryIcon}
-                style={{ backgroundColor: '#10B981' }}
-              >
-                ⚙️
-              </div>
-              <h3
-                className={styles.categoryTitle}
-                style={{ color: '#10B981' }}
-              >
-                Backend & APIs
-              </h3>
-            </div>
-
-            <div className={styles.skillsGrid}>
-              {skills.filter(skill => skill.category === 'backend').map((skill, index) => (
-                <motion.div
-                  key={skill.name}
-                  className={styles.skillItem}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                >
-                  <div className={styles.skillHeader}>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                      <span className={styles.skillName}>{skill.name}</span>
-                    </div>
-                    <span className={styles.skillYears}>{skill.years} years</span>
-                  </div>
-                  {skill.notes && (
-                    <div className={styles.skillNotes}>
-                      {skill.notes}
-                    </div>
-                  )}
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
-
           {/* Tech Skills Container */}
           <motion.div
             className={`${styles.techSkillsContainer} ${styles.categoryLight}`}
@@ -345,51 +300,6 @@ const Skills = () => {
                           {React.createElement(skillIcons[skill.name as keyof typeof skillIcons], { size: 16 })}
                         </div>
                       )}
-                      <span className={styles.skillName}>{skill.name}</span>
-                    </div>
-                    <span className={styles.skillYears}>{skill.years} years</span>
-                  </div>
-                  {skill.notes && (
-                    <div className={styles.skillNotes}>
-                      {skill.notes}
-                    </div>
-                  )}
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
-
-          {/* Development Tools Container */}
-          <motion.div
-            className={`${styles.toolsSkillsContainer} ${styles.categoryLight}`}
-            variants={itemVariants}
-          >
-            <div className={styles.categoryHeader}>
-              <div
-                className={styles.categoryIcon}
-                style={{ backgroundColor: '#2563EB' }}
-              >
-                🛠️
-              </div>
-              <h3
-                className={styles.categoryTitle}
-                style={{ color: '#2563EB' }}
-              >
-                Development Tools
-              </h3>
-            </div>
-
-            <div className={styles.skillsGrid}>
-              {skills.filter(skill => skill.category === 'tools').map((skill, index) => (
-                <motion.div
-                  key={skill.name}
-                  className={styles.skillItem}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                >
-                  <div className={styles.skillHeader}>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
                       <span className={styles.skillName}>{skill.name}</span>
                     </div>
                     <span className={styles.skillYears}>{skill.years} years</span>
