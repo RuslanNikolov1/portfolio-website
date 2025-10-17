@@ -26,6 +26,15 @@ const About = () => {
       <div className={styles.container}>
       <div className={styles.overlay}></div>
       
+        <motion.div
+          className={styles.header}
+          initial={{ opacity: 0, y: -30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
+          <h2 className={styles.sectionTitle}>About Me</h2>
+        </motion.div>
 
         <div className={styles.timelineLayout}>
           <motion.div

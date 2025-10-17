@@ -130,18 +130,18 @@ const Hero = () => {
                   <span className={styles.roleBreak}>Electronic Music Producer</span>
                 </p>
               </motion.div>
-
               <motion.div
                 className={`${styles.highlightedContainer} ${styles.descriptionContainer}`}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.5 }}
+                transition={{ duration: 0.8, delay: 0.8 }}
               >
-                <p className={styles.description}>
-                  From EPAM Systems to freelance development, seeking to expand opportunities
-                  and contribute to diverse projects.
-                </p>
+                 <p className={styles.description}>
+                   From EPAM Systems to freelance development, seeking to expand opportunities
+                   and contribute to diverse projects.
+                 </p>
               </motion.div>
+
             </div>
 
             <motion.div
@@ -163,6 +163,8 @@ const Hero = () => {
             {/* Buttons removed as requested */}
           </motion.div>
         </div>
+
+
 
         <motion.div
           className={styles.scrollIndicator}

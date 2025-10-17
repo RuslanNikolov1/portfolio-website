@@ -17,9 +17,15 @@ $font-weight-semibold: 600;
 
 .contact {
   padding: 6rem 0;
-  background: linear-gradient(90deg, #1D4ED8 0%, #7C3AED 100%); // more saturated blue to more saturated purple gradient
   position: relative;
   min-height: 100vh;
+  background: linear-gradient(to bottom,
+    /* Direction: top → bottom */
+    rgba(75, 0, 130, 0.85),
+    /* Dark purple overlay */
+    rgba(155, 89, 182, 0.85)
+    /* Light purple overlay */
+  )
 }
 
 .contact::before {
@@ -70,7 +76,7 @@ $font-weight-semibold: 600;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
   line-height: 1;
   color: $secondary;
   font-size: 6rem;
@@ -109,7 +115,7 @@ $font-weight-semibold: 600;
 }
 
 .infoCard {
-  background: 
+  background:
     linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
     url('/RuslanAvatar.png') center/cover no-repeat;
   border-radius: 20px;
@@ -122,7 +128,9 @@ $font-weight-semibold: 600;
   flex-direction: column;
 }
 
-.infoCard::before { display: none; }
+.infoCard::before {
+  display: none;
+}
 
 .infoTitle {
   font-family: $font-rubik;
@@ -169,7 +177,11 @@ $font-weight-semibold: 600;
   transition: all 0.3s ease;
 }
 
-.socialLink:hover { border-color: #096e6c; color: #096e6c; }
+.socialLink:hover {
+  background: #20B2AA; // turquoise background
+  border-color: #20B2AA;
+  color: #ffffff; // white text
+}
 
 .socialIcon {
   width: 40px;
@@ -181,6 +193,12 @@ $font-weight-semibold: 600;
   align-items: center;
   justify-content: center;
   color: #ffffff; // white icons
+  transition: all 0.3s ease;
+}
+
+.socialLink:hover .socialIcon {
+  background: #ffffff; // white background on hover
+  color: #20B2AA; // turquoise icons on hover
 }
 
 .socialName {
@@ -227,7 +245,10 @@ $font-weight-semibold: 600;
   transition: all 0.3s ease;
 }
 
-.emailLink:hover { color: #096e6c; text-shadow: none; }
+.emailLink:hover {
+  color: #096e6c;
+  text-shadow: none;
+}
 
 .services {
   margin-top: 2rem;
@@ -258,7 +279,7 @@ $font-weight-semibold: 600;
   border-radius: 12px;
   border: 1px solid #0b8e8c;
   transition: all 0.3s ease;
-  
+
   &:hover {
     background: rgba(11, 142, 140, 0.12);
     border-color: #096e6c;
@@ -275,9 +296,17 @@ $font-weight-semibold: 600;
   flex: 1;
 }
 
-.serviceItem strong { color: #ffffff; } // white text
+.serviceItem strong {
+  color: #ffffff;
+}
 
-.serviceItem p { color: #ffffff; } // white text
+// white text
+
+.serviceItem p {
+  color: #ffffff;
+}
+
+// white text
 
 .formSection {
   display: flex;
@@ -443,20 +472,23 @@ $font-weight-semibold: 600;
   box-shadow: 0 0 20px rgba(32, 178, 170, 0.35);
   cursor: pointer;
   transition: all 0.3s ease;
-  
+
   &:hover {
     transform: scale(1.1);
     box-shadow: 0 0 30px rgba(32, 178, 170, 0.6);
   }
 }
 
-.pulse { display: none; }
+.pulse {
+  display: none;
+}
 
 @keyframes pulse {
   0% {
     transform: scale(1);
     opacity: 1;
   }
+
   100% {
     transform: scale(1.4);
     opacity: 0;
@@ -468,13 +500,13 @@ $font-weight-semibold: 600;
     grid-template-columns: 1fr;
     gap: 3rem;
   }
-  
+
   .floatingCta {
     bottom: 1rem;
     left: 1rem;
     gap: 0.5rem;
   }
-  
+
   .scrollArrow {
     width: 35px;
     height: 35px;
@@ -485,74 +517,75 @@ $font-weight-semibold: 600;
   .contact {
     padding: 4rem 0;
   }
-  
+
   .container {
     padding: 0 1rem;
   }
-  
+
   .infoCard,
   .form {
     padding: 2rem;
   }
-  
+
   .socialLinks {
     gap: 0.75rem;
   }
-  
+
   .socialLink {
     padding: 0.75rem;
   }
-  
+
   .socialIcon {
     width: 35px;
     height: 35px;
   }
-  
+
   .workWithMeButton {
     padding: 0.75rem 1.5rem;
     font-size: 0.9rem;
   }
-  
+
   .scrollArrow {
     width: 32px;
     height: 32px;
   }
-  
+
   .services {
     margin-top: 1.5rem;
     padding-top: 1.5rem;
   }
-  
+
   .serviceList {
     gap: 0.8rem;
   }
-  
+
   .serviceItem {
     padding: 0.8rem;
   }
-  
+
   .serviceIcon {
     font-size: 1.2rem;
   }
 }
 
 @media (max-width: 480px) {
+
   .infoCard,
   .form {
     padding: 1.5rem;
   }
-  
+
   .emailCard {
     flex-direction: column;
     text-align: center;
     gap: 0.5rem;
   }
-  
+
   .floatingCta {
     bottom: 0.5rem;
     right: 0.5rem;
   }
-  
+
   .workWithMeButton {
     padding: 0.5rem 1rem;
     font-size: 0.8rem;
