@@ -12,6 +12,8 @@ export interface Project {
 export interface Skill {
   name: string;
   level: number;
+  years: number;
+  notes?: string;
   category: 'frontend' | 'backend' | 'tools' | 'design' | 'music';
   icon?: string;
 }

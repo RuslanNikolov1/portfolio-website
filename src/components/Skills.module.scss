@@ -134,13 +134,24 @@ $slate-dark: #1E293B;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1rem 0;
+  padding: 2rem 0;
+  margin-top: 2rem;
   position: relative;
   width: 100vw; // break out of the centered container
   margin-left: calc(50% - 50vw);
   overflow: visible;
   z-index: 2;
   transform: translateY(-20px); // lift slightly up
+  animation: slideLeftToRight 8s ease-in-out infinite;
+}
+
+@keyframes slideLeftToRight {
+  0%, 100% {
+    transform: translateY(-20px) translateX(-25px);
+  }
+  50% {
+    transform: translateY(-20px) translateX(25px);
+  }
 }
 
 .dividerAvatarFirst img,
@@ -163,18 +174,103 @@ $slate-dark: #1E293B;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1rem 0;
+  padding: 2rem 0;
+  margin-top: 3rem;
   position: relative;
   width: 100vw; // break out of the centered container
   margin-left: calc(50% - 50vw);
   overflow: visible;
   z-index: 2;
   transform: translateY(-20px); // lift slightly up
+  animation: slideUpToDown 6s ease-in-out infinite;
+}
+
+@keyframes slideUpToDown {
+  0%, 100% {
+    transform: translateY(-40px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
 }
 
 .dividerAvatar2 img,
 .dividerAvatar2 .avatarImage {
   width: min(450px, 50vw); // bigger avatar size
+  height: auto;
+  max-width: none; // prevent container constraints
+  border-radius: 50%;
+  border: none;
+  object-fit: cover;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  box-shadow: none;
+}
+
+.dividerAvatar3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 0;
+  margin-top: 3rem;
+  position: relative;
+  width: 100vw; // break out of the centered container
+  margin-left: calc(50% - 50vw);
+  overflow: visible;
+  z-index: 2;
+  transform: translateY(-20px); // lift slightly up
+  animation: diagonalTopLeftToBottomRight 7s ease-in-out infinite;
+}
+
+@keyframes diagonalTopLeftToBottomRight {
+  0%, 100% {
+    transform: translateY(-40px) translateX(-30px);
+  }
+  50% {
+    transform: translateY(0px) translateX(30px);
+  }
+}
+
+.dividerAvatar3 img,
+.dividerAvatar3 .avatarImage {
+  width: min(400px, 45vw); // medium avatar size
+  height: auto;
+  max-width: none; // prevent container constraints
+  border-radius: 50%;
+  border: none;
+  object-fit: cover;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  box-shadow: none;
+}
+
+.dividerAvatar4 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 0;
+  margin-top: 3rem;
+  position: relative;
+  width: 100vw; // break out of the centered container
+  margin-left: calc(50% - 50vw);
+  overflow: visible;
+  z-index: 2;
+  transform: translateY(-20px); // lift slightly up
+  animation: diagonalBottomLeftToTopRight 5s ease-in-out infinite;
+}
+
+@keyframes diagonalBottomLeftToTopRight {
+  0%, 100% {
+    transform: translateY(0px) translateX(-25px);
+  }
+  50% {
+    transform: translateY(-35px) translateX(25px);
+  }
+}
+
+.dividerAvatar4 img,
+.dividerAvatar4 .avatarImage {
+  width: min(350px, 40vw); // smaller avatar size
   height: auto;
   max-width: none; // prevent container constraints
   border-radius: 50%;
@@ -236,7 +332,8 @@ $slate-dark: #1E293B;
   }
 
   .skillName { color: #0f172a; text-shadow: none; }
-  .skillLevel { color: #475569; }
+  .skillYears { color: #475569; }
+  .skillNotes { color: #64748b; }
 
   .progressBar { background: #e2e8f0; box-shadow: none; }
 }
@@ -310,7 +407,7 @@ $slate-dark: #1E293B;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 1rem;
+  margin-bottom: 0.25rem;
 }
 
 .skillName {
@@ -320,30 +417,22 @@ $slate-dark: #1E293B;
   text-shadow: 0 0 5px rgba(245, 247, 250, 0.2);
 }
 
-.skillLevel {
+.skillYears {
   font-size: 0.9rem;
   font-weight: 500;
   color: $color-text-muted;
 }
 
-.progressBar {
-  width: 100%;
-  height: 6px; // slimmer
-  background: $color-surface; // Vibrant surface track
-  border-radius: 4px;
-  overflow: hidden;
-  position: relative;
-  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
+.skillNotes {
+  font-size: 0.85rem;
+  color: $color-text-muted;
+  line-height: 1.4;
+  margin-top: 0.5rem;
 }
 
-.progressFill {
-  height: 100%;
-  border-radius: 4px;
-  position: relative;
-  overflow: hidden;
-  background: linear-gradient(90deg, $color-blue 0%, $color-green 100%); // Vibrant blue-green fill
-  box-shadow: 0 0 10px rgba(93, 183, 255, 0.4);
-}
+// removed progress bar UI
+
+// removed progress fill UI
 
 
 .summary {

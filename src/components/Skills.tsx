@@ -32,7 +32,8 @@ import {
   Search,
   Heart,
   Handshake,
-  GraduationCap
+  GraduationCap,
+  Shield
 } from 'lucide-react';
 import { skills } from '@/data';
 import styles from './Skills.module.scss';
@@ -75,6 +76,13 @@ const Skills = () => {
     'Webpack': Package,
     'Vite': Zap,
     'AI-assisted Development': Sparkles,
+    'React Query': Code,
+    'React Table': ClipboardList,
+    'Axios': Globe,
+    'Recharts': Target,
+    'React Router': Globe,
+    'Zod': Shield,
+    'React Hook Form': FileText,
     
     // Soft Skills
     'Client-focused problem solving': Target,
@@ -195,19 +203,14 @@ const Skills = () => {
                             )}
                             <span className={styles.skillName}>{skill.name}</span>
                           </div>
-                          <span className={styles.skillLevel}>{skill.level}%</span>
+                          <span className={styles.skillYears}>{skill.years} years</span>
                         </div>
+                        {skill.notes && (
+                          <div className={styles.skillNotes}>
+                            {skill.notes}
+                          </div>
+                        )}
                         
-                        <div className={styles.progressBar}>
-                          <motion.div
-                            className={styles.progressFill}
-                            style={{ backgroundColor: category.color }}
-                            initial={{ width: 0 }}
-                            whileInView={{ width: `${skill.level}%` }}
-                            transition={{ duration: 1, delay: index * 0.1, ease: 'easeOut' }}
-                            viewport={{ once: true }}
-                          />
-                        </div>
                       </motion.div>
                     ))}
                   </div>
@@ -234,6 +237,28 @@ const Skills = () => {
                         alt="Avatar 2" 
                         width={500}
                         height={500}
+                        quality={95}
+                        priority={false}
+                        className={styles.avatarImage}
+                      />
+                    </div>
+                    <div className={styles.dividerAvatar3}>
+                      <Image 
+                        src="/FB_Avatar 3.png" 
+                        alt="Avatar 3" 
+                        width={400}
+                        height={400}
+                        quality={95}
+                        priority={false}
+                        className={styles.avatarImage}
+                      />
+                    </div>
+                    <div className={styles.dividerAvatar4}>
+                      <Image 
+                        src="/FB_Avatar 4.png" 
+                        alt="Avatar 4" 
+                        width={350}
+                        height={350}
                         quality={95}
                         priority={false}
                         className={styles.avatarImage}

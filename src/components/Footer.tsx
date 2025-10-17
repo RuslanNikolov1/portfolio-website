@@ -35,7 +35,11 @@ const Footer = () => {
         >
           <div className={styles.brand}>
             <div className={styles.logo}>
-              <span className={styles.logoText}>RN</span>
+              <img
+                src="/RuslanAvatar.png"
+                alt="Ruslan Nikolov"
+                className={styles.profileAvatar}
+              />
             </div>
             <h3 className={styles.brandName}>Ruslan Nikolov</h3>
             <p className={styles.brandDescription}>
