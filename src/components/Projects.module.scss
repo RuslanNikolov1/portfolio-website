@@ -33,20 +33,28 @@ $font-weight-bold: 700;
     url('/Mountain Landscape.avif') center/cover no-repeat,
     linear-gradient(135deg, $background 0%, $background-secondary 100%);
   position: relative;
+  backdrop-filter: blur(5px); // normal 5px blur
+  overflow: hidden;
+  z-index: 0;
+  box-shadow: 0 0 20px rgba(37, 99, 235, 0.3);
 }
-
 
 .projects::before {
   content: '';
   position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100vw; // full-bleed divider spanning viewport
-  height: 8px; // thinner white divider
-  background: #ffffff;
-  z-index: 0;
-  pointer-events: none;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at center,
+      rgba(0, 0, 0, 0.7) 0%,
+      rgba(0, 0, 0, 0.4) 35%,
+      rgba(0, 0, 0, 0.15) 65%,
+      rgba(255, 255, 255, 0.18) 100%
+    ),
+    url('/Mountain Landscape.avif') center/cover no-repeat,
+    linear-gradient(135deg, $background 0%, $background-secondary 100%);
+  filter: blur(3px);
+  transform: scale(1.05); // prevents edges from showing through
+  z-index: -1; // keeps it behind all content
 }
 
 .container {
@@ -105,7 +113,7 @@ $font-weight-bold: 700;
   background: #EAF4FF; // very light blue background
   border: 4.5px solid #18314f;
   border-radius: 20px;
-  padding: 2rem 1rem;
+  padding: 2rem 0;
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
   align-items: center;
 }

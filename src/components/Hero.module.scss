@@ -131,30 +131,50 @@ $font-weight-semibold: 600;
 }
 
 .content {
-  flex: 1;
+  margin-top: 1.75rem;
   
   @media (max-width: 968px) {
     max-width: 100%;
   }
 }
 
-/* Removed icon row */
-
 .title {
   font-family: $font-rubik;
-  font-size: clamp($font-size-5xl, 6vw, $font-size-7xl);
-  font-weight: $font-weight-bold;
-  color: #ffffff;
+  font-size: 5rem;
+  font-weight: 800;
+  color: white;
+  -webkit-text-stroke: 6px transparent;
+  background: linear-gradient(90deg, #1E3A8A, #059669); /* deeper blue → deeper green */
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   margin-bottom: 0;
   line-height: $line-height-tight;
   letter-spacing: $letter-spacing-tight;
   position: relative;
-  -webkit-text-stroke: 1px #1e3a8a; // Thinner dark blue border around letters
-  text-shadow:
-    1px 0 #1e3a8a,
-    -1px 0 #1e3a8a,
-    0 1px #1e3a8a,
-    0 -1px #1e3a8a; // Reduced shadows for thinner dark blue border
+  -webkit-text-fill-color: white;
+
+  /* Create the gradient for the stroke */
+  background: linear-gradient(90deg, #0070f3, #00ff99);
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-color: #020617;
+}
+
+.title::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: transparent;
+  -webkit-text-stroke: 6px;
+  background: linear-gradient(90deg, #0070f3, #00ff99);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: white;
+  mask-composite: exclude;
+  -webkit-mask-composite: xor;
+  background-color: #020617;
 }
 
 .titleRow {
@@ -163,6 +183,17 @@ $font-weight-semibold: 600;
   align-items: center;
   gap: 0.5rem;
   justify-content: center;
+}
+
+.highlightedContainer {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 2px dotted #1e3a8a; // Dark deep blue dotted border
+  border-radius: 16px;
+  padding: 0.5rem 1rem;
+  margin-top: 0.75rem;
+  box-shadow: 0 8px 32px rgba(255, 255, 255, 0.1);
+  display: inline-block;
 }
 
 .subtitle {
@@ -206,12 +237,17 @@ $font-weight-semibold: 600;
   font-family: $font-satoshi;
   font-size: clamp($font-size-lg, 3vw, $font-size-xl);
   color: #1e3a8a;
-  margin-bottom: 2rem;
   line-height: $line-height-relaxed;
   letter-spacing: $letter-spacing-normal;
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 0;
+}
+
+.descriptionContainer {
+  margin-bottom: 1rem;
+  padding: 0 1rem -0.5rem 1rem;
 }
 
 .credentials {
@@ -221,6 +257,7 @@ $font-weight-semibold: 600;
   flex-wrap: nowrap;
   width: 100vw;
   padding: 0 20px;
+  margin-top: -3vh;
 }
 
 // Ensure "Projects Delivered" (second) appears at the far right, while

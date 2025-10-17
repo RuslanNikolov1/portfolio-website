@@ -144,8 +144,8 @@
 }
 
 .profile {
-  position: sticky;
-  top: 2rem;
+  position: relative;
+  align-self: start;
 }
 
 .profileImg {
@@ -685,7 +685,7 @@
 @media (max-width: 968px) {
   .content { grid-template-columns: 1fr; gap: 3rem; }
   .timelineLayout { grid-template-columns: 1fr; }
-  .profile { position: static; }
+  .profile { position: relative; }
   
   .cvSection {
     position: static;

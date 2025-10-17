@@ -22,11 +22,11 @@ const Hero = () => {
       <div className={styles.background} role="img" aria-label="Animated background video">
         {isClient ? (
           !videoError ? (
-            <video 
+            <video
               className={styles.heroVideo}
-              autoPlay 
-              muted 
-              loop 
+              autoPlay
+              muted
+              loop
               playsInline
               preload="metadata"
               onError={() => {
@@ -41,7 +41,7 @@ const Hero = () => {
               Your browser does not support the video tag.
             </video>
           ) : (
-            <div className={styles.heroVideo} style={{ 
+            <div className={styles.heroVideo} style={{
               background: `
                 linear-gradient(135deg, #0F172A 0%, #1E293B 50%, #0F172A 100%),
                 radial-gradient(ellipse at 20% 30%, rgba(37, 99, 235, 0.15) 0%, transparent 60%),
@@ -66,7 +66,7 @@ const Hero = () => {
             </div>
           )
         ) : (
-          <div className={styles.heroVideo} style={{ 
+          <div className={styles.heroVideo} style={{
             background: `
               linear-gradient(135deg, #0F172A 0%, #1E293B 50%, #0F172A 100%),
               radial-gradient(ellipse at 20% 30%, rgba(37, 99, 235, 0.15) 0%, transparent 60%),
@@ -90,12 +90,12 @@ const Hero = () => {
             {videoError ? 'Video unavailable' : 'Loading video...'}
           </div>
         )}
-        
-        
+
+
         <div className={styles.gradient} />
         <div className={styles.noise} />
       </div>
-      
+
       <div className={styles.container}>
         <div className={styles.heroLayout}>
           <motion.div
@@ -105,55 +105,63 @@ const Hero = () => {
             transition={{ duration: 0.8, ease: 'easeOut' }}
           >
 
-          <div className={styles.titleRow}>
-            <motion.h1
-              className={styles.title}
+            <div className={styles.titleRow}>
+              <div className={styles.titleContainer}>
+                <motion.h1
+                  className={styles.title}
+                  data-text="ruslan nikolov"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: 0.3 }}
+                >
+                  ruslan nikolov
+                </motion.h1>
+
+              </div>
+
+              <motion.div
+                className={styles.highlightedContainer}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.35 }}
+              >
+                <p className={`${styles.subtitle} ${styles.inlineSubtitle}`}>
+                  Senior Frontend Developer • UI/UX Designer
+                  <span className={styles.roleBreak}>Electronic Music Producer</span>
+                </p>
+              </motion.div>
+
+              <motion.div
+                className={`${styles.highlightedContainer} ${styles.descriptionContainer}`}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.5 }}
+              >
+                <p className={styles.description}>
+                  From EPAM Systems to freelance development, seeking to expand opportunities
+                  and contribute to diverse projects.
+                </p>
+              </motion.div>
+            </div>
+
+            <motion.div
+              className={styles.credentials}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.3 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
             >
-              Ruslan Nikolov
-            </motion.h1>
+              <div className={styles.credential}>
+                <span className={styles.credentialNumber}>7+</span>
+                <span className={styles.credentialLabel}>Years Experience</span>
+              </div>
+              <div className={styles.credential}>
+                <span className={styles.credentialNumber}>18</span>
+                <span className={styles.credentialLabel}>Projects Delivered</span>
+              </div>
+            </motion.div>
 
-            <motion.p
-              className={`${styles.subtitle} ${styles.inlineSubtitle}`}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.35 }}
-            >
-              Senior Frontend Developer • UI/UX Designer
-              <span className={styles.roleBreak}>Electronic Music Producer</span>
-            </motion.p>
-          </div>
-
-          <motion.p
-            className={styles.description}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.5 }}
-          >
-            From EPAM Systems to freelance development, now seeking to expand my project opportunities 
-            and contribute to more diverse and complex projects.
-          </motion.p>
-
-          <motion.div
-            className={styles.credentials}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-          >
-            <div className={styles.credential}>
-              <span className={styles.credentialNumber}>7+</span>
-              <span className={styles.credentialLabel}>Years Experience</span>
-            </div>
-            <div className={styles.credential}>
-              <span className={styles.credentialNumber}>18</span>
-              <span className={styles.credentialLabel}>Projects Delivered</span>
-            </div>
+            {/* Buttons removed as requested */}
           </motion.div>
-
-          {/* Buttons removed as requested */}
-        </motion.div>
         </div>
 
         <motion.div

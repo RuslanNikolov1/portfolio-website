@@ -72,8 +72,7 @@ $slate-dark: #1E293B;
 .categories {
   display: grid;
   width: 100%;
-  grid-template-columns: 2fr 2fr 2fr;
-  /* 3 columns: frontend, middle (backend+avatars+tools), soft skills */
+  grid-template-columns: 2.5fr 600px 2.5fr; /* 3 columns: frontend, middle (backend+avatars+tools), soft skills */
   margin: 2rem 0;
   z-index: 1;
 }
@@ -317,6 +316,7 @@ $slate-dark: #1E293B;
   min-height: 300px;
   display: flex;
   flex-direction: column;
+  margin-top: 300px; /* Push down to align with tech and soft skills */
 }
 
 // Light theme variant for specific skills cards
