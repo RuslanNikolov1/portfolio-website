@@ -313,6 +313,51 @@ const Skills = () => {
               ))}
             </div>
           </motion.div>
+
+          {/* Development Tools Container */}
+          <motion.div
+            className={`${styles.toolsSkillsContainer} ${styles.categoryLight}`}
+            variants={itemVariants}
+          >
+            <div className={styles.categoryHeader}>
+              <div
+                className={styles.categoryIcon}
+                style={{ backgroundColor: '#FACC15' }}
+              >
+                🛠️
+              </div>
+              <h3
+                className={styles.categoryTitle}
+                style={{ color: '#FACC15' }}
+              >
+                Development Tools
+              </h3>
+            </div>
+
+            <div className={styles.skillsGrid}>
+              {skills.filter(skill => skill.category === 'tools').map((skill, index) => (
+                <motion.div
+                  key={skill.name}
+                  className={styles.skillItem}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                >
+                  <div className={styles.skillHeader}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                      <span className={styles.skillName}>{skill.name}</span>
+                    </div>
+                    <span className={styles.skillYears}>{skill.years} years</span>
+                  </div>
+                  {skill.notes && (
+                    <div className={styles.skillNotes}>
+                      {skill.notes}
+                    </div>
+                  )}
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
         </motion.div>
 
 
