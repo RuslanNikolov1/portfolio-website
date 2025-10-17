@@ -33,7 +33,13 @@ import {
   Heart,
   Handshake,
   GraduationCap,
-  Shield
+  Shield,
+  Network,
+  Database,
+  Terminal,
+  Workflow,
+  Wrench,
+  Bot
 } from 'lucide-react';
 import { skills } from '@/data';
 import styles from './Skills.module.scss';
@@ -67,15 +73,15 @@ const Skills = () => {
     'Three.js': Cpu,
 
     // Backend & API Skills
-    'REST API': Globe,
-    'GraphQL': Code,
+    'REST API': Network,
+    'GraphQL': Database,
 
     // Development Tools
     'Git': GitBranch,
-    'CI/CD': Settings,
+    'CI/CD': Workflow,
     'Webpack': Package,
     'Vite': Zap,
-    'AI-assisted Development': Sparkles,
+    'Cursor': Bot,
     'React Query': Code,
     'React Table': ClipboardList,
     'Axios': Globe,
@@ -217,13 +223,13 @@ const Skills = () => {
               <div className={styles.categoryHeader}>
                 <div
                   className={styles.categoryIcon}
-                  style={{ backgroundColor: '#10B981' }}
+                  style={{ backgroundColor: '#8B5CF6' }}
                 >
                   ⚙️
                 </div>
                 <h3
                   className={styles.categoryTitle}
-                  style={{ color: '#10B981' }}
+                  style={{ color: '#8B5CF6' }}
                 >
                   Backend & APIs
                 </h3>
@@ -240,6 +246,18 @@ const Skills = () => {
                   >
                     <div className={styles.skillHeader}>
                       <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                        {skillIcons[skill.name as keyof typeof skillIcons] && (
+                          <div style={{
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            width: '20px',
+                            height: '20px',
+                            color: '#8B5CF6'
+                          }}>
+                            {React.createElement(skillIcons[skill.name as keyof typeof skillIcons], { size: 16 })}
+                          </div>
+                        )}
                         <span className={styles.skillName}>{skill.name}</span>
                       </div>
                       <span className={styles.skillYears}>{skill.years} years</span>
@@ -335,6 +353,18 @@ const Skills = () => {
                   >
                     <div className={styles.skillHeader}>
                       <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                        {skillIcons[skill.name as keyof typeof skillIcons] && (
+                          <div style={{
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            width: '20px',
+                            height: '20px',
+                            color: '#FACC15'
+                          }}>
+                            {React.createElement(skillIcons[skill.name as keyof typeof skillIcons], { size: 16 })}
+                          </div>
+                        )}
                         <span className={styles.skillName}>{skill.name}</span>
                       </div>
                       <span className={styles.skillYears}>{skill.years} years</span>
