@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import Navigation from '@/components/Navigation';
 import Hero from '@/components/Hero';
 import dynamic from 'next/dynamic';
+import styles from './page.module.scss';
 
 // Lazy-loaded sections with skeleton loading states
 const ProjectsLazy = dynamic(() => import('@/components/Projects'), {
@@ -68,7 +69,7 @@ export default function Home() {
     <>
       <Navigation />
       <main id="main-content" role="main">
-        <section id="hero" aria-label="Hero section">
+        <section id="hero" aria-label="Hero section" className={styles.heroSection}>
           <Hero />
         </section>
       <div style={{ height: 3, background: '#ffffff', width: '100%' }} />

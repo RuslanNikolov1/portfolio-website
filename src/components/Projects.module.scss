@@ -146,6 +146,12 @@ $font-weight-bold: 700;
     transform: translateX(-25px); // Move left arrow a bit more inside
   }
 
+  @media (max-width: 1025px) {
+    &:last-child {
+      transform: translateX(25px); // Move left arrow a bit more inside
+    }
+  }
+
   @media (max-width: 769px) {
     &:last-child {
       transform: translateX(15px); // Move left arrow a bit more inside
@@ -155,6 +161,7 @@ $font-weight-bold: 700;
       transform: translateX(-15px); // Move left arrow a bit more inside
     }
   }
+  
 
   @media (max-width: 426px) {
     &:first-child {
@@ -476,10 +483,6 @@ $font-weight-bold: 700;
 
   .container {
     padding: 0 1.5rem;
-  }
-
-  .showcase {
-    gap: 1.5rem;
   }
 
   .preview {

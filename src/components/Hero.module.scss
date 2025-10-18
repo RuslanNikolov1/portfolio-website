@@ -127,10 +127,6 @@ $font-weight-semibold: 600;
 }
 
 .heroLayout {
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  min-height: 80vh;
   padding-top: 85px;
 }
 
@@ -201,7 +197,7 @@ $font-weight-semibold: 600;
   display: inline-block;
 }
 
-@media (max-width: 426px) {
+@media (max-width: 426px) { 
   .highlightedContainer {
     background: rgba(255, 255, 255, 0.825);
     backdrop-filter: blur(0px);
@@ -466,7 +462,6 @@ $font-weight-semibold: 600;
 
   .heroLayout {
     gap: 1.5rem;
-    min-height: 70vh;
   }
 
   .avatarContainer {
@@ -522,5 +517,11 @@ $font-weight-semibold: 600;
 @media (max-width: 1025px) and (min-width: 769px) {
   .credentials {
     margin-top: 3vh;
+  }
+}
+
+@media (max-width: 1025px) and (min-width: 425px) {
+  .heroLayout {
+    padding-top: 12vw;
   }
 }
