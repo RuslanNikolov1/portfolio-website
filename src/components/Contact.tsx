@@ -27,8 +27,6 @@ const Contact = () => {
 
       // Show arrow once at contact section or further down
       setShowUpArrow(scrollTop + 50 >= contactTop);
-      // Also track near-bottom state if needed later
-      setIsAtBottom(scrollTop + windowHeight >= documentHeight - 100);
     };
 
     window.addEventListener('scroll', handleScroll);
