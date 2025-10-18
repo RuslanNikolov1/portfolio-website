@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
 import { Menu, X, Play, Pause, Volume2, Home, Briefcase, Zap, User, Mail } from 'lucide-react';
 import Image from 'next/image';
+import Link from 'next/link';
 import styles from './Navigation.module.scss';
 
 const Navigation = () => {

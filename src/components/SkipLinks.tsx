@@ -1,9 +1,11 @@
 'use client';
 
+import Link from 'next/link';
+
 const SkipLinks = () => {
   return (
     <>
-      <a 
+      <Link 
         href="#main-content" 
         className="skip-link"
         style={{
@@ -25,8 +27,8 @@ const SkipLinks = () => {
         }}
       >
         Skip to main content
-      </a>
-      <a 
+      </Link>
+      <Link 
         href="#navigation" 
         className="skip-link"
         style={{
@@ -49,7 +51,7 @@ const SkipLinks = () => {
         }}
       >
         Skip to navigation
-      </a>
+      </Link>
     </>
   );
 };

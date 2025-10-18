@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import { useRef } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import styles from './About.module.scss';
 
 const About = () => {
@@ -75,7 +76,7 @@ const About = () => {
               <h3 className={styles.sectionTitle}>Music</h3>
             </div>
             <p className={styles.paragraph}>
-              Outside of work, I am passionate about <strong>music</strong>. I produce electronic music across different genres—techno, breakbeat, house, dub, drum and bass, psy‑trance, trip‑hop, ambient, but also jazz, funk, and bossa nova. I try to mix interesting melodies, beats and emotions, and try to keep it interesting at all times. <a href="https://soundcloud.com/ruslan-nikolov-323139497" target="_blank" rel="noopener noreferrer">SoundCloud</a>. I publish my own tracks independently, and the feedback that I receive is very positive. Favourite musicians: Thievery Corporation, Deadmau5, Flume, Calibre. Worth checking out. <strong>How this helps my development:</strong> Music production has taught me rhythm, timing, and flow—essential for creating smooth animations and intuitive user interactions. My experience with audio software interfaces directly translates to designing better UX patterns and understanding user feedback systems.
+              Outside of work, I am passionate about <strong>music</strong>. I produce electronic music across different genres—techno, breakbeat, house, dub, drum and bass, psy‑trance, trip‑hop, ambient, but also jazz, funk, and bossa nova. I try to mix interesting melodies, beats and emotions, and try to keep it interesting at all times. <Link href="https://soundcloud.com/ruslan-nikolov-323139497" target="_blank" rel="noopener noreferrer">SoundCloud</Link>. I publish my own tracks independently, and the feedback that I receive is very positive. Favourite musicians: Thievery Corporation, Deadmau5, Flume, Calibre. Worth checking out. <strong>How this helps my development:</strong> Music production has taught me rhythm, timing, and flow—essential for creating smooth animations and intuitive user interactions. My experience with audio software interfaces directly translates to designing better UX patterns and understanding user feedback systems.
             </p>
             <div className={styles.musicImagesRow}>
               <div className={styles.imagesContainer}>

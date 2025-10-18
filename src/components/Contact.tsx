@@ -1,9 +1,10 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback, memo } from 'react';
 import { useForm } from 'react-hook-form';
 import { Mail, Github, Linkedin, Music, Send, MessageCircle, ArrowUp } from 'lucide-react';
+import Link from 'next/link';
 import { socialLinks } from '@/data';
 import styles from './Contact.module.scss';
 
@@ -14,7 +15,7 @@ interface ContactFormData {
   message: string;
 }
 
-const Contact = () => {
+const Contact = memo(() => {
   const { register, handleSubmit, formState: { errors }, reset } = useForm<ContactFormData>();
   const [showUpArrow, setShowUpArrow] = useState(false);
 
@@ -121,12 +122,12 @@ const Contact = () => {
                   <Mail size={24} />
                   <div>
                     <p className={styles.emailLabel}>Email me directly</p>
-                    <a 
+                    <Link 
                       href="mailto:ruslannikolov1@gmail.com"
                       className={styles.emailLink}
                     >
                       ruslannikolov1@gmail.com
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>

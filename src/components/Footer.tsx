@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import { Github, Linkedin, Mail, Music } from 'lucide-react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { socialLinks } from '@/data';
 import styles from './Footer.module.scss';
 
@@ -54,10 +55,10 @@ const Footer = () => {
             <div className={styles.linkGroup}>
               <h4 className={styles.linkTitle}>Navigation</h4>
               <div className={styles.linkList}>
-                <a href="#projects" className={styles.link}>Projects</a>
-                <a href="#skills" className={styles.link}>Skills</a>
-                <a href="#about" className={styles.link}>About</a>
-                <a href="#contact" className={styles.link}>Contact</a>
+                <Link href="#projects" className={styles.link}>Projects</Link>
+                <Link href="#skills" className={styles.link}>Skills</Link>
+                <Link href="#about" className={styles.link}>About</Link>
+                <Link href="#contact" className={styles.link}>Contact</Link>
               </div>
             </div>
 

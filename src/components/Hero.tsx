@@ -2,15 +2,23 @@
 
 import { motion } from 'framer-motion';
 import { ChevronDown } from 'lucide-react';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback, memo } from 'react';
 import styles from './Hero.module.scss';
 
-const Hero = () => {
+const Hero = memo(() => {
   const [isClient, setIsClient] = useState(false);
   const [videoError, setVideoError] = useState(false);
 
   useEffect(() => {
     setIsClient(true);
+  }, []);
+
+  const handleVideoError = useCallback(() => {
+    setVideoError(true);
+  }, []);
+
+  const handleVideoCanPlay = useCallback(() => {
+    setVideoError(false);
   }, []);
 
 
@@ -26,12 +34,8 @@ const Hero = () => {
               loop
               playsInline
               preload="metadata"
-              onError={() => {
-                setVideoError(true);
-              }}
-              onCanPlay={() => {
-                setVideoError(false);
-              }}
+              onError={handleVideoError}
+              onCanPlay={handleVideoCanPlay}
               aria-label="Background animation video"
             >
               <source src="/TensorPix - Hero Animated.mp4" type="video/mp4" />
@@ -180,5 +184,9 @@ const Hero = () => {
     </section>
   );
 };
+
+});
+
+Hero.displayName = 'Hero';
 
 export default Hero;

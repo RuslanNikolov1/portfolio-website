@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback, useMemo, memo } from 'react';
 import { motion } from 'framer-motion';
 import { ExternalLink, Github, ChevronLeft, ChevronRight, Rocket } from 'lucide-react';
 import Image from 'next/image';
@@ -64,22 +64,23 @@ const SHOWCASE_ITEMS = projects.slice(0, 9).map((project, index) => ({
   thumbUrl: project.imageUrl
 }));
 
-const Projects = () => {
+const Projects = memo(() => {
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [isClient, setIsClient] = useState(false);
-  const selected = SHOWCASE_ITEMS[selectedIndex];
+
+  const selected = useMemo(() => SHOWCASE_ITEMS[selectedIndex], [selectedIndex]);
 
   useEffect(() => {
     setIsClient(true);
   }, []);
 
-  const goToPrevious = () => {
+  const goToPrevious = useCallback(() => {
     setSelectedIndex((prev) => (prev === 0 ? SHOWCASE_ITEMS.length - 1 : prev - 1));
-  };
+  }, []);
 
-  const goToNext = () => {
+  const goToNext = useCallback(() => {
     setSelectedIndex((prev) => (prev === SHOWCASE_ITEMS.length - 1 ? 0 : prev + 1));
-  };
+  }, []);
 
   return (
     <section id="projects" className={styles.projects}>
@@ -239,5 +240,9 @@ const Projects = () => {
     </section>
   );
 };
+
+});
+
+Projects.displayName = 'Projects';
 
 export default Projects;
