@@ -5,46 +5,36 @@ import Navigation from '@/components/Navigation';
 import Hero from '@/components/Hero';
 import dynamic from 'next/dynamic';
 import styles from './page.module.scss';
+import ProjectsSkeleton from '@/components/ProjectsSkeleton';
+import SkillsSkeleton from '@/components/SkillsSkeleton';
+import AboutSkeleton from '@/components/AboutSkeleton';
+import ContactSkeleton from '@/components/ContactSkeleton';
+import FeedbacksSkeleton from '@/components/FeedbacksSkeleton';
 
 // Lazy-loaded sections with skeleton loading states
 const ProjectsLazy = dynamic(() => import('@/components/Projects'), {
   ssr: false,
-  loading: () => {
-    const ProjectsSkeleton = require('@/components/ProjectsSkeleton').default;
-    return <ProjectsSkeleton />;
-  },
+  loading: () => <ProjectsSkeleton />,
 });
 
 const SkillsLazy = dynamic(() => import('@/components/Skills'), {
   ssr: false,
-  loading: () => {
-    const SkillsSkeleton = require('@/components/SkillsSkeleton').default;
-    return <SkillsSkeleton />;
-  },
+  loading: () => <SkillsSkeleton />,
 });
 
 const AboutLazy = dynamic(() => import('@/components/About'), {
   ssr: false,
-  loading: () => {
-    const AboutSkeleton = require('@/components/AboutSkeleton').default;
-    return <AboutSkeleton />;
-  },
+  loading: () => <AboutSkeleton />,
 });
 
 const FeedbacksLazy = dynamic(() => import('@/components/Feedbacks'), {
   ssr: false,
-  loading: () => {
-    const FeedbacksSkeleton = require('@/components/FeedbacksSkeleton').default;
-    return <FeedbacksSkeleton />;
-  },
+  loading: () => <FeedbacksSkeleton />,
 });
 
 const ContactLazy = dynamic(() => import('@/components/Contact'), {
   ssr: false,
-  loading: () => {
-    const ContactSkeleton = require('@/components/ContactSkeleton').default;
-    return <ContactSkeleton />;
-  },
+  loading: () => <ContactSkeleton />,
 });
 
 const FooterLazy = dynamic(() => import('@/components/Footer'), {

@@ -68,30 +68,6 @@ const AnimatedAvatar = ({
     }
   };
 
-  const dragonVariants = {
-    initial: {
-      scale: 1,
-      rotate: 0
-    },
-    animate: {
-      scale: [1, 1.1, 1],
-      rotate: [0, 5, -5, 0],
-      transition: {
-        duration: 4,
-        repeat: Infinity,
-        ease: [0.25, 0.46, 0.45, 0.94] as const
-      }
-    },
-    hover: {
-      scale: [1, 1.2, 1],
-      rotate: [0, 10, -10, 0],
-      transition: {
-        duration: 2.5,
-        repeat: Infinity,
-        ease: [0.25, 0.46, 0.45, 0.94] as const
-      }
-    }
-  };
 
   return (
     <div

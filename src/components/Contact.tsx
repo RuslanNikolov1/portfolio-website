@@ -16,7 +16,6 @@ interface ContactFormData {
 
 const Contact = () => {
   const { register, handleSubmit, formState: { errors }, reset } = useForm<ContactFormData>();
-  const [isAtBottom, setIsAtBottom] = useState(false);
   const [showUpArrow, setShowUpArrow] = useState(false);
 
   useEffect(() => {

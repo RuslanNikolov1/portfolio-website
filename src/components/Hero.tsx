@@ -13,9 +13,6 @@ const Hero = () => {
     setIsClient(true);
   }, []);
 
-  const scrollToProjects = () => {
-    document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
-  };
 
   return (
     <section className={styles.hero} aria-label="Hero section">

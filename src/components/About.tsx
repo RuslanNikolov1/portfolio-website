@@ -1,7 +1,6 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Download } from 'lucide-react';
 import { useRef } from 'react';
 import styles from './About.module.scss';
 

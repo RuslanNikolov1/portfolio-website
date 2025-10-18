@@ -3,7 +3,6 @@
 import React, { useRef } from 'react';
 import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
-import Image from 'next/image';
 import {
   Code, Palette, Music,
   Atom,
@@ -13,7 +12,6 @@ import {
   Layers,
   Palette as PaletteIcon,
   Zap,
-  Users,
   Target,
   Lightbulb,
   Headphones,
@@ -22,7 +20,6 @@ import {
   Mic,
   Sparkles,
   GitBranch,
-  Settings,
   Package,
   Cpu,
   Crown,
@@ -36,21 +33,15 @@ import {
   Shield,
   Network,
   Database,
-  Terminal,
   Workflow,
-  Wrench,
   Bot
 } from 'lucide-react';
 import { skills } from '@/data';
 import styles from './Skills.module.scss';
 
 const Skills = () => {
-  const [isClient, setIsClient] = useState(false);
   const developmentToolsRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    setIsClient(true);
-  }, []);
 
   const skillCategories = {
     frontend: { icon: Code, title: 'Technical Skills', color: '#10B981' },
