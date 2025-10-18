@@ -1,5 +1,3 @@
-'use client';
-
 import Skeleton from './LoadingSkeleton';
 import styles from './LoadingSkeleton.module.scss';
 

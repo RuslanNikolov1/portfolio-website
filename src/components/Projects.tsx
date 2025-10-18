@@ -239,8 +239,6 @@ const Projects = memo(() => {
       </div>
     </section>
   );
-};
-
 });
 
 Projects.displayName = 'Projects';

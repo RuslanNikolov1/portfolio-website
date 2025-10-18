@@ -34,13 +34,13 @@ const Contact = memo(() => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const onSubmit = async (data: ContactFormData) => {
+  const onSubmit = useCallback(async (data: ContactFormData) => {
     // Here you would typically send the data to your backend or email service
     console.log('Form submitted:', data);
     // For now, we'll just show a success message
     alert('Thank you for your message! I&apos;ll get back to you soon.');
     reset();
-  };
+  }, [reset]);
 
   const getIcon = (iconName: string) => {
     switch (iconName) {
@@ -260,6 +260,8 @@ const Contact = memo(() => {
       <div className={styles.bottomDivider}></div>
     </section>
   );
-};
+});
+
+Contact.displayName = 'Contact';
 
 export default Contact;

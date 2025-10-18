@@ -1,5 +1,3 @@
-'use client';
-
 import { motion } from 'framer-motion';
 import styles from './Feedbacks.module.scss';
 import { MessageCircle } from 'lucide-react';

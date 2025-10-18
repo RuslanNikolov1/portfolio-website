@@ -183,8 +183,6 @@ const Hero = memo(() => {
       </div>
     </section>
   );
-};
-
 });
 
 Hero.displayName = 'Hero';
