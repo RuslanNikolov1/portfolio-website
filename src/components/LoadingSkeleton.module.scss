@@ -1,0 +1,615 @@
+@import "../styles/variables";
+
+.skeleton {
+  background: linear-gradient(90deg, 
+    rgba(255, 255, 255, 0.1) 0%, 
+    rgba(255, 255, 255, 0.2) 50%, 
+    rgba(255, 255, 255, 0.1) 100%
+  );
+  background-size: 200% 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.skeleton::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    rgba(255, 255, 255, 0.3) 50%, 
+    transparent 100%
+  );
+  background-size: 200% 100%;
+}
+
+.pulse {
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+.wave {
+  animation: wave 2s ease-in-out infinite;
+}
+
+.shimmer {
+  animation: shimmer 1.8s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes wave {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    background-position: 200% 0;
+    opacity: 0.6;
+  }
+}
+
+// Hero skeleton specific styles
+.heroSkeleton {
+  min-height: 100vh;
+  background: linear-gradient(135deg, $background 0%, $background-secondary 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.heroContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  max-width: 800px;
+  width: 100%;
+  padding: 2rem;
+}
+
+.heroTitle {
+  width: 300px;
+  height: 60px;
+  border-radius: 8px;
+}
+
+.heroSubtitle {
+  width: 400px;
+  height: 30px;
+  border-radius: 6px;
+}
+
+.heroDescription {
+  width: 500px;
+  height: 20px;
+  border-radius: 4px;
+}
+
+.heroCredentials {
+  display: flex;
+  gap: 3rem;
+  margin-top: 2rem;
+}
+
+.credentialSkeleton {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.credentialNumber {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.credentialLabel {
+  width: 80px;
+  height: 16px;
+  border-radius: 4px;
+}
+
+// About skeleton specific styles
+.aboutSkeleton {
+  padding: 6rem 0;
+  background: $background;
+  min-height: 100vh;
+}
+
+.aboutContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.aboutHeader {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.aboutTitle {
+  width: 200px;
+  height: 50px;
+  border-radius: 8px;
+  margin: 0 auto 1rem;
+}
+
+.aboutLayout {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.profileSkeleton {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.profileImage {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+}
+
+.timelineSkeleton {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.timelineItem {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.timelineMarker {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin-top: 0.5rem;
+}
+
+.timelineContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.timelineYear {
+  width: 120px;
+  height: 20px;
+  border-radius: 4px;
+}
+
+.timelineTitle {
+  width: 250px;
+  height: 24px;
+  border-radius: 4px;
+}
+
+.timelineText {
+  width: 100%;
+  height: 16px;
+  border-radius: 4px;
+  margin-bottom: 0.25rem;
+}
+
+.timelineText:nth-child(3) {
+  width: 80%;
+}
+
+.timelineText:nth-child(4) {
+  width: 90%;
+}
+
+// Skills skeleton specific styles
+.skillsSkeleton {
+  padding: 6rem 0;
+  background: $background;
+  min-height: 100vh;
+}
+
+.skillsContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.skillsHeader {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.skillsTitle {
+  width: 200px;
+  height: 50px;
+  border-radius: 8px;
+  margin: 0 auto 1rem;
+}
+
+.skillsSubtitle {
+  width: 300px;
+  height: 24px;
+  border-radius: 6px;
+  margin: 0 auto;
+}
+
+.skillsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.skillCategory {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.categoryTitle {
+  width: 120px;
+  height: 30px;
+  border-radius: 6px;
+}
+
+.skillItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem;
+  background: $card-bg;
+  border-radius: 8px;
+  border: 1px solid $border;
+}
+
+.skillName {
+  width: 100px;
+  height: 20px;
+  border-radius: 4px;
+}
+
+.skillYears {
+  width: 60px;
+  height: 16px;
+  border-radius: 4px;
+}
+
+.skillNotes {
+  width: 100%;
+  height: 14px;
+  border-radius: 4px;
+}
+
+.skillNotes:nth-child(3) {
+  width: 80%;
+}
+
+// Projects skeleton specific styles
+.projectsSkeleton {
+  padding: 6rem 0;
+  background: $background;
+  min-height: 100vh;
+}
+
+.projectsContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.projectsHeader {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.projectsTitle {
+  width: 250px;
+  height: 50px;
+  border-radius: 8px;
+  margin: 0 auto 1rem;
+}
+
+.projectsSubtitle {
+  width: 300px;
+  height: 24px;
+  border-radius: 6px;
+  margin: 0 auto;
+}
+
+.thumbnailsGrid {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  overflow-x: auto;
+  padding: 1rem 0;
+}
+
+.thumbnailSkeleton {
+  width: 120px;
+  height: 80px;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.showcaseSkeleton {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.leftPanel {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.projectTitle {
+  width: 200px;
+  height: 32px;
+  border-radius: 6px;
+}
+
+.projectDescription {
+  width: 100%;
+  height: 20px;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+}
+
+.projectDescription:nth-child(2) {
+  width: 80%;
+}
+
+.technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+.techBadge {
+  width: 60px;
+  height: 24px;
+  border-radius: 12px;
+}
+
+.buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.button {
+  width: 120px;
+  height: 40px;
+  border-radius: 6px;
+}
+
+.rightPanel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.previewSkeleton {
+  width: 100%;
+  height: 300px;
+  border-radius: 8px;
+}
+
+// Feedbacks skeleton specific styles
+.feedbacksSkeleton {
+  padding: 6rem 0;
+  background: linear-gradient(180deg, #1E40AF 0%, #1E3A8A 25%, #1D4ED8 50%, #1E3A8A 75%, #0F172A 100%);
+  min-height: 100vh;
+}
+
+.feedbacksContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.feedbacksHeader {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.feedbacksTitle {
+  width: 200px;
+  height: 50px;
+  border-radius: 8px;
+  margin: 0 auto 1rem;
+}
+
+.feedbacksSubtitle {
+  width: 300px;
+  height: 24px;
+  border-radius: 6px;
+  margin: 0 auto;
+}
+
+.feedbacksGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.feedbackCard {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 2rem;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.feedbackHeader {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.feedbackInfo {
+  flex: 1;
+}
+
+.feedbackName {
+  width: 120px;
+  height: 20px;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+}
+
+.feedbackRole {
+  width: 100px;
+  height: 16px;
+  border-radius: 4px;
+}
+
+.feedbackText {
+  width: 100%;
+  height: 16px;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+}
+
+.feedbackText:nth-child(2) {
+  width: 80%;
+}
+
+.feedbackText:nth-child(3) {
+  width: 90%;
+}
+
+// Contact skeleton specific styles
+.contactSkeleton {
+  padding: 6rem 0;
+  background: linear-gradient(to right, #4B0082 0%, #6A0DAD 25%, #8B5CF6 50%, #A855F7 75%, #C084FC 100%);
+  min-height: 100vh;
+}
+
+.contactContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.contactHeader {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.contactTitle {
+  width: 200px;
+  height: 50px;
+  border-radius: 8px;
+  margin: 0 auto 1rem;
+}
+
+.contactSubtitle {
+  width: 300px;
+  height: 24px;
+  border-radius: 6px;
+  margin: 0 auto;
+}
+
+.contactForm {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.formLabel {
+  width: 80px;
+  height: 16px;
+  border-radius: 4px;
+}
+
+.formInput {
+  width: 100%;
+  height: 40px;
+  border-radius: 6px;
+}
+
+.formTextarea {
+  width: 100%;
+  height: 120px;
+  border-radius: 6px;
+}
+
+.submitButton {
+  width: 150px;
+  height: 45px;
+  border-radius: 6px;
+  margin: 0 auto;
+}
+
+// Responsive design
+@media (max-width: 768px) {
+  .aboutLayout {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .skillsGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .showcaseSkeleton {
+    grid-template-columns: 1fr;
+  }
+  
+  .feedbacksGrid {
+    grid-template-columns: 1fr;
+  }
+}
+

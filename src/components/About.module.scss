@@ -134,23 +134,18 @@
   align-items: start;
 }
 
-// New timeline layout
-.timelineLayout {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 3rem;
-  align-items: start;
-  padding-top: 4rem;
-}
-
+// Profile section above timeline
 .profile {
   position: relative;
-  align-self: start;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 3rem;
+  padding-top: 2rem;
 }
 
 .profileImg {
-  width: 100%;
-  max-width: 520px;
+  max-width: 700px;
   border-radius: 16px;
   border: 5px solid #1e293b; // revert to original dark border
   box-shadow: 0 10px 30px rgba(0,0,0,0.35);
@@ -158,40 +153,106 @@
 
 .timeline {
   position: relative;
+  width: 100%;
+  max-width: 100%;
   padding-left: 2rem;
+  
+  // Vertical timeline line
+  &::before {
+    content: '';
+    position: absolute;
+    left: 1rem;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: linear-gradient(
+      to bottom,
+      $secondary 0%,
+      $primary 50%,
+      $secondary 100%
+    );
+    border-radius: 2px;
+  }
 }
-
 
 .timelineItem {
   position: relative;
-  margin-bottom: 1.75rem;
+  margin-bottom: 2.5rem;
+  
+  // Timeline marker
+  &::before {
+    content: '';
+    position: absolute;
+    left: -2rem;
+    top: 0.5rem;
+    width: 16px;
+    height: 16px;
+    background: $secondary;
+    border: 4px solid #ffffff;
+    border-radius: 50%;
+    box-shadow: 0 0 0 3px rgba(250, 204, 21, 0.3);
+    z-index: 2;
+  }
+  
+  // Connecting line to next item
+  &:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    left: -1.5rem;
+    top: 1.5rem;
+    bottom: -2.5rem;
+    width: 2px;
+    background: linear-gradient(
+      to bottom,
+      rgba(250, 204, 21, 0.6) 0%,
+      rgba(37, 99, 235, 0.6) 100%
+    );
+    z-index: 1;
+  }
 }
 
-
 .timelineContent {
-  background: #1e293b;
-  border: 2px solid #ffffff;
-  border-radius: 12px;
-  padding: 1rem 1.25rem;
+  background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  padding: 1.5rem 2rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  
+  &:hover {
+    transform: translateX(8px);
+    border-color: $secondary;
+    box-shadow: 0 12px 40px rgba(250, 204, 21, 0.2);
+  }
 }
 
 .timelineHeader {
   display: flex;
-  align-items: baseline;
-  gap: 0.75rem;
-  margin-bottom: 0.25rem;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .timelineYear {
   color: $secondary;
   font-weight: 700;
   font-family: $font-rubik;
+  font-size: 0.9rem;
+  background: rgba(250, 204, 21, 0.1);
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  border: 1px solid rgba(250, 204, 21, 0.3);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .timelineTitle {
   color: $foreground;
   font-weight: 600;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
+  flex: 1;
 }
 
 .textContent {
@@ -268,9 +329,9 @@
   background: 
     linear-gradient(
       to bottom,
-      rgba(0, 100, 0, 0.9) 0%,    /* dark saturated green overlay */
-      rgba(0, 128, 0, 0.9) 50%,   /* medium green overlay */
-      rgba(0, 255, 127, 0.9) 100%   /* bright green overlay */
+      rgba(0, 64, 64, 0.95) 0%,    /* darker turquoise overlay */
+      rgba(0, 128, 128, 0.95) 50%,   /* dark turquoise overlay */
+      rgba(32, 178, 170, 0.95) 100%   /* medium turquoise overlay */
     ),
     url('/Sports-Background.jpeg') center/cover no-repeat;
   border-radius: 16px;
@@ -278,7 +339,7 @@
   margin-bottom: 1.5rem;
   border: 3px solid white;
   backdrop-filter: blur(10px);
-  box-shadow: 0 8px 24px rgba(34, 139, 34, 0.2);
+  box-shadow: 0 8px 24px rgba(0, 64, 64, 0.3);
 }
 
 .musicImagesRow {
@@ -326,12 +387,11 @@
   height: 180px;
   object-fit: cover;
   border-radius: 12px;
-  border: 2px solid rgba(255, 255, 255, 0.2);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   
   &:hover {
     transform: scale(1.05);
-    box-shadow: 0 8px 24px rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 24px rgba(0, 64, 64, 0.5);
   }
   
   @media (max-width: 768px) {
@@ -390,12 +450,11 @@
   height: 180px;
   object-fit: cover;
   border-radius: 12px;
-  border: 2px solid rgba(255, 255, 255, 0.2);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   
   &:hover {
     transform: scale(1.05);
-    box-shadow: 0 8px 24px rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 24px rgba(0, 64, 64, 0.5);
   }
   
   @media (max-width: 768px) {
@@ -429,9 +488,9 @@
   background: 
     linear-gradient(
       to bottom,
-      rgba(0, 100, 0, 0.85) 0%,    /* dark saturated green overlay */
-      rgba(0, 128, 0, 0.85) 50%,   /* medium green overlay */
-      rgba(0, 255, 127, 0.85) 100%   /* bright green overlay */
+      rgba(0, 64, 64, 0.9) 0%,    /* darker turquoise overlay */
+      rgba(0, 128, 128, 0.9) 50%,   /* dark turquoise overlay */
+      rgba(32, 178, 170, 0.9) 100%   /* medium turquoise overlay */
     ),
     url('/Art-Background.jpg') center/cover no-repeat;
   border-radius: 16px;
@@ -439,7 +498,7 @@
   margin-bottom: 1.5rem;
   border: 3px solid white;
   backdrop-filter: blur(10px);
-  box-shadow: 0 8px 24px rgba(34, 139, 34, 0.2);
+  box-shadow: 0 8px 24px rgba(0, 64, 64, 0.3);
 }
 
 .divider {
@@ -689,13 +748,15 @@
 
 .sportsImagesRow .imagesContainer,
 .artImagesRow .imagesContainer {
-  background: #007f00; // brighter green for green sections
+  background: rgba(0, 64, 64, 0.9); // dark turquoise for sports and art sections
 }
 
 @media (max-width: 968px) {
   .content { grid-template-columns: 1fr; gap: 3rem; }
-  .timelineLayout { grid-template-columns: 1fr; }
-  .profile { position: relative; }
+  .profile { 
+    position: relative;
+    margin-bottom: 2rem;
+  }
   
   .cvSection {
     position: static;
@@ -749,6 +810,47 @@
   
   .cvCard {
     padding: 1.5rem;
+  }
+  
+  .profileImg {
+    max-width: 500px;
+  }
+  
+  .timeline {
+    padding-left: 1.5rem;
+    
+    &::before {
+      left: 0.75rem;
+      width: 2px;
+    }
+  }
+  
+  .timelineItem {
+    &::before {
+      left: -1.5rem;
+      width: 12px;
+      height: 12px;
+      border-width: 2px;
+    }
+    
+    &:not(:last-child)::after {
+      left: -1.25rem;
+      width: 1px;
+    }
+  }
+  
+  .timelineContent {
+    padding: 1rem 1.5rem;
+  }
+  
+  .timelineHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .timelineTitle {
+    font-size: 1.1rem;
   }
 }
 

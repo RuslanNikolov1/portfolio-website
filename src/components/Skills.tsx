@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useRef } from 'react';
 import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
@@ -46,6 +46,7 @@ import styles from './Skills.module.scss';
 
 const Skills = () => {
   const [isClient, setIsClient] = useState(false);
+  const developmentToolsRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     setIsClient(true);
@@ -213,117 +214,10 @@ const Skills = () => {
             </div>
           </motion.div>
 
-          {/* Middle Column - Backend & APIs, Avatars, Development Tools */}
-          <div className={styles.middleColumn}>
-            {/* Backend & APIs Container */}
-            <motion.div
-              className={`${styles.backendSkillsContainer} ${styles.categoryLight}`}
-              variants={itemVariants}
-            >
-              <div className={styles.categoryHeader}>
-                <div
-                  className={styles.categoryIcon}
-                  style={{ backgroundColor: '#8B5CF6' }}
-                >
-                  ⚙️
-                </div>
-                <h3
-                  className={styles.categoryTitle}
-                  style={{ color: '#8B5CF6' }}
-                >
-                  Backend & APIs
-                </h3>
-              </div>
-
-              <div className={styles.skillsGrid}>
-                {skills.filter(skill => skill.category === 'backend').map((skill, index) => (
-                  <motion.div
-                    key={skill.name}
-                    className={styles.skillItem}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                    viewport={{ once: true }}
-                  >
-                    <div className={styles.skillHeader}>
-                      <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                        {skillIcons[skill.name as keyof typeof skillIcons] && (
-                          <div style={{
-                            display: 'flex',
-                            alignItems: 'center',
-                            justifyContent: 'center',
-                            width: '20px',
-                            height: '20px',
-                            color: '#8B5CF6'
-                          }}>
-                            {React.createElement(skillIcons[skill.name as keyof typeof skillIcons], { size: 16 })}
-                          </div>
-                        )}
-                        <span className={styles.skillName}>{skill.name}</span>
-                      </div>
-                      <span className={styles.skillYears}>{skill.years} years</span>
-                    </div>
-                    {skill.notes && (
-                      <div className={styles.skillNotes}>
-                        {skill.notes}
-                      </div>
-                    )}
-                  </motion.div>
-                ))}
-              </div>
-            </motion.div>
-
-            {/* Avatar Container */}
-            <div className={styles.dividerAvatarContainer}>
-              <div className={styles.dividerAvatar}>
-              </div>
-              <div className={styles.dividerAvatarFirst}>
-                <Image
-                  src="/FB_Avatar 1.png"
-                  alt="Avatar 1"
-                  width={450}
-                  height={450}
-                  quality={95}
-                  priority={false}
-                  className={styles.avatarImage}
-                />
-              </div>
-              <div className={styles.dividerAvatar2}>
-                <Image
-                  src="/FB_Avatar 2.png"
-                  alt="Avatar 2"
-                  width={400}
-                  height={400}
-                  quality={95}
-                  priority={false}
-                  className={styles.avatarImage}
-                />
-              </div>
-              <div className={styles.dividerAvatar3}>
-                <Image
-                  src="/FB_Avatar 3.png"
-                  alt="Avatar 3"
-                  width={380}
-                  height={380}
-                  quality={95}
-                  priority={false}
-                  className={styles.avatarImage}
-                />
-              </div>
-              <div className={styles.dividerAvatar4}>
-                <Image
-                  src="/FB_Avatar 4.png"
-                  alt="Avatar 4"
-                  width={320}
-                  height={320}
-                  quality={95}
-                  priority={false}
-                  className={styles.avatarImage}
-                />
-              </div>
-            </div>
-
+          {/* Middle Column - Development Tools */}
             {/* Development Tools Container */}
             <motion.div
+              ref={developmentToolsRef}
               className={`${styles.toolsSkillsContainer} ${styles.categoryLight}`}
               variants={itemVariants}
             >
@@ -378,7 +272,6 @@ const Skills = () => {
                 ))}
               </div>
             </motion.div>
-          </div>
 
           {/* Right Column - Soft Skills */}
           <motion.div
@@ -437,8 +330,6 @@ const Skills = () => {
             </div>
           </motion.div>
         </motion.div>
-
-
 
         {/* summary removed as requested */}
       </div>

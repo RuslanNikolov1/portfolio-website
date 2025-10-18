@@ -5,50 +5,45 @@ import Navigation from '@/components/Navigation';
 import Hero from '@/components/Hero';
 import dynamic from 'next/dynamic';
 
-// Lazy-loaded sections with accessible fallbacks
+// Lazy-loaded sections with skeleton loading states
 const ProjectsLazy = dynamic(() => import('@/components/Projects'), {
   ssr: false,
-  loading: () => (
-    <div role="status" aria-busy="true" style={{ padding: '2rem', textAlign: 'center' }}>
-      Loading Projects…
-    </div>
-  ),
+  loading: () => {
+    const ProjectsSkeleton = require('@/components/ProjectsSkeleton').default;
+    return <ProjectsSkeleton />;
+  },
 });
 
 const SkillsLazy = dynamic(() => import('@/components/Skills'), {
   ssr: false,
-  loading: () => (
-    <div role="status" aria-busy="true" style={{ padding: '2rem', textAlign: 'center' }}>
-      Loading Skills…
-    </div>
-  ),
+  loading: () => {
+    const SkillsSkeleton = require('@/components/SkillsSkeleton').default;
+    return <SkillsSkeleton />;
+  },
 });
 
 const AboutLazy = dynamic(() => import('@/components/About'), {
   ssr: false,
-  loading: () => (
-    <div role="status" aria-busy="true" style={{ padding: '2rem', textAlign: 'center' }}>
-      Loading About…
-    </div>
-  ),
+  loading: () => {
+    const AboutSkeleton = require('@/components/AboutSkeleton').default;
+    return <AboutSkeleton />;
+  },
 });
 
 const FeedbacksLazy = dynamic(() => import('@/components/Feedbacks'), {
   ssr: false,
-  loading: () => (
-    <div role="status" aria-busy="true" style={{ padding: '2rem', textAlign: 'center' }}>
-      Loading Testimonials…
-    </div>
-  ),
+  loading: () => {
+    const FeedbacksSkeleton = require('@/components/FeedbacksSkeleton').default;
+    return <FeedbacksSkeleton />;
+  },
 });
 
 const ContactLazy = dynamic(() => import('@/components/Contact'), {
   ssr: false,
-  loading: () => (
-    <div role="status" aria-busy="true" style={{ padding: '2rem', textAlign: 'center' }}>
-      Loading Contact…
-    </div>
-  ),
+  loading: () => {
+    const ContactSkeleton = require('@/components/ContactSkeleton').default;
+    return <ContactSkeleton />;
+  },
 });
 
 const FooterLazy = dynamic(() => import('@/components/Footer'), {

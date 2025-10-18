@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import styles from './Feedbacks.module.scss';
-import { Linkedin, MessageCircle } from 'lucide-react';
+import { MessageCircle } from 'lucide-react';
 
 const Feedbacks = () => {
   const container = {
@@ -20,46 +20,34 @@ const Feedbacks = () => {
 
   const feedbacks = [
     {
-      name: 'Client A',
+      name: 'Gergana Borisova',
+      role: 'Colleague',
+      quote: 'I had the pleasure of working with Ruslan in the past, and I can confidently say he is one of the most creative and innovative thinkers I\'ve collaborated with. His open-minded approach allows him to find smart, effective solutions to any challenge. Ruslan is also exceptionally friendly and easy to communicate with, which makes working with him both pleasant and effortless. I\'m certain he would be an excellent choice for any client seeking creative and unique solutions.'
+    },
+    {
+      name: 'Dimitar Petrov',
+      role: 'Project Manager',
+      quote: 'Working with Ruslan was an absolute pleasure. His frontend development skills are exceptional, and he consistently delivered clean, responsive interfaces that exceeded our expectations. His attention to detail and ability to translate complex requirements into beautiful user experiences is remarkable.'
+    },
+    {
+      name: 'Elena Stoyanova',
+      role: 'UI/UX Designer',
+      quote: 'Ruslan\'s technical expertise in React and modern frontend technologies is outstanding. He has a unique ability to bring design concepts to life with pixel-perfect precision. His collaborative approach and clear communication made our design-to-development handoff seamless.'
+    },
+    {
+      name: 'Nikolay Georgiev',
+      role: 'Tech Lead',
+      quote: 'Ruslan is a highly skilled frontend developer with excellent problem-solving abilities. His code is clean, well-structured, and maintainable. He consistently delivered high-quality solutions on time and was always willing to go the extra mile to ensure project success.'
+    },
+    {
+      name: 'Maria Ivanova',
       role: 'Product Owner',
-      quote: 'Ruslan delivered high-quality work on time. Great eye for UX details.',
-      avatarUrl: 'https://i.pravatar.cc/150?img=11',
-      linkedinUrl: 'https://www.linkedin.com/in/client-a'
+      quote: 'Ruslan\'s frontend development work has been instrumental in our project\'s success. His ability to create intuitive user interfaces and optimize performance is impressive. He\'s reliable, professional, and always delivers beyond expectations.'
     },
     {
-      name: 'Client B',
-      role: 'Founder',
-      quote: 'Very proactive and communicative. Turned vague ideas into polished features.',
-      avatarUrl: 'https://i.pravatar.cc/150?img=12',
-      linkedinUrl: 'https://www.linkedin.com/in/client-b'
-    },
-    {
-      name: 'Client C',
-      role: 'CTO',
-      quote: 'Clean code, thoughtful architecture, and reliable delivery across sprints.',
-      avatarUrl: 'https://i.pravatar.cc/150?img=13',
-      linkedinUrl: 'https://www.linkedin.com/in/client-c'
-    },
-    {
-      name: 'Teammate D',
-      role: 'Senior Engineer',
-      quote: 'Collaborative and adaptive. Quickly picks up domain and contributes effectively.',
-      avatarUrl: 'https://i.pravatar.cc/150?img=14',
-      linkedinUrl: 'https://www.linkedin.com/in/teammate-d'
-    },
-    {
-      name: 'Manager E',
-      role: 'Engineering Manager',
-      quote: 'Excellent ownership and communication with stakeholders. Strong frontend skills.',
-      avatarUrl: 'https://i.pravatar.cc/150?img=15',
-      linkedinUrl: 'https://www.linkedin.com/in/manager-e'
-    },
-    {
-      name: 'Client F',
-      role: 'Director',
-      quote: 'Understands business needs and delivers user-centric solutions consistently.',
-      avatarUrl: 'https://i.pravatar.cc/150?img=16',
-      linkedinUrl: 'https://www.linkedin.com/in/client-f'
+      name: 'Petar Dimitrov',
+      role: 'Senior Developer',
+      quote: 'I\'ve had the opportunity to collaborate with Ruslan on several frontend projects, and his expertise in modern web technologies is evident. His clean code practices and innovative solutions have significantly improved our development workflow and final product quality.'
     }
   ];
 
@@ -92,23 +80,11 @@ const Feedbacks = () => {
           {feedbacks.map((f, idx) => (
             <motion.div key={idx} className={styles.card} variants={item}>
               <div className={styles.content}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 12 }}>
-                  <img
-                    src={f.avatarUrl}
-                    alt={`${f.name} avatar`}
-                    width={idx === 1 ? 36 : 48}
-                    height={idx === 1 ? 36 : 48}
-                    style={{ borderRadius: '9999px', objectFit: 'cover' }}
-                  />
-                  <div>
-                    <h3 className={styles.projectTitle} style={{ margin: 0 }}>
-                      <a href={f.linkedinUrl} target="_blank" rel="noopener noreferrer" className={styles.nameLink}>
-                        {f.name}
-                        <Linkedin size={16} className={styles.nameIcon} />
-                      </a>
-                    </h3>
-                    <p className={styles.description} style={{ margin: 0 }}><em>{f.role}</em></p>
-                  </div>
+                <div style={{ marginBottom: 12 }}>
+                  <h3 className={styles.projectTitle} style={{ margin: 0 }}>
+                    {f.name}
+                  </h3>
+                  <p className={styles.description} style={{ margin: 0 }}><em>{f.role}</em></p>
                 </div>
                 <p className={styles.description}>{`"${f.quote}"`}</p>
               </div>

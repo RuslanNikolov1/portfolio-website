@@ -126,7 +126,7 @@ const Navigation = () => {
             }
           }}
         >
-          <img src="/Ruslan Profile Pic.jpg" alt="Ruslan Nikolov profile picture" />
+          <img src="/Ruslan Looking Avatar.jpg" alt="Ruslan Nikolov profile picture" />
         </motion.button>
 
         <div 

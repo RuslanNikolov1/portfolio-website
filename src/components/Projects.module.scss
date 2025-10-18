@@ -23,17 +23,7 @@ $font-weight-bold: 700;
 
 .projects {
   padding: 6rem 0;
-  background:
-    radial-gradient(ellipse at center,
-      rgba(0, 0, 0, 0.7) 0%,       // very dark center
-      rgba(0, 0, 0, 0.4) 35%,
-      rgba(0, 0, 0, 0.15) 65%,
-      rgba(255, 255, 255, 0.18) 100% // bright edges for strong contrast
-    ),
-    url('/Mountain Landscape.avif') center/cover no-repeat,
-    linear-gradient(135deg, $background 0%, $background-secondary 100%);
   position: relative;
-  backdrop-filter: blur(5px); // normal 5px blur
   overflow: hidden;
   z-index: 0;
   box-shadow: 0 0 20px rgba(37, 99, 235, 0.3);
@@ -43,17 +33,17 @@ $font-weight-bold: 700;
   content: '';
   position: absolute;
   inset: 0;
-  background:
+  background: 
     radial-gradient(ellipse at center,
-      rgba(0, 0, 0, 0.7) 0%,
-      rgba(0, 0, 0, 0.4) 35%,
-      rgba(0, 0, 0, 0.15) 65%,
-      rgba(255, 255, 255, 0.18) 100%
+      rgba(0, 0, 0, 0.85) 0%,       // darker center
+      rgba(0, 0, 0, 0.65) 35%,
+      rgba(0, 0, 0, 0.4) 65%,
+      rgba(0, 0, 0, 0.2) 100% // darker edges
     ),
-    url('/Mountain Landscape.avif') center/cover no-repeat,
+    url('/Projects-Background-2.jpeg') center/cover no-repeat,
     linear-gradient(135deg, $background 0%, $background-secondary 100%);
-  filter: blur(3px);
-  transform: scale(1.05); // prevents edges from showing through
+  filter: blur(10px);
+  transform: scale(1.1); // prevents edges from showing through
   z-index: -1; // keeps it behind all content
 }
 
@@ -61,6 +51,8 @@ $font-weight-bold: 700;
   max-width: 1400px;
   margin: 0 auto;
   padding: 0 2rem;
+  position: relative;
+  z-index: 1;
 }
 
 .header {

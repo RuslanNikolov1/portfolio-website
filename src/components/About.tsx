@@ -1,25 +1,12 @@
 'use client';
 
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { Download } from 'lucide-react';
 import { useRef } from 'react';
 import styles from './About.module.scss';
 
 const About = () => {
-  const scrollToContact = () => {
-    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
-  };
-
   const aboutRef = useRef<HTMLElement>(null);
-  const timelineRef = useRef<HTMLDivElement>(null);
-  
-  const { scrollYProgress } = useScroll({
-    target: timelineRef,
-    offset: ["start end", "end start"]
-  });
-
-  // Make the profile picture follow the timeline scroll more directly
-  const profileY = useTransform(scrollYProgress, [0, 0.3, 1], [0, 200, 500]);
 
   return (
     <section id="about" className={styles.about} ref={aboutRef}>
@@ -36,43 +23,27 @@ const About = () => {
           <h2 className={styles.sectionTitle}>About Me</h2>
         </motion.div>
 
-        <div className={styles.timelineLayout}>
-          <motion.div
-            className={styles.profile}
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <motion.img
-              src="/Ruslan Profile Pic.jpg"
-              alt="Ruslan Nikolov profile"
-              className={styles.profileImg}
-              style={{ y: profileY }}
-            />
-            <div className={styles.cta}>
-              <motion.button
-                className={styles.contactButton}
-                onClick={scrollToContact}
-                whileHover={{
-                  scale: 1.05,
-                  boxShadow: '0 0 30px rgba(37, 99, 235, 0.5)'
-                }}
-                whileTap={{ scale: 0.95 }}
-              >
-                Let&apos;s work together
-              </motion.button>
-            </div>
-          </motion.div>
+        <motion.div
+          className={styles.profile}
+          initial={{ opacity: 0, y: -30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
+          <motion.img
+            src="/Ruslan Laptop Looking.jpg"
+            alt="Ruslan Nikolov working on laptop"
+            className={styles.profileImg}
+          />
+        </motion.div>
 
-          <motion.div
-            ref={timelineRef}
-            className={styles.timeline}
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
+        <motion.div
+          className={styles.timeline}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
             {[
               { year: 'School', title: 'Natural Sciences & Mathematics, Burgas', text: 'Graduated from the Natural Sciences and Mathematics school in Burgas.' },
               { year: 'UNWE', title: "Bachelor's in Marketing (English)", text: 'Completed a Bachelor\'s degree in Marketing in English at UNWE (Sofia).' },
@@ -95,8 +66,7 @@ const About = () => {
                 </div>
               </div>
             ))}
-          </motion.div>
-        </div>
+        </motion.div>
 
         <div style={{ marginTop: '2rem' }}>
           <div className={styles.musicContainer}>
@@ -105,7 +75,7 @@ const About = () => {
               <h3 className={styles.sectionTitle}>Music</h3>
             </div>
             <p className={styles.paragraph}>
-              🎧 Outside of work, I am passionate about <strong>music</strong>. I produce electronic music across different genres—techno, breakbeat, house, dub, drum and bass, psy‑trance, trip‑hop, ambient, but also jazz, funk, and bossa nova. I try to mix interesting melodies, beats and emotions, and try to keep it interesting at all times. <a href="https://soundcloud.com/ruslan-nikolov-323139497" target="_blank" rel="noopener noreferrer">SoundCloud</a>. I publish my own tracks independently, and the feedback that I receive is very positive. Favourite musicians: Thievery Corporation, Deadmau5, Flume, Calibre. Worth checking out. <strong>How this helps my development:</strong> Music production has taught me rhythm, timing, and flow—essential for creating smooth animations and intuitive user interactions. My experience with audio software interfaces directly translates to designing better UX patterns and understanding user feedback systems.
+              Outside of work, I am passionate about <strong>music</strong>. I produce electronic music across different genres—techno, breakbeat, house, dub, drum and bass, psy‑trance, trip‑hop, ambient, but also jazz, funk, and bossa nova. I try to mix interesting melodies, beats and emotions, and try to keep it interesting at all times. <a href="https://soundcloud.com/ruslan-nikolov-323139497" target="_blank" rel="noopener noreferrer">SoundCloud</a>. I publish my own tracks independently, and the feedback that I receive is very positive. Favourite musicians: Thievery Corporation, Deadmau5, Flume, Calibre. Worth checking out. <strong>How this helps my development:</strong> Music production has taught me rhythm, timing, and flow—essential for creating smooth animations and intuitive user interactions. My experience with audio software interfaces directly translates to designing better UX patterns and understanding user feedback systems.
             </p>
             <div className={styles.musicImagesRow}>
               <div className={styles.imagesContainer}>
@@ -122,7 +92,7 @@ const About = () => {
               <h3 className={styles.sectionTitle}>Sports</h3>
             </div>
             <p className={styles.paragraph}>
-              🏃‍♂️ I also love doing <strong>sports</strong>. I have trained karate and volleyball when I was in school. At all times I have been parallely doing calisthenics and going to the gym, I am now mainly focused on basketball and crossfit and table‑tennis. The sportsmen I admire are Lionel Messi, Nikola Jokic (basketball), Stephen Curry, Raphael Nadal, Roger Federer, Simon Gauzy (table tennis). <strong>How this helps my development:</strong> Sports have taught me discipline, teamwork, and strategic thinking—crucial for project planning and collaboration. The competitive mindset drives me to continuously improve my code quality and stay updated with the latest frontend technologies.
+              I also love doing <strong>sports</strong>. I have trained karate and volleyball when I was in school. At all times I have been parallely doing calisthenics and going to the gym, I am now mainly focused on basketball and crossfit and table‑tennis. The sportsmen I admire are Lionel Messi, Nikola Jokic (basketball), Stephen Curry, Raphael Nadal, Roger Federer, Simon Gauzy (table tennis). <strong>How this helps my development:</strong> Sports have taught me discipline, teamwork, and strategic thinking—crucial for project planning and collaboration. The competitive mindset drives me to continuously improve my code quality and stay updated with the latest frontend technologies.
             </p>
             <div className={styles.sportsImagesRow}>
               <div className={styles.imagesContainer}>
@@ -139,7 +109,7 @@ const About = () => {
               <h3 className={styles.sectionTitle}>Reading</h3>
             </div>
             <p className={styles.paragraph}>
-              📖 I also enjoy <strong>reading</strong>. I recently finished a great book by historian Yuval Noah Harari called <strong>Homo Deus</strong>. It&apos;s a story of mankind, its past, present and future in a very pleasant and engaging manner. It goes through all the important topics and it fills your knowledge gaps effortlessly. I started reading <strong>Homo Sapiens</strong>. It&apos;s by the same author, but it&apos;s more focused on the past of our species.
+              I also enjoy <strong>reading</strong>. I recently finished a great book by historian Yuval Noah Harari called <strong>Homo Deus</strong>. It&apos;s a story of mankind, its past, present and future in a very pleasant and engaging manner. It goes through all the important topics and it fills your knowledge gaps effortlessly. I started reading <strong>Homo Sapiens</strong>. It&apos;s by the same author, but it&apos;s more focused on the past of our species.
               My intellectual interests include <strong>psychology, philosophy and physics</strong>. I also love <strong>comedy</strong>, and some would say I even have a decent sense of humour. <strong>How this helps my development:</strong> Reading about psychology helps me understand user behavior and create more intuitive interfaces. Philosophy teaches me to think critically about design decisions, while physics knowledge aids in creating realistic animations and understanding performance optimization principles.
             </p>
             <div className={styles.readingImagesRow}>
