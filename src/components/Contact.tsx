@@ -21,8 +21,6 @@ const Contact = () => {
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-      const windowHeight = window.innerHeight;
-      const documentHeight = document.documentElement.scrollHeight;
       const contactTop = document.getElementById('contact')?.offsetTop ?? 0;
 
       // Show arrow once at contact section or further down

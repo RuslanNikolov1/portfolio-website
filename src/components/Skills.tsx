@@ -2,7 +2,6 @@
 
 import React, { useRef } from 'react';
 import { motion } from 'framer-motion';
-import { useState, useEffect } from 'react';
 import {
   Code, Palette, Music,
   Atom,
