@@ -21,7 +21,7 @@ $font-weight-medium: 500;
   z-index: 1000;
   background: #0f1a4a; // darker blue header background
   backdrop-filter: none; // remove blur
-  border-bottom: 3px solid rgba(255,255,255,0.85); // subtle white border
+  border-bottom: 3px solid rgba(255, 255, 255, 0.85); // subtle white border
   overflow: visible;
   transition: all 0.3s ease;
   height: 75px; // Decreased header height
@@ -29,16 +29,19 @@ $font-weight-medium: 500;
 
 }
 
-.nav::after { display: none; }
+.nav::after {
+  display: none;
+}
 
 .nav.scrolled {
   background: #0f1a4a; // match 7 years / 18 projects color when scrolled
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-  border-bottom: 1.5px solid rgba(255,255,255,0.85); // keep border when scrolled
+  border-bottom: 1.5px solid rgba(255, 255, 255, 0.85); // keep border when scrolled
 }
 
 // Hide bottom border on mobile and tablet
-@media (max-width: 1024px) {
+@media (max-width: 1025px) {
+
   .nav,
   .nav.scrolled {
     border-bottom: 0 !important;
@@ -154,7 +157,7 @@ $font-weight-medium: 500;
   height: 2px;
   background: #ffffff;
   border-radius: 0;
-  box-shadow: 
+  box-shadow:
     0 0 10px #ffffff,
     0 0 20px #ffffff,
     0 0 30px #ffffff,
@@ -193,7 +196,7 @@ $font-weight-medium: 500;
   background: linear-gradient(135deg, #20B2AA 0%, #00CED1 100%);
   padding: 0.5rem 1rem;
   border-radius: 25px;
-  box-shadow: 
+  box-shadow:
     0 4px 15px rgba(32, 178, 170, 0.3),
     0 0 20px rgba(0, 206, 209, 0.2);
   border: 2px solid #ffffff;
@@ -203,14 +206,20 @@ $font-weight-medium: 500;
   overflow: hidden;
 }
 
+@media (max-width: 426px) {
+  .musicPlayer {
+    padding: 0 0.5rem;
+  }
+}
+
 .coverArt {
   width: 28px;
   height: 28px;
   border-radius: 6px;
   overflow: hidden;
   flex-shrink: 0;
-  border: 1px solid rgba(255,255,255,0.4);
-  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 }
 
 .musicPlayer::before {
@@ -230,7 +239,7 @@ $font-weight-medium: 500;
 
 .musicPlayer:hover {
   transform: translateY(-2px);
-  box-shadow: 
+  box-shadow:
     0 6px 20px rgba(32, 178, 170, 0.4),
     0 0 30px rgba(0, 206, 209, 0.3);
 }
@@ -240,6 +249,12 @@ $font-weight-medium: 500;
   align-items: center;
   gap: 0.5rem;
   min-width: 120px;
+}
+
+@media (max-width: 426px) {
+  .trackInfo {
+    min-width: 110px;
+  }
 }
 
 .trackText {
@@ -336,6 +351,12 @@ $font-weight-medium: 500;
   margin-left: 0.5rem;
 }
 
+@media (max-width: 426px) {
+  .visualizer {
+    margin-left: 0;
+  }
+}
+
 .bar {
   width: 3px;
   background: linear-gradient(to top, #ffffff, rgba(255, 255, 255, 0.6));
@@ -343,11 +364,11 @@ $font-weight-medium: 500;
   transition: all 0.3s ease;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1025px) {
   .container {
     padding: 0 1rem;
   }
-  
+
   .menu {
     position: fixed;
     top: 75px;
@@ -364,43 +385,86 @@ $font-weight-medium: 500;
     transition: all 0.3s ease;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   }
-  
+
   .menu.menuOpen {
     transform: translateY(0);
     opacity: 1;
     visibility: visible;
   }
-  
+
   .navItem {
     width: 100%;
     text-align: center;
     padding: 1rem;
     font-size: 1.1rem;
   }
-  
+
   .musicPlayer {
-    display: none; // Hide music player on mobile
+    display: flex; // Show music player on mobile
+    position: absolute;
+    left: 35%;
+    transform: translateX(-50%);
+    z-index: 1003;
   }
-  
+
   .mobileToggle {
     display: block;
   }
 }
 
+@media (max-width: 769px) {
+  .musicPlayer {
+    left: 30%;
+  }
+}
+
+@media (max-width: 426px) {
+  .musicPlayer {
+    left: 27.5%;
+  }
+  .visualizer {
+    display: none;
+  }
+  .volumeControl {
+    display: none;
+  }
+}
+
+
+@media (max-width: 376px) {
+  .musicPlayer {
+    left: 30%;
+  }
+  .coverArt {
+    display: none;
+  }
+  .visualizer {
+    display: none;
+  }
+  .volumeControl {
+    display: none;
+  }
+}
+
+@media (max-width: 321px) {
+  .musicPlayer {
+    left: 25%;
+  }
+}
 @media (max-width: 480px) {
   .container {
     height: 65px;
   }
-  
+
   .logo {
     width: 50px;
     height: 50px;
   }
-  
+
   .logoText {
     font-size: 1rem;
   }
-  
+
   .menu {
     top: 65px;
   }

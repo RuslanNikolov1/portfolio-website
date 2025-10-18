@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Github, Linkedin, Mail, Music, Heart } from 'lucide-react';
+import { Github, Linkedin, Mail, Music } from 'lucide-react';
 import { socialLinks } from '@/data';
 import styles from './Footer.module.scss';
 
@@ -96,15 +96,7 @@ const Footer = () => {
         >
           <div className={styles.copyright}>
             <p>
-              © {currentYear} Ruslan Nikolov. Made with{' '}
-              <motion.span
-                animate={{ scale: [1, 1.2, 1] }}
-                transition={{ duration: 1, repeat: Infinity }}
-                className={styles.heart}
-              >
-                <Heart size={16} fill="currentColor" />
-              </motion.span>{' '}
-              and lots of coffee ☕
+              © {currentYear} Ruslan Nikolov
             </p>
           </div>
           

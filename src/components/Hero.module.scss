@@ -60,12 +60,10 @@ $font-weight-semibold: 600;
   left: 0;
   right: 0;
   bottom: 0;
-  background: radial-gradient(
-    ellipse at center,
-    rgba(37, 99, 235, 0.1) 0%,
-    rgba(16, 185, 129, 0.05) 50%,
-    transparent 100%
-  );
+  background: radial-gradient(ellipse at center,
+      rgba(37, 99, 235, 0.1) 0%,
+      rgba(16, 185, 129, 0.05) 50%,
+      transparent 100%);
   animation: none;
 }
 
@@ -76,7 +74,7 @@ $font-weight-semibold: 600;
   left: 0;
   right: 0;
   bottom: 0;
-  background: 
+  background:
     radial-gradient(ellipse at 20% 30%, rgba(93, 183, 255, 0.12) 0%, transparent 60%),
     radial-gradient(ellipse at 80% 70%, rgba(124, 255, 178, 0.08) 0%, transparent 60%),
     radial-gradient(ellipse at 50% 50%, rgba(255, 214, 68, 0.06) 0%, transparent 70%);
@@ -95,19 +93,25 @@ $font-weight-semibold: 600;
 }
 
 @keyframes gradientShift {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: scale(1) rotate(0deg);
   }
+
   50% {
     transform: scale(1.1) rotate(180deg);
   }
 }
 
 @keyframes electronicGlow {
-  0%, 100% {
+
+  0%,
+  100% {
     opacity: 0.3;
     transform: scale(1);
   }
+
   50% {
     opacity: 0.6;
     transform: scale(1.05);
@@ -132,7 +136,7 @@ $font-weight-semibold: 600;
 
 .content {
   margin-top: 1.75rem;
-  
+
   @media (max-width: 968px) {
     max-width: 100%;
   }
@@ -144,7 +148,8 @@ $font-weight-semibold: 600;
   font-weight: 800;
   color: white;
   -webkit-text-stroke: 6px transparent;
-  background: linear-gradient(90deg, #1E3A8A, #059669); /* deeper blue → deeper green */
+  background: linear-gradient(90deg, #1E3A8A, #059669);
+  /* deeper blue → deeper green */
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -186,14 +191,22 @@ $font-weight-semibold: 600;
 }
 
 .highlightedContainer {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(8px);
+  background: rgba(255, 255, 255, 0.425);
   border: 2px dotted #1e3a8a; // Dark deep blue dotted border
   border-radius: 16px;
   padding: 0.5rem 1rem;
   margin-top: 0.75rem;
-  box-shadow: 0 8px 32px rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(255, 255, 255, 0.3);
   display: inline-block;
+}
+
+@media (max-width: 426px) {
+  .highlightedContainer {
+    background: rgba(255, 255, 255, 0.825);
+    backdrop-filter: blur(0px);
+    width: 90%
+  }
 }
 
 .subtitle {
@@ -212,7 +225,9 @@ $font-weight-semibold: 600;
   text-align: center;
 }
 
-.roleBreak { display: block; }
+.roleBreak {
+  display: inline;
+}
 
 .separator {
   display: inline-flex;
@@ -264,9 +279,21 @@ $font-weight-semibold: 600;
 // keeping "Years Experience" on the far left and "Client Satisfaction" centered
 // Keep the two metrics centered with slight spacing
 
-@media (max-width: 768px) {
-  .credentials { flex-wrap: wrap; justify-content: center; padding: 0 1rem; }
-  .credentials .credential { order: unset; margin-left: 0; }
+@media (max-width: 769px) {
+  .credentials {
+    display: flex;
+    justify-content: center;
+    padding: 0 1rem;
+    margin-top: 3rem;
+  }
+
+  .credentials .credential:nth-child(1) {
+    margin-left: 0;
+  }
+
+  .credentials .credential:nth-child(2) {
+    margin-right: 0;
+  }
 }
 
 .credential {
@@ -281,7 +308,7 @@ $font-weight-semibold: 600;
   backdrop-filter: blur(10px);
   min-width: 140px;
   transition: all 0.3s ease;
-  
+
   &:hover {
     background: #1b2e78; // slightly lighter on hover
     border-color: #ffffff;
@@ -362,7 +389,7 @@ $font-weight-semibold: 600;
   position: relative;
   overflow: hidden;
   box-shadow: 0 0 20px rgba(93, 183, 255, 0.3);
-  
+
   &:hover {
     box-shadow: 0 0 40px rgba(255, 214, 68, 0.6); // Intense yellow glow on hover
     transform: translateY(-3px);
@@ -399,7 +426,7 @@ $font-weight-semibold: 600;
   cursor: pointer;
   transition: all 0.3s ease;
   box-shadow: 0 0 10px rgba(93, 183, 255, 0.2);
-  
+
   &:hover {
     border-color: $color-green-accent; // Strategic green accent on hover
     color: $color-green-accent;
@@ -422,7 +449,7 @@ $font-weight-semibold: 600;
   color: $primary;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 769px) {
   .titleRow {
     flex-wrap: wrap;
   }
@@ -432,52 +459,53 @@ $font-weight-semibold: 600;
     width: 100%;
     text-align: center;
   }
+
   .container {
     padding: 0 1rem;
   }
-  
+
   .heroLayout {
     gap: 1.5rem;
     min-height: 70vh;
   }
-  
+
   .avatarContainer {
     margin-bottom: 1rem;
   }
-  
+
   .icons {
     gap: 1rem;
   }
-  
+
   .icon {
     width: 50px;
     height: 50px;
   }
-  
+
   .credentials {
     gap: 1rem;
     margin-bottom: 2rem;
   }
-  
+
   .credential {
-    min-width: 80px;
+    width: 90px;
     padding: 0.8rem;
   }
-  
+
   .credentialNumber {
     font-size: 1.5rem;
   }
-  
+
   .credentialLabel {
     font-size: 0.8rem;
   }
-  
+
   .buttons {
     flex-direction: column;
     align-items: center;
     margin-top: 2rem;
   }
-  
+
   .primaryButton,
   .secondaryButton {
     width: 100%;
@@ -488,5 +516,11 @@ $font-weight-semibold: 600;
 @media (max-width: 480px) {
   .hero {
     padding-top: 60px; // match smaller header height
+  }
+}
+
+@media (max-width: 1025px) and (min-width: 769px) {
+  .credentials {
+    margin-top: 3vh;
   }
 }

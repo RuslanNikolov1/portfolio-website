@@ -166,72 +166,72 @@ const Navigation = () => {
           })}
         </div>
 
-        <div className={styles.rightSection}>
-          <motion.div
-            className={styles.musicPlayer}
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            role="region"
-            aria-label="Music player"
-          >
-            <div className={styles.trackInfo}>
-              {true && (
-                <div className={styles.coverArt} aria-hidden="true">
-                  <img src="/Hopeful emotions pic.png" alt="" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-                </div>
-              )}
-              <div className={styles.trackText}>
-                <div className={styles.trackTitle}>Hopeful Emotions</div>
-                <div className={styles.trackArtist}>Ruslan Nikolov</div>
+        <motion.div
+          className={styles.musicPlayer}
+          initial={{ opacity: 0, x: 20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          role="region"
+          aria-label="Music player"
+        >
+          <div className={styles.trackInfo}>
+            {true && (
+              <div className={styles.coverArt} aria-hidden="true">
+                <img src="/Hopeful emotions pic.png" alt="" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
               </div>
+            )}
+            <div className={styles.trackText}>
+              <div className={styles.trackTitle}>Hopeful Emotions</div>
+              <div className={styles.trackArtist}>Ruslan Nikolov</div>
             </div>
-            <div className={styles.controls}>
-              <motion.button
-                className={styles.playButton}
-                onClick={togglePlayPause}
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
-                aria-label={isPlaying ? 'Pause music' : 'Play music'}
-                aria-pressed={isPlaying}
-              >
-                {isPlaying ? <Pause size={16} /> : <Play size={16} />}
-              </motion.button>
-              <div className={styles.volumeControl}>
-                <Volume2 size={14} />
-                <input
-                  type="range"
-                  min="0"
-                  max="1"
-                  step="0.1"
-                  value={volume}
-                  onChange={(e) => handleVolumeChange(parseFloat(e.target.value))}
-                  className={styles.volumeSlider}
-                  aria-label="Volume control"
-                  aria-valuemin={0}
-                  aria-valuemax={100}
-                  aria-valuenow={Math.round(volume * 100)}
-                />
-              </div>
+          </div>
+          <div className={styles.controls}>
+            <motion.button
+              className={styles.playButton}
+              onClick={togglePlayPause}
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              aria-label={isPlaying ? 'Pause music' : 'Play music'}
+              aria-pressed={isPlaying}
+            >
+              {isPlaying ? <Pause size={16} /> : <Play size={16} />}
+            </motion.button>
+            <div className={styles.volumeControl}>
+              <Volume2 size={14} />
+              <input
+                type="range"
+                min="0"
+                max="1"
+                step="0.1"
+                value={volume}
+                onChange={(e) => handleVolumeChange(parseFloat(e.target.value))}
+                className={styles.volumeSlider}
+                aria-label="Volume control"
+                aria-valuemin={0}
+                aria-valuemax={100}
+                aria-valuenow={Math.round(volume * 100)}
+              />
             </div>
-            <div className={styles.visualizer}>
-              {[...Array(5)].map((_, i) => (
-                <motion.div
-                  key={i}
-                  className={styles.bar}
-                  animate={{
-                    height: isPlaying ? ['20%', '80%', '20%'] : '20%',
-                  }}
-                  transition={{
-                    duration: 0.5,
-                    repeat: isPlaying ? Infinity : 0,
-                    delay: i * 0.1,
-                  }}
-                />
-              ))}
-            </div>
-          </motion.div>
+          </div>
+          <div className={styles.visualizer}>
+            {[...Array(5)].map((_, i) => (
+              <motion.div
+                key={i}
+                className={styles.bar}
+                animate={{
+                  height: isPlaying ? ['20%', '80%', '20%'] : '20%',
+                }}
+                transition={{
+                  duration: 0.5,
+                  repeat: isPlaying ? Infinity : 0,
+                  delay: i * 0.1,
+                }}
+              />
+            ))}
+          </div>
+        </motion.div>
 
+        <div className={styles.rightSection}>
           <motion.button
             className={styles.mobileToggle}
             onClick={() => setIsOpen(!isOpen)}
