@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { Github, Linkedin, Mail, Music } from 'lucide-react';
+import Image from 'next/image';
 import { socialLinks } from '@/data';
 import styles from './Footer.module.scss';
 
@@ -35,9 +36,11 @@ const Footer = () => {
         >
           <div className={styles.brand}>
             <div className={styles.logo}>
-              <img
+              <Image
                 src="/Ruslan Looking Avatar.jpg"
                 alt="Ruslan Nikolov"
+                width={60}
+                height={60}
                 className={styles.profileAvatar}
               />
             </div>

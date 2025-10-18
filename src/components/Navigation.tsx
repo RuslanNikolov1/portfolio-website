@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
 import { Menu, X, Play, Pause, Volume2, Home, Briefcase, Zap, User, Mail } from 'lucide-react';
+import Image from 'next/image';
 import styles from './Navigation.module.scss';
 
 const Navigation = () => {
@@ -126,7 +127,7 @@ const Navigation = () => {
             }
           }}
         >
-          <img src="/Ruslan Looking Avatar.jpg" alt="Ruslan Nikolov profile picture" />
+          <Image src="/Ruslan Looking Avatar.jpg" alt="Ruslan Nikolov profile picture" width={60} height={60} />
         </motion.button>
 
         <div 
@@ -177,7 +178,7 @@ const Navigation = () => {
           <div className={styles.trackInfo}>
             {true && (
               <div className={styles.coverArt} aria-hidden="true">
-                <img src="/Hopeful emotions pic.png" alt="" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                <Image src="/Hopeful emotions pic.png" alt="" width={28} height={28} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
               </div>
             )}
             <div className={styles.trackText}>
