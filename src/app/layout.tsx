@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Rubik, Space_Grotesk } from "next/font/google";
 import "./globals.scss";
-import CustomCursor from "@/components/CustomCursor";
 import SkipLinks from "@/components/SkipLinks";
 
 const rubik = Rubik({
@@ -63,7 +62,6 @@ export default function RootLayout({
       >
         {/* Skip Navigation Links */}
         <SkipLinks />
-        <CustomCursor />
         {children}
       </body>
     </html>
