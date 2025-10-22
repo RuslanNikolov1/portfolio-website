@@ -20,23 +20,7 @@ body {
   outline-offset: 2px;
 }
 
-// Skip links
-.skip-link {
-  position: absolute;
-  top: -40px;
-  left: 6px;
-  background: #000;
-  color: #fff;
-  padding: 8px;
-  text-decoration: none;
-  z-index: 1000;
-  border-radius: 4px;
-  transition: top 0.3s ease;
-}
-
-.skip-link:focus {
-  top: 6px;
-}
+// Skip links - now handled with inline styles for better control
 
 // Ensure interactive elements are accessible
 button:focus-visible,
@@ -531,6 +515,15 @@ small, .meta {
 
 
 
+
+// Bigger normal cursor
+* {
+  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path d="M0 0 L0 28 L8 20 L12 24 L16 20 L8 12 L28 0 Z" fill="white" stroke="black" stroke-width="2"/></svg>') 16 16, auto !important;
+}
+
+button, a, input, textarea, select, [role="button"] {
+  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path d="M0 0 L0 28 L8 20 L12 24 L16 20 L8 12 L28 0 Z" fill="white" stroke="black" stroke-width="2"/></svg>') 16 16, pointer !important;
+}
 
 // Mobile cursor behavior - ensure interactive elements show pointer
 @media (max-width: 768px) {

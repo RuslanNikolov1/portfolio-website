@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Rubik, Space_Grotesk } from "next/font/google";
 import "./globals.scss";
-import SkipLinks from "@/components/SkipLinks";
 
 const rubik = Rubik({
   variable: "--font-rubik",
@@ -20,8 +19,8 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "Ruslan Nikolov - Senior Frontend Developer & UI Designer | Available for Hire",
-  description: "Senior Frontend Developer with 7+ years experience at EPAM Systems. Specializing in React, TypeScript, Next.js. Available for full-time positions and freelance projects. Proven track record of delivering high-quality web applications.",
+  title: "My Portfolio — Frontend Developer",
+  description: "Portfolio of Ruslan Nikolov, Front-End Developer specializing in React, Next.js, and TypeScript.",
   keywords: [
     "senior frontend developer", 
     "React developer", 
@@ -41,8 +40,9 @@ export const metadata: Metadata = {
     apple: "/briefcase.svg",
   },
   openGraph: {
-    title: "Ruslan Nikolov - Senior Frontend Developer & UI Designer",
-    description: "7+ years experience | React, TypeScript, Next.js | Available for hire",
+    title: "My Portfolio — Frontend Developer",
+    description: "Projects built with React, Next.js, and modern UI/UX design.",
+    image: "https://portfolio-website-dusky-five-28.vercel.app/preview.png",
     type: "website",
   },
 };
@@ -60,8 +60,7 @@ export default function RootLayout({
       <body
         className={`${rubik.variable} ${spaceGrotesk.variable} antialiased`}
       >
-        {/* Skip Navigation Links */}
-        <SkipLinks />
+        {/* Skip Navigation Links temporarily removed */}
         {children}
       </body>
     </html>
