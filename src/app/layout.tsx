@@ -42,7 +42,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "My Portfolio — Frontend Developer",
     description: "Projects built with React, Next.js, and modern UI/UX design.",
-    image: "https://portfolio-website-dusky-five-28.vercel.app/preview.png",
+    images: ["https://portfolio-website-dusky-five-28.vercel.app/preview.png"],
     type: "website",
   },
 };
