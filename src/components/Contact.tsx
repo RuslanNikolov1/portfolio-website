@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback, memo } from 'react';
 import { useForm } from 'react-hook-form';
 import { Mail, Github, Linkedin, Music, Send, MessageCircle, ArrowUp } from 'lucide-react';
 import Link from 'next/link';
@@ -15,7 +15,7 @@ interface ContactFormData {
   message: string;
 }
 
-const Contact = () => {
+const Contact = memo(() => {
   const { register, handleSubmit, formState: { errors }, reset } = useForm<ContactFormData>();
   const [showUpArrow, setShowUpArrow] = useState(false);
 
@@ -34,13 +34,13 @@ const Contact = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const onSubmit = async (data: ContactFormData) => {
+  const onSubmit = useCallback(async (data: ContactFormData) => {
     // Here you would typically send the data to your backend or email service
     console.log('Form submitted:', data);
     // For now, we'll just show a success message
     alert('Thank you for your message! I&apos;ll get back to you soon.');
     reset();
-  };
+  }, [reset]);
 
   const getIcon = (iconName: string) => {
     switch (iconName) {
@@ -252,6 +252,8 @@ const Contact = () => {
       <div className={styles.bottomDivider}></div>
     </section>
   );
-};
+});
+
+Contact.displayName = 'Contact';
 
 export default Contact;

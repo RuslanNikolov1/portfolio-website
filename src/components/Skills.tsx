@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useMemo, memo } from 'react';
 import { motion } from 'framer-motion';
 import {
   Zap as ReactIcon,
@@ -39,10 +39,11 @@ import {
 import { skills } from '@/data';
 import styles from './Skills.module.scss';
 
-const Skills = () => {
+const Skills = memo(() => {
   const developmentToolsRef = useRef<HTMLDivElement>(null);
 
-  const containerVariants = {
+
+  const containerVariants = useMemo(() => ({
     visible: {
       opacity: 1,
       transition: {
@@ -50,9 +51,9 @@ const Skills = () => {
         duration: 0.6
       }
     }
-  };
+  }), []);
 
-  const itemVariants = {
+  const itemVariants = useMemo(() => ({
     visible: {
       opacity: 1,
       y: 0,
@@ -61,16 +62,16 @@ const Skills = () => {
         ease: [0.25, 0.46, 0.45, 0.94] as const
       }
     }
-  };
+  }), []);
 
-  const skillCategories = {
+  const skillCategories = useMemo(() => ({
     frontend: { title: 'Technical Skills', color: '#10B981' },
     design: { title: 'Soft Skills', color: '#2563EB' }
-  };
+  }), []);
 
-  const frontendSkills = skills.filter(skill => skill.category === 'frontend');
-  const toolsSkills = skills.filter(skill => skill.category === 'tools');
-  const designSkills = skills.filter(skill => skill.category === 'design');
+  const frontendSkills = useMemo(() => skills.filter(skill => skill.category === 'frontend'), []);
+  const toolsSkills = useMemo(() => skills.filter(skill => skill.category === 'tools'), []);
+  const designSkills = useMemo(() => skills.filter(skill => skill.category === 'design'), []);
 
   const skillIcons: { [key: string]: React.ComponentType<{ size?: number; color?: string }> } = {
     // Frontend Skills
@@ -340,6 +341,8 @@ const Skills = () => {
       </div>
     </section>
   );
-};
+});
+
+Skills.displayName = 'Skills';
 
 export default Skills;

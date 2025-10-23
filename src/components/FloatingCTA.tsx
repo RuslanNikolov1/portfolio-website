@@ -1,11 +1,12 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import { useCallback, memo } from 'react';
 
-const FloatingCTA = () => {
-  const scrollToContact = () => {
+const FloatingCTA = memo(() => {
+  const scrollToContact = useCallback(() => {
     document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
-  };
+  }, []);
 
   return (
     <motion.button
@@ -36,7 +37,9 @@ const FloatingCTA = () => {
       Work with me
     </motion.button>
   );
-};
+});
+
+FloatingCTA.displayName = 'FloatingCTA';
 
 export default FloatingCTA;
 

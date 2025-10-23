@@ -2,11 +2,11 @@
 
 import { motion } from 'framer-motion';
 import { ChevronDown } from 'lucide-react';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback, memo } from 'react';
 import Image from 'next/image';
 import styles from './Hero.module.scss';
 
-const Hero = () => {
+const Hero = memo(() => {
   const [isClient, setIsClient] = useState(false);
   const [videoError, setVideoError] = useState(false);
   const [videoLoaded, setVideoLoaded] = useState(false);
@@ -66,18 +66,18 @@ const Hero = () => {
   }, [shouldLoadVideo]);
 
 
-  const handleVideoError = () => {
+  const handleVideoError = useCallback(() => {
     setVideoError(true);
-  };
+  }, []);
 
-  const handleVideoCanPlay = () => {
+  const handleVideoCanPlay = useCallback(() => {
     setVideoError(false);
     setVideoLoaded(true);
-  };
+  }, []);
 
-  const handleVideoLoad = () => {
+  const handleVideoLoad = useCallback(() => {
     setVideoLoaded(true);
-  };
+  }, []);
 
 
   return (
@@ -298,6 +298,8 @@ const Hero = () => {
     </section>
     </>
   );
-};
+});
+
+Hero.displayName = 'Hero';
 
 export default Hero;
