@@ -10,10 +10,60 @@ const Hero = memo(() => {
   const [isClient, setIsClient] = useState(false);
   const [videoError, setVideoError] = useState(false);
   const [videoLoaded, setVideoLoaded] = useState(false);
+  const [shouldLoadVideo, setShouldLoadVideo] = useState(false);
 
   useEffect(() => {
     setIsClient(true);
+    
+    // Lazy load video after first paint
+    const loadVideoAfterPaint = () => {
+      // Use requestAnimationFrame to ensure it runs after the first paint
+      requestAnimationFrame(() => {
+        // Add a small delay to ensure the initial image is painted first
+        setTimeout(() => {
+          setShouldLoadVideo(true);
+        }, 100);
+      });
+    };
+
+    // Use requestIdleCallback if available, otherwise use setTimeout
+    if ('requestIdleCallback' in window) {
+      requestIdleCallback(loadVideoAfterPaint);
+    } else {
+      setTimeout(loadVideoAfterPaint, 0);
+    }
   }, []);
+
+  // Additional optimization: Use Intersection Observer for even better lazy loading
+  useEffect(() => {
+    if (!shouldLoadVideo) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            // Video is in viewport, ensure it's loaded
+            const video = entry.target as HTMLVideoElement;
+            if (video && video.readyState < 2) {
+              video.load();
+            }
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    const videoElement = document.querySelector('video');
+    if (videoElement) {
+      observer.observe(videoElement);
+    }
+
+    return () => {
+      if (videoElement) {
+        observer.unobserve(videoElement);
+      }
+    };
+  }, [shouldLoadVideo]);
 
 
   const handleVideoError = useCallback(() => {
@@ -73,7 +123,7 @@ const Hero = memo(() => {
           </div>
         )}
         
-        {isClient ? (
+        {isClient && shouldLoadVideo ? (
           !videoError ? (
             <video
               className={styles.heroVideo}
@@ -81,7 +131,7 @@ const Hero = memo(() => {
               muted
               loop
               playsInline
-              preload="metadata"
+              preload="none"
               onError={handleVideoError}
               onCanPlay={handleVideoCanPlay}
               onLoadedData={handleVideoLoad}
@@ -119,6 +169,25 @@ const Hero = memo(() => {
               Video unavailable
             </div>
           )
+        ) : !shouldLoadVideo ? (
+          // Show initial image while video is being lazy loaded
+          <div className={styles.heroVideo} style={{
+            backgroundImage: 'url("/Hero Initial Picture.png")',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat',
+            position: 'relative'
+          }}>
+            <div style={{
+              position: 'absolute',
+              top: 0,
+              left: 0,
+              width: '100%',
+              height: '100%',
+              background: 'rgba(37, 99, 235, 0.15)',
+              zIndex: 1
+            }} />
+          </div>
         ) : (
             <div style={{
               position: 'absolute',

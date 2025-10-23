@@ -154,21 +154,6 @@ $font-weight-semibold: 600;
   background-color: #020617;
 }
 
-.title::before {
-  content: attr(data-text);
-  position: absolute;
-  top: 0;
-  left: 0;
-  color: transparent;
-  -webkit-text-stroke: 6px;
-  background: linear-gradient(90deg, #0070f3, #00ff99);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: white;
-  mask-composite: exclude;
-  -webkit-mask-composite: xor;
-  background-color: #020617;
-}
 
 .titleRow {
   display: flex;
@@ -353,76 +338,8 @@ $font-weight-semibold: 600;
   letter-spacing: $letter-spacing-normal;
 }
 
-.buttons {
-  display: flex;
-  gap: 1.5rem;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-bottom: 4rem;
-}
 
-.primaryButton {
-  font-family: $font-rubik;
-  padding: 1rem 2.5rem;
-  background: linear-gradient(135deg, $color-blue 0%, $color-green 100%); // Vibrant blue-green gradient
-  color: $color-bg;
-  border: none;
-  border-radius: 50px;
-  font-size: $font-size-lg;
-  font-weight: $font-weight-semibold;
-  line-height: $line-height-tight;
-  letter-spacing: $letter-spacing-wide;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  position: relative;
-  overflow: hidden;
-  box-shadow: 0 0 20px rgba(93, 183, 255, 0.3);
 
-  &:hover {
-    box-shadow: 0 0 40px rgba(255, 214, 68, 0.6); // Intense yellow glow on hover
-    transform: translateY(-3px);
-    background: linear-gradient(135deg, $color-yellow 0%, $color-blue 100%);
-  }
-}
-
-.primaryButton::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-  transition: left 0.5s;
-}
-
-.primaryButton:hover::before {
-  left: 100%;
-}
-
-.secondaryButton {
-  font-family: $font-rubik;
-  padding: 1rem 2.5rem;
-  background: transparent;
-  color: $color-text;
-  border: 2px solid $color-blue; // Vibrant blue border
-  border-radius: 50px;
-  font-size: $font-size-lg;
-  font-weight: $font-weight-semibold;
-  line-height: $line-height-tight;
-  letter-spacing: $letter-spacing-wide;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 0 10px rgba(93, 183, 255, 0.2);
-
-  &:hover {
-    border-color: $color-green-accent; // Strategic green accent on hover
-    color: $color-green-accent;
-    box-shadow: 0 0 30px rgba(16, 185, 129, 0.5);
-    transform: translateY(-3px);
-    background: rgba(16, 185, 129, 0.1);
-  }
-}
 
 .scrollIndicator {
   position: absolute;

@@ -1,10 +1,10 @@
 import { motion } from 'framer-motion';
-import { useRef } from 'react';
+import { useRef, memo } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import styles from './About.module.scss';
 
-const About = () => {
+const About = memo(() => {
   const aboutRef = useRef<HTMLElement>(null);
 
   return (
@@ -142,7 +142,9 @@ const About = () => {
       </div>
     </section>
   );
-};
+});
+
+About.displayName = 'About';
 
 export default About;
 

@@ -1,12 +1,12 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback, useMemo, memo } from 'react';
 import { Menu, X, Play, Pause, Volume2, Home, Briefcase, Zap, User, Mail } from 'lucide-react';
 import Image from 'next/image';
 import styles from './Navigation.module.scss';
 
-const Navigation = () => {
+const Navigation = memo(() => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState('hero');
@@ -14,28 +14,28 @@ const Navigation = () => {
   const [volume, setVolume] = useState(0.7);
   const [audioRef, setAudioRef] = useState<HTMLAudioElement | null>(null);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
-    };
+  const handleScroll = useCallback(() => {
+    setScrolled(window.scrollY > 50);
+  }, []);
 
-    // Use Intersection Observer for more accurate section detection
-    const observerOptions = {
-      root: null,
-      rootMargin: '-20% 0px -70% 0px', // Trigger when section is 20% from top
-      threshold: 0
-    };
-
-    const observerCallback = (entries: IntersectionObserverEntry[]) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          const sectionId = entry.target.id;
-          if (sectionId) {
-            setActiveSection(sectionId);
-          }
+  const observerCallback = useCallback((entries: IntersectionObserverEntry[]) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const sectionId = entry.target.id;
+        if (sectionId) {
+          setActiveSection(sectionId);
         }
-      });
-    };
+      }
+    });
+  }, []);
+
+  const observerOptions = useMemo(() => ({
+    root: null,
+    rootMargin: '-20% 0px -70% 0px', // Trigger when section is 20% from top
+    threshold: 0
+  }), []);
+
+  useEffect(() => {
 
     const observer = new IntersectionObserver(observerCallback, observerOptions);
     
@@ -60,7 +60,7 @@ const Navigation = () => {
       clearTimeout(timeoutId);
       observer.disconnect();
     };
-  }, []);
+  }, [handleScroll, observerCallback, observerOptions]);
 
   useEffect(() => {
     // Initialize audio and set starting time to 1:50 (110 seconds)
@@ -70,23 +70,23 @@ const Navigation = () => {
     }
   }, [audioRef, volume]);
 
-  const navItems = [
+  const navItems = useMemo(() => [
     { name: 'Home', href: '#hero', icon: Home },
     { name: 'Projects', href: '#projects', icon: Briefcase },
     { name: 'Skills', href: '#skills', icon: Zap },
     { name: 'About', href: '#about', icon: User },
     { name: 'Contact', href: '#contact', icon: Mail }
-  ];
+  ], []);
 
-  const scrollToSection = (href: string) => {
+  const scrollToSection = useCallback((href: string) => {
     const element = document.querySelector(href);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
     setIsOpen(false);
-  };
+  }, []);
 
-  const togglePlayPause = () => {
+  const togglePlayPause = useCallback(() => {
     if (audioRef) {
       if (isPlaying) {
         audioRef.pause();
@@ -95,14 +95,14 @@ const Navigation = () => {
       }
       setIsPlaying(!isPlaying);
     }
-  };
+  }, [audioRef, isPlaying]);
 
-  const handleVolumeChange = (newVolume: number) => {
+  const handleVolumeChange = useCallback((newVolume: number) => {
     setVolume(newVolume);
     if (audioRef) {
       audioRef.volume = newVolume;
     }
-  };
+  }, [audioRef]);
 
   return (
     <motion.nav
@@ -265,6 +265,8 @@ const Navigation = () => {
       />
     </motion.nav>
   );
-};
+});
+
+Navigation.displayName = 'Navigation';
 
 export default Navigation;

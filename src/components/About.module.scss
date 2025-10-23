@@ -194,6 +194,19 @@
     box-shadow: 0 0 0 3px rgba(250, 204, 21, 0.3);
     z-index: 2;
   }
+}
+
+.timelineMarker {
+  position: absolute;
+  left: -2rem;
+  top: 0.5rem;
+  width: 16px;
+  height: 16px;
+  background: $secondary;
+  border: 4px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px rgba(250, 204, 21, 0.3);
+  z-index: 2;
   
   // Connecting line to next item
   &:not(:last-child)::after {

@@ -1,22 +1,37 @@
 import type { Metadata } from "next";
-import { Rubik, Space_Grotesk } from "next/font/google";
+import { Rubik, Space_Grotesk, Inter } from "next/font/google";
 import "./globals.scss";
 
+// Google Fonts
 const rubik = Rubik({
   variable: "--font-rubik",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["300", "400", "500", "600", "700", "800"],
   display: "swap",
   preload: true,
+  fallback: ["system-ui", "arial"],
 });
 
 const spaceGrotesk = Space_Grotesk({
   variable: "--font-display",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["300", "400", "500", "600", "700"],
   display: "swap",
   preload: true,
+  fallback: ["system-ui", "arial"],
 });
+
+const inter = Inter({
+  variable: "--font-inter",
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700", "800"],
+  display: "swap",
+  preload: true,
+  fallback: ["system-ui", "arial"],
+});
+
+// Use Inter as Satoshi fallback for now
+const satoshi = inter;
 
 export const metadata: Metadata = {
   title: "My Portfolio — Frontend Developer",
@@ -58,7 +73,7 @@ export default function RootLayout({
         <link rel="icon" href="/briefcase.svg" type="image/svg+xml" />
       </head>
       <body
-        className={`${rubik.variable} ${spaceGrotesk.variable} antialiased`}
+        className={`${rubik.variable} ${spaceGrotesk.variable} ${inter.variable} ${satoshi.variable} antialiased`}
       >
         {/* Skip Navigation Links temporarily removed */}
         {children}
