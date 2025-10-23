@@ -93,27 +93,30 @@ const Contact = memo(() => {
 
               <div className={styles.socialLinks}>
                 {socialLinks.map((link, index) => (
-                  <motion.a
+                  <Link
                     key={link.name}
                     href={link.url}
                     target="_blank"
                     rel="noopener noreferrer"
                     className={styles.socialLink}
-                    whileHover={{ 
-                      scale: 1.1,
-                      y: -5
-                    }}
-                    whileTap={{ scale: 0.95 }}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                    viewport={{ once: true }}
                   >
-                    <div className={styles.socialIcon}>
-                      {getIcon(link.icon)}
-                    </div>
-                    <span className={styles.socialName}>{link.name}</span>
-                  </motion.a>
+                    <motion.div
+                      whileHover={{ 
+                        scale: 1.1,
+                        y: -5
+                      }}
+                      whileTap={{ scale: 0.95 }}
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.5, delay: index * 0.1 }}
+                      viewport={{ once: true }}
+                    >
+                      <div className={styles.socialIcon}>
+                        {getIcon(link.icon)}
+                      </div>
+                      <span className={styles.socialName}>{link.name}</span>
+                    </motion.div>
+                  </Link>
                 ))}
               </div>
 

@@ -3,7 +3,8 @@
 import { useState, useEffect, useCallback, useMemo, memo } from 'react';
 import { motion } from 'framer-motion';
 import { ExternalLink, Github, ChevronLeft, ChevronRight, Rocket } from 'lucide-react';
-// Removed Image import - using regular img tags for static export
+import Image from 'next/image';
+import Link from 'next/link';
 import { projects } from '@/data';
 import styles from './Projects.module.scss';
 
@@ -111,23 +112,23 @@ const Projects = memo(() => {
             >
               <div className={styles.thumbPlaceholder}>
                 {idx === 0 ? (
-                  <img src="/Thumbnail-1.png" alt="Thumbnail 1" width={120} height={80} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                  <Image src="/Thumbnail-1.png" alt="Thumbnail 1" width={120} height={80} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                 ) : idx === 1 ? (
-                  <img src="/Thumbnail-2.png" alt="Thumbnail 2" width={120} height={80} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                  <Image src="/Thumbnail-2.png" alt="Thumbnail 2" width={120} height={80} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                 ) : idx === 2 ? (
-                  <img src="/Thumbnail-4.png" alt="Thumbnail 4" width={120} height={80} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                  <Image src="/Thumbnail-4.png" alt="Thumbnail 4" width={120} height={80} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                 ) : idx === 3 ? (
-                  <img src="/Thumbnail - 7.png" alt="Thumbnail 7" width={120} height={80} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                  <Image src="/Thumbnail - 7.png" alt="Thumbnail 7" width={120} height={80} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                 ) : idx === 4 ? (
-                  <img src="/Thumbnail-3.png" alt="Thumbnail 3" width={120} height={80} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                  <Image src="/Thumbnail-3.png" alt="Thumbnail 3" width={120} height={80} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                 ) : idx === 5 ? (
-                  <img src="/Thumbnail-8.png" alt="Thumbnail 8" width={120} height={80} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                  <Image src="/Thumbnail-8.png" alt="Thumbnail 8" width={120} height={80} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                 ) : idx === 6 ? (
-                  <img src="/Thumbnail-5.png" alt="Thumbnail 5" width={120} height={80} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                  <Image src="/Thumbnail-5.png" alt="Thumbnail 5" width={120} height={80} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                 ) : idx === 7 ? (
-                  <img src="/Thumbnail-6.png" alt="Thumbnail 6" width={120} height={80} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                  <Image src="/Thumbnail-6.png" alt="Thumbnail 6" width={120} height={80} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                 ) : idx === 8 ? (
-                  <img src="/Thumbnail-9.png" alt="Thumbnail 9" width={120} height={80} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                  <Image src="/Thumbnail-9.png" alt="Thumbnail 9" width={120} height={80} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                 ) : (
                   idx + 1
                 )}
@@ -158,28 +159,26 @@ const Projects = memo(() => {
                 ))}
               </div>
               <div className={styles.leftButtons}>
-                <motion.a
-                  href={selected.liveUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={styles.liveButton}
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  <ExternalLink size={16} />
-                  Visit Project
-                </motion.a>
-                <motion.a
-                  href={selected.codeUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={styles.codeButton}
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  <Github size={16} />
-                  View Code
-                </motion.a>
+                <Link href={selected.liveUrl} target="_blank" rel="noopener noreferrer">
+                  <motion.div
+                    className={styles.liveButton}
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    <ExternalLink size={16} />
+                    Visit Project
+                  </motion.div>
+                </Link>
+                <Link href={selected.codeUrl} target="_blank" rel="noopener noreferrer">
+                  <motion.div
+                    className={styles.codeButton}
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    <Github size={16} />
+                    View Code
+                  </motion.div>
+                </Link>
               </div>
             </div>
 
@@ -200,7 +199,7 @@ const Projects = memo(() => {
                       Your browser does not support the video tag.
                     </video>
                   ) : (
-                    <img
+                    <Image
                       key={selected.id}
                       src={selected.previewUrl}
                       alt={selected.title}

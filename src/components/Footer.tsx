@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { Github, Linkedin, Mail, Music } from 'lucide-react';
-// Removed Image import - using regular img tags for static export
+import Image from 'next/image';
 import Link from 'next/link';
 import { socialLinks } from '@/data';
 import styles from './Footer.module.scss';
@@ -35,7 +35,7 @@ const Footer = () => {
         >
           <div className={styles.brand}>
             <div className={styles.logo}>
-              <img
+              <Image
                 src="/Ruslan Looking Avatar.jpg"
                 alt="Ruslan Nikolov"
                 width={60}
@@ -65,25 +65,28 @@ const Footer = () => {
               <h4 className={styles.linkTitle}>Connect</h4>
               <div className={styles.socialLinks}>
                 {socialLinks.map((link, index) => (
-                  <motion.a
+                  <Link
                     key={link.name}
                     href={link.url}
                     target="_blank"
                     rel="noopener noreferrer"
                     className={styles.socialLink}
-                    whileHover={{ 
-                      scale: 1.1,
-                      y: -2
-                    }}
-                    whileTap={{ scale: 0.95 }}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                    viewport={{ once: true }}
                   >
-                    {getIcon(link.icon)}
-                    <span>{link.name}</span>
-                  </motion.a>
+                    <motion.div
+                      whileHover={{ 
+                        scale: 1.1,
+                        y: -2
+                      }}
+                      whileTap={{ scale: 0.95 }}
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.5, delay: index * 0.1 }}
+                      viewport={{ once: true }}
+                    >
+                      {getIcon(link.icon)}
+                      <span>{link.name}</span>
+                    </motion.div>
+                  </Link>
                 ))}
               </div>
             </div>
