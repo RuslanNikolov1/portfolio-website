@@ -132,6 +132,7 @@ const Navigation = () => {
             alt="Ruslan Nikolov profile picture" 
             width={60} 
             height={60}
+            priority={true}
             style={{ borderRadius: '50%', objectFit: 'cover' }}
           />
         </motion.button>

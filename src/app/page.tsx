@@ -1,10 +1,10 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import dynamic from 'next/dynamic';
 import Navigation from '@/components/Navigation';
 import Hero from '@/components/Hero';
 import FloatingCTA from '@/components/FloatingCTA';
-import dynamic from 'next/dynamic';
 import styles from './page.module.scss';
 import ProjectsSkeleton from '@/components/ProjectsSkeleton';
 import SkillsSkeleton from '@/components/SkillsSkeleton';
@@ -50,7 +50,7 @@ const FooterLazy = dynamic(() => import('@/components/Footer'), {
       y: 0,
       transition: {
         duration: 0.8,
-        ease: "easeOut"
+        ease: [0.25, 0.46, 0.45, 0.94] as const
       }
     }
   };

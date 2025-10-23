@@ -1,7 +1,12 @@
 'use client';
 
 import { useState, useEffect, useCallback, useMemo, memo } from 'react';
-import { motion } from 'framer-motion';
+import dynamic from 'next/dynamic';
+
+const motion = dynamic(() => import('framer-motion').then(mod => ({ default: mod.motion })), {
+  ssr: false,
+  loading: () => <div />
+});
 import { ExternalLink, Github, ChevronLeft, ChevronRight, Rocket } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';

@@ -21,6 +21,72 @@ const nextConfig: NextConfig = {
   // Compression and performance
   compress: true,
   
+  // Headers for caching static assets
+  async headers() {
+    return [
+      {
+        // Images caching
+        source: '/:path*.(jpg|jpeg|png|gif|webp|avif|svg|ico)',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
+          },
+        ],
+      },
+      {
+        // Videos caching
+        source: '/:path*.(mp4|webm|mov|avi)',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
+          },
+        ],
+      },
+      {
+        // Fonts caching
+        source: '/:path*.(woff|woff2|eot|ttf|otf)',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
+          },
+        ],
+      },
+      {
+        // CSS and JS files caching
+        source: '/:path*.(css|js)',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
+          },
+        ],
+      },
+      {
+        // Static assets caching
+        source: '/_next/static/:path*',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
+          },
+        ],
+      },
+      {
+        // API routes caching
+        source: '/api/:path*',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=3600, s-maxage=3600',
+          },
+        ],
+      },
+    ];
+  },
+  
   
   // Bundle analyzer (uncomment to analyze bundle)
   // webpack: (config, { isServer }) => {

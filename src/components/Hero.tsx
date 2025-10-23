@@ -3,33 +3,18 @@
 import { motion } from 'framer-motion';
 import { ChevronDown } from 'lucide-react';
 import { useState, useEffect, useCallback, memo } from 'react';
+import Image from 'next/image';
 import styles from './Hero.module.scss';
 
 const Hero = memo(() => {
   const [isClient, setIsClient] = useState(false);
   const [videoError, setVideoError] = useState(false);
   const [videoLoaded, setVideoLoaded] = useState(false);
-  const [imageOpacity, setImageOpacity] = useState(0.3);
 
   useEffect(() => {
     setIsClient(true);
   }, []);
 
-  useEffect(() => {
-    if (!videoLoaded && !videoError) {
-      const interval = setInterval(() => {
-        setImageOpacity(prev => {
-          if (prev >= 1) {
-            clearInterval(interval);
-            return 1;
-          }
-          return prev + 0.05;
-        });
-      }, 100);
-      
-      return () => clearInterval(interval);
-    }
-  }, [videoLoaded, videoError]);
 
   const handleVideoError = useCallback(() => {
     setVideoError(true);
@@ -51,18 +36,14 @@ const Hero = memo(() => {
       <div className={styles.background} role="img" aria-label="Animated background video">
         {/* Hero Initial Picture - shows until video loads */}
         {!videoLoaded && !videoError && (
-          <div 
+          <Image
+            src="/Hero Initial Picture.png"
+            alt="Ruslan Nikolov - Frontend Developer"
+            fill
+            priority={true}
             className={styles.heroImage}
             style={{
-              position: 'absolute',
-              top: 0,
-              left: 0,
-              width: '100%',
-              height: '100%',
-              backgroundImage: 'url("/Hero Initial Picture.png")',
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-              backgroundRepeat: 'no-repeat',
+              objectFit: 'cover',
               zIndex: 1
             }}
           />
