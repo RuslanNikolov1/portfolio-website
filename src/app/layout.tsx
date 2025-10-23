@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   title: "My Portfolio — Frontend Developer",
   description: "Portfolio of Ruslan Nikolov, Front-End Developer specializing in React, Next.js, and TypeScript.",
   keywords: [
-    "senior frontend developer", 
+    "frontend developer", 
     "React developer", 
     "TypeScript developer", 
     "Next.js developer", 

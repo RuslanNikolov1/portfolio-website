@@ -127,7 +127,7 @@ const Hero = memo(() => {
                 transition={{ duration: 0.8, delay: 0.35 }}
               >
                 <p className={`${styles.subtitle} ${styles.inlineSubtitle}`}>
-                  Senior Frontend Developer • UI/UX Designer
+                  Frontend Developer • UI/UX Designer
                                     <span className={styles.roleBreak}> • Electronic Music Producer</span>
                 </p>
               </motion.div>

@@ -75,7 +75,7 @@ const Contact = memo(() => {
           </div>
           <p className={styles.subtitle}>
             Based in Burgas, Bulgaria • Available for remote work worldwide<br/>
-            Whether you&apos;re a hiring manager looking for a senior developer or a business owner needing a custom solution, 
+            Whether you&apos;re a hiring manager looking for a developer or a business owner needing a custom solution, 
             I&apos;m here to help bring your vision to life with professional expertise and creative innovation.
           </p>
         </motion.div>

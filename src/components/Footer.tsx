@@ -45,7 +45,7 @@ const Footer = () => {
             </div>
             <h3 className={styles.brandName}>Ruslan Nikolov</h3>
             <p className={styles.brandDescription}>
-              Senior Frontend Developer • Freelancer • Electronic Music Producer
+              Frontend Developer • Freelancer • Electronic Music Producer
             </p>
           </div>
 
