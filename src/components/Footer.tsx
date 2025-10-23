@@ -3,13 +3,12 @@ import { Github, Linkedin, Mail, Music } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { socialLinks } from '@/data';
-import { memo, useCallback } from 'react';
 import styles from './Footer.module.scss';
 
-const Footer = memo(() => {
+const Footer = () => {
   const currentYear = new Date().getFullYear();
 
-  const getIcon = useCallback((iconName: string) => {
+  const getIcon = (iconName: string) => {
     switch (iconName) {
       case 'mail':
         return <Mail size={20} />;
@@ -22,7 +21,7 @@ const Footer = memo(() => {
       default:
         return null;
     }
-  }, []);
+  };
 
   return (
     <footer className={styles.footer}>
@@ -114,8 +113,6 @@ const Footer = memo(() => {
       </div>
     </footer>
   );
-});
-
-Footer.displayName = 'Footer';
+};
 
 export default Footer;

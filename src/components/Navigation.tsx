@@ -1,12 +1,12 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { useState, useEffect, useCallback, useMemo, memo } from 'react';
+import { useState, useEffect } from 'react';
 import { Menu, X, Play, Pause, Volume2, Home, Briefcase, Zap, User, Mail } from 'lucide-react';
 import Image from 'next/image';
 import styles from './Navigation.module.scss';
 
-const Navigation = memo(() => {
+const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState('hero');
@@ -14,11 +14,11 @@ const Navigation = memo(() => {
   const [volume, setVolume] = useState(0.7);
   const [audioRef, setAudioRef] = useState<HTMLAudioElement | null>(null);
 
-  const handleScroll = useCallback(() => {
+  const handleScroll = () => {
     setScrolled(window.scrollY > 50);
-  }, []);
+  };
 
-  const observerCallback = useCallback((entries: IntersectionObserverEntry[]) => {
+  const observerCallback = (entries: IntersectionObserverEntry[]) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         const sectionId = entry.target.id;
@@ -27,13 +27,13 @@ const Navigation = memo(() => {
         }
       }
     });
-  }, []);
+  };
 
-  const observerOptions = useMemo(() => ({
+  const observerOptions = {
     root: null,
     rootMargin: '-20% 0px -70% 0px', // Trigger when section is 20% from top
     threshold: 0
-  }), []);
+  };
 
   useEffect(() => {
 
@@ -60,7 +60,7 @@ const Navigation = memo(() => {
       clearTimeout(timeoutId);
       observer.disconnect();
     };
-  }, [handleScroll, observerCallback, observerOptions]);
+  }, [observerOptions]);
 
   useEffect(() => {
     // Initialize audio and set starting time to 1:50 (110 seconds)
@@ -70,23 +70,23 @@ const Navigation = memo(() => {
     }
   }, [audioRef, volume]);
 
-  const navItems = useMemo(() => [
+  const navItems = [
     { name: 'Home', href: '#hero', icon: Home },
     { name: 'Projects', href: '#projects', icon: Briefcase },
     { name: 'Skills', href: '#skills', icon: Zap },
     { name: 'About', href: '#about', icon: User },
     { name: 'Contact', href: '#contact', icon: Mail }
-  ], []);
+  ];
 
-  const scrollToSection = useCallback((href: string) => {
+  const scrollToSection = (href: string) => {
     const element = document.querySelector(href);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
     setIsOpen(false);
-  }, []);
+  };
 
-  const togglePlayPause = useCallback(() => {
+  const togglePlayPause = () => {
     if (audioRef) {
       if (isPlaying) {
         audioRef.pause();
@@ -95,14 +95,14 @@ const Navigation = memo(() => {
       }
       setIsPlaying(!isPlaying);
     }
-  }, [audioRef, isPlaying]);
+  };
 
-  const handleVolumeChange = useCallback((newVolume: number) => {
+  const handleVolumeChange = (newVolume: number) => {
     setVolume(newVolume);
     if (audioRef) {
       audioRef.volume = newVolume;
     }
-  }, [audioRef]);
+  };
 
   return (
     <motion.nav
@@ -265,8 +265,6 @@ const Navigation = memo(() => {
       />
     </motion.nav>
   );
-});
-
-Navigation.displayName = 'Navigation';
+};
 
 export default Navigation;
