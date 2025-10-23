@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { useState } from 'react';
-import Image from 'next/image';
+// Removed Image import - using regular img tags for static export
 import styles from './AnimatedAvatar.module.scss';
 
 interface AnimatedAvatarProps {
@@ -108,13 +108,16 @@ const AnimatedAvatar = ({
           />
 
           {/* Avatar Image */}
-          <Image
+          <img
             src="/Ruslan Profile Pic.jpg"
             alt="Ruslan Nikolov - Frontend Developer, UI Designer & Music Producer"
-            fill
             className={styles.avatarImage}
-            priority={size === 'large'}
-            sizes={size === 'large' ? '320px' : size === 'medium' ? '192px' : '128px'}
+            style={{ 
+              width: '100%', 
+              height: '100%', 
+              objectFit: 'cover',
+              borderRadius: '50%'
+            }}
           />
 
           {/* Floating Music Notes */}

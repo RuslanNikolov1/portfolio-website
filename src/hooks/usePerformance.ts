@@ -1,64 +1,64 @@
-'use client';
+import { useEffect, useCallback, useRef } from 'react';
 
-import { useEffect, useState } from 'react';
-
-interface PerformanceMetrics {
-  loadTime: number;
-  renderTime: number;
-  memoryUsage?: number;
-}
-
+// Performance optimization hook
 export const usePerformance = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
+  const rafId = useRef<number | undefined>(undefined);
+  const timeoutId = useRef<NodeJS.Timeout | undefined>(undefined);
 
-  useEffect(() => {
-    const startTime = performance.now();
-
-    const measurePerformance = () => {
-      const loadTime = performance.now() - startTime;
-      
-      // Measure render time
-      const renderStart = performance.now();
-      requestAnimationFrame(() => {
-        const renderTime = performance.now() - renderStart;
-        
-        // Get memory usage if available
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        const memoryUsage = (performance as any).memory?.usedJSHeapSize;
-
-        setMetrics({
-          loadTime,
-          renderTime,
-          memoryUsage,
-        });
-      });
-    };
-
-    // Measure after initial load
-    if (document.readyState === 'complete') {
-      measurePerformance();
-    } else {
-      window.addEventListener('load', measurePerformance);
-    }
-
-    return () => {
-      window.removeEventListener('load', measurePerformance);
+  // Debounced function to reduce execution frequency
+  const debounce = useCallback(<T extends (...args: unknown[]) => void>(func: T, delay: number) => {
+    return (...args: Parameters<T>) => {
+      if (timeoutId.current) {
+        clearTimeout(timeoutId.current);
+      }
+      timeoutId.current = setTimeout(() => func(...args), delay);
     };
   }, []);
 
-  return metrics;
+  // Throttled function using requestAnimationFrame
+  const throttle = useCallback(<T extends (...args: unknown[]) => void>(func: T) => {
+    return (...args: Parameters<T>) => {
+      if (rafId.current) {
+        cancelAnimationFrame(rafId.current);
+      }
+      rafId.current = requestAnimationFrame(() => func(...args));
+    };
+  }, []);
+
+  // Cleanup on unmount
+  useEffect(() => {
+    return () => {
+      if (rafId.current) {
+        cancelAnimationFrame(rafId.current);
+      }
+      if (timeoutId.current) {
+        clearTimeout(timeoutId.current);
+      }
+    };
+  }, []);
+
+  return { debounce, throttle };
 };
 
+// Hook for lazy loading with intersection observer
 export const useIntersectionObserver = (
-  ref: React.RefObject<HTMLElement>,
-  options?: IntersectionObserverInit
+  callback: () => void,
+  options: IntersectionObserverInit = {}
 ) => {
-  const [isIntersecting, setIsIntersecting] = useState(false);
+  const elementRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
+    const element = elementRef.current;
+    if (!element) return;
+
     const observer = new IntersectionObserver(
-      ([entry]) => {
-        setIsIntersecting(entry.isIntersecting);
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            callback();
+            observer.unobserve(entry.target);
+          }
+        });
       },
       {
         threshold: 0.1,
@@ -67,17 +67,25 @@ export const useIntersectionObserver = (
       }
     );
 
-    if (ref.current) {
-      observer.observe(ref.current);
-    }
+    observer.observe(element);
 
     return () => {
-      const currentRef = ref.current;
-      if (currentRef) {
-        observer.unobserve(currentRef);
-      }
+      observer.disconnect();
     };
-  }, [ref, options]);
+  }, [callback, options]);
 
-  return isIntersecting;
+  return elementRef;
+};
+
+// Hook for reducing re-renders
+export const useStableCallback = <T extends (...args: unknown[]) => unknown>(
+  callback: T
+): T => {
+  const callbackRef = useRef(callback);
+  callbackRef.current = callback;
+
+  return useCallback(
+    ((...args: Parameters<T>) => callbackRef.current(...args)) as T,
+    []
+  );
 };

@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { useRef } from 'react';
-import Image from 'next/image';
+// Removed Image import - using regular img tags for static export
 import Link from 'next/link';
 import styles from './About.module.scss';
 
@@ -78,9 +78,9 @@ const About = () => {
             </p>
             <div className={styles.musicImagesRow}>
               <div className={styles.imagesContainer}>
-                <Image src="/Music-1.jpg" alt="Music 1" width={180} height={180} className={styles.musicImage} />
-                <Image src="/Music-2.jpg" alt="Music 2" width={180} height={180} className={styles.musicImage} />
-                <Image src="/Music-3.png" alt="Music 3" width={180} height={180} className={styles.musicImage} />
+                <img src="/Music-1.jpg" alt="Music 1" width={180} height={180} className={styles.musicImage} />
+                <img src="/Music-2.jpg" alt="Music 2" width={180} height={180} className={styles.musicImage} />
+                <img src="/Music-3.png" alt="Music 3" width={180} height={180} className={styles.musicImage} />
               </div>
             </div>
           </div>
@@ -95,9 +95,9 @@ const About = () => {
             </p>
             <div className={styles.sportsImagesRow}>
               <div className={styles.imagesContainer}>
-                <Image src="/Sports-1.jpg" alt="Sports 1" width={180} height={180} className={styles.sportsImage} />
-                <Image src="/Sports-2.webp" alt="Sports 2" width={180} height={180} className={styles.sportsImage} />
-                <Image src="/Sports-3.jpg" alt="Sports 3" width={180} height={180} className={styles.sportsImage} />
+                <img src="/Sports-1.jpg" alt="Sports 1" width={180} height={180} className={styles.sportsImage} />
+                <img src="/Sports-2.webp" alt="Sports 2" width={180} height={180} className={styles.sportsImage} />
+                <img src="/Sports-3.jpg" alt="Sports 3" width={180} height={180} className={styles.sportsImage} />
               </div>
             </div>
           </div>
@@ -113,9 +113,9 @@ const About = () => {
             </p>
             <div className={styles.readingImagesRow}>
               <div className={styles.imagesContainer}>
-                <Image src="/Reading-1.jpg" alt="Reading 1" width={180} height={180} className={styles.readingImage} />
-                <Image src="/Reading-2.jpg" alt="Reading 2" width={180} height={180} className={styles.readingImage} />
-                <Image src="/Reading-3.jpg" alt="Reading 3" width={180} height={180} className={styles.readingImage} />
+                <img src="/Reading-1.jpg" alt="Reading 1" width={180} height={180} className={styles.readingImage} />
+                <img src="/Reading-2.jpg" alt="Reading 2" width={180} height={180} className={styles.readingImage} />
+                <img src="/Reading-3.jpg" alt="Reading 3" width={180} height={180} className={styles.readingImage} />
               </div>
             </div>
           </div>
@@ -131,9 +131,9 @@ const About = () => {
             </p>
             <div className={styles.artImagesRow}>
               <div className={styles.imagesContainer}>
-                <Image src="/Art-1.jpeg" alt="Art 1" width={180} height={180} className={styles.artImage} />
-                <Image src="/Art-2.jpg" alt="Art 2" width={180} height={180} className={styles.artImage} />
-                <Image src="/Art-3.webp" alt="Art 3" width={180} height={180} className={styles.artImage} />
+                <img src="/Art-1.jpeg" alt="Art 1" width={180} height={180} className={styles.artImage} />
+                <img src="/Art-2.jpg" alt="Art 2" width={180} height={180} className={styles.artImage} />
+                <img src="/Art-3.webp" alt="Art 3" width={180} height={180} className={styles.artImage} />
               </div>
             </div>
           </div>

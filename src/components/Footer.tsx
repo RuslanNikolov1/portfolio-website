@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { Github, Linkedin, Mail, Music } from 'lucide-react';
-import Image from 'next/image';
+// Removed Image import - using regular img tags for static export
 import Link from 'next/link';
 import { socialLinks } from '@/data';
 import styles from './Footer.module.scss';
@@ -35,12 +35,13 @@ const Footer = () => {
         >
           <div className={styles.brand}>
             <div className={styles.logo}>
-              <Image
+              <img
                 src="/Ruslan Looking Avatar.jpg"
                 alt="Ruslan Nikolov"
                 width={60}
                 height={60}
                 className={styles.profileAvatar}
+                style={{ borderRadius: '50%', objectFit: 'cover' }}
               />
             </div>
             <h3 className={styles.brandName}>Ruslan Nikolov</h3>

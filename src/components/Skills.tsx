@@ -1,125 +1,58 @@
-import React, { useRef } from 'react';
+import React, { useRef, useMemo } from 'react';
 import { motion } from 'framer-motion';
-import {
-  Code, Palette, Music,
-  Atom,
-  FileCode,
-  Globe,
-  FileText,
-  Layers,
-  Palette as PaletteIcon,
-  Zap,
-  Target,
-  Lightbulb,
-  Headphones,
-  Volume2,
-  Music2,
-  Mic,
-  Sparkles,
-  GitBranch,
-  Package,
-  Cpu,
-  Crown,
-  MessageCircle,
-  ClipboardList,
-  Clock,
-  Search,
-  Heart,
-  Handshake,
-  GraduationCap,
-  Shield,
-  Network,
-  Database,
-  Workflow,
-  Bot
-} from 'lucide-react';
+import { Zap } from 'lucide-react'; // Only import the main icon used in header
+import IconLoader from './IconLoader';
 import { skills } from '@/data';
+// Removed unused import
 import styles from './Skills.module.scss';
 
 const Skills = () => {
   const developmentToolsRef = useRef<HTMLDivElement>(null);
 
 
-  const skillCategories = {
-    frontend: { icon: Code, title: 'Technical Skills', color: '#10B981' },
-    design: { icon: Palette, title: 'Soft Skills', color: '#2563EB' }
-  };
-
-  const skillIcons = {
-    // Frontend Skills
-    'React': Atom,
-    'TypeScript': FileCode,
-    'Next.js': Globe,
-    'JavaScript': FileText,
-    'HTML/CSS': Layers,
-    'SASS/SCSS': PaletteIcon,
-    'Tailwind CSS': Zap,
-    'Framer Motion': Sparkles,
-    'Redux': Code,
-    'Material UI': PaletteIcon,
-    'Mapbox': Globe,
-    'Web Audio API': Volume2,
-    'Three.js': Cpu,
-
-    // Backend & API Skills
-    'REST API': Network,
-    'GraphQL': Database,
-
-    // Development Tools
-    'Git': GitBranch,
-    'CI/CD': Workflow,
-    'Webpack': Package,
-    'Vite': Zap,
-    'Cursor': Bot,
-    'React Query': Code,
-    'React Table': ClipboardList,
-    'Axios': Globe,
-    'Recharts': Target,
-    'React Router': Globe,
-    'Zod': Shield,
-    'React Hook Form': FileText,
-
-    // Soft Skills
-    'Client-focused problem solving': Target,
-    'Leadership and mentoring': Crown,
-    'Effective communication': MessageCircle,
-    'Strategic project planning': ClipboardList,
-    'Problem-Solving & Critical Thinking': Lightbulb,
-    'Adaptability & Continuous Learning': Target,
-    'Time Management & Prioritization': Clock,
-    'Attention to Detail': Search,
-    'Empathy & User-Centric Mindset': Heart,
-    'Collaboration in Agile Teams': Handshake,
-    'Mentorship & Knowledge Sharing': GraduationCap,
-
-    // Music Skills
-    'Ableton Live': Headphones,
-    'Electronic Music': Music2,
-    'Sound Design': Volume2,
-    'Music Composition': Music,
-    'Audio Mixing': Mic,
-    'Creative Process': Sparkles
-  };
-
-  const containerVariants = {
+  // Memoized animation variants for better performance
+  const containerVariants = useMemo(() => ({
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.1
+        staggerChildren: 0.05, // Reduced stagger for faster loading
+        duration: 0.3 // Shorter duration
       }
     }
-  };
+  }), []);
 
-  const itemVariants = {
+  const itemVariants = useMemo(() => ({
     visible: {
       opacity: 1,
       y: 0,
       transition: {
-        duration: 0.6,
-        ease: [0.25, 0.46, 0.45, 0.94] as const
+        duration: 0.3, // Reduced from 0.6
+        ease: [0.25, 0.46, 0.45, 0.94] as const // Proper easing type
       }
     }
-  };
+  }), []);
+
+  // Memoized skill categories to prevent re-renders
+  const skillCategories = useMemo(() => ({
+    frontend: { title: 'Technical Skills', color: '#10B981' },
+    design: { title: 'Soft Skills', color: '#2563EB' }
+  }), []);
+
+  // Memoized filtered skills to prevent unnecessary recalculations
+  const frontendSkills = useMemo(() => 
+    skills.filter(skill => skill.category === 'frontend'), 
+    []
+  );
+  
+  const toolsSkills = useMemo(() => 
+    skills.filter(skill => skill.category === 'tools'), 
+    []
+  );
+  
+  const designSkills = useMemo(() => 
+    skills.filter(skill => skill.category === 'design'), 
+    []
+  );
 
   return (
     <section id="skills" className={styles.skills}>
@@ -127,7 +60,7 @@ const Skills = () => {
         <motion.div
           className={styles.header}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.4 }} // Reduced from 0.8
           viewport={{ once: true }}
         >
           <div className={styles.emojiTitle}>
@@ -155,7 +88,7 @@ const Skills = () => {
                 className={styles.categoryIcon}
                 style={{ backgroundColor: skillCategories.frontend.color }}
               >
-                {React.createElement(skillCategories.frontend.icon, { size: 24 })}
+                <IconLoader name="React" size={24} color="#ffffff" />
               </div>
               <h3
                 className={styles.categoryTitle}
@@ -166,17 +99,16 @@ const Skills = () => {
             </div>
 
             <div className={styles.skillsGrid}>
-              {skills.filter(skill => skill.category === 'frontend').map((skill, index) => (
+              {frontendSkills.map((skill, index) => (
                 <motion.div
                   key={skill.name}
                   className={styles.skillItem}
                   whileInView={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  transition={{ duration: 0.2, delay: index * 0.02 }} // Reduced duration and delay
                   viewport={{ once: true }}
                 >
-                  <div className={styles.skillHeader}>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                      {skillIcons[skill.name as keyof typeof skillIcons] && (
+                    <div className={styles.skillHeader}>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
                         <div style={{
                           display: 'flex',
                           alignItems: 'center',
@@ -185,13 +117,12 @@ const Skills = () => {
                           height: '20px',
                           color: skillCategories.frontend.color
                         }}>
-                          {React.createElement(skillIcons[skill.name as keyof typeof skillIcons], { size: 16 })}
+                          <IconLoader name={skill.name} size={16} color={skillCategories.frontend.color} />
                         </div>
-                      )}
-                      <span className={styles.skillName}>{skill.name}</span>
+                        <span className={styles.skillName}>{skill.name}</span>
+                      </div>
+                      <span className={styles.skillYears}>{skill.years} years</span>
                     </div>
-                    <span className={styles.skillYears}>{skill.years} years</span>
-                  </div>
                   {skill.notes && (
                     <div className={styles.skillNotes}>
                       {skill.notes}
@@ -225,28 +156,26 @@ const Skills = () => {
               </div>
 
               <div className={styles.skillsGrid}>
-                {skills.filter(skill => skill.category === 'tools').map((skill, index) => (
+                {toolsSkills.map((skill, index) => (
                   <motion.div
                     key={skill.name}
                     className={styles.skillItem}
                     whileInView={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    transition={{ duration: 0.2, delay: index * 0.02 }} // Reduced duration and delay
                     viewport={{ once: true }}
                   >
                     <div className={styles.skillHeader}>
                       <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                        {skillIcons[skill.name as keyof typeof skillIcons] && (
-                          <div style={{
-                            display: 'flex',
-                            alignItems: 'center',
-                            justifyContent: 'center',
-                            width: '20px',
-                            height: '20px',
-                            color: '#FACC15'
-                          }}>
-                            {React.createElement(skillIcons[skill.name as keyof typeof skillIcons], { size: 16 })}
-                          </div>
-                        )}
+                        <div style={{
+                          display: 'flex',
+                          alignItems: 'center',
+                          justifyContent: 'center',
+                          width: '20px',
+                          height: '20px',
+                          color: '#FACC15'
+                        }}>
+                          <IconLoader name={skill.name} size={16} color="#FACC15" />
+                        </div>
                         <span className={styles.skillName}>{skill.name}</span>
                       </div>
                       <span className={styles.skillYears}>{skill.years} years</span>
@@ -271,7 +200,7 @@ const Skills = () => {
                 className={styles.categoryIcon}
                 style={{ backgroundColor: skillCategories.design.color }}
               >
-                {React.createElement(skillCategories.design.icon, { size: 24 })}
+                <IconLoader name="Client-focused problem solving" size={24} color="#ffffff" />
               </div>
               <h3
                 className={styles.categoryTitle}
@@ -282,28 +211,26 @@ const Skills = () => {
             </div>
 
             <div className={styles.skillsGrid}>
-              {skills.filter(skill => skill.category === 'design').map((skill, index) => (
+              {designSkills.map((skill, index) => (
                 <motion.div
                   key={skill.name}
                   className={styles.skillItem}
                   whileInView={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  transition={{ duration: 0.2, delay: index * 0.02 }} // Reduced duration and delay
                   viewport={{ once: true }}
                 >
                   <div className={styles.skillHeader}>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                      {skillIcons[skill.name as keyof typeof skillIcons] && (
-                        <div style={{
-                          display: 'flex',
-                          alignItems: 'center',
-                          justifyContent: 'center',
-                          width: '20px',
-                          height: '20px',
-                          color: skillCategories.design.color
-                        }}>
-                          {React.createElement(skillIcons[skill.name as keyof typeof skillIcons], { size: 16 })}
-                        </div>
-                      )}
+                      <div style={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        width: '20px',
+                        height: '20px',
+                        color: skillCategories.design.color
+                      }}>
+                        <IconLoader name={skill.name} size={16} color={skillCategories.design.color} />
+                      </div>
                       <span className={styles.skillName}>{skill.name}</span>
                     </div>
                     <span className={styles.skillYears}>{skill.years} years</span>

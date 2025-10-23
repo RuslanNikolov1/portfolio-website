@@ -43,13 +43,13 @@ const FooterLazy = dynamic(() => import('@/components/Footer'), {
 });
 
 const sectionVariants = {
-  hidden: { opacity: 0, y: 50 },
+  hidden: { opacity: 0, y: 30 }, // Reduced from 50
   visible: {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 0.8,
-      ease: [0.25, 0.46, 0.45, 0.94] as const
+      duration: 0.4, // Reduced from 0.8
+      ease: [0.25, 0.46, 0.45, 0.94] as const // Proper easing type
     }
   }
 };

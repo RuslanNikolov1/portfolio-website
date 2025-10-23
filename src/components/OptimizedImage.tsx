@@ -1,6 +1,5 @@
 'use client';
 
-import Image from 'next/image';
 import { useState, memo } from 'react';
 
 interface OptimizedImageProps {
@@ -9,9 +8,6 @@ interface OptimizedImageProps {
   width?: number;
   height?: number;
   className?: string;
-  priority?: boolean;
-  quality?: number;
-  sizes?: string;
   fill?: boolean;
   style?: React.CSSProperties;
 }
@@ -22,9 +18,6 @@ const OptimizedImage = memo(({
   width,
   height,
   className,
-  priority = false,
-  quality = 85,
-  sizes = '(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw',
   fill = false,
   style,
 }: OptimizedImageProps) => {
@@ -81,21 +74,20 @@ const OptimizedImage = memo(({
           Loading...
         </div>
       )}
-      <Image
+      <img
         src={src}
         alt={alt}
-        width={fill ? undefined : width}
-        height={fill ? undefined : height}
-        fill={fill}
+        width={width}
+        height={height}
         className={className}
-        priority={priority}
-        quality={quality}
-        sizes={sizes}
         onLoad={handleLoad}
         onError={handleError}
         style={{
           opacity: isLoading ? 0 : 1,
           transition: 'opacity 0.3s ease-in-out',
+          width: fill ? '100%' : width,
+          height: fill ? '100%' : height,
+          objectFit: 'cover',
         }}
       />
     </div>

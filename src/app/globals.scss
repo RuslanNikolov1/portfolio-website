@@ -28,7 +28,7 @@ a:focus-visible,
 input:focus-visible,
 textarea:focus-visible,
 select:focus-visible {
-  cursor: auto !important;
+  cursor: auto;
 }
 
 // High contrast mode support
@@ -138,7 +138,7 @@ body {
   overflow-x: hidden;
   position: relative;
   transition: background 0.3s ease, color 0.3s ease;
-  cursor: auto; // Default cursor, musical cursor applied only on desktop
+  cursor: auto;
 }
 
 
