@@ -44,7 +44,7 @@ const Feedbacks = () => {
     },
     {
       name: 'Petar Dimitrov',
-      role: 'Senior Developer',
+      role: 'Developer',
       quote: 'I\'ve had the opportunity to collaborate with Ruslan on several frontend projects, and his expertise in modern web technologies is evident. His clean code practices and innovative solutions have significantly improved our development workflow and final product quality.'
     }
   ];
