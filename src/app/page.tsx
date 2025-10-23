@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import Navigation from '@/components/Navigation';
 import Hero from '@/components/Hero';
+import FloatingCTA from '@/components/FloatingCTA';
 import dynamic from 'next/dynamic';
 import styles from './page.module.scss';
 import ProjectsSkeleton from '@/components/ProjectsSkeleton';
@@ -125,6 +126,7 @@ export default function Home() {
       </main>
       
       <FooterLazy />
+      <FloatingCTA />
     </>
   );
 }
