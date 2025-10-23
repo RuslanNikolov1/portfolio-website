@@ -21,33 +21,6 @@ const nextConfig: NextConfig = {
   // Compression and performance
   compress: true,
   
-  // Webpack optimizations for better performance
-  webpack: (config, { isServer }) => {
-    if (!isServer) {
-      // Optimize bundle splitting
-      config.optimization.splitChunks = {
-        chunks: 'all',
-        cacheGroups: {
-          vendor: {
-            test: /[\\/]node_modules[\\/]/,
-            name: 'vendors',
-            chunks: 'all',
-          },
-          framerMotion: {
-            test: /[\\/]node_modules[\\/]framer-motion[\\/]/,
-            name: 'framer-motion',
-            chunks: 'all',
-          },
-          lucide: {
-            test: /[\\/]node_modules[\\/]lucide-react[\\/]/,
-            name: 'lucide',
-            chunks: 'all',
-          },
-        },
-      };
-    }
-    return config;
-  },
   
   // Bundle analyzer (uncomment to analyze bundle)
   // webpack: (config, { isServer }) => {

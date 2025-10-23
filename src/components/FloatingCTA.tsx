@@ -29,6 +29,7 @@ const FloatingCTA = () => {
         boxShadow: '0 0 20px rgba(139, 92, 246, 0.35)',
         cursor: 'pointer'
       }}
+      className="floating-cta"
       whileHover={{ scale: 1.06, boxShadow: '0 0 30px rgba(139, 92, 246, 0.6)' }}
       whileTap={{ scale: 0.95 }}
     >

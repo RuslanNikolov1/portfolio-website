@@ -245,17 +245,6 @@ const Contact = memo(() => {
               <ArrowUp size={20} />
             </motion.button>
           )}
-          <motion.button
-            className={styles.workWithMeButton}
-            whileHover={{ 
-              scale: 1.06,
-              boxShadow: '0 0 40px rgba(139, 92, 246, 0.6)'
-            }}
-            whileTap={{ scale: 0.94 }}
-            onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-          >
-            <span>Work with me</span>
-          </motion.button>
         </motion.div>
       </div>
       
