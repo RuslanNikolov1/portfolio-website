@@ -24,9 +24,12 @@ $font-weight-bold: 700;
 .projects {
   padding: 6rem 0;
   position: relative;
-  overflow: hidden;
   z-index: 0;
   box-shadow: 0 0 20px rgba(37, 99, 235, 0.3);
+}
+
+#projects {
+  overflow: visible !important;
 }
 
 .projects::before {
@@ -53,6 +56,8 @@ $font-weight-bold: 700;
   padding: 0 2rem;
   position: relative;
   z-index: 1;
+  overflow: visible !important;
+
 }
 
 .header {
@@ -107,6 +112,7 @@ $font-weight-bold: 700;
   padding: 2rem 0;
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
   align-items: center;
+  scroll-margin-top: 75px; // Account for sticky header
 }
 
 .showcaseContent {
@@ -233,8 +239,8 @@ $font-weight-bold: 700;
   align-items: center;
   margin-top: 1.5rem;
   padding: 1rem;
-  background: #ffffff; // white background behind thumbnails
-  border: 3px solid #0f172a; // darker deeper blue border
+  background: transparent; // Remove white background
+  border: none; // Remove dark border
   border-radius: 12px;
 }
 
@@ -252,12 +258,22 @@ $font-weight-bold: 700;
   transform: translateY(-2px) scale(1.05); // scale up on hover
   border-color: #00CED1; // darker turquoise on hover
   box-shadow: 0 4px 8px rgba(32, 178, 170, 0.3);
+  z-index: 1; // Ensure hovered thumbnails appear above others
 }
 
 .thumbActive {
-  border-color: #FACC15; // yellow for active state
-  box-shadow: 0 0 20px rgba(250, 204, 21, 0.6);
-  background: rgba(250, 204, 21, 0.1); // subtle yellow background
+  border-color: #FACC15 !important; // yellow for active state - force override
+  border-width: 5px !important; // even thicker border for active state
+  box-shadow: 0 0 25px rgba(250, 204, 21, 0.8) !important; // stronger glow
+  background: rgba(250, 204, 21, 0.15) !important; // more visible yellow background
+  
+  // Override hover state for active thumbnails
+  &:hover {
+    border-color: #FACC15 !important; // keep yellow on hover
+    border-width: 5px !important; // maintain thickness on hover
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 4px 8px rgba(250, 204, 21, 0.6), 0 0 25px rgba(250, 204, 21, 0.8) !important;
+  }
 }
 
 .thumbPlaceholder {
@@ -267,19 +283,50 @@ $font-weight-bold: 700;
   place-items: center;
   color: #94a3b8;
   background: url('/Thumbnail-1.png') center/cover no-repeat; // replaced missing Hero Banner.png
+  overflow: hidden;
+  border-radius: 6px; // Match the parent thumb border radius
+}
+
+.thumbnailImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  
+  &:active {
+    transform: scale(0.98);
+  }
+}
+
+.previewVideo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.previewImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.loadingPlaceholder {
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
 }
 
 // preview grid removed
 
 .bridge {
-  height: 3px;
+  height: 0; // Remove the visual line
   width: 100%;
-  background: linear-gradient(90deg,
-      rgba(255, 255, 255, 0) 0%,
-      rgba(255, 255, 255, 0.8) 50%,
-      rgba(255, 255, 255, 0) 100%);
-  backdrop-filter: blur(8px);
-  margin: 1.5rem 0;
+  margin: 1.5rem 0; // Keep spacing but remove visual element
 }
 
 .grid {
@@ -532,6 +579,7 @@ $font-weight-bold: 700;
 
   .showcase {
     border-radius: 16px;
+    scroll-margin-top: 75px; // Account for sticky header on mobile
   }
 
   .showcaseContent {
@@ -631,7 +679,10 @@ $font-weight-bold: 700;
   }
 
   .thumbActive {
-    box-shadow: 0 0 15px rgba(32, 178, 170, 0.3);
+    border-color: #FACC15 !important; // yellow for active state on mobile
+    border-width: 5px !important; // maintain thickness on mobile
+    box-shadow: 0 0 25px rgba(250, 204, 21, 0.8) !important; // yellow glow on mobile
+    background: rgba(250, 204, 21, 0.15) !important; // yellow background on mobile
   }
 }
 
@@ -664,6 +715,7 @@ $font-weight-bold: 700;
 
   .showcase {
     border-radius: 12px;
+    scroll-margin-top: 65px; // Smaller header on small mobile
   }
 
   .preview {

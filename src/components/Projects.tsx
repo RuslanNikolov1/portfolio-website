@@ -61,9 +61,25 @@ const SHOWCASE_ITEMS = projects.slice(0, 9).map((project, index) => ({
     : index === 5 ? "/Preview-Video-8.mp4" 
     : index === 6 ? "/Preview-Video-5.mp4" 
     : index === 7 ? "/Preview-Video-6.mp4" 
-    : "/Thumbnail-9.png", // Use Thumbnail-9 for portfolio website
+    : "/Thumbnail-9.png",
   thumbUrl: project.imageUrl
 }));
+
+// ----- Utility: find nearest scrollable ancestor -----
+const findScrollContainer = (el: Element): Element => {
+  let cur = el.parentElement;
+  while (cur && cur !== document.body) {
+    const style = getComputedStyle(cur);
+    const overflowY = style.overflowY;
+    const isScrollable =
+      (overflowY === 'auto' || overflowY === 'scroll' || overflowY === 'overlay') &&
+      cur.scrollHeight > cur.clientHeight;
+    if (isScrollable) return cur;
+    cur = cur.parentElement;
+  }
+  // fallback to page scrolling element
+  return document.scrollingElement || document.documentElement;
+};
 
 const Projects = memo(() => {
   const [selectedIndex, setSelectedIndex] = useState(0);
@@ -77,11 +93,33 @@ const Projects = memo(() => {
 
   const goToPrevious = useCallback(() => {
     setSelectedIndex((prev) => (prev === 0 ? SHOWCASE_ITEMS.length - 1 : prev - 1));
+    // Scroll after state change for mobile (call reuse of handler)
+    // (we purposely don't scroll here — thumbnails control scroll)
   }, []);
 
   const goToNext = useCallback(() => {
     setSelectedIndex((prev) => (prev === SHOWCASE_ITEMS.length - 1 ? 0 : prev + 1));
   }, []);
+
+  // We'll keep a ref-like variable for debounce inside the closure.
+  let scrollTimer: NodeJS.Timeout | null = null;
+
+  const handleThumbnailClick = (idx) => {
+    setSelectedIndex(idx);
+  
+    console.log('Thumbnail clicked ✅', idx);
+  
+    const target = document.getElementById('project-preview');
+    console.log('Target found:', !!target, target);
+  
+    const isMobile = window.matchMedia('(max-width: 768px)').matches;
+    console.log('isMobile:', isMobile);
+  
+    if (!isMobile) return;
+    if (!target) return;
+  
+    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  };
 
   return (
     <section id="projects" className={styles.projects}>
@@ -107,28 +145,28 @@ const Projects = memo(() => {
             <button
               key={item.id}
               className={`${styles.thumb} ${idx === selectedIndex ? styles.thumbActive : ''}`}
-              onClick={() => setSelectedIndex(idx)}
+              onClick={(e) => handleThumbnailClick(idx, e)}
               aria-label={`Select ${item.title}`}
             >
               <div className={styles.thumbPlaceholder}>
                 {idx === 0 ? (
-                  <Image src="/Thumbnail-1.png" alt="Thumbnail 1" width={120} height={80} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                  <Image src="/Thumbnail-1.png" alt="Thumbnail 1" width={120} height={80} className={styles.thumbnailImage} />
                 ) : idx === 1 ? (
-                  <Image src="/Thumbnail-2.png" alt="Thumbnail 2" width={120} height={80} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                  <Image src="/Thumbnail-2.png" alt="Thumbnail 2" width={120} height={80} className={styles.thumbnailImage} />
                 ) : idx === 2 ? (
-                  <Image src="/Thumbnail-4.png" alt="Thumbnail 4" width={120} height={80} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                  <Image src="/Thumbnail-4.png" alt="Thumbnail 4" width={120} height={80} className={styles.thumbnailImage} />
                 ) : idx === 3 ? (
-                  <Image src="/Thumbnail - 7.png" alt="Thumbnail 7" width={120} height={80} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                  <Image src="/Thumbnail - 7.png" alt="Thumbnail 7" width={120} height={80} className={styles.thumbnailImage} />
                 ) : idx === 4 ? (
-                  <Image src="/Thumbnail-3.png" alt="Thumbnail 3" width={120} height={80} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                  <Image src="/Thumbnail-3.png" alt="Thumbnail 3" width={120} height={80} className={styles.thumbnailImage} />
                 ) : idx === 5 ? (
-                  <Image src="/Thumbnail-8.png" alt="Thumbnail 8" width={120} height={80} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                  <Image src="/Thumbnail-8.png" alt="Thumbnail 8" width={120} height={80} className={styles.thumbnailImage} />
                 ) : idx === 6 ? (
-                  <Image src="/Thumbnail-5.png" alt="Thumbnail 5" width={120} height={80} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                  <Image src="/Thumbnail-5.png" alt="Thumbnail 5" width={120} height={80} className={styles.thumbnailImage} />
                 ) : idx === 7 ? (
-                  <Image src="/Thumbnail-6.png" alt="Thumbnail 6" width={120} height={80} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                  <Image src="/Thumbnail-6.png" alt="Thumbnail 6" width={120} height={80} className={styles.thumbnailImage} />
                 ) : idx === 8 ? (
-                  <Image src="/Thumbnail-9.png" alt="Thumbnail 9" width={120} height={80} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                  <Image src="/Thumbnail-9.png" alt="Thumbnail 9" width={120} height={80} className={styles.thumbnailImage} />
                 ) : (
                   idx + 1
                 )}
@@ -139,7 +177,7 @@ const Projects = memo(() => {
 
         <div className={styles.bridge}></div>
 
-        <div className={styles.showcase}>
+        <div className={styles.showcase} id="project-preview" tabIndex={-1}>
           <button 
             className={styles.navArrow} 
             onClick={goToPrevious}
@@ -152,7 +190,6 @@ const Projects = memo(() => {
             <div className={styles.leftPanel}>
               <h3 className={styles.projectTitle}>{selected.title}</h3>
               <p className={styles.description}>{selected.description}</p>
-              {/* Details list removed as requested */}
               <div className={styles.technologies}>
                 {selected.technologies.map((t, idx) => (
                   <span key={idx} className={`${styles.techBadge} dev`}>{t}</span>
@@ -194,7 +231,7 @@ const Projects = memo(() => {
                       muted
                       playsInline
                       preload="metadata"
-                      style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                      className={styles.previewVideo}
                     >
                       Your browser does not support the video tag.
                     </video>
@@ -205,19 +242,11 @@ const Projects = memo(() => {
                       alt={selected.title}
                       width={800}
                       height={600}
-                      style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                      className={styles.previewImage}
                     />
                   )
                 ) : (
-                  <div style={{ 
-                    width: '100%', 
-                    height: '100%', 
-                    backgroundColor: '#000', 
-                    display: 'flex', 
-                    alignItems: 'center', 
-                    justifyContent: 'center',
-                    color: '#fff'
-                  }}>
+                  <div className={styles.loadingPlaceholder}>
                     Loading preview...
                   </div>
                 )}
@@ -233,8 +262,6 @@ const Projects = memo(() => {
             <ChevronRight size={24} />
           </button>
         </div>
-
-        {/* preview grid removed */}
       </div>
     </section>
   );
