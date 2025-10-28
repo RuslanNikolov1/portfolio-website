@@ -113,9 +113,9 @@ const About = memo(() => {
             </p>
             <div className={styles.readingImagesRow}>
               <div className={styles.imagesContainer}>
-                <img src="/Reading-1.jpg" alt="Reading 1" width={180} height={180} className={styles.readingImage} />
-                <img src="/Reading-2.jpg" alt="Reading 2" width={180} height={180} className={styles.readingImage} />
-                <img src="/Reading-3.jpg" alt="Reading 3" width={180} height={180} className={styles.readingImage} />
+                <Image src="/Reading-1.jpg" alt="Reading 1" width={180} height={180} className={styles.readingImage} />
+                <Image src="/Reading-2.jpg" alt="Reading 2" width={180} height={180} className={styles.readingImage} />
+                <Image src="/Reading-3.jpg" alt="Reading 3" width={180} height={180} className={styles.readingImage} />
               </div>
             </div>
           </div>
@@ -131,9 +131,9 @@ const About = memo(() => {
             </p>
             <div className={styles.artImagesRow}>
               <div className={styles.imagesContainer}>
-                <img src="/Art-1.jpeg" alt="Art 1" width={180} height={180} className={styles.artImage} />
-                <img src="/Art-2.jpg" alt="Art 2" width={180} height={180} className={styles.artImage} />
-                <img src="/Art-3.webp" alt="Art 3" width={180} height={180} className={styles.artImage} />
+                <Image src="/Art-1.jpeg" alt="Art 1" width={180} height={180} className={styles.artImage} />
+                <Image src="/Art-2.jpg" alt="Art 2" width={180} height={180} className={styles.artImage} />
+                <Image src="/Art-3.webp" alt="Art 3" width={180} height={180} className={styles.artImage} />
               </div>
             </div>
           </div>

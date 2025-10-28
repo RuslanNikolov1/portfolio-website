@@ -65,21 +65,6 @@ const SHOWCASE_ITEMS = projects.slice(0, 9).map((project, index) => ({
   thumbUrl: project.imageUrl
 }));
 
-// ----- Utility: find nearest scrollable ancestor -----
-const findScrollContainer = (el: Element): Element => {
-  let cur = el.parentElement;
-  while (cur && cur !== document.body) {
-    const style = getComputedStyle(cur);
-    const overflowY = style.overflowY;
-    const isScrollable =
-      (overflowY === 'auto' || overflowY === 'scroll' || overflowY === 'overlay') &&
-      cur.scrollHeight > cur.clientHeight;
-    if (isScrollable) return cur;
-    cur = cur.parentElement;
-  }
-  // fallback to page scrolling element
-  return document.scrollingElement || document.documentElement;
-};
 
 const Projects = memo(() => {
   const [selectedIndex, setSelectedIndex] = useState(0);
@@ -101,10 +86,8 @@ const Projects = memo(() => {
     setSelectedIndex((prev) => (prev === SHOWCASE_ITEMS.length - 1 ? 0 : prev + 1));
   }, []);
 
-  // We'll keep a ref-like variable for debounce inside the closure.
-  let scrollTimer: NodeJS.Timeout | null = null;
 
-  const handleThumbnailClick = (idx) => {
+  const handleThumbnailClick = (idx: number) => {
     setSelectedIndex(idx);
   
     console.log('Thumbnail clicked ✅', idx);
@@ -145,7 +128,7 @@ const Projects = memo(() => {
             <button
               key={item.id}
               className={`${styles.thumb} ${idx === selectedIndex ? styles.thumbActive : ''}`}
-              onClick={(e) => handleThumbnailClick(idx, e)}
+              onClick={() => handleThumbnailClick(idx)}
               aria-label={`Select ${item.title}`}
             >
               <div className={styles.thumbPlaceholder}>
