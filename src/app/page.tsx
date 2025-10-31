@@ -5,6 +5,7 @@ import dynamic from 'next/dynamic';
 import Navigation from '@/components/Navigation';
 import Hero from '@/components/Hero';
 import FloatingCTA from '@/components/FloatingCTA';
+import DownloadCVButton from '@/components/DownloadCVButton';
 import styles from './page.module.scss';
 import ProjectsSkeleton from '@/components/ProjectsSkeleton';
 import SkillsSkeleton from '@/components/SkillsSkeleton';
@@ -127,6 +128,7 @@ export default function Home() {
       
       <FooterLazy />
       <FloatingCTA />
+      <DownloadCVButton />
     </>
   );
 }
