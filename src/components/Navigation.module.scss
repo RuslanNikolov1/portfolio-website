@@ -49,7 +49,6 @@ $font-weight-medium: 500;
 }
 
 .container {
-  max-width: 1200px;
   margin: 0 auto;
   padding: 0 2rem;
   display: flex;
@@ -107,6 +106,15 @@ $font-weight-medium: 500;
   gap: 2rem;
   position: relative;
   z-index: 1002; // Above container
+}
+
+@media (min-width: 1025px) {
+  .menu {
+    margin-left: 2vw;
+  }
+  .container {
+    justify-content: flex-start;
+  }
 }
 
 .menuOpen {
@@ -210,6 +218,15 @@ $font-weight-medium: 500;
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
+}
+
+// Desktop: Position music player absolutely to the right
+@media (min-width: 1025px) {
+  .musicPlayer {
+    position: absolute;
+    right: 2rem;
+    z-index: 1002;
+  }
 }
 
 @media (max-width: 426px) {
@@ -410,7 +427,6 @@ $font-weight-medium: 500;
     display: flex; // Show music player on mobile
     position: absolute;
     left: 35%;
-    transform: translateX(-50%);
     z-index: 1003;
   }
 
