@@ -33,6 +33,11 @@ const inter = Inter({
 // Use Inter as Satoshi fallback for now
 const satoshi = inter;
 
+// Dynamic base URL for development vs production
+const baseUrl = process.env.NODE_ENV === 'development' 
+  ? 'http://localhost:3000' 
+  : 'https://portfolio-website-dusky-five-28.vercel.app';
+
 export const metadata: Metadata = {
   title: "My Portfolio — Frontend Developer",
   description: "Portfolio of Ruslan Nikolov, Front-End Developer specializing in React, Next.js, and TypeScript.",
@@ -57,12 +62,12 @@ export const metadata: Metadata = {
   openGraph: {
     title: "My Portfolio — Frontend Developer",
     description: "Projects built with React, Next.js, and modern UI/UX design.",
-    images: ["https://portfolio-website-dusky-five-28.vercel.app/preview.png"],
+    images: [`${baseUrl}/preview.png`],
     type: "website",
-    url: "https://portfolio-website-dusky-five-28.vercel.app",
+    url: baseUrl,
   },
   alternates: {
-    canonical: "https://portfolio-website-dusky-five-28.vercel.app",
+    canonical: baseUrl,
   },
   other: {
     // Ensure Apple devices open in Safari, not as web app
@@ -91,7 +96,7 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <link rel="icon" href="/briefcase.svg" type="image/svg+xml" />
-        <link rel="canonical" href="https://portfolio-website-dusky-five-28.vercel.app" />
+        <link rel="canonical" href={baseUrl} />
         <meta name="theme-color" content="#ffffff" />
         <meta name="apple-mobile-web-app-capable" content="no" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
