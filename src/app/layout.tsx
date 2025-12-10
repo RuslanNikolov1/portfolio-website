@@ -59,7 +59,27 @@ export const metadata: Metadata = {
     description: "Projects built with React, Next.js, and modern UI/UX design.",
     images: ["https://portfolio-website-dusky-five-28.vercel.app/preview.png"],
     type: "website",
+    url: "https://portfolio-website-dusky-five-28.vercel.app",
   },
+  alternates: {
+    canonical: "https://portfolio-website-dusky-five-28.vercel.app",
+  },
+  other: {
+    // Ensure Apple devices open in Safari, not as web app
+    "apple-mobile-web-app-capable": "no",
+    "apple-mobile-web-app-status-bar-style": "default",
+    // Prevent Apple from detecting and formatting phone numbers/emails
+    "format-detection": "telephone=no, date=no, email=no, address=no",
+    // Disable automatic app banner suggestions
+    "apple-itunes-app": "app-id=",
+  },
+};
+
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+  userScalable: true,
 };
 
 export default function RootLayout({
@@ -71,6 +91,11 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <link rel="icon" href="/briefcase.svg" type="image/svg+xml" />
+        <link rel="canonical" href="https://portfolio-website-dusky-five-28.vercel.app" />
+        <meta name="theme-color" content="#ffffff" />
+        <meta name="apple-mobile-web-app-capable" content="no" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+        <meta name="format-detection" content="telephone=no, date=no, email=no, address=no" />
       </head>
       <body
         className={`${rubik.variable} ${spaceGrotesk.variable} ${inter.variable} ${satoshi.variable} antialiased`}
