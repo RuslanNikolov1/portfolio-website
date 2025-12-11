@@ -67,6 +67,7 @@ $font-weight-medium: 500;
   z-index: 1002;
 }
 
+
 .logo {
   display: flex;
   align-items: center;
@@ -474,6 +475,8 @@ $font-weight-medium: 500;
     left: 25%;
   }
 }
+
+
 @media (max-width: 480px) {
   .container {
     height: 65px;
