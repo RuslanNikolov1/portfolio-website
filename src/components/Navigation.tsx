@@ -256,7 +256,7 @@ const Navigation = memo(() => {
       {/* Hidden audio element */}
       <audio
         ref={setAudioRef}
-        src="/Hopeful emotions.mp4"
+        src="/Hopeful emotions.mp3"
         preload="metadata"
         onPlay={() => setIsPlaying(true)}
         onPause={() => setIsPlaying(false)}
