@@ -9,59 +9,59 @@ import { projects } from '@/data';
 import styles from './Projects.module.scss';
 
 // Use the first nine projects as the main showcase
-const SHOWCASE_ITEMS = projects.slice(0, 9).map((project, index) => ({
+const SHOWCASE_ITEMS = projects.map((project, index) => ({
   id: project.id,
   title: project.title,
   description: project.description,
   details: index === 0 ? [
+    'Goal: create a modern real estate experience for property buyers and owners',
+    'Highlights: advanced filtering, property submissions, appraisal requests, favourites, and client feedback',
+    'Stack: Next.js, Supabase, Cloudinary, Framer, React, Sass, TypeScript',
+  ] : index === 1 ? [
     'Goal: showcase a clean UX with responsive layouts',
     'Highlights: interactive building layout, property listings, floor plans',
     'Stack: Three.js, Framer Motion, React, Sass, TypeScript',
-  ] : index === 1 ? [
+  ] : index === 2 ? [
+    'Goal: present a magical, calming massage therapy experience online',
+    'Highlights: practice information, therapist bio, pricing, Destiny Matrix, and online shop',
+    'Stack: Next.js, Framer Motion, React, Sass, TypeScript',
+  ] : index === 3 ? [
     'Goal: visualize real-time DeFi data with interactive charts',
     'Highlights: custom APIs, data aggregation, protocol stats, market trends',
     'Stack: React Query, React Table, Axios, Recharts, Sass, TypeScript',
-  ] : index === 2 ? [
+  ] : index === 4 ? [
     'Goal: visualize astrology data and zodiac insights through clean interface',
     'Highlights: personalized birth charts, star alignments, dynamic horoscope visuals',
     'Stack: React, Sass',
-  ] : index === 3 ? [
-    'Goal: make mortgage applications simple, transparent, and accessible',
-    'Highlights: loan options clarity, payment schedules, interest rates, intuitive controls',
-    'Stack: React, Sass',
-  ] : index === 4 ? [
+  ] : index === 5 ? [
     'Goal: evoke elegance & appetite while keeping UX seamless',
     'Highlights: visual storytelling, immersive imagery, dynamic menu, gallery showcase',
     'Stack: HTML, CSS',
-  ] : index === 5 ? [
+  ] : index === 6 ? [
     'Goal: provide comprehensive information on transport policies and initiatives',
     'Highlights: transport policies, projects, events, news, member engagement',
     'Stack: React, React-router, Sass, TypeScript',
-  ] : index === 6 ? [
+  ] : index === 7 ? [
     'Goal: merge craftsmanship with modern aesthetics through digital presentation',
     'Highlights: minimalist layout, smooth scrolling, responsive visuals, tactile quality emphasis',
     'Stack: React, Sass, TypeScript',
-  ] : index === 7 ? [
+  ] : [
     'Goal: explore ASH identity through clean design and bold typography',
     'Highlights: visual hierarchy, minimalism, high-contrast elements, smooth transitions',
     'Stack: HTML, CSS',
-  ] : [
-    'Goal: showcase modern web experiences with thoughtful user flows',
-    'Highlights: seamless responsive interfaces, design and functionality connection, precise attention to detail',
-    'Stack: Next.js, React, Framer Motion, Sass, Zod, React Hook Form, TypeScript',
   ],
   technologies: project.technologies,
   liveUrl: project.liveUrl,
   codeUrl: project.codeUrl,
-  previewUrl: index === 0 ? "/Knyazhevo app.mp4" 
-    : index === 1 ? "/Preview-Video 2.mp4" 
-    : index === 2 ? "/Preview-4.mp4" 
-    : index === 3 ? "/Preview-Video 7.mp4" 
-    : index === 4 ? "/Preview-Video-3.mp4" 
-    : index === 5 ? "/Preview-Video-8.mp4" 
-    : index === 6 ? "/Preview-Video-5.mp4" 
-    : index === 7 ? "/Preview-Video-6.mp4" 
-    : "/Thumbnail-9.png",
+  previewUrl: index === 0 ? "/Thumbnail - Real Estate.png"
+    : index === 1 ? "/Knyazhevo app.mp4"
+    : index === 2 ? "/Thumbnail-Massage.png"
+    : index === 3 ? "/Preview-Video 2.mp4"
+    : index === 4 ? "/Preview-4.mp4"
+    : index === 5 ? "/Preview-Video-3.mp4"
+    : index === 6 ? "/Preview-Video-8.mp4"
+    : index === 7 ? "/Preview-Video-5.mp4"
+    : "/Preview-Video-6.mp4",
   thumbUrl: project.imageUrl
 }));
 
@@ -132,27 +132,13 @@ const Projects = memo(() => {
               aria-label={`Select ${item.title}`}
             >
               <div className={styles.thumbPlaceholder}>
-                {idx === 0 ? (
-                  <Image src="/Thumbnail-1.png" alt="Thumbnail 1" width={120} height={80} className={styles.thumbnailImage} />
-                ) : idx === 1 ? (
-                  <Image src="/Thumbnail-2.png" alt="Thumbnail 2" width={120} height={80} className={styles.thumbnailImage} />
-                ) : idx === 2 ? (
-                  <Image src="/Thumbnail-4.png" alt="Thumbnail 4" width={120} height={80} className={styles.thumbnailImage} />
-                ) : idx === 3 ? (
-                  <Image src="/Thumbnail - 7.png" alt="Thumbnail 7" width={120} height={80} className={styles.thumbnailImage} />
-                ) : idx === 4 ? (
-                  <Image src="/Thumbnail-3.png" alt="Thumbnail 3" width={120} height={80} className={styles.thumbnailImage} />
-                ) : idx === 5 ? (
-                  <Image src="/Thumbnail-8.png" alt="Thumbnail 8" width={120} height={80} className={styles.thumbnailImage} />
-                ) : idx === 6 ? (
-                  <Image src="/Thumbnail-5.png" alt="Thumbnail 5" width={120} height={80} className={styles.thumbnailImage} />
-                ) : idx === 7 ? (
-                  <Image src="/Thumbnail-6.png" alt="Thumbnail 6" width={120} height={80} className={styles.thumbnailImage} />
-                ) : idx === 8 ? (
-                  <Image src="/Thumbnail-9.png" alt="Thumbnail 9" width={120} height={80} className={styles.thumbnailImage} />
-                ) : (
-                  idx + 1
-                )}
+                <Image
+                  src={item.thumbUrl || `/Thumbnail-${idx + 1}.png`}
+                  alt={`${item.title} thumbnail`}
+                  width={120}
+                  height={80}
+                  className={styles.thumbnailImage}
+                />
               </div>
             </button>
           ))}

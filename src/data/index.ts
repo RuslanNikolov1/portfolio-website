@@ -2,21 +2,54 @@ import { Project, Skill, SocialLink } from '@/types';
 
 export const projects: Project[] = [
   {
+    id: '10',
+    title: 'Broker Bulgaria',
+    description:
+      'A modern, well-designed real estate website for Broker Bulgaria featuring advanced rent and sale filtering, property submissions, appraisal requests, client feedback, and a favourites system for saved listings.',
+    technologies: [
+      'Next.js',
+      'Framer',
+      'Cloudinary',
+      'Mailtrap',
+      'React',
+      'TypeScript',
+      'Supabase',
+      'Sass'
+    ],
+    imageUrl: '/Thumbnail - Real Estate.png',
+    liveUrl: 'https://www.brokerbulgaria.com',
+    codeUrl: 'https://github.com/RuslanNikolov1/real-estate-app',
+    category: 'web'
+  },
+  {
     id: '1',
     title: 'Forest Residence Sofia',
-    description: 'A modern web application showcasing Forest Residence Sofia — a residential project where city and nature meet. Features include interactive building layout, property listings, floor plans, and contact functionality. Designed with a clean UI and responsive design to give users a seamless experience on desktop and mobile.',
+    description:
+      'A modern web application showcasing Forest Residence Sofia — a residential project where city and nature meet. Features include interactive building layout, property listings, floor plans, and contact functionality. Designed with a clean UI and responsive design to give users a seamless experience on desktop and mobile.',
     technologies: ['Three.js', 'Framer Motion', 'React', 'Sass', 'TypeScript'],
-    imageUrl: '/projects/forest-residence.png',
+    imageUrl: '/Thumbnail-ForestResidenceSofia.png',
     liveUrl: 'https://knyazhevo-building-app.vercel.app/',
     codeUrl: 'https://github.com/RuslanNikolov1/knyazhevo-building-app',
     category: 'web'
   },
   {
+    id: '11',
+    title: 'Energy Massage Therapy',
+    description:
+      'A thoughtfully crafted massage therapy website with a magical visual identity, featuring practice information, therapist bio, pricing, an online shop, and an interactive Destiny Matrix offering.',
+    technologies: ['Next.js', 'Framer Motion', 'React', 'Sass', 'TypeScript'],
+    imageUrl: '/Thumbnail-Massage.png',
+    liveUrl: 'https://www.energymassagetherapy.com',
+    codeUrl: 'https://github.com/RuslanNikolov1/burgas-massage-app',
+    category: 'web'
+  },
+  {
     id: '2',
     title: 'DefiLlama-Dashboard',
-    description: 'A full-stack web app that visualizes real-time DeFi data using custom APIs and interactive charts. I built both the backend for data aggregation and the frontend dashboard for exploring protocol stats and market trends.',
+    description:
+      'A full-stack web app that visualizes real-time DeFi data using custom APIs and interactive charts. I built both the backend for data aggregation and the frontend dashboard for exploring protocol stats and market trends.',
     technologies: ['React Query', 'React Table', 'Axios', 'React', 'Recharts', 'Sass', 'TypeScript'],
-    imageUrl: '/projects/defillama.png',
+    imageUrl: '/Thumbnail-DefiLama.png',
     liveUrl: 'https://defi-llama-dashboard-backend.vercel.app/',
     codeUrl: 'https://github.com/RuslanNikolov1',
     category: 'web'
@@ -24,29 +57,21 @@ export const projects: Project[] = [
   {
     id: '3',
     title: 'Astrology App',
-    description: 'A modern web application that visualizes astrology data and zodiac insights through a clean, responsive interface. Users can explore personalized birth charts, learn about star alignments, and view dynamic horoscope visuals. Designed with an emphasis on clarity, interactivity, and smooth user experience across all devices.',
+    description:
+      'A modern web application that visualizes astrology data and zodiac insights through a clean, responsive interface. Users can explore personalized birth charts, learn about star alignments, and view dynamic horoscope visuals. Designed with an emphasis on clarity, interactivity, and smooth user experience across all devices.',
     technologies: ['React', 'Sass'],
-    imageUrl: '/projects/astrology.png',
+    imageUrl: '/Thumbnail-Astrology.png',
     liveUrl: 'https://astrology-app-chi.vercel.app/',
     codeUrl: 'https://github.com/RuslanNikolov1/astrology-app',
     category: 'web'
   },
   {
-    id: '4',
-    title: 'AGB Finance',
-    description: 'Developed a polished front-end prototype for a mortgage loan service, designed to make applying for a mortgage simple, transparent, and accessible. The interface emphasizes clarity in showing loan options, payment schedules, and interest rates, with intuitive controls and responsive layout that works well across devices. My aim was to reduce friction, build trust through clean design, and help users make informed financial decisions.',
-    technologies: ['React', 'Sass'],
-    imageUrl: '/projects/agb.png',
-    liveUrl: 'https://agb-prototype-1-s7hr.vercel.app/',
-    codeUrl: 'https://github.com/RuslanNikolov1/agb-prototype-1',
-    category: 'web'
-  },
-  {
     id: '5',
     title: 'Ambra Restaurant',
-    description: 'A modern prototype for Ambra, a fine-dining restaurant concept. I designed and built the front-end with a focus on visual storytelling, immersive imagery, and intuitive navigation. Features include a dynamic menu, gallery showcase, reservation call-to-action, and responsive design across devices. Goal: evoke elegance & appetite while keeping UX seamless.',
+    description:
+      'A modern prototype for Ambra, a fine-dining restaurant concept. I designed and built the front-end with a focus on visual storytelling, immersive imagery, and intuitive navigation. Features include a dynamic menu, gallery showcase, reservation call-to-action, and responsive design across devices. Goal: evoke elegance & appetite while keeping UX seamless.',
     technologies: ['HTML', 'CSS'],
-    imageUrl: '/projects/ambra.png',
+    imageUrl: '/Thumbnail-Maisons.png',
     liveUrl: 'https://ambra-prototype.vercel.app/',
     codeUrl: 'https://github.com/RuslanNikolov1/ambra-prototype',
     category: 'web'
@@ -54,9 +79,10 @@ export const projects: Project[] = [
   {
     id: '6',
     title: 'AMTP Association',
-    description: 'A comprehensive web application for the Public Transport Association, providing detailed information on transport policies, projects, events, and news. The app allows members and the public to easily explore resources, stay updated on initiatives, and engage with the association\'s activities. Designed with a clean, responsive interface, this project highlights my ability to create informative, user-friendly web solutions tailored to organizational needs.',
+    description:
+      "A comprehensive web application for the Public Transport Association, providing detailed information on transport policies, projects, events, and news. The app allows members and the public to easily explore resources, stay updated on initiatives, and engage with the association's activities. Designed with a clean, responsive interface, this project highlights my ability to create informative, user-friendly web solutions tailored to organizational needs.",
     technologies: ['React', 'React-router', 'Sass', 'TypeScript'],
-    imageUrl: '/projects/association.png',
+    imageUrl: '/Thumbnail-AMTP.png',
     liveUrl: 'https://association-app-nyop.vercel.app/',
     codeUrl: 'https://github.com/RuslanNikolov1/association-app',
     category: 'web'
@@ -64,9 +90,10 @@ export const projects: Project[] = [
   {
     id: '7',
     title: 'Custom Wallets',
-    description: 'A digital presentation of a custom physical wallet line designed to merge craftsmanship with modern aesthetics. The site highlights each wallet\'s materials, structure, and concept through minimalist layout, smooth scrolling, and responsive visuals. Built to emphasize both the tactile quality of the products and the clarity of their design story.',
+    description:
+      'A digital presentation of a custom physical wallet line designed to merge craftsmanship with modern aesthetics. The site highlights each wallet\'s materials, structure, and concept through minimalist layout, smooth scrolling, and responsive visuals. Built to emphasize both the tactile quality of the products and the clarity of their design story.',
     technologies: ['React', 'Sass', 'TypeScript'],
-    imageUrl: '/projects/wallets.png',
+    imageUrl: '/Thumbnail-Wallets.png',
     liveUrl: 'https://wallets-prototype.vercel.app/',
     codeUrl: 'https://github.com/RuslanNikolov1/wallets-prototype',
     category: 'web'
@@ -74,21 +101,12 @@ export const projects: Project[] = [
   {
     id: '8',
     title: 'Ash-services',
-    description: 'A sleek prototype site exploring the identity and aesthetic of ASH through clean design, bold typography, and immersive imagery. The layout emphasizes visual hierarchy, minimalism, and high-contrast elements to communicate a strong brand personality. Built to look elegant, responsive, and intuitive, the prototype enhances user engagement with smooth transitions and refined visual details.',
+    description:
+      'A sleek prototype site exploring the identity and aesthetic of ASH through clean design, bold typography, and immersive imagery. The layout emphasizes visual hierarchy, minimalism, and high-contrast elements to communicate a strong brand personality. Built to look elegant, responsive, and intuitive, the prototype enhances user engagement with smooth transitions and refined visual details.',
     technologies: ['HTML', 'CSS'],
-    imageUrl: '/projects/ash.png',
+    imageUrl: '/Thumbnail-Ash.png',
     liveUrl: 'https://ash-prototype.vercel.app/',
     codeUrl: 'https://github.com/RuslanNikolov1/ash-prototype',
-    category: 'web'
-  },
-  {
-    id: '9',
-    title: 'My Portfolio Website',
-    description: 'I\'m a front-end developer and UX designer crafting seamless, responsive interfaces that connect design and functionality. My portfolio features 8 selected projects showcasing modern web experiences, thoughtful user flows, and precise attention to detail.',
-    technologies: ['Next.js', 'React', 'Framer Motion', 'Sass', 'Zod', 'React Hook Form', 'TypeScript'],
-    imageUrl: '/projects/portfolio.gif',
-    liveUrl: '#',
-    codeUrl: 'https://github.com/RuslanNikolov1/portfolio-website',
     category: 'web'
   }
 ];
