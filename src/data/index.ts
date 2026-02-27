@@ -16,7 +16,7 @@ export const projects: Project[] = [
       'Supabase',
       'Sass'
     ],
-    imageUrl: '/Thumbnail - Real Estate.png',
+    imageUrl: '/Thumbnail - Real Estate New.png',
     liveUrl: 'https://www.brokerbulgaria.com',
     codeUrl: 'https://github.com/RuslanNikolov1/real-estate-app',
     category: 'web'
@@ -38,20 +38,20 @@ export const projects: Project[] = [
     description:
       'A thoughtfully crafted massage therapy website with a magical visual identity, featuring practice information, therapist bio, pricing, an online shop, and an interactive Destiny Matrix offering.',
     technologies: ['Next.js', 'Framer Motion', 'React', 'Sass', 'TypeScript'],
-    imageUrl: '/Thumbnail-Massage.png',
+    imageUrl: '/Thumbnail Massage New.png',
     liveUrl: 'https://www.energymassagetherapy.com',
     codeUrl: 'https://github.com/RuslanNikolov1/burgas-massage-app',
     category: 'web'
   },
   {
-    id: '2',
-    title: 'DefiLlama-Dashboard',
+    id: '12',
+    title: 'Kutiev Law Firm',
     description:
-      'A full-stack web app that visualizes real-time DeFi data using custom APIs and interactive charts. I built both the backend for data aggregation and the frontend dashboard for exploring protocol stats and market trends.',
-    technologies: ['React Query', 'React Table', 'Axios', 'React', 'Recharts', 'Sass', 'TypeScript'],
-    imageUrl: '/Thumbnail-DefiLama.png',
-    liveUrl: 'https://defi-llama-dashboard-backend.vercel.app/',
-    codeUrl: 'https://github.com/RuslanNikolov1',
+      'A focused business card website for a criminal law attorney, clearly presenting services, credentials, and contact options for clients seeking expert legal representation.',
+    technologies: ['React', 'Next.js', 'TypeScript', 'Sass'],
+    imageUrl: '/Thumbnail-Lawyer.png',
+    liveUrl: 'https://lawyer-app-one.vercel.app/',
+    codeUrl: 'https://github.com/RuslanNikolov1/lawyer-app',
     category: 'web'
   },
   {
@@ -82,7 +82,7 @@ export const projects: Project[] = [
     description:
       "A comprehensive web application for the Public Transport Association, providing detailed information on transport policies, projects, events, and news. The app allows members and the public to easily explore resources, stay updated on initiatives, and engage with the association's activities. Designed with a clean, responsive interface, this project highlights my ability to create informative, user-friendly web solutions tailored to organizational needs.",
     technologies: ['React', 'React-router', 'Sass', 'TypeScript'],
-    imageUrl: '/Thumbnail-AMTP.png',
+    imageUrl: '/Thumbnail-AMTP-new.png',
     liveUrl: 'https://association-app-nyop.vercel.app/',
     codeUrl: 'https://github.com/RuslanNikolov1/association-app',
     category: 'web'

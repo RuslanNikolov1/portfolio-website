@@ -68,7 +68,7 @@ const About = memo(() => {
         </motion.div>
 
         <div style={{ marginTop: '2rem' }}>
-          <div className={styles.musicContainer}>
+          <div className={styles.sportsContainer}>
             <div className={styles.emojiTitle}>
               <div className={styles.emoji}>🎧</div>
               <h3 className={styles.sectionTitle}>Music</h3>
@@ -76,7 +76,7 @@ const About = memo(() => {
             <p className={styles.paragraph}>
               Outside of work, I am passionate about <strong>music</strong>. I produce electronic music across different genres—techno, breakbeat, house, dub, drum and bass, psy‑trance, trip‑hop, ambient, but also jazz, funk, and bossa nova. I try to mix interesting melodies, beats and emotions, and try to keep it interesting at all times. <Link href="https://soundcloud.com/ruslan-nikolov-323139497" target="_blank" rel="noopener noreferrer">SoundCloud</Link>. I publish my own tracks independently, and the feedback that I receive is very positive. Favourite musicians: Thievery Corporation, Deadmau5, Flume, Calibre. Worth checking out. <strong>How this helps my development:</strong> Music production has taught me rhythm, timing, and flow—essential for creating smooth animations and intuitive user interactions. My experience with audio software interfaces directly translates to designing better UX patterns and understanding user feedback systems.
             </p>
-            <div className={styles.musicImagesRow}>
+            <div className={styles.sportsImagesRow}>
               <div className={styles.imagesContainer}>
                 <Image src="/Music-1.jpg" alt="Music 1" width={180} height={180} className={styles.musicImage} />
                 <Image src="/Music-2.jpg" alt="Music 2" width={180} height={180} className={styles.musicImage} />
@@ -102,7 +102,7 @@ const About = memo(() => {
             </div>
           </div>
 
-          <div className={styles.readingContainer}>
+          <div className={styles.sportsContainer}>
             <div className={styles.emojiTitle}>
               <div className={styles.emoji}>📚</div>
               <h3 className={styles.sectionTitle}>Reading</h3>
@@ -111,7 +111,7 @@ const About = memo(() => {
               I also enjoy <strong>reading</strong>. I recently finished a great book by historian Yuval Noah Harari called <strong>Homo Deus</strong>. It&apos;s a story of mankind, its past, present and future in a very pleasant and engaging manner. It goes through all the important topics and it fills your knowledge gaps effortlessly. I started reading <strong>Homo Sapiens</strong>. It&apos;s by the same author, but it&apos;s more focused on the past of our species.
               My intellectual interests include <strong>psychology, philosophy and physics</strong>. I also love <strong>comedy</strong>, and some would say I even have a decent sense of humour. <strong>How this helps my development:</strong> Reading about psychology helps me understand user behavior and create more intuitive interfaces. Philosophy teaches me to think critically about design decisions, while physics knowledge aids in creating realistic animations and understanding performance optimization principles.
             </p>
-            <div className={styles.readingImagesRow}>
+            <div className={styles.sportsImagesRow}>
               <div className={styles.imagesContainer}>
                 <Image src="/Reading-1.jpg" alt="Reading 1" width={180} height={180} className={styles.readingImage} />
                 <Image src="/Reading-2.jpg" alt="Reading 2" width={180} height={180} className={styles.readingImage} />

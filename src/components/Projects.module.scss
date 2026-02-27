@@ -51,7 +51,7 @@ $font-weight-bold: 700;
 }
 
 .container {
-  max-width: 1400px;
+  max-width: 1450px;
   margin: 0 auto;
   padding: 0 2rem;
   position: relative;
@@ -90,16 +90,6 @@ $font-weight-bold: 700;
   margin-bottom: 1rem;
   line-height: $line-height-tight;
   letter-spacing: $letter-spacing-tight;
-}
-
-.subtitle {
-  font-family: $font-satoshi;
-  font-size: $font-size-xl;
-  color: #ffffff;
-  max-width: 600px;
-  margin: 0 auto;
-  line-height: $line-height-relaxed;
-  letter-spacing: $letter-spacing-normal;
 }
 
 // New showcase layout

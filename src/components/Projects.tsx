@@ -9,61 +9,107 @@ import { projects } from '@/data';
 import styles from './Projects.module.scss';
 
 // Use the first nine projects as the main showcase
-const SHOWCASE_ITEMS = projects.map((project, index) => ({
-  id: project.id,
-  title: project.title,
-  description: project.description,
-  details: index === 0 ? [
-    'Goal: create a modern real estate experience for property buyers and owners',
-    'Highlights: advanced filtering, property submissions, appraisal requests, favourites, and client feedback',
-    'Stack: Next.js, Supabase, Cloudinary, Framer, React, Sass, TypeScript',
-  ] : index === 1 ? [
-    'Goal: showcase a clean UX with responsive layouts',
-    'Highlights: interactive building layout, property listings, floor plans',
-    'Stack: Three.js, Framer Motion, React, Sass, TypeScript',
-  ] : index === 2 ? [
-    'Goal: present a magical, calming massage therapy experience online',
-    'Highlights: practice information, therapist bio, pricing, Destiny Matrix, and online shop',
-    'Stack: Next.js, Framer Motion, React, Sass, TypeScript',
-  ] : index === 3 ? [
-    'Goal: visualize real-time DeFi data with interactive charts',
-    'Highlights: custom APIs, data aggregation, protocol stats, market trends',
-    'Stack: React Query, React Table, Axios, Recharts, Sass, TypeScript',
-  ] : index === 4 ? [
-    'Goal: visualize astrology data and zodiac insights through clean interface',
-    'Highlights: personalized birth charts, star alignments, dynamic horoscope visuals',
-    'Stack: React, Sass',
-  ] : index === 5 ? [
-    'Goal: evoke elegance & appetite while keeping UX seamless',
-    'Highlights: visual storytelling, immersive imagery, dynamic menu, gallery showcase',
-    'Stack: HTML, CSS',
-  ] : index === 6 ? [
-    'Goal: provide comprehensive information on transport policies and initiatives',
-    'Highlights: transport policies, projects, events, news, member engagement',
-    'Stack: React, React-router, Sass, TypeScript',
-  ] : index === 7 ? [
-    'Goal: merge craftsmanship with modern aesthetics through digital presentation',
-    'Highlights: minimalist layout, smooth scrolling, responsive visuals, tactile quality emphasis',
-    'Stack: React, Sass, TypeScript',
-  ] : [
-    'Goal: explore ASH identity through clean design and bold typography',
-    'Highlights: visual hierarchy, minimalism, high-contrast elements, smooth transitions',
-    'Stack: HTML, CSS',
-  ],
-  technologies: project.technologies,
-  liveUrl: project.liveUrl,
-  codeUrl: project.codeUrl,
-  previewUrl: index === 0 ? "/Thumbnail - Real Estate.png"
-    : index === 1 ? "/Knyazhevo app.mp4"
-    : index === 2 ? "/Thumbnail-Massage.png"
-    : index === 3 ? "/Preview-Video 2.mp4"
-    : index === 4 ? "/Preview-4.mp4"
-    : index === 5 ? "/Preview-Video-3.mp4"
-    : index === 6 ? "/Preview-Video-8.mp4"
-    : index === 7 ? "/Preview-Video-5.mp4"
-    : "/Preview-Video-6.mp4",
-  thumbUrl: project.imageUrl
-}));
+const SHOWCASE_ITEMS = projects
+  // Ensure any removed projects (like historical DefiLlama) stay out of the UI
+  .filter((project) => project.id !== '2')
+  .map((project) => {
+    let details: string[];
+    let previewUrl: string;
+
+    switch (project.id) {
+      case '10': // Broker Bulgaria
+        details = [
+          'Goal: create a modern real estate experience for property buyers and owners',
+          'Highlights: advanced filtering, property submissions, appraisal requests, favourites, and client feedback',
+          'Stack: Next.js, Supabase, Cloudinary, Framer, React, Sass, TypeScript',
+        ];
+        previewUrl = "/Thumbnail - Real Estate New.png";
+        break;
+      case '1': // Forest Residence Sofia
+        details = [
+          'Goal: showcase a clean UX with responsive layouts',
+          'Highlights: interactive building layout, property listings, floor plans',
+          'Stack: Three.js, Framer Motion, React, Sass, TypeScript',
+        ];
+        previewUrl = "/Knyazhevo app.mp4";
+        break;
+      case '11': // Energy Massage Therapy
+        details = [
+          'Goal: present a magical, calming massage therapy experience online',
+          'Highlights: practice information, therapist bio, pricing, Destiny Matrix, and online shop',
+          'Stack: Next.js, Framer Motion, React, Sass, TypeScript',
+        ];
+        previewUrl = "/Thumbnail Massage New.png";
+        break;
+      case '12': // Kutiev Law Firm
+        details = [
+          'Goal: create a focused online presence for a criminal law attorney',
+          'Highlights: clear practice areas, professional credentials, concise firm overview, and direct contact options',
+          'Stack: React, Next.js, TypeScript, Sass',
+        ];
+        previewUrl = "/Thumbnail-Lawyer.png";
+        break;
+      case '3': // Astrology App
+        details = [
+          'Goal: visualize astrology data and zodiac insights through a clean interface',
+          'Highlights: personalized birth charts, star alignments, dynamic horoscope visuals',
+          'Stack: React, Sass',
+        ];
+        previewUrl = "/Preview-4.mp4";
+        break;
+      case '5': // Ambra Restaurant
+        details = [
+          'Goal: evoke elegance & appetite while keeping UX seamless',
+          'Highlights: visual storytelling, immersive imagery, dynamic menu, gallery showcase',
+          'Stack: HTML, CSS',
+        ];
+        previewUrl = "/Preview-Video-3.mp4";
+        break;
+      case '6': // AMTP Association
+        details = [
+          'Goal: provide comprehensive information on transport policies and initiatives',
+          'Highlights: transport policies, projects, events, news, member engagement',
+          'Stack: React, React-router, Sass, TypeScript',
+        ];
+        previewUrl = "/Thumbnail-AMTP-new.png";
+        break;
+      case '7': // Custom Wallets
+        details = [
+          'Goal: merge craftsmanship with modern aesthetics through digital presentation',
+          'Highlights: minimalist layout, smooth scrolling, responsive visuals, tactile quality emphasis',
+          'Stack: React, Sass, TypeScript',
+        ];
+        previewUrl = "/Preview-Video-5.mp4";
+        break;
+      case '8': // Ash-services
+        details = [
+          'Goal: explore ASH identity through clean design and bold typography',
+          'Highlights: visual hierarchy, minimalism, high-contrast elements, smooth transitions',
+          'Stack: HTML, CSS',
+        ];
+        previewUrl = "/Preview-Video-6.mp4";
+        break;
+      default:
+        details = [
+          'Goal: showcase a modern web experience',
+          'Highlights: responsive design, clean UI, and smooth interactions',
+          'Stack: modern frontend technologies',
+        ];
+        previewUrl = project.imageUrl;
+    }
+
+    return {
+      id: project.id,
+      title: project.title,
+      description: project.description,
+      details,
+      technologies: project.technologies,
+      liveUrl: project.liveUrl,
+      codeUrl: project.codeUrl,
+      previewUrl,
+      thumbUrl: project.imageUrl,
+    };
+  });
 
 
 const Projects = memo(() => {
@@ -120,7 +166,6 @@ const Projects = memo(() => {
             </div>
             <h2 className={styles.title}>Featured Projects</h2>
           </div>
-          <p className={styles.subtitle}>Select one of my signature designs</p>
         </motion.div>
 
         <div className={styles.thumbnails}>
