@@ -242,7 +242,6 @@ const Hero = memo(() => {
               >
                 <p className={`${styles.subtitle} ${styles.inlineSubtitle}`}>
                   Frontend Developer • UI/UX Designer
-                                    <span className={styles.roleBreak}> • Electronic Music Producer</span>
                 </p>
               </motion.div>
               <motion.div

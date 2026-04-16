@@ -1,4 +1,4 @@
-import React, { useRef, useMemo, memo } from 'react';
+import React, { useRef, useMemo, useState, useCallback, memo } from 'react';
 import { motion } from 'framer-motion';
 import {
   Zap as ReactIcon,
@@ -34,13 +34,22 @@ import {
   Clock,
   Search,
   Heart,
-  GraduationCap
+  GraduationCap,
+  ChevronDown
 } from 'lucide-react';
 import { skills } from '@/data';
 import styles from './Skills.module.scss';
 
 const Skills = memo(() => {
   const developmentToolsRef = useRef<HTMLDivElement>(null);
+  const [expandedSkillKeys, setExpandedSkillKeys] = useState<Record<string, boolean>>({});
+
+  const toggleSkill = useCallback((skillKey: string) => {
+    setExpandedSkillKeys((prev) => ({
+      ...prev,
+      [skillKey]: !prev[skillKey]
+    }));
+  }, []);
 
 
   const containerVariants = useMemo(() => ({
@@ -185,38 +194,60 @@ const Skills = memo(() => {
 
             <div className={styles.skillsGrid}>
               {frontendSkills.map((skill, index) => (
-                <motion.div
-                  key={skill.name}
-                  className={styles.skillItem}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.2, delay: index * 0.02 }} // Reduced duration and delay
-                  viewport={{ once: true }}
-                >
-                    <div className={styles.skillHeader}>
-                      <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                        <div style={{
-                          display: 'flex',
-                          alignItems: 'center',
-                          justifyContent: 'center',
-                          width: '20px',
-                          height: '20px',
-                          color: skillCategories.frontend.color
-                        }}>
-                          {skillIcons[skill.name] && React.createElement(skillIcons[skill.name], {
-                            size: 16,
-                            color: skillCategories.frontend.color
-                          })}
+                (() => {
+                  const skillKey = `frontend-${index}`;
+                  const isExpanded = Boolean(expandedSkillKeys[skillKey]);
+
+                  return (
+                    <motion.div
+                      key={skill.name}
+                      className={styles.skillItem}
+                      whileInView={{ opacity: 1, scale: 1 }}
+                      transition={{ duration: 0.2, delay: index * 0.02 }} // Reduced duration and delay
+                      viewport={{ once: true }}
+                    >
+                      <button
+                        type="button"
+                        className={styles.skillToggle}
+                        onClick={() => toggleSkill(skillKey)}
+                        aria-expanded={isExpanded}
+                        aria-controls={`skill-notes-${skillKey}`}
+                      >
+                        <div className={styles.skillHeader}>
+                          <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                            <div style={{
+                              display: 'flex',
+                              alignItems: 'center',
+                              justifyContent: 'center',
+                              width: '20px',
+                              height: '20px',
+                              color: skillCategories.frontend.color
+                            }}>
+                              {skillIcons[skill.name] && React.createElement(skillIcons[skill.name], {
+                                size: 16,
+                                color: skillCategories.frontend.color
+                              })}
+                            </div>
+                            <span className={styles.skillName}>{skill.name}</span>
+                          </div>
+                          <div className={styles.skillMeta}>
+                            <span className={styles.skillYears}>{skill.years} years</span>
+                            <ChevronDown
+                              size={14}
+                              className={`${styles.skillChevron} ${isExpanded ? styles.skillChevronExpanded : ''}`}
+                              aria-hidden="true"
+                            />
+                          </div>
                         </div>
-                        <span className={styles.skillName}>{skill.name}</span>
-                      </div>
-                      <span className={styles.skillYears}>{skill.years} years</span>
-                    </div>
-                  {skill.notes && (
-                    <div className={styles.skillNotes}>
-                      {skill.notes}
-                    </div>
-                  )}
-                </motion.div>
+                      </button>
+                      {skill.notes && isExpanded && (
+                        <div id={`skill-notes-${skillKey}`} className={styles.skillNotes}>
+                          {skill.notes}
+                        </div>
+                      )}
+                    </motion.div>
+                  );
+                })()
               ))}
             </div>
           </motion.div>
@@ -245,38 +276,60 @@ const Skills = memo(() => {
 
               <div className={styles.skillsGrid}>
                 {toolsSkills.map((skill, index) => (
-                  <motion.div
-                    key={skill.name}
-                    className={styles.skillItem}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.2, delay: index * 0.02 }} // Reduced duration and delay
-                    viewport={{ once: true }}
-                  >
-                    <div className={styles.skillHeader}>
-                      <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                        <div style={{
-                          display: 'flex',
-                          alignItems: 'center',
-                          justifyContent: 'center',
-                          width: '20px',
-                          height: '20px',
-                          color: '#FACC15'
-                        }}>
-                          {skillIcons[skill.name] && React.createElement(skillIcons[skill.name], {
-                            size: 16,
-                            color: "#FACC15"
-                          })}
-                        </div>
-                        <span className={styles.skillName}>{skill.name}</span>
-                      </div>
-                      <span className={styles.skillYears}>{skill.years} years</span>
-                    </div>
-                    {skill.notes && (
-                      <div className={styles.skillNotes}>
-                        {skill.notes}
-                      </div>
-                    )}
-                  </motion.div>
+                  (() => {
+                    const skillKey = `tools-${index}`;
+                    const isExpanded = Boolean(expandedSkillKeys[skillKey]);
+
+                    return (
+                      <motion.div
+                        key={skill.name}
+                        className={styles.skillItem}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        transition={{ duration: 0.2, delay: index * 0.02 }} // Reduced duration and delay
+                        viewport={{ once: true }}
+                      >
+                        <button
+                          type="button"
+                          className={styles.skillToggle}
+                          onClick={() => toggleSkill(skillKey)}
+                          aria-expanded={isExpanded}
+                          aria-controls={`skill-notes-${skillKey}`}
+                        >
+                          <div className={styles.skillHeader}>
+                            <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                              <div style={{
+                                display: 'flex',
+                                alignItems: 'center',
+                                justifyContent: 'center',
+                                width: '20px',
+                                height: '20px',
+                                color: '#FACC15'
+                              }}>
+                                {skillIcons[skill.name] && React.createElement(skillIcons[skill.name], {
+                                  size: 16,
+                                  color: '#FACC15'
+                                })}
+                              </div>
+                              <span className={styles.skillName}>{skill.name}</span>
+                            </div>
+                            <div className={styles.skillMeta}>
+                              <span className={styles.skillYears}>{skill.years} years</span>
+                              <ChevronDown
+                                size={14}
+                                className={`${styles.skillChevron} ${isExpanded ? styles.skillChevronExpanded : ''}`}
+                                aria-hidden="true"
+                              />
+                            </div>
+                          </div>
+                        </button>
+                        {skill.notes && isExpanded && (
+                          <div id={`skill-notes-${skillKey}`} className={styles.skillNotes}>
+                            {skill.notes}
+                          </div>
+                        )}
+                      </motion.div>
+                    );
+                  })()
                 ))}
               </div>
             </motion.div>
@@ -303,38 +356,60 @@ const Skills = memo(() => {
 
             <div className={styles.skillsGrid}>
               {designSkills.map((skill, index) => (
-                <motion.div
-                  key={skill.name}
-                  className={styles.skillItem}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.2, delay: index * 0.02 }} // Reduced duration and delay
-                  viewport={{ once: true }}
-                >
-                  <div className={styles.skillHeader}>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                      <div style={{
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        width: '20px',
-                        height: '20px',
-                        color: skillCategories.design.color
-                      }}>
-                        {skillIcons[skill.name] && React.createElement(skillIcons[skill.name], {
-                          size: 16,
-                          color: skillCategories.design.color
-                        })}
-                      </div>
-                      <span className={styles.skillName}>{skill.name}</span>
-                    </div>
-                    <span className={styles.skillYears}>{skill.years} years</span>
-                  </div>
-                  {skill.notes && (
-                    <div className={styles.skillNotes}>
-                      {skill.notes}
-                    </div>
-                  )}
-                </motion.div>
+                (() => {
+                  const skillKey = `design-${index}`;
+                  const isExpanded = Boolean(expandedSkillKeys[skillKey]);
+
+                  return (
+                    <motion.div
+                      key={skill.name}
+                      className={styles.skillItem}
+                      whileInView={{ opacity: 1, scale: 1 }}
+                      transition={{ duration: 0.2, delay: index * 0.02 }} // Reduced duration and delay
+                      viewport={{ once: true }}
+                    >
+                      <button
+                        type="button"
+                        className={styles.skillToggle}
+                        onClick={() => toggleSkill(skillKey)}
+                        aria-expanded={isExpanded}
+                        aria-controls={`skill-notes-${skillKey}`}
+                      >
+                        <div className={styles.skillHeader}>
+                          <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                            <div style={{
+                              display: 'flex',
+                              alignItems: 'center',
+                              justifyContent: 'center',
+                              width: '20px',
+                              height: '20px',
+                              color: skillCategories.design.color
+                            }}>
+                              {skillIcons[skill.name] && React.createElement(skillIcons[skill.name], {
+                                size: 16,
+                                color: skillCategories.design.color
+                              })}
+                            </div>
+                            <span className={styles.skillName}>{skill.name}</span>
+                          </div>
+                          <div className={styles.skillMeta}>
+                            <span className={styles.skillYears}>{skill.years} years</span>
+                            <ChevronDown
+                              size={14}
+                              className={`${styles.skillChevron} ${isExpanded ? styles.skillChevronExpanded : ''}`}
+                              aria-hidden="true"
+                            />
+                          </div>
+                        </div>
+                      </button>
+                      {skill.notes && isExpanded && (
+                        <div id={`skill-notes-${skillKey}`} className={styles.skillNotes}>
+                          {skill.notes}
+                        </div>
+                      )}
+                    </motion.div>
+                  );
+                })()
               ))}
             </div>
           </motion.div>

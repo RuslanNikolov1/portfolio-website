@@ -34,7 +34,7 @@ $font-weight-bold: 700;
 .container {
   max-width: 1400px;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 5rem;
 }
 
 .header {
@@ -79,17 +79,40 @@ $font-weight-bold: 700;
   letter-spacing: $letter-spacing-normal;
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 2rem;
+.carousel {
   margin-top: 3rem;
-
-  @media (max-width: 768px) {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+
+.viewport {
+  overflow: hidden;
+  width: 100%;
+  display: grid;
+  place-items: center;
+  position: relative;
+  height: 42vh;
+  min-height: 42vh;
+}
+
+.cardSlot {
+  position: relative;
+  width: 100%;
+  display: grid;
+  place-items: center;
+  height: 100%;
+}
+
+.cardSlotItem {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  will-change: transform;
+  z-index: 1;
+}
+
 
 .card {
   background: $card-bg;
@@ -117,6 +140,41 @@ $font-weight-bold: 700;
   }
 }
 
+@media (min-width: 769px) {
+  .card {
+    width: 55vw;
+    margin: 0 auto;
+  }
+}
+
+.navButton {
+  width: 3.2vw;
+  height: 3.2vw;
+  min-width: 2.6rem;
+  min-height: 2.6rem;
+  border: 0.12vw solid rgba(15, 23, 42, 0.35);
+  border-radius: 10%;
+  background: #ffffff;
+  color: #0f172a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+
+  &:hover {
+    transform: scale(1.06);
+    background: rgba(255, 255, 255, 0.92);
+    border-color: rgba(15, 23, 42, 0.55);
+  }
+
+  &:focus-visible {
+    outline: 0.2vw solid #ffffff;
+    outline-offset: 0.15vw;
+  }
+}
+
+
 .content {
   position: relative;
   z-index: 1;
@@ -134,7 +192,7 @@ $font-weight-bold: 700;
 
 .description {
   font-family: $font-satoshi;
-  font-size: $font-size-base;
+  font-size: 2.5vh;
   color: $color-text-muted;
   line-height: $line-height-relaxed;
   letter-spacing: $letter-spacing-normal;
@@ -167,8 +225,14 @@ $font-weight-bold: 700;
 
 // Responsive adjustments
 @media (max-width: 1024px) {
-  .grid {
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  .navButton {
+    width: 4.2vw;
+    height: 4.2vw;
+  }
+
+  .dot {
+    width: 0.9vw;
+    height: 0.9vw;
   }
 }
 
@@ -184,6 +248,15 @@ $font-weight-bold: 700;
   .card {
     padding: 1.5rem;
   }
+
+  .carousel {
+    gap: 2vw;
+  }
+
+  .navButton {
+    width: 5.4vw;
+    height: 5.4vw;
+  }
   
   .title {
     font-size: clamp(2rem, 8vw, 3rem);
@@ -195,12 +268,19 @@ $font-weight-bold: 700;
 }
 
 @media (max-width: 480px) {
-  .grid {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-  }
-  
   .card {
     padding: 1.25rem;
+  }
+
+  .navButton {
+    width: 8.5vw;
+    height: 8.5vw;
+    min-width: 2.25rem;
+    min-height: 2.25rem;
+  }
+
+  .dot {
+    width: 1.8vw;
+    height: 1.8vw;
   }
 }
