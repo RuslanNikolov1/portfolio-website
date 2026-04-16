@@ -33,6 +33,17 @@ export const projects: Project[] = [
     category: 'web'
   },
   {
+    id: '13',
+    title: 'Strong Sol Construction App (IN PROGRESS)',
+    description:
+      'A moden website with pleasant UI design and web animations. Has video play on scroll, rotating 3D elements and a 3D model which can be rotated.',
+    technologies: ['Figma', 'Next.js', 'Typescript', 'GSAP', 'React', 'SASS', 'Three.js', 'Web-ifc'],
+    imageUrl: '/Thumbnail Construction.png',
+    liveUrl: 'https://construction-app-tau-three.vercel.app/',
+    codeUrl: 'https://github.com/RuslanNikolov1/construction-app',
+    category: 'web'
+  },
+  {
     id: '11',
     title: 'Energy Massage Therapy',
     description:
@@ -115,15 +126,18 @@ export const skills: Skill[] = [
   // Frontend Skills
   { name: 'React', level: 95, years: 7, category: 'frontend', notes: 'Used in all my projects. I choose React because of its component-based architecture, excellent ecosystem, and the way it makes building interactive UIs intuitive and maintainable.' },
   { name: 'TypeScript', level: 90, years: 7, category: 'frontend', notes: 'Used in nearly all my projects. I use TypeScript because it catches errors at compile time, improves code readability, and makes refactoring much safer and more confident.' },
+  { name: 'Figma', level: 92, years: 2, category: 'frontend', notes: 'Used across product and website work. I use Figma to craft beautiful and intuitive designs, create wireframes, build reusable design systems with components, validate responsiveness, prototype interactions, and apply strong design principles before development.' },
   { name: 'Next.js', level: 88, years: 3, category: 'frontend', notes: 'Used in Ambra restaurant and portfolio website. I choose Next.js for its built-in SSR/SSG capabilities, automatic code splitting, and excellent performance optimizations that make production-ready apps.' },
+  { name: 'Supabase', level: 80, years: 1.5, category: 'frontend', notes: 'Used in modern web apps for backend services. I use Supabase for authentication, database access, and realtime capabilities with a clean developer experience.' },
+  { name: 'GSAP', level: 78, years: 1, category: 'frontend', notes: 'Used for smooth and performant web animations. I use GSAP to build engaging motion effects and timeline-based interactions with precise control.' },
+  { name: 'Storybook', level: 82, years: 3, category: 'frontend', notes: 'Used to develop and document UI components in isolation. I use Storybook to improve component quality, consistency, and collaboration with designers and developers.' },
   { name: 'JavaScript', level: 92, years: 8, category: 'frontend', notes: 'Used in all my projects. JavaScript is the foundation of modern web development - I leverage ES6+ features, async/await patterns, and functional programming to write clean, efficient code.' },
   { name: 'HTML/CSS', level: 95, years: 8, category: 'frontend', notes: 'Used in all my projects. These are the building blocks of the web - I focus on semantic HTML for accessibility and SEO, while CSS enables responsive, visually appealing designs.' },
   { name: 'SASS/SCSS', level: 85, years: 4, category: 'frontend', notes: 'Used in nearly all my projects. I prefer SASS over Tailwind and CSS-in-JS because it keeps classes clean, provides better performance, and offers variables, nesting, and mixins for organized, DRY code.' },
   { name: 'Tailwind CSS', level: 90, years: 2, category: 'frontend', notes: 'Used in Ambra restaurant. I use Tailwind for rapid prototyping and utility-first styling when I need to build quickly without custom CSS, though I prefer SASS for complex projects.' },
   { name: 'Framer Motion', level: 80, years: 2, category: 'frontend', notes: 'Used for animations and micro-interactions. I choose Framer Motion because it brings interfaces to life with smooth animations that enhance user experience and provide meaningful feedback.' },
-  { name: 'Redux', level: 85, years: 5, category: 'frontend', notes: 'Used for big state management. I use Redux when component state becomes unwieldy or when multiple components need to share data - it provides predictable state updates and excellent DevTools.' },
+  { name: 'Redux', level: 85, years: 4, category: 'frontend', notes: 'Used for big state management. I use Redux when component state becomes unwieldy or when multiple components need to share data - it provides predictable state updates and excellent DevTools.' },
   { name: 'Material UI', level: 80, years: 5, category: 'frontend', notes: 'Used in a lot of projects. I choose Material UI when I need to build quickly while maintaining design consistency, as it provides pre-built, accessible components with a solid theming system.' },
-  { name: 'Mapbox', level: 75, years: 1, category: 'frontend', notes: 'Used in the transport project. I use Mapbox for location-based applications because it provides excellent performance, customization options, and real-time data visualization capabilities.' },
   { name: 'Web Audio API', level: 70, years: 1, category: 'frontend', notes: 'Used in various sites. I use Web Audio API to create rich audio experiences in the browser, enabling interactive sound effects and music applications for immersive web experiences.' },
   { name: 'Three.js', level: 75, years: 1, category: 'frontend', notes: 'Used in the Forest Residence Sofia app. I choose Three.js for 3D web experiences because it makes WebGL accessible and allows me to build stunning 3D interfaces impossible with traditional web technologies.' },
   { name: 'React Query', level: 85, years: 2, category: 'frontend', notes: 'Revolutionary data fetching and caching library. I use React Query to manage server state, handle loading states, and implement optimistic updates - it eliminates boilerplate code and provides excellent caching strategies.' },
@@ -141,6 +155,7 @@ export const skills: Skill[] = [
   { name: 'CI/CD', level: 85, years: 5, category: 'tools', notes: 'Used Jenkins, Github and Vercel. I use CI/CD to automate my deployment pipeline for faster, more reliable releases, ensuring code quality and reducing manual errors.' },
   { name: 'Webpack', level: 80, years: 5, category: 'tools', notes: 'Used a lot in the old projects. I use Webpack for complex applications because its module system and plugin ecosystem allow me to optimize builds and handle assets effectively.' },
   { name: 'Vite', level: 85, years: 2, category: 'tools', notes: 'Used very frequently. I choose Vite for its revolutionary development experience with lightning-fast hot reload, simplicity, and excellent TypeScript support that dramatically improves productivity.' },
+  { name: 'Vercel', level: 88, years: 2, category: 'tools', notes: 'Used in multiple projects for deployment and hosting. I use Vercel for reliable builds, fast global delivery, and smooth integration with modern frontend workflows.' },
   { name: 'Cursor', level: 90, years: 2, category: 'tools', notes: 'Used a lot recently. I use Cursor for AI-assisted development, code generation, debugging, documentation, and learning new technologies - it accelerates development while helping me write better, more efficient code.' },
   
   // Design Skills

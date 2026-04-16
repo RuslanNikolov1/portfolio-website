@@ -33,6 +33,14 @@ const SHOWCASE_ITEMS = projects
         ];
         previewUrl = "/Knyazhevo app.mp4";
         break;
+      case '13': // Strong Sol Construction App (IN PROGRESS)
+        details = [
+          'Goal: deliver a pleasant construction-focused UI with modern interaction design',
+          'Highlights: video play on scroll, rotating 3D elements, and an interactive rotatable 3D model',
+          'Stack: Figma, Next.js, TypeScript, GSAP, React, Sass, Three.js, Web-ifc',
+        ];
+        previewUrl = "/Thumbnail Construction.png";
+        break;
       case '11': // Energy Massage Therapy
         details = [
           'Goal: present a magical, calming massage therapy experience online',

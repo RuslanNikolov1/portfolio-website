@@ -100,6 +100,9 @@ const Skills = memo(() => {
     'REST API': Html5,
     'GraphQL': Zap,
     'Next.js': Nextjs,
+    'Supabase': Webpack,
+    'GSAP': Zap,
+    'Storybook': BookOpen,
     
     // Development Tools
     'Git': Git,

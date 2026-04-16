@@ -189,7 +189,7 @@ const Navigation = memo(() => {
               </div>
             )}
             <div className={styles.trackText}>
-              <div className={styles.trackTitle}>Hopeful Emotions</div>
+              <div className={styles.trackTitle}>Bar Elyzium</div>
               <div className={styles.trackArtist}>Ruslan Nikolov</div>
             </div>
           </div>
@@ -256,7 +256,7 @@ const Navigation = memo(() => {
       {/* Hidden audio element */}
       <audio
         ref={setAudioRef}
-        src="/Hopeful emotions.mp3"
+        src="/Bar Elyzium.mp3"
         preload="metadata"
         onPlay={() => setIsPlaying(true)}
         onPause={() => setIsPlaying(false)}
