@@ -81,13 +81,13 @@ const SHOWCASE_ITEMS = projects
         ];
         previewUrl = "/Thumbnail-AMTP-new.png";
         break;
-      case '7': // Custom Wallets
+      case '7': // De-Fi Dashboard
         details = [
-          'Goal: merge craftsmanship with modern aesthetics through digital presentation',
-          'Highlights: minimalist layout, smooth scrolling, responsive visuals, tactile quality emphasis',
-          'Stack: React, Sass, TypeScript',
+          'Goal: visualize real-time DeFi data with an interactive dashboard',
+          'Highlights: custom data aggregation backend, interactive charts, protocol stats and market trends',
+          'Stack: React Query, React Table, Axios, React, Recharts, Sass, TypeScript',
         ];
-        previewUrl = "/Preview-Video-5.mp4";
+        previewUrl = "/Preview-Video%202.mp4";
         break;
       case '8': // Ash-services
         details = [

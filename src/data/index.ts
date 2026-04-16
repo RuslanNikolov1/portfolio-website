@@ -100,13 +100,13 @@ export const projects: Project[] = [
   },
   {
     id: '7',
-    title: 'Custom Wallets',
+    title: 'De-Fi Dashboard',
     description:
-      'A digital presentation of a custom physical wallet line designed to merge craftsmanship with modern aesthetics. The site highlights each wallet\'s materials, structure, and concept through minimalist layout, smooth scrolling, and responsive visuals. Built to emphasize both the tactile quality of the products and the clarity of their design story.',
-    technologies: ['React', 'Sass', 'TypeScript'],
-    imageUrl: '/Thumbnail-Wallets.png',
-    liveUrl: 'https://wallets-prototype.vercel.app/',
-    codeUrl: 'https://github.com/RuslanNikolov1/wallets-prototype',
+      'A full-stack web app that visualizes real-time DeFi data using custom APIs and interactive charts. I built both the backend for data aggregation and the frontend dashboard for exploring protocol stats and market trends.',
+    technologies: ['React Query', 'React Table', 'Axios', 'React', 'Recharts', 'Sass', 'TypeScript'],
+    imageUrl: '/Thumbnail-DefiLama.png',
+    liveUrl: 'https://defi-llama-dashboard-backend.vercel.app/',
+    codeUrl: 'https://github.com/RuslanNikolov1',
     category: 'web'
   },
   {
