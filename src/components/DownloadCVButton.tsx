@@ -6,8 +6,8 @@ import { memo } from 'react';
 const DownloadCVButton = memo(() => {
 	return (
 		<motion.a
-			href="/Ruslan Nikolov CV.pdf"
-			download="Ruslan Nikolov CV.pdf"
+			href="/Ruslan Nikolov - CV.pdf"
+			download="Ruslan Nikolov - CV.pdf"
 			initial={{ opacity: 0, scale: 0.9 }}
 			animate={{ opacity: 1, scale: 1 }}
 			transition={{ duration: 0.3 }}
