@@ -55,9 +55,6 @@ const Contact = memo(() => {
           viewport={{ once: true }}
         >
           <div className={styles.emojiTitle}>
-            <div className={styles.emoji}>
-              <Mail size={64} />
-            </div>
             <h2 className={styles.title}>Ready to Start Your Project?</h2>
           </div>
         </motion.div>
@@ -71,11 +68,9 @@ const Contact = memo(() => {
             viewport={{ once: true }}
           >
             <p className={styles.subtitle}>
-              Based in Burgas, Bulgaria • Available for remote work worldwide • 8+ years of experience<br/>
               Whether you&apos;re a startup founder, hiring manager seeking a skilled frontend developer, or an established business owner needing a custom digital solution, 
               I&apos;m here to help transform your ideas into reality with cutting-edge technologies, professional expertise, and creative innovation. 
               Specializing in React, Next.js, TypeScript, SASS, Framer Motion, and modern web development practices to deliver exceptional, responsive user experiences.
-              From concept to deployment, I focus on creating scalable, performant applications that drive real business results and user engagement.
             </p>
           </motion.div>
 

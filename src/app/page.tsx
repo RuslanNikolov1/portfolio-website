@@ -126,9 +126,9 @@ export default function Home() {
         </motion.section>
       </main>
       
-      <FooterLazy />
+      {/* <FooterLazy /> */}
       <FloatingCTA />
-      <DownloadCVButton />
+      {/* <DownloadCVButton /> */}
     </>
   );
 }

@@ -126,8 +126,8 @@ $font-weight-bold: 700;
   background: #20B2AA; // turquoise fill
   border: 2px solid #20B2AA;
   border-radius: 50%;
-  width: 50px;
-  height: 50px;
+  width: 55;
+  height: 55;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -140,6 +140,9 @@ $font-weight-bold: 700;
   // Position arrows so their center aligns with the showcase border
   &:first-child {
     transform: translateX(-25px); // Move left arrow a bit more inside
+  }
+  &:last-child {
+    transform: translateX(25px); // Move left arrow a bit more inside
   }
 
   @media (max-width: 1025px) {
@@ -173,17 +176,9 @@ $font-weight-bold: 700;
     background: #00CED1; // lighter turquoise on hover
     border-color: #ffffff; // white border on hover
     color: #ffffff;
-    transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(0, 206, 209, 0.4);
 
     // Maintain horizontal positioning on hover
-    &:first-child {
-      transform: translateX(-35px) translateY(-2px);
-    }
-
-    &:last-child {
-      transform: translateX(35px) translateY(-2px);
-    }
   }
 
   &:active {
@@ -236,7 +231,7 @@ $font-weight-bold: 700;
 
 .thumb {
   background: transparent;
-  border: 2px solid #b7fffb; // turquoise border
+  border: 2px solid #ffffff; // turquoise border
   width: 100%;
   aspect-ratio: 16 / 9;
   cursor: pointer;

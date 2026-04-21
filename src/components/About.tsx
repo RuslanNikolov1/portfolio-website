@@ -77,7 +77,6 @@ const About = memo(() => {
               { year: 'March 2025 – Present', title: 'Freelance Frontend Developer & UI/UX Designer', text: 'Designed and delivered high-performance, secure, accessible, responsive web applications across multiple industries. Created wireframes and aesthetic intuitive UI designs with Figma. Worked with translations, animations, theming, SEO, CMS. Worked with Supabase for database integration. Managed end-to-end project lifecycle: requirement gathering, prototyping, implementation, deployment, and post-launch support. Collaborated with clients to translate vision into maintainable, modern web applications. Leveraged AI tools (Cursor, ChatGPT) to accelerate development and ensure high-quality, bug-free code. Technologies: React, TypeScript, Next.js, Tailwind, SASS, AI-assisted Development, Supabase, Jest, Vercel.' }
             ].slice().reverse().map((item, idx) => (
               <div key={idx} className={styles.timelineItem}>
-                <div className={styles.timelineMarker} />
                 <div className={styles.timelineContent}>
                   <div className={styles.timelineHeader}>
                     <span className={styles.timelineYear}>{item.year}</span>

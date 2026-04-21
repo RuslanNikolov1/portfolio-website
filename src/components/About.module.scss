@@ -161,73 +161,15 @@
   max-width: 100%;
   padding-left: 2rem;
   
-  // Single horizontal timeline line
-  &::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 50%;
-    height: 3px;
-    background: linear-gradient(
-      to right,
-      $secondary 0%,
-      $primary 50%,
-      $secondary 100%
-    );
-    border-radius: 2px;
-    transform: translateY(-50%);
-  }
 }
 
 .timelineItem {
   position: relative;
   margin-bottom: 2.5rem;
   
-  // Timeline marker
-  &::before {
-    content: '';
-    position: absolute;
-    left: -2rem;
-    top: 0.5rem;
-    width: 16px;
-    height: 16px;
-    background: $secondary;
-    border: 4px solid #ffffff;
-    border-radius: 50%;
-    box-shadow: 0 0 0 3px rgba(250, 204, 21, 0.3);
-    z-index: 2;
-  }
 }
 
-.timelineMarker {
-  position: absolute;
-  left: -2rem;
-  top: 0.5rem;
-  width: 16px;
-  height: 16px;
-  background: $secondary;
-  border: 4px solid #ffffff;
-  border-radius: 50%;
-  box-shadow: 0 0 0 3px rgba(250, 204, 21, 0.3);
-  z-index: 2;
-  
-  // Connecting line to next item
-  &:not(:last-child)::after {
-    content: '';
-    position: absolute;
-    left: -1.5rem;
-    top: 1.5rem;
-    bottom: -2.5rem;
-    width: 2px;
-    background: linear-gradient(
-      to bottom,
-      rgba(250, 204, 21, 0.6) 0%,
-      rgba(37, 99, 235, 0.6) 100%
-    );
-    z-index: 1;
-  }
-}
+
 
 .timelineContent {
   background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
@@ -236,12 +178,6 @@
   padding: 1.5rem 2rem;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
   transition: all 0.3s ease;
-  
-  &:hover {
-    transform: translateX(8px);
-    border-color: $secondary;
-    box-shadow: 0 12px 40px rgba(250, 204, 21, 0.2);
-  }
 }
 
 .timelineHeader {
@@ -424,13 +360,13 @@
 
 .sportsContainer {
   background: 
-    linear-gradient(
-      to bottom,
-      rgba(0, 64, 64, 0.95) 0%,    /* darker turquoise overlay */
-      rgba(0, 128, 128, 0.95) 50%,   /* dark turquoise overlay */
-      rgba(32, 178, 170, 0.95) 100%   /* medium turquoise overlay */
-    ),
-    url('/Sports-Background.jpeg') center/cover no-repeat;
+  linear-gradient(
+    to bottom,
+    rgba(0, 64, 64, 0.9) 0%,    /* darker turquoise overlay */
+    rgba(0, 128, 128, 0.9) 50%,   /* dark turquoise overlay */
+    rgba(32, 178, 170, 0.9) 100%   /* medium turquoise overlay */
+  ),
+ center/cover no-repeat;
   border-radius: 16px;
   padding: 2rem;
   margin-bottom: 1.5rem;
@@ -589,7 +525,7 @@
       rgba(0, 128, 128, 0.9) 50%,   /* dark turquoise overlay */
       rgba(32, 178, 170, 0.9) 100%   /* medium turquoise overlay */
     ),
-    url('/Art-Background.jpg') center/cover no-repeat;
+    center/cover no-repeat;
   border-radius: 16px;
   padding: 2rem;
   margin-bottom: 1.5rem;
@@ -621,30 +557,6 @@
 
 .emojiTitle .emoji {
   font-size: 3.5rem; // Slightly smaller emojis for personal interest containers
-}
-
-// Accent underline for key phrases
-.paragraph:nth-child(2)::after {
-  content: '';
-  position: absolute;
-  bottom: -5px;
-  left: 0;
-  width: 60px;
-  height: 3px;
-  background: linear-gradient(90deg, $secondary 0%, $primary 100%);
-  border-radius: 2px;
-  animation: underlineGlow 3s ease-in-out infinite;
-}
-
-@keyframes underlineGlow {
-  0%, 100% {
-    opacity: 0.6;
-    transform: scaleX(1);
-  }
-  50% {
-    opacity: 1;
-    transform: scaleX(1.2);
-  }
 }
 
 .cta {
@@ -910,25 +822,8 @@
   .timeline {
     padding-left: 1.5rem;
     
-    &::before {
-      left: 0.75rem;
-      width: 2px;
-    }
   }
   
-  .timelineItem {
-    &::before {
-      left: -1.5rem;
-      width: 12px;
-      height: 12px;
-      border-width: 2px;
-    }
-    
-    &:not(:last-child)::after {
-      left: -1.25rem;
-      width: 1px;
-    }
-  }
   
   .timelineContent {
     padding: 1rem 1.5rem;

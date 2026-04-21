@@ -11,7 +11,7 @@ const Navigation = memo(() => {
   const [scrolled, setScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState('hero');
   const [isPlaying, setIsPlaying] = useState(false);
-  const [volume, setVolume] = useState(0.7);
+  const [volume, setVolume] = useState(0.1);
   const [audioRef, setAudioRef] = useState<HTMLAudioElement | null>(null);
 
   const handleScroll = useCallback(() => {
@@ -65,7 +65,6 @@ const Navigation = memo(() => {
   useEffect(() => {
     // Initialize audio and set starting time to 1:50 (110 seconds)
     if (audioRef) {
-      audioRef.currentTime = 110; // 1:50 = 110 seconds
       audioRef.volume = volume;
     }
   }, [audioRef, volume]);
@@ -97,12 +96,6 @@ const Navigation = memo(() => {
     }
   }, [audioRef, isPlaying]);
 
-  const handleVolumeChange = useCallback((newVolume: number) => {
-    setVolume(newVolume);
-    if (audioRef) {
-      audioRef.volume = newVolume;
-    }
-  }, [audioRef]);
 
   return (
     <motion.nav
@@ -189,8 +182,7 @@ const Navigation = memo(() => {
               </div>
             )}
             <div className={styles.trackText}>
-              <div className={styles.trackTitle}>Bar Elyzium</div>
-              <div className={styles.trackArtist}>Ruslan Nikolov</div>
+              <div className={styles.trackTitle}>My music</div>
             </div>
           </div>
           <div className={styles.controls}>
@@ -204,22 +196,6 @@ const Navigation = memo(() => {
             >
               {isPlaying ? <Pause size={16} /> : <Play size={16} />}
             </motion.button>
-            <div className={styles.volumeControl}>
-              <Volume2 size={14} />
-              <input
-                type="range"
-                min="0"
-                max="1"
-                step="0.1"
-                value={volume}
-                onChange={(e) => handleVolumeChange(parseFloat(e.target.value))}
-                className={styles.volumeSlider}
-                aria-label="Volume control"
-                aria-valuemin={0}
-                aria-valuemax={100}
-                aria-valuenow={Math.round(volume * 100)}
-              />
-            </div>
           </div>
           <div className={styles.visualizer}>
             {[...Array(5)].map((_, i) => (

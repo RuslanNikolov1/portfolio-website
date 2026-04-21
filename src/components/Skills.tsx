@@ -97,7 +97,6 @@ const Skills = memo(() => {
     'Redux': Webpack,
     'Material UI': Illustrator,
     'Mapbox': Html5,
-    'Web Audio API': Zap,
     'Three.js': Zap,
     'React Query': Zap,
     'React Table': Webpack,
@@ -158,9 +157,8 @@ const Skills = memo(() => {
           viewport={{ once: true }}
         >
           <div className={styles.emojiTitle}>
-            <div className={styles.emoji}>
-              <Zap size={64} />
-            </div>
+            <br />
+            <br />
             <h2 className={styles.title}>Skills & Expertise</h2>
           </div>
         </motion.div>

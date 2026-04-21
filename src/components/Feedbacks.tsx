@@ -76,10 +76,7 @@ const Feedbacks = () => {
           viewport={{ once: true }}
         >
           <div className={styles.emojiTitle}>
-            <div className={styles.emoji}>
-              <MessageCircle size={64} />
-            </div>
-            <h2 className={styles.title}>What People Say</h2>
+              <h2 className={styles.title}>What People Say</h2>
           </div>
         </motion.div>
 

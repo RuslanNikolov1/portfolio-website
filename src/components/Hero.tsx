@@ -234,16 +234,16 @@ const Hero = memo(() => {
 
               </div>
 
-              <motion.div
+              {/* <motion.div
                 className={styles.highlightedContainer}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.35 }}
               >
                 <p className={`${styles.subtitle} ${styles.inlineSubtitle}`}>
-                  Frontend Developer • UI/UX Designer
+                  Frontend Developer
                 </p>
-              </motion.div>
+              </motion.div> */}
               <motion.div
                 className={`${styles.highlightedContainer} ${styles.descriptionContainer}`}
                 initial={{ opacity: 0, y: 20 }}
@@ -251,11 +251,13 @@ const Hero = memo(() => {
                 transition={{ duration: 0.8, delay: 0.8 }}
               >
                  <p className={styles.description}>
-                   From EPAM Systems to freelance development, seeking to expand opportunities
+                   Web developer, seeking to expand opportunities
                    and contribute to diverse projects.
                  </p>
+                 
               </motion.div>
-
+              <br />
+              <br />
             </div>
 
             <motion.div
@@ -265,8 +267,8 @@ const Hero = memo(() => {
               transition={{ duration: 0.8, delay: 0.6 }}
             >
               <div className={styles.credential}>
-                <span className={styles.credentialNumber}>8+</span>
-                <span className={styles.credentialLabel}>Years Experience</span>
+                <span className={styles.credentialNumber}>8</span>
+                <span className={styles.credentialLabel}>Years Of Experience</span>
               </div>
               <div className={styles.credential}>
                 <span className={styles.credentialNumber}>22</span>

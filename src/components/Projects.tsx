@@ -169,9 +169,6 @@ const Projects = memo(() => {
           viewport={{ once: true }}
         >
           <div className={styles.emojiTitle}>
-            <div className={styles.emoji}>
-              <Rocket size={64} />
-            </div>
             <h2 className={styles.title}>Featured Projects</h2>
           </div>
         </motion.div>

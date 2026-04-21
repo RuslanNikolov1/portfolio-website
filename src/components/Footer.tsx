@@ -106,10 +106,6 @@ const Footer = memo(() => {
               © {currentYear} Ruslan Nikolov
             </p>
           </div>
-          
-          <div className={styles.tech}>
-            <p>Built with Next.js, TypeScript, and Framer Motion</p>
-          </div>
         </motion.div>
       </div>
     </footer>
