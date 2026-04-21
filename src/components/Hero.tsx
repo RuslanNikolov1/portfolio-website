@@ -267,7 +267,7 @@ const Hero = memo(() => {
               transition={{ duration: 0.8, delay: 0.6 }}
             >
               <div className={styles.credential}>
-                <span className={styles.credentialNumber}>8</span>
+                <span className={styles.credentialNumber}>7+</span>
                 <span className={styles.credentialLabel}>Years Of Experience</span>
               </div>
               <div className={styles.credential}>
