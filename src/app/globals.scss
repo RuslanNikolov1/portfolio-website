@@ -14,12 +14,10 @@
 html {
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
   font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  scroll-behavior: smooth;
-  -moz-osx-font-smoothing: grayscale;
+  // text-rendering: optimizeLegibility;
+  // -webkit-font-smoothing: antialiased;
+  // -moz-osx-font-smoothing: grayscale;
 }
 
 body {
@@ -65,7 +63,6 @@ select:focus-visible {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
   }
 }
 
@@ -135,10 +132,6 @@ $font-weight-bold: 700;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
 }
 
 /* Only show on devices that have a mouse pointer and support hover */
@@ -316,24 +309,6 @@ small, .meta {
 
 .digital-pulse {
   animation: digitalPulse 2s ease-in-out infinite;
-}
-
-// Custom scrollbar
-::-webkit-scrollbar {
-  width: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background: $background;
-}
-
-::-webkit-scrollbar-thumb {
-  background: $primary;
-  border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: $accent;
 }
 
 // Global text selection

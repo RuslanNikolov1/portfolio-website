@@ -39,11 +39,6 @@ const ContactLazy = dynamic(() => import('@/components/Contact'), {
   loading: () => <ContactSkeleton />,
 });
 
-const FooterLazy = dynamic(() => import('@/components/Footer'), {
-  ssr: false,
-  loading: () => null,
-});
-
   const sectionVariants = {
     hidden: { opacity: 0, y: 50 },
     visible: {

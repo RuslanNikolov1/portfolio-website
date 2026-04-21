@@ -124,11 +124,6 @@ $font-weight-bold: 700;
   position: relative;
   overflow: hidden;
 
-  &:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-  }
-
   &::before {
     content: '';
     position: absolute;
@@ -172,6 +167,16 @@ $font-weight-bold: 700;
     outline: 0.2vw solid #ffffff;
     outline-offset: 0.15vw;
   }
+}
+
+.navButton:first-child {
+  border-top-left-radius: 40%;
+  border-top-right-radius:  40%;
+}
+
+.navButton:last-child {
+  border-bottom-left-radius: 40%;
+  border-bottom-right-radius:  40%;
 }
 
 
