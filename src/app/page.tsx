@@ -122,7 +122,7 @@ export default function Home() {
       </main>
       
       {/* <FooterLazy /> */}
-      <FloatingCTA />
+      {/* <FloatingCTA /> */}
       {/* <DownloadCVButton /> */}
     </>
   );
