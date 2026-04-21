@@ -87,7 +87,7 @@ const Hero = memo(() => {
         {/* Hero Initial Picture - shows until video loads */}
         {!videoLoaded && !videoError && (
           <Image
-            src="/Hero Initial Picture.png"
+            src="/Hero Initial Picture.webp"
             alt="Ruslan Nikolov - Frontend Developer"
             fill
             priority={true}

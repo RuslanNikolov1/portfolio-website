@@ -22,10 +22,9 @@ const nextConfig: NextConfig = {
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
   },
 
-  // Compression and performance
-  compress: true,
+  // // Compression and performance
+  // compress: true,
   
-  // Headers for caching static assets
   // async headers() {
   //   return [
   //     {

@@ -85,8 +85,6 @@ export default function Home() {
         <SkillsLazy />
         </motion.section>
 
-        {/* Dragons image moved into About header */}
-        
         <motion.section
           id="about"
           aria-label="About section"

@@ -52,7 +52,7 @@ const About = memo(() => {
           viewport={{ once: true }}
         >
           <motion.img
-            src="/Ruslan Laptop Looking.jpg"
+            src="/Ruslan Profile.webp"
             alt="Ruslan Nikolov working on laptop"
             className={styles.profileImg}
           />
