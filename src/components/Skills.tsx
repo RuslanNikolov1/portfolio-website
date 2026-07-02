@@ -13,6 +13,7 @@ import {
   Package as Npm,
   Package as Yarn,
   Settings as Webpack,
+  Wrench,
   Zap as Vite,
   Zap as Nextjs,
   Zap as Vercel,
@@ -152,15 +153,14 @@ const Skills = memo(() => {
       <div className={styles.container}>
         <motion.div
           className={styles.header}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.4 }} // Reduced from 0.8
+          initial={{ opacity: 0, x: -24 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
           viewport={{ once: true }}
         >
-          <div className={styles.emojiTitle}>
-            <br />
-            <br />
-            <h2 className={styles.title}>Skills & Expertise</h2>
-          </div>
+          <h2 className={styles.title}>
+            Skills & <span className={styles.titleAccent}>Expertise</span>
+          </h2>
         </motion.div>
 
         <motion.div
@@ -262,11 +262,11 @@ const Skills = memo(() => {
                   className={styles.categoryIcon}
                   style={{ backgroundColor: '#FACC15' }}
                 >
-                  🛠️
+                  <Wrench size={22} color="#0f2d4a" />
                 </div>
                 <h3
                   className={styles.categoryTitle}
-                  style={{ color: '#FACC15' }}
+                  style={{ color: 'var(--home-ink)' }}
                 >
                   Development Tools
                 </h3>

@@ -19,24 +19,17 @@ $font-weight-medium: 500;
   left: 0;
   right: 0;
   z-index: 1000;
-  background: #0f1a4a; // darker blue header background
-  backdrop-filter: none; // remove blur
-  border-bottom: 3px solid rgba(255, 255, 255, 0.85); // subtle white border
+  background: var(--home-navy);
+  border-bottom: 4px solid var(--home-accent);
   overflow: visible;
-  transition: all 0.3s ease;
-  height: 75px; // Decreased header height
-  background: linear-gradient(135deg, #1a0d3a 0%, #2d1b69 100%); // deeper purple gradient
-
-}
-
-.nav::after {
-  display: none;
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+  height: 72px;
 }
 
 .nav.scrolled {
-  background: #0f1a4a; // match 7 years / 18 projects color when scrolled
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-  border-bottom: 1.5px solid rgba(255, 255, 255, 0.85); // keep border when scrolled
+  background: var(--home-navy);
+  box-shadow: 0 8px 28px var(--home-shadow);
+  border-bottom-color: var(--home-yellow);
 }
 
 // Hide bottom border on mobile and tablet
@@ -97,8 +90,8 @@ $font-weight-medium: 500;
   height: 100%;
   object-fit: cover;
   border-radius: 50%;
-  border: 2px solid #20B2AA;
-  box-shadow: 0 0 20px #20B2AA;
+  border: 3px solid var(--home-accent);
+  box-shadow: 3px 3px 0 var(--home-yellow);
 }
 
 .menu {
@@ -168,23 +161,19 @@ $font-weight-medium: 500;
 .navItemActive::after {
   content: '';
   position: absolute;
-  bottom: -2px;
+  bottom: -4px;
   left: 0;
   width: 100%;
-  height: 2px;
-  background: #ffffff;
-  border-radius: 0;
-  box-shadow:
-    0 0 10px #ffffff,
-    0 0 20px #ffffff,
-    0 0 30px #ffffff,
-    inset 0 0 5px #ffffff;
-  filter: brightness(1.5) contrast(1.2);
+  height: 3px;
+  background: var(--home-yellow);
+  border-radius: 999px;
+  box-shadow: none;
+  filter: none;
 }
 
 .navItem:hover {
-  color: #20B2AA;
-  background: rgba(32, 178, 170, 0.1);
+  color: var(--home-accent);
+  background: rgb(56 189 248 / 0.12);
 }
 
 .mobileToggle {
@@ -210,13 +199,11 @@ $font-weight-medium: 500;
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  background: transparent;
-  padding: 0.5rem 1rem;
-  border-radius: 25px;
-  box-shadow: none;
-  border: 2px solid #20B2AA;
-  backdrop-filter: blur(10px);
-  transition: all 0.3s ease;
+  background: rgb(255 255 255 / 0.08);
+  padding: 0.45rem 0.85rem;
+  border-radius: 999px;
+  border: 2px solid var(--home-accent);
+  transition: transform 0.25s ease, border-color 0.25s ease;
   position: relative;
   overflow: hidden;
 }
@@ -396,11 +383,11 @@ $font-weight-medium: 500;
 
   .menu {
     position: fixed;
-    top: 75px;
+    top: 72px;
     left: 0;
     right: 0;
-    background: rgba(15, 23, 42, 0.98);
-    backdrop-filter: blur(20px);
+    background: var(--home-navy);
+    backdrop-filter: blur(12px);
     flex-direction: column;
     padding: 2rem;
     gap: 1rem;
@@ -408,7 +395,7 @@ $font-weight-medium: 500;
     opacity: 0;
     visibility: hidden;
     transition: all 0.3s ease;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 4px solid var(--home-accent);
   }
 
   .menu.menuOpen {

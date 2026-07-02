@@ -30,7 +30,7 @@ body {
 
 // Focus indicators for accessibility
 *:focus-visible {
-  outline: 2px solid var(--color-yellow);
+  outline: 2px solid var(--home-accent-deep);
   outline-offset: 2px;
 }
 
@@ -66,31 +66,75 @@ select:focus-visible {
   }
 }
 
-// Vibrant Digital Pulse Palette
+// Vibrant Digital Pulse Palette + Homepage Light System
 :root {
-  // Dark Theme (Default) - Vibrant Digital Pulse
-  --color-bg: #0d0f11;           // dark base
-  --color-surface: #171a1e;      // card/background surface
-  --color-yellow: #FFD644;       // main CTA / glow color
-  --color-green: #7CFFB2;        // success / active / accent
-  --color-green-accent: #10B981; // strategic green accent
-  --color-blue: #5DB7FF;         // highlights / links / dividers
-  --color-text: #F5F7FA;         // main text
-  --color-text-muted: #A0A4AB;   // secondary text
-  
-  // Legacy variable mapping for compatibility
-  --background: var(--color-bg);
-  --background-secondary: var(--color-surface);
-  --foreground: var(--color-text);
-  --muted: var(--color-text-muted);
-  --primary: var(--color-blue);
-  --secondary: var(--color-yellow);
-  --accent: var(--color-green);
-  --card-bg: var(--color-surface);
-  --border: rgba(93, 183, 255, 0.2);
-  --text-muted: var(--color-text-muted);
-  --slate-dark: var(--color-surface);
-  
+  // Homepage light system (primary)
+  --home-bg: #e8f4fd;
+  --home-bg-light: #f5fbff;
+  --home-bg-alt: #fff8e1;
+  --home-bg-warm: #fff8e1;
+  --home-bg-warm-light: #fffef5;
+  --home-surface: #ffffff;
+  --home-surface-light: #f8fcff;
+  --home-surface-elevated: #f0f9ff;
+  --home-accent: #38bdf8;
+  --home-accent-light: #bae6fd;
+  --home-accent-hover: #0ea5e9;
+  --home-accent-deep: #0369a1;
+  --home-ink: #0f2d4a;
+  --home-ink-muted: #475569;
+  --home-yellow: #facc15;
+  --home-yellow-glow: rgba(250, 204, 21, 0.5);
+  --home-orange: #fb923c;
+  --home-navy: #19296c;
+  --home-border: #0f2d4a;
+  --home-shadow: rgba(15, 45, 74, 0.14);
+  --home-radius: 16px;
+  --home-radius-lg: 24px;
+  --home-dock-overlap: -3.5rem;
+
+  // Legacy dark tokens (compat)
+  --color-bg: var(--home-bg);
+  --color-surface: var(--home-surface);
+  --color-yellow: var(--home-yellow);
+  --color-green: #7CFFB2;
+  --color-green-accent: #10B981;
+  --color-blue: var(--home-accent);
+  --color-text: var(--home-ink);
+  --color-text-muted: var(--home-ink-muted);
+
+  --background: var(--home-bg);
+  --background-secondary: var(--home-surface-elevated);
+  --foreground: var(--home-ink);
+  --muted: var(--home-ink-muted);
+  --primary: var(--home-accent);
+  --secondary: var(--home-yellow);
+  --accent: var(--home-accent);
+  --card-bg: var(--home-surface);
+  --border: rgb(15 45 74 / 0.18);
+  --text-muted: var(--home-ink-muted);
+  --slate-dark: var(--home-navy);
+
+  // Projects aliases
+  --projects-bg: var(--home-bg);
+  --projects-bg-warm: var(--home-bg-warm);
+  --projects-surface: var(--home-surface);
+  --projects-surface-elevated: var(--home-surface-elevated);
+  --projects-accent: var(--home-accent);
+  --projects-accent-hover: var(--home-accent-hover);
+  --projects-accent-deep: var(--home-accent-deep);
+  --projects-ink: var(--home-ink);
+  --projects-ink-muted: var(--home-ink-muted);
+  --projects-yellow: var(--home-yellow);
+  --projects-yellow-glow: var(--home-yellow-glow);
+  --projects-orange: var(--home-orange);
+  --projects-border: var(--home-border);
+  --projects-border-accent: var(--home-accent);
+  --projects-shadow: var(--home-shadow);
+  --projects-radius: var(--home-radius);
+  --projects-radius-lg: var(--home-radius-lg);
+  --projects-navy: var(--home-navy);
+  --projects-dock-overlap: var(--home-dock-overlap);
 }
 
 // SASS Variables - Vibrant Digital Pulse Palette
@@ -138,7 +182,7 @@ $font-weight-bold: 700;
 
 
 body {
-  color: var(--color-text);
+  color: var(--home-ink);
   font-family: $font-satoshi;
   font-weight: $font-weight-normal;
   font-size: $font-size-base;
@@ -146,20 +190,18 @@ body {
   letter-spacing: $letter-spacing-normal;
   overflow-x: hidden;
   position: relative;
-  transition: background 0.3s ease, color 0.3s ease;
+  background: var(--home-surface);
   cursor: auto;
 }
 
-
-// Global text selection
 ::selection {
-  background: #8B5CF6; // purple selection background
-  color: #ffffff; // white text on selection
+  background: var(--home-accent);
+  color: var(--home-ink);
 }
 
 ::-moz-selection {
-  background: #8B5CF6; // purple selection background for Firefox
-  color: #ffffff; // white text on selection
+  background: var(--home-accent);
+  color: var(--home-ink);
 }
 
 // Smooth transitions

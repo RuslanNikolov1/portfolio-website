@@ -121,7 +121,7 @@ const Navigation = memo(() => {
           }}
         >
           <Image 
-            src="/Ruslan Looking Avatar.jpg" 
+            src="/Ruslan Looking Avatar.webp" 
             alt="Ruslan Nikolov profile picture" 
             width={60} 
             height={60}
@@ -178,7 +178,7 @@ const Navigation = memo(() => {
           <div className={styles.trackInfo}>
             {true && (
               <div className={styles.coverArt} aria-hidden="true">
-                <Image src="/Hopeful emotions pic.png" alt="" width={28} height={28} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                <Image src="/Hopeful emotions pic.webp" alt="" width={28} height={28} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
               </div>
             )}
             <div className={styles.trackText}>

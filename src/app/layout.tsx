@@ -62,7 +62,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "My Portfolio — Frontend Developer",
     description: "Projects built with React, Next.js, and modern UI/UX design.",
-    images: [`${baseUrl}/preview.png`],
+    images: [`${baseUrl}/preview.webp`],
     type: "website",
     url: baseUrl,
   },
