@@ -1,6 +1,5 @@
-'use client';
-
 import dynamic from 'next/dynamic';
+import { Suspense } from 'react';
 import Navigation from '@/components/Navigation';
 import Hero from '@/components/Hero';
 import styles from './page.module.scss';
@@ -11,27 +10,22 @@ import ContactSkeleton from '@/components/ContactSkeleton';
 import FeedbacksSkeleton from '@/components/FeedbacksSkeleton';
 
 const ProjectsLazy = dynamic(() => import('@/components/Projects'), {
-  ssr: false,
   loading: () => <ProjectsSkeleton />,
 });
 
 const SkillsLazy = dynamic(() => import('@/components/Skills'), {
-  ssr: false,
   loading: () => <SkillsSkeleton />,
 });
 
 const AboutLazy = dynamic(() => import('@/components/About'), {
-  ssr: false,
   loading: () => <AboutSkeleton />,
 });
 
 const FeedbacksLazy = dynamic(() => import('@/components/Feedbacks'), {
-  ssr: false,
   loading: () => <FeedbacksSkeleton />,
 });
 
 const ContactLazy = dynamic(() => import('@/components/Contact'), {
-  ssr: false,
   loading: () => <ContactSkeleton />,
 });
 
@@ -47,25 +41,35 @@ export default function Home() {
         <div className={styles.sectionDivider} aria-hidden="true" />
 
         <div className={styles.sectionShell}>
-          <ProjectsLazy />
+          <Suspense fallback={<ProjectsSkeleton />}>
+            <ProjectsLazy />
+          </Suspense>
         </div>
 
         <div className={styles.sectionDivider} aria-hidden="true" />
 
         <div className={styles.sectionShell}>
-          <SkillsLazy />
+          <Suspense fallback={<SkillsSkeleton />}>
+            <SkillsLazy />
+          </Suspense>
         </div>
 
         <div className={styles.sectionShell}>
-          <AboutLazy />
+          <Suspense fallback={<AboutSkeleton />}>
+            <AboutLazy />
+          </Suspense>
         </div>
 
         <div className={styles.sectionShell}>
-          <FeedbacksLazy />
+          <Suspense fallback={<FeedbacksSkeleton />}>
+            <FeedbacksLazy />
+          </Suspense>
         </div>
 
         <div className={styles.sectionShell}>
-          <ContactLazy />
+          <Suspense fallback={<ContactSkeleton />}>
+            <ContactLazy />
+          </Suspense>
         </div>
       </main>
     </div>

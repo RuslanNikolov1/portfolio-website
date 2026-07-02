@@ -1,20 +1,15 @@
 'use client';
 
-import { motion, useReducedMotion } from 'framer-motion';
 import { useState, useEffect, useCallback, memo } from 'react';
 import Image from 'next/image';
 import styles from './Hero.module.scss';
 
 const Hero = memo(() => {
-  const [isClient, setIsClient] = useState(false);
   const [videoError, setVideoError] = useState(false);
   const [videoLoaded, setVideoLoaded] = useState(false);
   const [shouldLoadVideo, setShouldLoadVideo] = useState(false);
-  const reduceMotion = useReducedMotion();
 
   useEffect(() => {
-    setIsClient(true);
-
     const loadVideoAfterPaint = () => {
       requestAnimationFrame(() => {
         setTimeout(() => setShouldLoadVideo(true), 100);
@@ -62,23 +57,23 @@ const Hero = memo(() => {
     <section className={styles.hero} aria-label="Hero section">
       <div className={styles.background} role="img" aria-label="Animated background video">
         {!videoLoaded && !videoError && (
-          <Image
-            src="/Hero Initial Picture.webp"
-            alt="Ruslan Nikolov - Frontend Developer"
-            fill
-            priority
-            className={styles.heroImage}
-            style={{ objectFit: 'cover', zIndex: 1 }}
-          />
+          <>
+            <Image
+              src="/Hero Initial Picture.webp"
+              alt="Ruslan Nikolov - Frontend Developer"
+              fill
+              priority
+              sizes="100vw"
+              className={styles.heroImage}
+              style={{ objectFit: 'cover', zIndex: 1 }}
+            />
+            <div className={styles.loaderWrap} aria-hidden="true">
+              <div className={styles.loader} />
+            </div>
+          </>
         )}
 
-        {!videoLoaded && !videoError && (
-          <div className={styles.loaderWrap} aria-hidden="true">
-            <div className={styles.loader} />
-          </div>
-        )}
-
-        {isClient && shouldLoadVideo ? (
+        {shouldLoadVideo ? (
           !videoError ? (
             <video
               className={styles.heroVideo}
@@ -87,6 +82,7 @@ const Hero = memo(() => {
               loop
               playsInline
               preload="none"
+              poster="/Hero Initial Picture.webp"
               onError={handleVideoError}
               onCanPlay={handleVideoCanPlay}
               onLoadedData={handleVideoLoad}
@@ -102,59 +98,30 @@ const Hero = memo(() => {
           ) : (
             <div className={styles.videoFallback}>Video unavailable</div>
           )
-        ) : (
-          !shouldLoadVideo && (
-            <div
-              className={styles.heroVideo}
-              style={{
-                backgroundImage: 'url("/Hero Initial Picture.webp")',
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
-              }}
-            />
-          )
-        )}
+        ) : null}
       </div>
 
       <div className={styles.container}>
         <div className={styles.heroLayout}>
-          <motion.div
-            className={styles.content}
-            initial={reduceMotion ? false : { opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-          >
+          <div className={`${styles.content} ${styles.contentReveal}`}>
             <div className={styles.titleRow}>
               <div className={styles.titleContainer}>
-                <motion.h1
-                  className={styles.title}
-                  initial={reduceMotion ? false : { opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: 0.2 }}
-                >
+                <h1 className={`${styles.title} ${styles.titleReveal}`}>
                   ruslan nikolov
-                </motion.h1>
+                </h1>
               </div>
 
-              <motion.div
-                className={`${styles.highlightedContainer} ${styles.descriptionContainer}`}
-                initial={reduceMotion ? false : { opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.45 }}
+              <div
+                className={`${styles.highlightedContainer} ${styles.descriptionContainer} ${styles.descriptionReveal}`}
               >
                 <p className={styles.description}>
                   Web developer, seeking to expand opportunities and contribute to diverse
                   projects.
                 </p>
-              </motion.div>
+              </div>
             </div>
 
-            <motion.div
-              className={styles.credentials}
-              initial={reduceMotion ? false : { opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
-            >
+            <div className={`${styles.credentials} ${styles.credentialsReveal}`}>
               <div className={styles.credential}>
                 <span className={styles.credentialNumber}>7+</span>
                 <span className={styles.credentialLabel}>Years Of Experience</span>
@@ -163,8 +130,8 @@ const Hero = memo(() => {
                 <span className={styles.credentialNumber}>22</span>
                 <span className={styles.credentialLabel}>Projects Delivered</span>
               </div>
-            </motion.div>
-          </motion.div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

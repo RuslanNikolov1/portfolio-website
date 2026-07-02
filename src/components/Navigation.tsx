@@ -125,7 +125,7 @@ const Navigation = memo(() => {
             alt="Ruslan Nikolov profile picture" 
             width={60} 
             height={60}
-            priority={true}
+            sizes="60px"
             style={{ borderRadius: '50%', objectFit: 'cover' }}
           />
         </motion.button>
@@ -233,7 +233,7 @@ const Navigation = memo(() => {
       <audio
         ref={setAudioRef}
         src="/Bar Elyzium.mp3"
-        preload="metadata"
+        preload="none"
         onPlay={() => setIsPlaying(true)}
         onPause={() => setIsPlaying(false)}
         onEnded={() => setIsPlaying(false)}

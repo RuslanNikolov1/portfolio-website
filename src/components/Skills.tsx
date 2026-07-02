@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useRef, useMemo, useState, useCallback, memo } from 'react';
 import { motion } from 'framer-motion';
 import {

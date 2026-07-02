@@ -44,7 +44,6 @@ const SWIPE_THRESHOLD = 72;
 
 const Projects = memo(() => {
   const [selectedIndex, setSelectedIndex] = useState(0);
-  const [isClient, setIsClient] = useState(false);
   const reduceMotion = useReducedMotion();
   const sectionRef = useRef<HTMLElement>(null);
   const railRef = useRef<HTMLElement>(null);
@@ -58,10 +57,6 @@ const Projects = memo(() => {
   });
 
   const blobCoolY = useTransform(scrollYProgress, [0, 1], [-30, 90]);
-
-  useEffect(() => {
-    setIsClient(true);
-  }, []);
 
   useEffect(() => {
     const activeTab = railRef.current?.querySelector('[aria-selected="true"]');
@@ -128,10 +123,6 @@ const Projects = memo(() => {
   };
 
   const renderPreview = () => {
-    if (!isClient) {
-      return <div className={styles.loadingPlaceholder}>Loading preview...</div>;
-    }
-
     if (selected.previewUrl.endsWith('.mp4')) {
       return (
         <video
@@ -141,7 +132,7 @@ const Projects = memo(() => {
           loop
           muted
           playsInline
-          preload="metadata"
+          preload="none"
           className={styles.previewMedia}
         >
           Your browser does not support the video tag.
@@ -156,6 +147,7 @@ const Projects = memo(() => {
         alt={selected.title}
         width={1200}
         height={750}
+        sizes="(max-width: 768px) 100vw, 70vw"
         className={styles.previewMedia}
         priority={selectedIndex === 0}
       />

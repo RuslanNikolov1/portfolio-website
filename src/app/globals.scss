@@ -68,6 +68,8 @@ select:focus-visible {
 
 // Vibrant Digital Pulse Palette + Homepage Light System
 :root {
+  --font-satoshi: var(--font-inter);
+
   // Homepage light system (primary)
   --home-bg: #e8f4fd;
   --home-bg-light: #f5fbff;
