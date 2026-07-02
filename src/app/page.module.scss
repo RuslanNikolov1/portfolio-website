@@ -1,5 +1,28 @@
-@media screen and (max-width: 1025px) and (min-width: 425px) {
-.heroSection {
-    margin-top:-4vw;
+.page {
+  background: var(--home-surface);
 }
+
+.heroSection {
+  position: relative;
+}
+
+.sectionShell {
+  position: relative;
+}
+
+.sectionDivider {
+  height: 6px;
+  width: 100%;
+  background: linear-gradient(
+    90deg,
+    var(--home-yellow) 0%,
+    var(--home-accent) 50%,
+    var(--home-navy) 100%
+  );
+}
+
+@media screen and (max-width: 1025px) and (min-width: 425px) {
+  .heroSection {
+    margin-top: -4vw;
+  }
 }

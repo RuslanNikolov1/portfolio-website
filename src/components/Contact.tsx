@@ -1,30 +1,13 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { useState, useEffect, memo } from 'react';
-import { Mail, Github, Linkedin, Music, MessageCircle, ArrowUp, Phone } from 'lucide-react';
+import { memo } from 'react';
+import { Mail, Github, Linkedin, Music, MessageCircle, Phone } from 'lucide-react';
 import Link from 'next/link';
 import { socialLinks } from '@/data';
 import styles from './Contact.module.scss';
 
 const Contact = memo(() => {
-  const [showUpArrow, setShowUpArrow] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-      const contactTop = document.getElementById('contact')?.offsetTop ?? 0;
-
-      // Show arrow once at contact section or further down
-      setShowUpArrow(scrollTop + 50 >= contactTop);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    handleScroll(); // Check initial state
-    
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
   const getIcon = (iconName: string) => {
     switch (iconName) {
       case 'phone':
@@ -54,9 +37,9 @@ const Contact = memo(() => {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <div className={styles.emojiTitle}>
-            <h2 className={styles.title}>Ready to Start Your Project?</h2>
-          </div>
+          <h2 className={styles.title}>
+            Ready to Start Your <span className={styles.titleAccent}>Project?</span>
+          </h2>
         </motion.div>
 
         <div className={styles.content}>
@@ -81,60 +64,35 @@ const Contact = memo(() => {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <div className={styles.infoCard}>
-              <div className={styles.socialLinks}>
-                {socialLinks.map((link, index) => (
-                  <Link
-                    key={link.name}
-                    href={link.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={styles.socialLink}
+            <div className={styles.socialLinks}>
+              {socialLinks.map((link, index) => (
+                <Link
+                  key={link.name}
+                  href={link.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.socialLink}
+                  aria-label={link.name}
+                >
+                  <motion.div
+                    className={styles.socialIcon}
+                    whileHover={{
+                      scale: 1.1,
+                      y: -5,
+                    }}
+                    whileTap={{ scale: 0.95 }}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    viewport={{ once: true }}
                   >
-                    <motion.div
-                      className={styles.socialIcon}
-                      whileHover={{ 
-                        scale: 1.1,
-                        y: -5
-                      }}
-                      whileTap={{ scale: 0.95 }}
-                      initial={{ opacity: 0, y: 20 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.5, delay: index * 0.1 }}
-                      viewport={{ once: true }}
-                    >
-                      {getIcon(link.icon)}
-                    </motion.div>
-                  </Link>
-                ))}
-              </div>
-
+                    {getIcon(link.icon)}
+                  </motion.div>
+                </Link>
+              ))}
             </div>
           </motion.div>
         </div>
-
-        <motion.div
-          className={styles.floatingCta}
-          initial={{ opacity: 0, scale: 0.9 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.4 }}
-          viewport={{ once: true }}
-        >
-          {showUpArrow && (
-            <motion.button
-              type="button"
-              aria-label="Scroll to top"
-              className={styles.scrollArrow}
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: 20 }}
-              transition={{ duration: 0.3 }}
-              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-            >
-              <ArrowUp size={20} />
-            </motion.button>
-          )}
-        </motion.div>
       </div>
       
       {/* White divider after contact form */}

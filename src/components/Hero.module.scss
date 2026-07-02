@@ -25,7 +25,7 @@ $font-weight-semibold: 600;
 
 .hero {
   width: 100vw;
-  height: 120vh;
+  min-height: 100dvh;
   display: flex;
   justify-content: center;
   position: relative;
@@ -163,14 +163,46 @@ $font-weight-semibold: 600;
   justify-content: center;
 }
 
+.loaderWrap {
+  position: absolute;
+  top: 42%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+
+.loader {
+  width: 56px;
+  height: 56px;
+  border: 5px solid rgb(56 189 248 / 0.25);
+  border-top-color: var(--home-accent-deep);
+  border-radius: 50%;
+  animation: heroSpin 0.9s linear infinite;
+}
+
+@keyframes heroSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.videoFallback {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  color: var(--home-ink-muted);
+  background:
+    linear-gradient(135deg, var(--home-bg) 0%, var(--home-surface-elevated) 100%);
+}
+
 .highlightedContainer {
   backdrop-filter: blur(8px);
-  background: rgba(255, 255, 255, 0.425);
-  border: 2px dotted #1e3a8a; // Dark deep blue dotted border
-  border-radius: 16px;
-  padding: 0.5rem 1rem;
+  background: rgb(255 255 255 / 0.72);
+  border: 3px dashed var(--home-accent-deep);
+  border-radius: var(--home-radius);
+  padding: 0.65rem 1.1rem;
   margin-top: 0.75rem;
-  box-shadow: 0 8px 32px rgba(255, 255, 255, 0.3);
   display: inline-block;
 }
 
@@ -274,18 +306,17 @@ $font-weight-semibold: 600;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: 1.5rem;
-  background: #19296c; // match header color
-  border-radius: 15px;
-  border: 2px solid #ffffff; // white border around container
-  backdrop-filter: blur(10px);
+  padding: 1.35rem 1.5rem;
+  background: var(--home-navy);
+  border-radius: var(--home-radius);
+  border: 3px solid var(--home-surface);
+  box-shadow: 6px 6px 0 var(--home-accent);
   min-width: 140px;
-  transition: all 0.3s ease;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 
   &:hover {
-    background: #1b2e78; // slightly lighter on hover
-    border-color: #ffffff;
-    transform: translateY(-2px);
+    transform: translateY(-3px);
+    box-shadow: 8px 8px 0 var(--home-yellow);
   }
 }
 

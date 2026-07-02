@@ -37,7 +37,7 @@ const Footer = memo(() => {
           <div className={styles.brand}>
             <div className={styles.logo}>
               <Image
-                src="/Ruslan Looking Avatar.jpg"
+                src="/Ruslan Looking Avatar.webp"
                 alt="Ruslan Nikolov"
                 width={60}
                 height={60}
