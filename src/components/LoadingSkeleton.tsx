@@ -1,4 +1,3 @@
-import { motion } from 'framer-motion';
 import styles from './LoadingSkeleton.module.scss';
 
 interface SkeletonProps {
@@ -10,28 +9,25 @@ interface SkeletonProps {
   delay?: number;
 }
 
-const Skeleton = ({ 
-  width = '100%', 
-  height = '20px', 
+function Skeleton({
+  width = '100%',
+  height = '20px',
   borderRadius = '4px',
   className = '',
   animation = 'pulse',
-  delay = 0
-}: SkeletonProps) => {
+  delay = 0,
+}: SkeletonProps) {
   return (
-    <motion.div
+    <div
       className={`${styles.skeleton} ${styles[animation]} ${className}`}
       style={{
         width,
         height,
         borderRadius,
+        animationDelay: `${delay}s`,
       }}
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ delay, duration: 0.3 }}
     />
   );
-};
+}
 
 export default Skeleton;
-
