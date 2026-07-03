@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, useCallback, memo } from 'react';
+import { useState, useEffect, useCallback, memo, useRef } from 'react';
 import Image from 'next/image';
 import styles from './Hero.module.scss';
 
@@ -23,26 +23,30 @@ const Hero = memo(() => {
     }
   }, []);
 
+  const videoRef = useRef<HTMLVideoElement>(null);
+
   useEffect(() => {
     if (!shouldLoadVideo) return;
+
+    const videoElement = videoRef.current;
+    if (!videoElement) return;
 
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             const video = entry.target as HTMLVideoElement;
-            if (video && video.readyState < 2) video.load();
+            if (video.readyState < 2) video.load();
           }
         });
       },
       { threshold: 0.1 },
     );
 
-    const videoElement = document.querySelector('video');
-    if (videoElement) observer.observe(videoElement);
+    observer.observe(videoElement);
 
     return () => {
-      if (videoElement) observer.unobserve(videoElement);
+      observer.unobserve(videoElement);
     };
   }, [shouldLoadVideo]);
 
@@ -76,6 +80,7 @@ const Hero = memo(() => {
         {shouldLoadVideo ? (
           !videoError ? (
             <video
+              ref={videoRef}
               className={styles.heroVideo}
               autoPlay
               muted

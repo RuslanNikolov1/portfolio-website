@@ -10,16 +10,13 @@
     "analyze": "cross-env ANALYZE=true npm run build"
   },
   "dependencies": {
-    "@hookform/resolvers": "^5.2.2",
     "@next/bundle-analyzer": "^16.0.0",
     "framer-motion": "^12.23.22",
     "lucide-react": "^0.545.0",
     "next": "16.0.8",
     "react": "19.1.0",
     "react-dom": "19.1.0",
-    "react-hook-form": "^7.64.0",
-    "sass": "^1.93.2",
-    "zod": "^4.1.12"
+    "sass": "^1.93.2"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",

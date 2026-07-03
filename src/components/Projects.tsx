@@ -9,7 +9,7 @@ import {
 import { ExternalLink, Github, ChevronLeft, ChevronRight } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { projects } from '@/data';
+import { projects } from '@/data/projects';
 import styles from './Projects.module.scss';
 
 const SHOWCASE_ITEMS = projects

@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { memo } from 'react';
 import { Mail, Github, Linkedin, Music, MessageCircle, Phone } from 'lucide-react';
 import Link from 'next/link';
-import { socialLinks } from '@/data';
+import { socialLinks } from '@/data/social-links';
 import styles from './Contact.module.scss';
 
 const Contact = memo(() => {

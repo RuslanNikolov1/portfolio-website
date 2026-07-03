@@ -40,7 +40,7 @@ import {
   GraduationCap,
   ChevronDown
 } from 'lucide-react';
-import { skills } from '@/data';
+import { skills } from '@/data/skills';
 import styles from './Skills.module.scss';
 
 const Skills = memo(() => {

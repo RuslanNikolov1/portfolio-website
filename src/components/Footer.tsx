@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { Github, Linkedin, Mail, Music } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { socialLinks } from '@/data';
+import { socialLinks } from '@/data/social-links';
 import { memo, useCallback } from 'react';
 import styles from './Footer.module.scss';
 

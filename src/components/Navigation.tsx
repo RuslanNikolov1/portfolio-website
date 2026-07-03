@@ -1,18 +1,19 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import dynamic from 'next/dynamic';
 import { useState, useEffect, useCallback, useMemo, memo } from 'react';
-import { Menu, X, Play, Pause, Volume2, Home, Briefcase, Zap, User, Mail } from 'lucide-react';
+import { Menu, X, Home, Briefcase, Zap, User, Mail } from 'lucide-react';
 import Image from 'next/image';
 import styles from './Navigation.module.scss';
+
+const NavigationMusicPlayer = dynamic(() => import('./NavigationMusicPlayer'), {
+  ssr: false,
+});
 
 const Navigation = memo(() => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState('hero');
-  const [isPlaying, setIsPlaying] = useState(false);
-  const [volume, setVolume] = useState(0.1);
-  const [audioRef, setAudioRef] = useState<HTMLAudioElement | null>(null);
 
   const handleScroll = useCallback(() => {
     setScrolled(window.scrollY > 50);
@@ -29,20 +30,21 @@ const Navigation = memo(() => {
     });
   }, []);
 
-  const observerOptions = useMemo(() => ({
-    root: null,
-    rootMargin: '-20% 0px -70% 0px', // Trigger when section is 20% from top
-    threshold: 0
-  }), []);
+  const observerOptions = useMemo(
+    () => ({
+      root: null,
+      rootMargin: '-20% 0px -70% 0px',
+      threshold: 0,
+    }),
+    [],
+  );
 
   useEffect(() => {
-
     const observer = new IntersectionObserver(observerCallback, observerOptions);
-    
-    // Observe all sections with a small delay to ensure DOM is ready
+
     const observeSections = () => {
       const sections = ['hero', 'projects', 'skills', 'about', 'contact'];
-      sections.forEach(sectionId => {
+      sections.forEach((sectionId) => {
         const section = document.getElementById(sectionId);
         if (section) {
           observer.observe(section);
@@ -50,11 +52,10 @@ const Navigation = memo(() => {
       });
     };
 
-    // Use setTimeout to ensure sections are rendered
     const timeoutId = setTimeout(observeSections, 100);
 
-    window.addEventListener('scroll', handleScroll);
-    
+    window.addEventListener('scroll', handleScroll, { passive: true });
+
     return () => {
       window.removeEventListener('scroll', handleScroll);
       clearTimeout(timeoutId);
@@ -62,20 +63,16 @@ const Navigation = memo(() => {
     };
   }, [handleScroll, observerCallback, observerOptions]);
 
-  useEffect(() => {
-    // Initialize audio and set starting time to 1:50 (110 seconds)
-    if (audioRef) {
-      audioRef.volume = volume;
-    }
-  }, [audioRef, volume]);
-
-  const navItems = useMemo(() => [
-    { name: 'Home', href: '#hero', icon: Home },
-    { name: 'Projects', href: '#projects', icon: Briefcase },
-    { name: 'Skills', href: '#skills', icon: Zap },
-    { name: 'About', href: '#about', icon: User },
-    { name: 'Contact', href: '#contact', icon: Mail }
-  ], []);
+  const navItems = useMemo(
+    () => [
+      { name: 'Home', href: '#hero', icon: Home },
+      { name: 'Projects', href: '#projects', icon: Briefcase },
+      { name: 'Skills', href: '#skills', icon: Zap },
+      { name: 'About', href: '#about', icon: User },
+      { name: 'Contact', href: '#contact', icon: Mail },
+    ],
+    [],
+  );
 
   const scrollToSection = useCallback((href: string) => {
     const element = document.querySelector(href);
@@ -85,32 +82,16 @@ const Navigation = memo(() => {
     setIsOpen(false);
   }, []);
 
-  const togglePlayPause = useCallback(() => {
-    if (audioRef) {
-      if (isPlaying) {
-        audioRef.pause();
-      } else {
-        audioRef.play();
-      }
-      setIsPlaying(!isPlaying);
-    }
-  }, [audioRef, isPlaying]);
-
-
   return (
-    <motion.nav
+    <nav
       id="navigation"
-      className={`${styles.nav} ${scrolled ? styles.scrolled : ''}`}
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      transition={{ duration: 0.6, ease: 'easeOut' }}
+      className={`${styles.nav} ${styles.navEnter} ${scrolled ? styles.scrolled : ''}`}
       role="navigation"
       aria-label="Main navigation"
     >
       <div className={styles.container}>
-        <motion.button
-          className={styles.logo}
-          whileHover={{ scale: 1.05 }}
+        <button
+          className={`${styles.logo} ${styles.interactiveButton}`}
           onClick={() => scrollToSection('#hero')}
           aria-label="Go to home section"
           onKeyDown={(e) => {
@@ -120,17 +101,17 @@ const Navigation = memo(() => {
             }
           }}
         >
-          <Image 
-            src="/Ruslan Looking Avatar.webp" 
-            alt="Ruslan Nikolov profile picture" 
-            width={60} 
+          <Image
+            src="/Ruslan Looking Avatar.webp"
+            alt="Ruslan Nikolov profile picture"
+            width={60}
             height={60}
             sizes="60px"
             style={{ borderRadius: '50%', objectFit: 'cover' }}
           />
-        </motion.button>
+        </button>
 
-        <div 
+        <div
           className={`${styles.menu} ${isOpen ? styles.menuOpen : ''}`}
           role="menubar"
           aria-label="Main menu"
@@ -139,17 +120,13 @@ const Navigation = memo(() => {
             const sectionId = item.href.replace('#', '');
             const isActive = activeSection === sectionId;
             const IconComponent = item.icon;
-            
+
             return (
-              <motion.button
+              <button
                 key={item.name}
-                className={`${styles.navItem} ${isActive ? styles.navItemActive : ''}`}
+                className={`${styles.navItem} ${styles.navItemEnter} ${isActive ? styles.navItemActive : ''}`}
+                style={{ animationDelay: `${index * 0.1}s` }}
                 onClick={() => scrollToSection(item.href)}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
                 role="menuitem"
                 aria-current={isActive ? 'page' : undefined}
                 aria-label={`Navigate to ${item.name} section`}
@@ -162,84 +139,26 @@ const Navigation = memo(() => {
               >
                 <IconComponent size={16} />
                 <span>{item.name}</span>
-              </motion.button>
+              </button>
             );
           })}
         </div>
 
-        <motion.div
-          className={styles.musicPlayer}
-          initial={{ opacity: 0, x: 20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          role="region"
-          aria-label="Music player"
-        >
-          <div className={styles.trackInfo}>
-            {true && (
-              <div className={styles.coverArt} aria-hidden="true">
-                <Image src="/Hopeful emotions pic.webp" alt="" width={28} height={28} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-              </div>
-            )}
-            <div className={styles.trackText}>
-              <div className={styles.trackTitle}>My music</div>
-            </div>
-          </div>
-          <div className={styles.controls}>
-            <motion.button
-              className={styles.playButton}
-              onClick={togglePlayPause}
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-              aria-label={isPlaying ? 'Pause music' : 'Play music'}
-              aria-pressed={isPlaying}
-            >
-              {isPlaying ? <Pause size={16} /> : <Play size={16} />}
-            </motion.button>
-          </div>
-          <div className={styles.visualizer}>
-            {[...Array(5)].map((_, i) => (
-              <motion.div
-                key={i}
-                className={styles.bar}
-                animate={{
-                  height: isPlaying ? ['20%', '80%', '20%'] : '20%',
-                }}
-                transition={{
-                  duration: 0.5,
-                  repeat: isPlaying ? Infinity : 0,
-                  delay: i * 0.1,
-                }}
-              />
-            ))}
-          </div>
-        </motion.div>
+        <NavigationMusicPlayer />
 
         <div className={styles.rightSection}>
-          <motion.button
-            className={styles.mobileToggle}
+          <button
+            className={`${styles.mobileToggle} ${styles.interactiveButton}`}
             onClick={() => setIsOpen(!isOpen)}
-            whileTap={{ scale: 0.95 }}
             aria-label={isOpen ? 'Close navigation menu' : 'Open navigation menu'}
             aria-expanded={isOpen}
             aria-controls="navigation"
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
-          </motion.button>
+          </button>
         </div>
       </div>
-      
-      {/* Hidden audio element */}
-      <audio
-        ref={setAudioRef}
-        src="/Bar Elyzium.mp3"
-        preload="none"
-        onPlay={() => setIsPlaying(true)}
-        onPause={() => setIsPlaying(false)}
-        onEnded={() => setIsPlaying(false)}
-        onError={(e) => console.error('Audio error:', e)}
-      />
-    </motion.nav>
+    </nav>
   );
 });
 
