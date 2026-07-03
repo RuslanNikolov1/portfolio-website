@@ -86,6 +86,7 @@ select:focus-visible {
   --home-ink: #0f2d4a;
   --home-ink-muted: #475569;
   --home-yellow: #facc15;
+  --home-yellow-light: #fee378;
   --home-yellow-glow: rgba(250, 204, 21, 0.5);
   --home-orange: #fb923c;
   --home-navy: #19296c;
@@ -136,7 +137,7 @@ select:focus-visible {
   --projects-radius: var(--home-radius);
   --projects-radius-lg: var(--home-radius-lg);
   --projects-navy: var(--home-navy);
-  --projects-dock-overlap: var(--home-dock-overlap);
+  --projects-dock-overlap: -2rem;
 }
 
 // SASS Variables - Vibrant Digital Pulse Palette

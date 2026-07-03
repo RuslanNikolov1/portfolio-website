@@ -88,7 +88,7 @@ const Feedbacks = memo(() => {
   return (
     <section id="feedbacks" className={styles.feedbacks} aria-labelledby="feedbacks-heading">
       <div className={styles.container}>
-        <motion.header
+        {/* <motion.header
           className={styles.header}
           initial={reduceMotion ? false : { opacity: 0, x: -24 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -98,7 +98,7 @@ const Feedbacks = memo(() => {
           <h2 id="feedbacks-heading" className={styles.title}>
             What People <span className={styles.titleAccent}>Say</span>
           </h2>
-        </motion.header>
+        </motion.header> */}
 
         <div className={styles.stage}>
           <div className={styles.quoteShell}>
