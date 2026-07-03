@@ -68,7 +68,7 @@ $border: #334155;
 .subtitle {
   font-family: $font-satoshi;
   font-size: clamp($font-size-base, 1.6vw, $font-size-lg);
-  color: var(--home-navy);
+  color: var(--home-ink);
   line-height: $line-height-relaxed;
   letter-spacing: $letter-spacing-normal;
   margin: 0;
@@ -83,7 +83,7 @@ $border: #334155;
   justify-content: center;
   height: 100%;
   padding: clamp(1rem, 2vw, 1.5rem);
-  background: #ccedfe;
+  background: var(--home-surface);
   border: 4px solid var(--home-ink);
   border-radius: var(--home-radius-lg);
   box-shadow: 10px 10px 0 var(--home-navy);
