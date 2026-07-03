@@ -3,7 +3,7 @@ import styles from './LoadingSkeleton.module.scss';
 
 const ContactSkeleton = () => {
   return (
-    <section className={styles.contactSkeleton} aria-label="Loading contact section">
+    <section id="contact" className={styles.contactSkeleton} aria-label="Loading contact section">
       <div className={styles.contactContainer}>
         <div className={styles.contactHeader}>
           <Skeleton 

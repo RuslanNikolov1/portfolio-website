@@ -183,6 +183,14 @@
   white-space: nowrap;
 }
 
+.navLetter {
+  font-family: $font-satoshi;
+  font-size: 0.82rem;
+  font-weight: $font-weight-bold;
+  letter-spacing: 0.02em;
+  line-height: 1;
+}
+
 .navItemActive {
   background: var(--home-yellow);
   color: var(--home-ink) !important;
@@ -233,7 +241,7 @@
   display: flex;
   align-items: center;
   gap: 0.65rem;
-  background: var(--home-surface);
+  background: var(--home-accent-light);
   padding: 0.4rem 0.75rem 0.4rem 0.5rem;
   border-radius: 999px;
   border: 3px solid var(--home-ink);
@@ -305,7 +313,7 @@
   justify-content: center;
   width: 30px;
   height: 30px;
-  background: var(--home-accent);
+  background: var(--home-yellow);
   border: 2px solid var(--home-ink);
   border-radius: 50%;
   color: var(--home-ink);

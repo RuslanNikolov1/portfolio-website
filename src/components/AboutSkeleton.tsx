@@ -3,7 +3,7 @@ import styles from './LoadingSkeleton.module.scss';
 
 const AboutSkeleton = () => {
   return (
-    <section className={styles.aboutSkeleton} aria-label="Loading about section">
+    <section id="about" className={styles.aboutSkeleton} aria-label="Loading about section">
       <div className={styles.aboutContainer}>
         <div className={styles.aboutHeader}>
           <Skeleton className={styles.aboutTitle} animation="shimmer" delay={0.2} />

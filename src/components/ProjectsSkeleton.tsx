@@ -3,7 +3,7 @@ import styles from './LoadingSkeleton.module.scss';
 
 const ProjectsSkeleton = () => {
   return (
-    <section className={styles.projectsSkeleton} aria-label="Loading projects section">
+    <section id="projects" className={styles.projectsSkeleton} aria-label="Loading projects section">
       <div className={styles.projectsContainer}>
         <div className={styles.projectsHeader}>
           <Skeleton 

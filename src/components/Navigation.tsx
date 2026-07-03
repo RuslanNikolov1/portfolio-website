@@ -2,7 +2,7 @@
 
 import dynamic from 'next/dynamic';
 import { useState, useEffect, useCallback, useMemo, useRef, memo } from 'react';
-import { Menu, X, Home, Briefcase, Zap, User, Mail } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import Image from 'next/image';
 import { MQ_BELOW_MD } from '@/styles/breakpoints';
 import styles from './Navigation.module.scss';
@@ -10,6 +10,19 @@ import styles from './Navigation.module.scss';
 const NavigationMusicPlayer = dynamic(() => import('./NavigationMusicPlayer'), {
   ssr: false,
 });
+
+const NAV_SCROLL_OFFSET = 80;
+
+function isEditableTarget(target: EventTarget | null) {
+  if (!(target instanceof HTMLElement)) return false;
+
+  return (
+    target.isContentEditable ||
+    target.tagName === 'INPUT' ||
+    target.tagName === 'TEXTAREA' ||
+    target.tagName === 'SELECT'
+  );
+}
 
 const Navigation = memo(() => {
   const [isOpen, setIsOpen] = useState(false);
@@ -101,22 +114,55 @@ const Navigation = memo(() => {
 
   const navItems = useMemo(
     () => [
-      { name: 'Home', href: '#hero', icon: Home },
-      { name: 'Projects', href: '#projects', icon: Briefcase },
-      { name: 'Skills', href: '#skills', icon: Zap },
-      { name: 'About', href: '#about', icon: User },
-      { name: 'Contact', href: '#contact', icon: Mail },
+      { name: 'Home', href: '#hero' },
+      { name: 'Projects', href: '#projects' },
+      { name: 'Skills', href: '#skills' },
+      { name: 'About', href: '#about' },
+      { name: 'Contact', href: '#contact' },
     ],
     [],
   );
 
   const scrollToSection = useCallback((href: string) => {
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
+    const sectionId = href.replace('#', '');
+    setActiveSection(sectionId);
+
+    const scroll = (attempt = 0) => {
+      const element = document.querySelector(href);
+      if (element) {
+        const top = element.getBoundingClientRect().top + window.scrollY - NAV_SCROLL_OFFSET;
+        window.scrollTo({ top: Math.max(0, top), behavior: 'smooth' });
+        return;
+      }
+
+      if (attempt < 15) {
+        window.setTimeout(() => scroll(attempt + 1), 100);
+      }
+    };
+
+    scroll();
     setIsOpen(false);
   }, []);
+
+  useEffect(() => {
+    function handleNavShortcut(event: KeyboardEvent) {
+      if (event.defaultPrevented || event.metaKey || event.ctrlKey || event.altKey) return;
+      if (isEditableTarget(event.target)) return;
+
+      const href = navItems.find(
+        (item) => item.name.charAt(0).toLowerCase() === event.key.toLowerCase(),
+      )?.href;
+
+      if (!href) return;
+
+      event.preventDefault();
+      scrollToSection(href);
+    }
+
+    document.addEventListener('keydown', handleNavShortcut);
+
+    return () => document.removeEventListener('keydown', handleNavShortcut);
+  }, [navItems, scrollToSection]);
 
   const handleNavClick = useCallback(
     (event: React.MouseEvent<HTMLAnchorElement>, href: string) => {
@@ -158,7 +204,7 @@ const Navigation = memo(() => {
           {navItems.map((item, index) => {
             const sectionId = item.href.replace('#', '');
             const isActive = activeSection === sectionId;
-            const IconComponent = item.icon;
+            const letter = item.name.charAt(0).toLowerCase();
 
             return (
               <li key={item.name} className={styles.menuItem}>
@@ -169,7 +215,9 @@ const Navigation = memo(() => {
                   onClick={(event) => handleNavClick(event, item.href)}
                   aria-current={isActive ? 'location' : undefined}
                 >
-                  <IconComponent size={16} aria-hidden="true" />
+                  <span className={styles.navLetter} aria-hidden="true">
+                    [{letter}]
+                  </span>
                   <span>{item.name}</span>
                 </a>
               </li>
