@@ -26,15 +26,15 @@ export default defineConfig({
         statements: 80,
       },
     },
+    css: {
+      modules: {
+        classNameStrategy: 'non-scoped',
+      },
+    },
   },
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
-    },
-  },
-  css: {
-    modules: {
-      classNameStrategy: 'non-scoped',
     },
   },
 });
