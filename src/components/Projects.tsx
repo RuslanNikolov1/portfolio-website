@@ -36,12 +36,22 @@ const Projects = memo(() => {
   const totalProjects = SHOWCASE_ITEMS.length;
 
   useEffect(() => {
-    const activeTab = railRef.current?.querySelector('[aria-selected="true"]');
-    activeTab?.scrollIntoView({
-      behavior: reduceMotion ? 'auto' : 'smooth',
-      block: 'nearest',
-      inline: 'center',
-    });
+    const rail = railRef.current;
+    const activeTab = rail?.querySelector('[aria-selected="true"]') as HTMLElement | null;
+    if (!rail || !activeTab) return;
+
+    const isHorizontal = window.matchMedia('(max-width: 768px)').matches;
+    const behavior = reduceMotion ? 'auto' : 'smooth';
+
+    if (isHorizontal) {
+      const scrollLeft =
+        activeTab.offsetLeft - (rail.clientWidth - activeTab.clientWidth) / 2;
+      rail.scrollTo({ left: scrollLeft, behavior });
+    } else {
+      const scrollTop =
+        activeTab.offsetTop - (rail.clientHeight - activeTab.clientHeight) / 2;
+      rail.scrollTo({ top: scrollTop, behavior });
+    }
   }, [selectedIndex, reduceMotion]);
 
   const goToPrevious = useCallback(() => {
