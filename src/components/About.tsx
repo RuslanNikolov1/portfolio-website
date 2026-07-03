@@ -216,7 +216,7 @@ const About = memo(() => {
                 <Tabs.Trigger
                   key={hobby.id}
                   value={hobby.id}
-                  className={`${styles.hobbyTab} ${styles[`hobbyTab_${hobby.accent}`]}`}
+                  className={styles.hobbyTab}
                 >
                   {hobby.title}
                 </Tabs.Trigger>
