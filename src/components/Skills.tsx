@@ -1,7 +1,8 @@
 'use client';
 
-import React, { useRef, useMemo, useState, useCallback, memo } from 'react';
+import React, { useRef, useMemo, memo } from 'react';
 import { motion } from 'framer-motion';
+import * as Collapsible from '@radix-ui/react-collapsible';
 import {
   Zap as ReactIcon,
   Type as TypeScript,
@@ -41,94 +42,170 @@ import {
   ChevronDown
 } from 'lucide-react';
 import { skills } from '@/data/skills';
+import type { Skill } from '@/types';
 import styles from './Skills.module.scss';
+
+interface SkillCollapsibleItemProps {
+  skillKey: string;
+  skill: Skill;
+  iconColor: string;
+  index: number;
+  SkillIcon?: React.ComponentType<{ size?: number; color?: string }>;
+}
+
+function SkillCollapsibleItem({
+  skillKey,
+  skill,
+  iconColor,
+  index,
+  SkillIcon,
+}: SkillCollapsibleItemProps) {
+  return (
+    <motion.div
+      className={styles.skillItem}
+      whileInView={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 0.2, delay: index * 0.02 }}
+      viewport={{ once: true }}
+    >
+      <Collapsible.Root>
+        <Collapsible.Trigger asChild>
+          <button
+            type="button"
+            className={styles.skillToggle}
+            aria-controls={`skill-notes-${skillKey}`}
+          >
+            <div className={styles.skillHeader}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                <div
+                  style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    width: '20px',
+                    height: '20px',
+                    color: iconColor,
+                  }}
+                >
+                  {SkillIcon &&
+                    React.createElement(SkillIcon, {
+                      size: 16,
+                      color: iconColor,
+                    })}
+                </div>
+                <span className={styles.skillName}>{skill.name}</span>
+              </div>
+              <div className={styles.skillMeta}>
+                <span className={styles.skillYears}>{skill.years} years</span>
+                <ChevronDown size={14} className={styles.skillChevron} aria-hidden="true" />
+              </div>
+            </div>
+          </button>
+        </Collapsible.Trigger>
+        {skill.notes && (
+          <Collapsible.Content
+            id={`skill-notes-${skillKey}`}
+            className={styles.skillNotes}
+          >
+            {skill.notes}
+          </Collapsible.Content>
+        )}
+      </Collapsible.Root>
+    </motion.div>
+  );
+}
 
 const Skills = memo(() => {
   const developmentToolsRef = useRef<HTMLDivElement>(null);
-  const [expandedSkillKeys, setExpandedSkillKeys] = useState<Record<string, boolean>>({});
 
-  const toggleSkill = useCallback((skillKey: string) => {
-    setExpandedSkillKeys((prev) => ({
-      ...prev,
-      [skillKey]: !prev[skillKey]
-    }));
-  }, []);
+  const containerVariants = useMemo(
+    () => ({
+      visible: {
+        opacity: 1,
+        transition: {
+          staggerChildren: 0.1,
+          duration: 0.6,
+        },
+      },
+    }),
+    [],
+  );
 
+  const itemVariants = useMemo(
+    () => ({
+      visible: {
+        opacity: 1,
+        y: 0,
+        transition: {
+          duration: 0.6,
+          ease: [0.25, 0.46, 0.45, 0.94] as const,
+        },
+      },
+    }),
+    [],
+  );
 
-  const containerVariants = useMemo(() => ({
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-        duration: 0.6
-      }
-    }
-  }), []);
+  const skillCategories = useMemo(
+    () => ({
+      frontend: { title: 'Technical Skills', color: '#10B981' },
+      design: { title: 'Soft Skills', color: '#2563EB' },
+    }),
+    [],
+  );
 
-  const itemVariants = useMemo(() => ({
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.6,
-        ease: [0.25, 0.46, 0.45, 0.94] as const
-      }
-    }
-  }), []);
+  const frontendSkills = useMemo(
+    () => skills.filter((skill) => skill.category === 'frontend'),
+    [],
+  );
+  const toolsSkills = useMemo(
+    () => skills.filter((skill) => skill.category === 'tools'),
+    [],
+  );
+  const designSkills = useMemo(
+    () => skills.filter((skill) => skill.category === 'design'),
+    [],
+  );
 
-  const skillCategories = useMemo(() => ({
-    frontend: { title: 'Technical Skills', color: '#10B981' },
-    design: { title: 'Soft Skills', color: '#2563EB' }
-  }), []);
-
-  const frontendSkills = useMemo(() => skills.filter(skill => skill.category === 'frontend'), []);
-  const toolsSkills = useMemo(() => skills.filter(skill => skill.category === 'tools'), []);
-  const designSkills = useMemo(() => skills.filter(skill => skill.category === 'design'), []);
-
-  const skillIcons: { [key: string]: React.ComponentType<{ size?: number; color?: string }> } = {
-    // Frontend Skills
-    'React': ReactIcon,
-    'TypeScript': TypeScript,
-    'JavaScript': JavaScript,
+  const skillIcons: {
+    [key: string]: React.ComponentType<{ size?: number; color?: string }>;
+  } = {
+    React: ReactIcon,
+    TypeScript: TypeScript,
+    JavaScript: JavaScript,
     'HTML/CSS': Html5,
-    'HTML5': Html5,
-    'CSS3': Css3,
+    HTML5: Html5,
+    CSS3: Css3,
     'SASS/SCSS': Sass,
-    'Sass': Sass,
+    Sass: Sass,
     'Tailwind CSS': Css3,
     'Framer Motion': Zap,
-    'Redux': Webpack,
+    Redux: Webpack,
     'Material UI': Illustrator,
-    'Mapbox': Html5,
+    Mapbox: Html5,
     'Three.js': Zap,
     'React Query': Zap,
     'React Table': Webpack,
-    'Axios': Zap,
-    'Recharts': BarChart3,
+    Axios: Zap,
+    Recharts: BarChart3,
     'React Router': Zap,
-    'Zod': TypeScript,
+    Zod: TypeScript,
     'React Hook Form': FileText,
     'REST API': Html5,
-    'GraphQL': Zap,
+    GraphQL: Zap,
     'Next.js': Nextjs,
-    'Supabase': Webpack,
-    'GSAP': Zap,
-    'Storybook': BookOpen,
-    
-    // Development Tools
-    'Git': Git,
+    Supabase: Webpack,
+    GSAP: Zap,
+    Storybook: BookOpen,
+    Git: Git,
     'CI/CD': Webpack,
-    'Webpack': Webpack,
-    'Vite': Vite,
-    'Cursor': Zap,
-    'GitHub': Github,
-    'GitLab': Gitlab,
-    'npm': Npm,
-    'Yarn': Yarn,
-    'Vercel': Vercel,
-    'Netlify': Netlify,
-    
-    // Design Skills
+    Webpack: Webpack,
+    Vite: Vite,
+    Cursor: Zap,
+    GitHub: Github,
+    GitLab: Gitlab,
+    npm: Npm,
+    Yarn: Yarn,
+    Vercel: Vercel,
+    Netlify: Netlify,
     'Client-focused problem solving': Zap,
     'Leadership and mentoring': Users,
     'Effective communication': MessageCircle,
@@ -140,14 +217,12 @@ const Skills = memo(() => {
     'Empathy & User-Centric Mindset': Heart,
     'Collaboration in Agile Teams': Users,
     'Mentorship & Knowledge Sharing': GraduationCap,
-    
-    // Design Tools
-    'Figma': Figma,
-    'Adobe': Adobe,
-    'Photoshop': Photoshop,
-    'Illustrator': Illustrator,
+    Figma: Figma,
+    Adobe: Adobe,
+    Photoshop: Photoshop,
+    Illustrator: Illustrator,
     'After Effects': AfterEffects,
-    'Premiere': Premiere
+    Premiere: Premiere,
   };
 
   return (
@@ -172,7 +247,6 @@ const Skills = memo(() => {
           whileInView="visible"
           viewport={{ once: true }}
         >
-          {/* Left Column - Frontend Skills */}
           <motion.div
             className={`${styles.techSkillsContainer} ${styles.categoryLight}`}
             variants={itemVariants}
@@ -194,147 +268,52 @@ const Skills = memo(() => {
 
             <div className={styles.skillsGrid}>
               {frontendSkills.map((skill, index) => (
-                (() => {
-                  const skillKey = `frontend-${index}`;
-                  const isExpanded = Boolean(expandedSkillKeys[skillKey]);
-
-                  return (
-                    <motion.div
-                      key={skill.name}
-                      className={styles.skillItem}
-                      whileInView={{ opacity: 1, scale: 1 }}
-                      transition={{ duration: 0.2, delay: index * 0.02 }} // Reduced duration and delay
-                      viewport={{ once: true }}
-                    >
-                      <button
-                        type="button"
-                        className={styles.skillToggle}
-                        onClick={() => toggleSkill(skillKey)}
-                        aria-expanded={isExpanded}
-                        aria-controls={`skill-notes-${skillKey}`}
-                      >
-                        <div className={styles.skillHeader}>
-                          <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                            <div style={{
-                              display: 'flex',
-                              alignItems: 'center',
-                              justifyContent: 'center',
-                              width: '20px',
-                              height: '20px',
-                              color: skillCategories.frontend.color
-                            }}>
-                              {skillIcons[skill.name] && React.createElement(skillIcons[skill.name], {
-                                size: 16,
-                                color: skillCategories.frontend.color
-                              })}
-                            </div>
-                            <span className={styles.skillName}>{skill.name}</span>
-                          </div>
-                          <div className={styles.skillMeta}>
-                            <span className={styles.skillYears}>{skill.years} years</span>
-                            <ChevronDown
-                              size={14}
-                              className={`${styles.skillChevron} ${isExpanded ? styles.skillChevronExpanded : ''}`}
-                              aria-hidden="true"
-                            />
-                          </div>
-                        </div>
-                      </button>
-                      {skill.notes && isExpanded && (
-                        <div id={`skill-notes-${skillKey}`} className={styles.skillNotes}>
-                          {skill.notes}
-                        </div>
-                      )}
-                    </motion.div>
-                  );
-                })()
+                <SkillCollapsibleItem
+                  key={skill.name}
+                  skillKey={`frontend-${index}`}
+                  skill={skill}
+                  iconColor={skillCategories.frontend.color}
+                  index={index}
+                  SkillIcon={skillIcons[skill.name]}
+                />
               ))}
             </div>
           </motion.div>
 
-          {/* Middle Column - Development Tools */}
-            {/* Development Tools Container */}
-            <motion.div
-              ref={developmentToolsRef}
-              className={`${styles.toolsSkillsContainer} ${styles.categoryLight}`}
-              variants={itemVariants}
-            >
-              <div className={styles.categoryHeader}>
-                <div
-                  className={styles.categoryIcon}
-                  style={{ backgroundColor: '#FACC15' }}
-                >
-                  <Wrench size={22} color="#0f2d4a" />
-                </div>
-                <h3
-                  className={styles.categoryTitle}
-                  style={{ color: 'var(--home-ink)' }}
-                >
-                  Development Tools
-                </h3>
+          <motion.div
+            ref={developmentToolsRef}
+            className={`${styles.toolsSkillsContainer} ${styles.categoryLight}`}
+            variants={itemVariants}
+          >
+            <div className={styles.categoryHeader}>
+              <div
+                className={styles.categoryIcon}
+                style={{ backgroundColor: '#FACC15' }}
+              >
+                <Wrench size={22} color="#0f2d4a" />
               </div>
+              <h3
+                className={styles.categoryTitle}
+                style={{ color: 'var(--home-ink)' }}
+              >
+                Development Tools
+              </h3>
+            </div>
 
-              <div className={styles.skillsGrid}>
-                {toolsSkills.map((skill, index) => (
-                  (() => {
-                    const skillKey = `tools-${index}`;
-                    const isExpanded = Boolean(expandedSkillKeys[skillKey]);
+            <div className={styles.skillsGrid}>
+              {toolsSkills.map((skill, index) => (
+                <SkillCollapsibleItem
+                  key={skill.name}
+                  skillKey={`tools-${index}`}
+                  skill={skill}
+                  iconColor="#FACC15"
+                  index={index}
+                  SkillIcon={skillIcons[skill.name]}
+                />
+              ))}
+            </div>
+          </motion.div>
 
-                    return (
-                      <motion.div
-                        key={skill.name}
-                        className={styles.skillItem}
-                        whileInView={{ opacity: 1, scale: 1 }}
-                        transition={{ duration: 0.2, delay: index * 0.02 }} // Reduced duration and delay
-                        viewport={{ once: true }}
-                      >
-                        <button
-                          type="button"
-                          className={styles.skillToggle}
-                          onClick={() => toggleSkill(skillKey)}
-                          aria-expanded={isExpanded}
-                          aria-controls={`skill-notes-${skillKey}`}
-                        >
-                          <div className={styles.skillHeader}>
-                            <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                              <div style={{
-                                display: 'flex',
-                                alignItems: 'center',
-                                justifyContent: 'center',
-                                width: '20px',
-                                height: '20px',
-                                color: '#FACC15'
-                              }}>
-                                {skillIcons[skill.name] && React.createElement(skillIcons[skill.name], {
-                                  size: 16,
-                                  color: '#FACC15'
-                                })}
-                              </div>
-                              <span className={styles.skillName}>{skill.name}</span>
-                            </div>
-                            <div className={styles.skillMeta}>
-                              <span className={styles.skillYears}>{skill.years} years</span>
-                              <ChevronDown
-                                size={14}
-                                className={`${styles.skillChevron} ${isExpanded ? styles.skillChevronExpanded : ''}`}
-                                aria-hidden="true"
-                              />
-                            </div>
-                          </div>
-                        </button>
-                        {skill.notes && isExpanded && (
-                          <div id={`skill-notes-${skillKey}`} className={styles.skillNotes}>
-                            {skill.notes}
-                          </div>
-                        )}
-                      </motion.div>
-                    );
-                  })()
-                ))}
-              </div>
-            </motion.div>
-
-          {/* Right Column - Soft Skills */}
           <motion.div
             className={`${styles.softSkillsContainer} ${styles.categoryLight}`}
             variants={itemVariants}
@@ -356,66 +335,18 @@ const Skills = memo(() => {
 
             <div className={styles.skillsGrid}>
               {designSkills.map((skill, index) => (
-                (() => {
-                  const skillKey = `design-${index}`;
-                  const isExpanded = Boolean(expandedSkillKeys[skillKey]);
-
-                  return (
-                    <motion.div
-                      key={skill.name}
-                      className={styles.skillItem}
-                      whileInView={{ opacity: 1, scale: 1 }}
-                      transition={{ duration: 0.2, delay: index * 0.02 }} // Reduced duration and delay
-                      viewport={{ once: true }}
-                    >
-                      <button
-                        type="button"
-                        className={styles.skillToggle}
-                        onClick={() => toggleSkill(skillKey)}
-                        aria-expanded={isExpanded}
-                        aria-controls={`skill-notes-${skillKey}`}
-                      >
-                        <div className={styles.skillHeader}>
-                          <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                            <div style={{
-                              display: 'flex',
-                              alignItems: 'center',
-                              justifyContent: 'center',
-                              width: '20px',
-                              height: '20px',
-                              color: skillCategories.design.color
-                            }}>
-                              {skillIcons[skill.name] && React.createElement(skillIcons[skill.name], {
-                                size: 16,
-                                color: skillCategories.design.color
-                              })}
-                            </div>
-                            <span className={styles.skillName}>{skill.name}</span>
-                          </div>
-                          <div className={styles.skillMeta}>
-                            <span className={styles.skillYears}>{skill.years} years</span>
-                            <ChevronDown
-                              size={14}
-                              className={`${styles.skillChevron} ${isExpanded ? styles.skillChevronExpanded : ''}`}
-                              aria-hidden="true"
-                            />
-                          </div>
-                        </div>
-                      </button>
-                      {skill.notes && isExpanded && (
-                        <div id={`skill-notes-${skillKey}`} className={styles.skillNotes}>
-                          {skill.notes}
-                        </div>
-                      )}
-                    </motion.div>
-                  );
-                })()
+                <SkillCollapsibleItem
+                  key={skill.name}
+                  skillKey={`design-${index}`}
+                  skill={skill}
+                  iconColor={skillCategories.design.color}
+                  index={index}
+                  SkillIcon={skillIcons[skill.name]}
+                />
               ))}
             </div>
           </motion.div>
         </motion.div>
-
-        {/* summary removed as requested */}
       </div>
     </section>
   );

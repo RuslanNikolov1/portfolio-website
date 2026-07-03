@@ -229,7 +229,7 @@
   }
 }
 
-.hobbyTabActive {
+.hobbyTab[data-state='active'] {
   color: var(--home-navy);
   background: var(--home-yellow);
   box-shadow: 4px 4px 0 var(--home-accent);

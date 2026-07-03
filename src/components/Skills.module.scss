@@ -223,7 +223,7 @@ $slate-dark: #1E293B;
   color: #64748b;
 }
 
-.skillChevronExpanded {
+.skillToggle[data-state='open'] .skillChevron {
   transform: rotate(180deg);
 }
 

@@ -1,7 +1,8 @@
 'use client';
 
-import { motion, AnimatePresence, useReducedMotion } from 'framer-motion';
-import { memo, useCallback, useState } from 'react';
+import { motion, useReducedMotion } from 'framer-motion';
+import { memo } from 'react';
+import * as Tabs from '@radix-ui/react-tabs';
 import Image from 'next/image';
 import Link from 'next/link';
 import styles from './About.module.scss';
@@ -147,13 +148,6 @@ const HOBBIES: HobbyEntry[] = [
 
 const About = memo(() => {
   const reduceMotion = useReducedMotion();
-  const [activeHobby, setActiveHobby] = useState(HOBBIES[0].id);
-
-  const selectedHobby = HOBBIES.find((hobby) => hobby.id === activeHobby) ?? HOBBIES[0];
-
-  const handleHobbySelect = useCallback((hobbyId: string) => {
-    setActiveHobby(hobbyId);
-  }, []);
 
   return (
     <section id="about" className={styles.about} aria-labelledby="about-heading">
@@ -216,57 +210,47 @@ const About = memo(() => {
         <div className={styles.hobbiesSection}>
           <h3 className={styles.subsectionTitle}>Outside of work</h3>
 
-          <div className={styles.hobbyTabs} role="tablist" aria-label="Personal interests">
-            {HOBBIES.map((hobby) => {
-              const isActive = hobby.id === activeHobby;
-
-              return (
-                <button
+          <Tabs.Root defaultValue={HOBBIES[0].id}>
+            <Tabs.List className={styles.hobbyTabs} aria-label="Personal interests">
+              {HOBBIES.map((hobby) => (
+                <Tabs.Trigger
                   key={hobby.id}
-                  type="button"
-                  role="tab"
-                  id={`hobby-tab-${hobby.id}`}
-                  aria-selected={isActive}
-                  aria-controls={`hobby-panel-${hobby.id}`}
-                  className={`${styles.hobbyTab} ${isActive ? styles.hobbyTabActive : ''} ${styles[`hobbyTab_${hobby.accent}`]}`}
-                  onClick={() => handleHobbySelect(hobby.id)}
+                  value={hobby.id}
+                  className={`${styles.hobbyTab} ${styles[`hobbyTab_${hobby.accent}`]}`}
                 >
                   {hobby.title}
-                </button>
-              );
-            })}
-          </div>
+                </Tabs.Trigger>
+              ))}
+            </Tabs.List>
 
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={selectedHobby.id}
-              id={`hobby-panel-${selectedHobby.id}`}
-              role="tabpanel"
-              aria-labelledby={`hobby-tab-${selectedHobby.id}`}
-              className={`${styles.hobbyPanel} ${styles[`hobbyPanel_${selectedHobby.accent}`]}`}
-              initial={reduceMotion ? false : { opacity: 0, y: 16 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={reduceMotion ? undefined : { opacity: 0, y: -8 }}
-              transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
-            >
-              <div className={styles.hobbyContent}>
-                <p className={styles.paragraph}>{selectedHobby.text}</p>
-              </div>
-              <ul className={styles.hobbyGallery}>
-                {selectedHobby.images.map((image) => (
-                  <li key={image.src} className={styles.hobbyImageWrap}>
-                    <Image
-                      src={image.src}
-                      alt={image.alt}
-                      width={200}
-                      height={200}
-                      className={styles.hobbyImage}
-                    />
-                  </li>
-                ))}
-              </ul>
-            </motion.div>
-          </AnimatePresence>
+            {HOBBIES.map((hobby) => (
+              <Tabs.Content key={hobby.id} value={hobby.id} asChild>
+                <motion.div
+                  className={`${styles.hobbyPanel} ${styles[`hobbyPanel_${hobby.accent}`]}`}
+                  initial={reduceMotion ? false : { opacity: 0, y: 16 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
+                >
+                  <div className={styles.hobbyContent}>
+                    <p className={styles.paragraph}>{hobby.text}</p>
+                  </div>
+                  <ul className={styles.hobbyGallery}>
+                    {hobby.images.map((image) => (
+                      <li key={image.src} className={styles.hobbyImageWrap}>
+                        <Image
+                          src={image.src}
+                          alt={image.alt}
+                          width={200}
+                          height={200}
+                          className={styles.hobbyImage}
+                        />
+                      </li>
+                    ))}
+                  </ul>
+                </motion.div>
+              </Tabs.Content>
+            ))}
+          </Tabs.Root>
         </div>
       </div>
     </section>
