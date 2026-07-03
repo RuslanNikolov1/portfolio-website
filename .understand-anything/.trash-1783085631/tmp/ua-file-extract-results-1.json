@@ -1,0 +1,245 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 7,
+  "filesSkipped": [],
+  "results": [
+    {
+      "path": "src/app/_components/home-sections.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 82,
+      "nonEmptyLines": 64,
+      "functions": [
+        {
+          "name": "SectionDivider",
+          "startLine": 35,
+          "endLine": 42,
+          "params": [
+            "{ variant }"
+          ]
+        },
+        {
+          "name": "SectionShell",
+          "startLine": 44,
+          "endLine": 46,
+          "params": [
+            "{ children }"
+          ]
+        },
+        {
+          "name": "HomeSections",
+          "startLine": 48,
+          "endLine": 82,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "HomeSections",
+          "line": 48,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 6,
+        "exportCount": 1,
+        "functionCount": 3,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/components/AboutSkeleton.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 27,
+      "nonEmptyLines": 23,
+      "functions": [
+        {
+          "name": "AboutSkeleton",
+          "startLine": 4,
+          "endLine": 25,
+          "params": []
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "AboutSkeleton",
+          "callee": "Array.from({ length: 6 }).map",
+          "lineNumber": 18
+        },
+        {
+          "caller": "AboutSkeleton",
+          "callee": "Array.from",
+          "lineNumber": 18
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 0,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/components/ContactSkeleton.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 73,
+      "nonEmptyLines": 66,
+      "functions": [
+        {
+          "name": "ContactSkeleton",
+          "startLine": 4,
+          "endLine": 70,
+          "params": []
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 0,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/components/FeedbacksSkeleton.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 20,
+      "nonEmptyLines": 17,
+      "functions": [
+        {
+          "name": "FeedbacksSkeleton",
+          "startLine": 4,
+          "endLine": 18,
+          "params": []
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 0,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/components/LoadingSkeleton.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 33,
+      "nonEmptyLines": 30,
+      "functions": [
+        {
+          "name": "Skeleton",
+          "startLine": 12,
+          "endLine": 31,
+          "params": [
+            "{\n  width = '100%',\n  height = '20px',\n  borderRadius = '4px',\n  className = '',\n  animation = 'pulse',\n  delay = 0,\n}"
+          ]
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 0,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/components/ProjectsSkeleton.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 89,
+      "nonEmptyLines": 81,
+      "functions": [
+        {
+          "name": "ProjectsSkeleton",
+          "startLine": 4,
+          "endLine": 86,
+          "params": []
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "ProjectsSkeleton",
+          "callee": "Array.from({ length: 9 }).map",
+          "lineNumber": 22
+        },
+        {
+          "caller": "ProjectsSkeleton",
+          "callee": "Array.from",
+          "lineNumber": 22
+        },
+        {
+          "caller": "ProjectsSkeleton",
+          "callee": "Array.from({ length: 5 }).map",
+          "lineNumber": 51
+        },
+        {
+          "caller": "ProjectsSkeleton",
+          "callee": "Array.from",
+          "lineNumber": 51
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 0,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/components/SkillsSkeleton.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 103,
+      "nonEmptyLines": 97,
+      "functions": [
+        {
+          "name": "SkillsSkeleton",
+          "startLine": 4,
+          "endLine": 100,
+          "params": []
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "SkillsSkeleton",
+          "callee": "Array.from({ length: 6 }).map",
+          "lineNumber": 29
+        },
+        {
+          "caller": "SkillsSkeleton",
+          "callee": "Array.from",
+          "lineNumber": 29
+        },
+        {
+          "caller": "SkillsSkeleton",
+          "callee": "Array.from({ length: 4 }).map",
+          "lineNumber": 57
+        },
+        {
+          "caller": "SkillsSkeleton",
+          "callee": "Array.from",
+          "lineNumber": 57
+        },
+        {
+          "caller": "SkillsSkeleton",
+          "callee": "Array.from({ length: 4 }).map",
+          "lineNumber": 76
+        },
+        {
+          "caller": "SkillsSkeleton",
+          "callee": "Array.from",
+          "lineNumber": 76
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 0,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    }
+  ]
+}

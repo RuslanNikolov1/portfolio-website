@@ -1,0 +1,79 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 9,
+  "filesSkipped": [],
+  "results": [
+    {
+      "path": "src/components/About.module.scss",
+      "language": "css",
+      "fileCategory": "markup",
+      "totalLines": 389,
+      "nonEmptyLines": 333,
+      "metrics": {}
+    },
+    {
+      "path": "src/components/Contact.module.scss",
+      "language": "css",
+      "fileCategory": "markup",
+      "totalLines": 294,
+      "nonEmptyLines": 248,
+      "metrics": {}
+    },
+    {
+      "path": "src/components/Feedbacks.module.scss",
+      "language": "css",
+      "fileCategory": "markup",
+      "totalLines": 286,
+      "nonEmptyLines": 243,
+      "metrics": {}
+    },
+    {
+      "path": "src/components/Footer.module.scss",
+      "language": "css",
+      "fileCategory": "markup",
+      "totalLines": 262,
+      "nonEmptyLines": 222,
+      "metrics": {}
+    },
+    {
+      "path": "src/components/Hero.module.scss",
+      "language": "css",
+      "fileCategory": "markup",
+      "totalLines": 521,
+      "nonEmptyLines": 441,
+      "metrics": {}
+    },
+    {
+      "path": "src/components/LoadingSkeleton.module.scss",
+      "language": "css",
+      "fileCategory": "markup",
+      "totalLines": 611,
+      "nonEmptyLines": 516,
+      "metrics": {}
+    },
+    {
+      "path": "src/components/Navigation.module.scss",
+      "language": "css",
+      "fileCategory": "markup",
+      "totalLines": 501,
+      "nonEmptyLines": 430,
+      "metrics": {}
+    },
+    {
+      "path": "src/components/Projects.module.scss",
+      "language": "css",
+      "fileCategory": "markup",
+      "totalLines": 414,
+      "nonEmptyLines": 357,
+      "metrics": {}
+    },
+    {
+      "path": "src/components/Skills.module.scss",
+      "language": "css",
+      "fileCategory": "markup",
+      "totalLines": 328,
+      "nonEmptyLines": 272,
+      "metrics": {}
+    }
+  ]
+}

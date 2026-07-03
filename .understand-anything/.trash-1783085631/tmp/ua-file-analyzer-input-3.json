@@ -1,0 +1,63 @@
+{
+  "projectRoot": "c:/Development/portfolio-website-design-taste",
+  "batchFiles": [
+    {
+      "path": "src/components/Contact.tsx",
+      "language": "typescript",
+      "sizeLines": 106,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/Footer.tsx",
+      "language": "typescript",
+      "sizeLines": 119,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/Skills.tsx",
+      "language": "typescript",
+      "sizeLines": 357,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/data/skills.ts",
+      "language": "typescript",
+      "sizeLines": 50,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/data/social-links.ts",
+      "language": "typescript",
+      "sizeLines": 34,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/types/index.ts",
+      "language": "typescript",
+      "sizeLines": 32,
+      "fileCategory": "code"
+    }
+  ],
+  "batchImportData": {
+    "src/components/Contact.tsx": [
+      "src/components/Contact.module.scss",
+      "src/data/social-links.ts"
+    ],
+    "src/components/Footer.tsx": [
+      "src/components/Footer.module.scss",
+      "src/data/social-links.ts"
+    ],
+    "src/components/Skills.tsx": [
+      "src/components/Skills.module.scss",
+      "src/data/skills.ts",
+      "src/types/index.ts"
+    ],
+    "src/data/skills.ts": [
+      "src/types/index.ts"
+    ],
+    "src/data/social-links.ts": [
+      "src/types/index.ts"
+    ],
+    "src/types/index.ts": []
+  }
+}

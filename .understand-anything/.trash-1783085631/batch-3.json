@@ -1,0 +1,163 @@
+{
+  "nodes": [
+    {
+      "id": "file:src/components/Contact.tsx",
+      "type": "file",
+      "name": "Contact.tsx",
+      "filePath": "src/components/Contact.tsx",
+      "summary": "Contact section with social links and mailto call-to-action.",
+      "complexity": "moderate",
+      "tags": [
+        "component",
+        "react",
+        "ui"
+      ]
+    },
+    {
+      "id": "file:src/components/Footer.tsx",
+      "type": "file",
+      "name": "Footer.tsx",
+      "filePath": "src/components/Footer.tsx",
+      "summary": "Site footer with copyright, social links, and navigation anchors.",
+      "complexity": "moderate",
+      "tags": [
+        "component",
+        "react",
+        "ui"
+      ]
+    },
+    {
+      "id": "file:src/components/Skills.tsx",
+      "type": "file",
+      "name": "Skills.tsx",
+      "filePath": "src/components/Skills.tsx",
+      "summary": "Skills section displaying expertise categories with collapsible groups and icons.",
+      "complexity": "complex",
+      "tags": [
+        "component",
+        "react",
+        "ui"
+      ]
+    },
+    {
+      "id": "function:src/components/Skills.tsx:SkillCollapsibleItem",
+      "type": "function",
+      "name": "SkillCollapsibleItem",
+      "filePath": "src/components/Skills.tsx",
+      "summary": "SkillCollapsibleItem defined in Skills.tsx.",
+      "complexity": "moderate",
+      "tags": [
+        "function",
+        "internal"
+      ]
+    },
+    {
+      "id": "file:src/data/skills.ts",
+      "type": "file",
+      "name": "skills.ts",
+      "filePath": "src/data/skills.ts",
+      "summary": "Static skills data grouped by category for the Skills section.",
+      "complexity": "simple",
+      "tags": [
+        "data-model",
+        "static-data"
+      ]
+    },
+    {
+      "id": "file:src/data/social-links.ts",
+      "type": "file",
+      "name": "social-links.ts",
+      "filePath": "src/data/social-links.ts",
+      "summary": "Social media and contact link definitions used across Contact and Footer.",
+      "complexity": "simple",
+      "tags": [
+        "data-model",
+        "static-data"
+      ]
+    },
+    {
+      "id": "file:src/types/index.ts",
+      "type": "file",
+      "name": "index.ts",
+      "filePath": "src/types/index.ts",
+      "summary": "Shared TypeScript interfaces for projects, skills, and social links.",
+      "complexity": "simple",
+      "tags": [
+        "type-definition",
+        "shared-types"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:src/components/Contact.tsx",
+      "target": "file:src/components/Contact.module.scss",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/Contact.tsx",
+      "target": "file:src/data/social-links.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/Footer.tsx",
+      "target": "file:src/components/Footer.module.scss",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/Footer.tsx",
+      "target": "file:src/data/social-links.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/Skills.tsx",
+      "target": "function:src/components/Skills.tsx:SkillCollapsibleItem",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/components/Skills.tsx",
+      "target": "file:src/components/Skills.module.scss",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/Skills.tsx",
+      "target": "file:src/data/skills.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/Skills.tsx",
+      "target": "file:src/types/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/data/skills.ts",
+      "target": "file:src/types/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/data/social-links.ts",
+      "target": "file:src/types/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    }
+  ]
+}

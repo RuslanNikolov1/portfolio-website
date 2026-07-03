@@ -1,0 +1,435 @@
+{
+  "projectRoot": "c:/Development/portfolio-website-design-taste",
+  "files": [
+    {
+      "path": ".understand-anything/.understandignore",
+      "language": "unknown",
+      "fileCategory": "code"
+    },
+    {
+      "path": ".understand-anything/config.json",
+      "language": "json",
+      "fileCategory": "config"
+    },
+    {
+      "path": "BUNDLE_ANALYSIS.md",
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "eslint.config.mjs",
+      "language": "javascript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "next.config.ts",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "package.json",
+      "language": "json",
+      "fileCategory": "config"
+    },
+    {
+      "path": "public/Art-1.webp",
+      "language": "webp",
+      "fileCategory": "code"
+    },
+    {
+      "path": "public/Art-2.webp",
+      "language": "webp",
+      "fileCategory": "code"
+    },
+    {
+      "path": "public/Art-3.webp",
+      "language": "webp",
+      "fileCategory": "code"
+    },
+    {
+      "path": "public/Hero Initial Picture.webp",
+      "language": "webp",
+      "fileCategory": "code"
+    },
+    {
+      "path": "public/Hopeful emotions pic.webp",
+      "language": "webp",
+      "fileCategory": "code"
+    },
+    {
+      "path": "public/Music-1.webp",
+      "language": "webp",
+      "fileCategory": "code"
+    },
+    {
+      "path": "public/Music-2.webp",
+      "language": "webp",
+      "fileCategory": "code"
+    },
+    {
+      "path": "public/Music-3.webp",
+      "language": "webp",
+      "fileCategory": "code"
+    },
+    {
+      "path": "public/preview.webp",
+      "language": "webp",
+      "fileCategory": "code"
+    },
+    {
+      "path": "public/Reading-1.webp",
+      "language": "webp",
+      "fileCategory": "code"
+    },
+    {
+      "path": "public/Reading-2.webp",
+      "language": "webp",
+      "fileCategory": "code"
+    },
+    {
+      "path": "public/Reading-3.webp",
+      "language": "webp",
+      "fileCategory": "code"
+    },
+    {
+      "path": "public/Reading-Background.webp",
+      "language": "webp",
+      "fileCategory": "code"
+    },
+    {
+      "path": "public/robots.txt",
+      "language": "txt",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "public/Ruslan Looking Avatar.webp",
+      "language": "webp",
+      "fileCategory": "code"
+    },
+    {
+      "path": "public/Ruslan Looking.webp",
+      "language": "webp",
+      "fileCategory": "code"
+    },
+    {
+      "path": "public/Ruslan Profile Pic.webp",
+      "language": "webp",
+      "fileCategory": "code"
+    },
+    {
+      "path": "public/Ruslan Profile.webp",
+      "language": "webp",
+      "fileCategory": "code"
+    },
+    {
+      "path": "public/sitemap.xml",
+      "language": "xml",
+      "fileCategory": "config"
+    },
+    {
+      "path": "public/Sports-1.webp",
+      "language": "webp",
+      "fileCategory": "code"
+    },
+    {
+      "path": "public/Sports-2.webp",
+      "language": "webp",
+      "fileCategory": "code"
+    },
+    {
+      "path": "public/Sports-3.webp",
+      "language": "webp",
+      "fileCategory": "code"
+    },
+    {
+      "path": "public/Thumbnail - Real Estate New.webp",
+      "language": "webp",
+      "fileCategory": "code"
+    },
+    {
+      "path": "public/Thumbnail Construction.webp",
+      "language": "webp",
+      "fileCategory": "code"
+    },
+    {
+      "path": "public/Thumbnail Massage New.webp",
+      "language": "webp",
+      "fileCategory": "code"
+    },
+    {
+      "path": "public/Thumbnail-AMTP-new.webp",
+      "language": "webp",
+      "fileCategory": "code"
+    },
+    {
+      "path": "public/Thumbnail-Ash.webp",
+      "language": "webp",
+      "fileCategory": "code"
+    },
+    {
+      "path": "public/Thumbnail-Astrology.webp",
+      "language": "webp",
+      "fileCategory": "code"
+    },
+    {
+      "path": "public/Thumbnail-DefiLama.webp",
+      "language": "webp",
+      "fileCategory": "code"
+    },
+    {
+      "path": "public/Thumbnail-ForestResidenceSofia.webp",
+      "language": "webp",
+      "fileCategory": "code"
+    },
+    {
+      "path": "public/Thumbnail-Lawyer.webp",
+      "language": "webp",
+      "fileCategory": "code"
+    },
+    {
+      "path": "public/Thumbnail-Maisons.webp",
+      "language": "webp",
+      "fileCategory": "code"
+    },
+    {
+      "path": "README.md",
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "src/app/_components/home-sections.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/app/error.module.scss",
+      "language": "css",
+      "fileCategory": "markup"
+    },
+    {
+      "path": "src/app/error.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/app/globals.scss",
+      "language": "css",
+      "fileCategory": "markup"
+    },
+    {
+      "path": "src/app/layout.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/app/loading.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/app/not-found.module.scss",
+      "language": "css",
+      "fileCategory": "markup"
+    },
+    {
+      "path": "src/app/not-found.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/app/page.module.scss",
+      "language": "css",
+      "fileCategory": "markup"
+    },
+    {
+      "path": "src/app/page.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/About.module.scss",
+      "language": "css",
+      "fileCategory": "markup"
+    },
+    {
+      "path": "src/components/About.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/AboutSkeleton.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/Contact.module.scss",
+      "language": "css",
+      "fileCategory": "markup"
+    },
+    {
+      "path": "src/components/Contact.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/ContactSkeleton.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/DownloadCVButton.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/Feedbacks.module.scss",
+      "language": "css",
+      "fileCategory": "markup"
+    },
+    {
+      "path": "src/components/Feedbacks.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/FeedbacksSkeleton.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/FloatingCTA.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/Footer.module.scss",
+      "language": "css",
+      "fileCategory": "markup"
+    },
+    {
+      "path": "src/components/Footer.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/Hero.module.scss",
+      "language": "css",
+      "fileCategory": "markup"
+    },
+    {
+      "path": "src/components/Hero.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/HeroSkeleton.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/LoadingSkeleton.module.scss",
+      "language": "css",
+      "fileCategory": "markup"
+    },
+    {
+      "path": "src/components/LoadingSkeleton.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/Navigation.module.scss",
+      "language": "css",
+      "fileCategory": "markup"
+    },
+    {
+      "path": "src/components/Navigation.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/NavigationMusicPlayer.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/Projects.module.scss",
+      "language": "css",
+      "fileCategory": "markup"
+    },
+    {
+      "path": "src/components/Projects.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/ProjectsSkeleton.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/Skills.module.scss",
+      "language": "css",
+      "fileCategory": "markup"
+    },
+    {
+      "path": "src/components/Skills.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/SkillsSkeleton.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/data/projects.ts",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/data/skills.ts",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/data/social-links.ts",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/lib/site.ts",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/styles/_backdrops.scss",
+      "language": "css",
+      "fileCategory": "markup"
+    },
+    {
+      "path": "src/styles/_home.scss",
+      "language": "css",
+      "fileCategory": "markup"
+    },
+    {
+      "path": "src/styles/_variables.scss",
+      "language": "css",
+      "fileCategory": "markup"
+    },
+    {
+      "path": "src/styles/breakpoints.ts",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/types/index.ts",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "tsconfig.json",
+      "language": "json",
+      "fileCategory": "config"
+    }
+  ]
+}

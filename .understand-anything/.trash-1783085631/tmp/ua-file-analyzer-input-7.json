@@ -1,0 +1,28 @@
+{
+  "projectRoot": "c:/Development/portfolio-website-design-taste",
+  "batchFiles": [
+    {
+      "path": "src/styles/_backdrops.scss",
+      "language": "css",
+      "sizeLines": 77,
+      "fileCategory": "markup"
+    },
+    {
+      "path": "src/styles/_home.scss",
+      "language": "css",
+      "sizeLines": 41,
+      "fileCategory": "markup"
+    },
+    {
+      "path": "src/styles/_variables.scss",
+      "language": "css",
+      "sizeLines": 123,
+      "fileCategory": "markup"
+    }
+  ],
+  "batchImportData": {
+    "src/styles/_backdrops.scss": [],
+    "src/styles/_home.scss": [],
+    "src/styles/_variables.scss": []
+  }
+}

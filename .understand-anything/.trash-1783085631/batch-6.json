@@ -1,0 +1,229 @@
+{
+  "nodes": [
+    {
+      "id": "file:src/components/About.module.scss",
+      "type": "file",
+      "name": "About.module.scss",
+      "filePath": "src/components/About.module.scss",
+      "summary": "Scoped SASS module styling the About component.",
+      "complexity": "complex",
+      "tags": [
+        "styling",
+        "sass-module"
+      ]
+    },
+    {
+      "id": "file:src/components/Contact.module.scss",
+      "type": "file",
+      "name": "Contact.module.scss",
+      "filePath": "src/components/Contact.module.scss",
+      "summary": "Scoped SASS module styling the Contact component.",
+      "complexity": "complex",
+      "tags": [
+        "styling",
+        "sass-module"
+      ]
+    },
+    {
+      "id": "file:src/components/Feedbacks.module.scss",
+      "type": "file",
+      "name": "Feedbacks.module.scss",
+      "filePath": "src/components/Feedbacks.module.scss",
+      "summary": "Scoped SASS module styling the Feedbacks component.",
+      "complexity": "complex",
+      "tags": [
+        "styling",
+        "sass-module"
+      ]
+    },
+    {
+      "id": "file:src/components/Footer.module.scss",
+      "type": "file",
+      "name": "Footer.module.scss",
+      "filePath": "src/components/Footer.module.scss",
+      "summary": "Scoped SASS module styling the Footer component.",
+      "complexity": "complex",
+      "tags": [
+        "styling",
+        "sass-module"
+      ]
+    },
+    {
+      "id": "file:src/components/Hero.module.scss",
+      "type": "file",
+      "name": "Hero.module.scss",
+      "filePath": "src/components/Hero.module.scss",
+      "summary": "Scoped SASS module styling the Hero component.",
+      "complexity": "complex",
+      "tags": [
+        "styling",
+        "sass-module"
+      ]
+    },
+    {
+      "id": "file:src/components/LoadingSkeleton.module.scss",
+      "type": "file",
+      "name": "LoadingSkeleton.module.scss",
+      "filePath": "src/components/LoadingSkeleton.module.scss",
+      "summary": "Scoped SASS module styling the LoadingSkeleton component.",
+      "complexity": "complex",
+      "tags": [
+        "loading",
+        "component",
+        "skeleton",
+        "styling",
+        "sass-module"
+      ]
+    },
+    {
+      "id": "file:src/components/Navigation.module.scss",
+      "type": "file",
+      "name": "Navigation.module.scss",
+      "filePath": "src/components/Navigation.module.scss",
+      "summary": "Scoped SASS module styling the Navigation component.",
+      "complexity": "complex",
+      "tags": [
+        "styling",
+        "sass-module"
+      ]
+    },
+    {
+      "id": "file:src/components/Projects.module.scss",
+      "type": "file",
+      "name": "Projects.module.scss",
+      "filePath": "src/components/Projects.module.scss",
+      "summary": "Scoped SASS module styling the Projects component.",
+      "complexity": "complex",
+      "tags": [
+        "styling",
+        "sass-module"
+      ]
+    },
+    {
+      "id": "file:src/components/Skills.module.scss",
+      "type": "file",
+      "name": "Skills.module.scss",
+      "filePath": "src/components/Skills.module.scss",
+      "summary": "Scoped SASS module styling the Skills component.",
+      "complexity": "complex",
+      "tags": [
+        "styling",
+        "sass-module"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:src/components/About.tsx",
+      "target": "file:src/components/About.module.scss",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/Contact.tsx",
+      "target": "file:src/components/Contact.module.scss",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/Feedbacks.tsx",
+      "target": "file:src/components/Feedbacks.module.scss",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/Footer.tsx",
+      "target": "file:src/components/Footer.module.scss",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/Hero.tsx",
+      "target": "file:src/components/Hero.module.scss",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/AboutSkeleton.tsx",
+      "target": "file:src/components/LoadingSkeleton.module.scss",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/ContactSkeleton.tsx",
+      "target": "file:src/components/LoadingSkeleton.module.scss",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/FeedbacksSkeleton.tsx",
+      "target": "file:src/components/LoadingSkeleton.module.scss",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/HeroSkeleton.tsx",
+      "target": "file:src/components/LoadingSkeleton.module.scss",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/LoadingSkeleton.tsx",
+      "target": "file:src/components/LoadingSkeleton.module.scss",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/ProjectsSkeleton.tsx",
+      "target": "file:src/components/LoadingSkeleton.module.scss",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/SkillsSkeleton.tsx",
+      "target": "file:src/components/LoadingSkeleton.module.scss",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/Navigation.tsx",
+      "target": "file:src/components/Navigation.module.scss",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/NavigationMusicPlayer.tsx",
+      "target": "file:src/components/Navigation.module.scss",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/Projects.tsx",
+      "target": "file:src/components/Projects.module.scss",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/Skills.tsx",
+      "target": "file:src/components/Skills.module.scss",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    }
+  ]
+}

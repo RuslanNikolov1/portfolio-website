@@ -1,0 +1,130 @@
+[
+  {
+    "id": "layer:application-shell",
+    "name": "Application Shell",
+    "description": "Next.js App Router entry points including layout, home page, loading/error/not-found boundaries, and the home-sections orchestrator.",
+    "nodeIds": [
+      "file:src/app/_components/home-sections.tsx",
+      "file:src/app/page.tsx",
+      "file:src/app/error.tsx",
+      "file:src/app/layout.tsx",
+      "file:src/app/loading.tsx",
+      "file:src/app/not-found.tsx"
+    ]
+  },
+  {
+    "id": "layer:ui-components",
+    "name": "UI Components",
+    "description": "Portfolio section React components (Hero, About, Skills, Projects, Contact, Navigation) plus skeleton placeholders and shared UI widgets.",
+    "nodeIds": [
+      "file:src/components/AboutSkeleton.tsx",
+      "file:src/components/ContactSkeleton.tsx",
+      "file:src/components/FeedbacksSkeleton.tsx",
+      "file:src/components/LoadingSkeleton.tsx",
+      "file:src/components/ProjectsSkeleton.tsx",
+      "file:src/components/SkillsSkeleton.tsx",
+      "file:src/components/Hero.tsx",
+      "file:src/components/Navigation.tsx",
+      "file:src/components/Projects.tsx",
+      "file:src/components/Contact.tsx",
+      "file:src/components/Footer.tsx",
+      "file:src/components/Skills.tsx",
+      "file:src/components/About.tsx",
+      "file:src/components/DownloadCVButton.tsx",
+      "file:src/components/Feedbacks.tsx",
+      "file:src/components/FloatingCTA.tsx",
+      "file:src/components/HeroSkeleton.tsx",
+      "file:src/components/NavigationMusicPlayer.tsx"
+    ]
+  },
+  {
+    "id": "layer:styling",
+    "name": "Styling",
+    "description": "SASS modules co-located with components, global styles, shared SCSS partials, variables, backdrops, and responsive breakpoint tokens.",
+    "nodeIds": [
+      "file:src/styles/breakpoints.ts",
+      "file:src/app/error.module.scss",
+      "file:src/app/globals.scss",
+      "file:src/app/not-found.module.scss",
+      "file:src/app/page.module.scss",
+      "file:src/components/About.module.scss",
+      "file:src/components/Contact.module.scss",
+      "file:src/components/Feedbacks.module.scss",
+      "file:src/components/Footer.module.scss",
+      "file:src/components/Hero.module.scss",
+      "file:src/components/LoadingSkeleton.module.scss",
+      "file:src/components/Navigation.module.scss",
+      "file:src/components/Projects.module.scss",
+      "file:src/components/Skills.module.scss",
+      "file:src/styles/_backdrops.scss",
+      "file:src/styles/_home.scss",
+      "file:src/styles/_variables.scss"
+    ]
+  },
+  {
+    "id": "layer:data-types",
+    "name": "Data & Types",
+    "description": "Static portfolio content (projects, skills, social links), shared TypeScript interfaces, and centralized site metadata in lib/site.ts.",
+    "nodeIds": [
+      "file:src/data/projects.ts",
+      "file:src/data/skills.ts",
+      "file:src/data/social-links.ts",
+      "file:src/types/index.ts",
+      "file:src/lib/site.ts"
+    ]
+  },
+  {
+    "id": "layer:static-assets-seo",
+    "name": "Static Assets & SEO",
+    "description": "Public WebP images for hero, hobbies, and project thumbnails, plus robots.txt and sitemap.xml for search engine indexing.",
+    "nodeIds": [
+      "file:public/Art-1.webp",
+      "file:public/Art-2.webp",
+      "file:public/Art-3.webp",
+      "file:public/Hero Initial Picture.webp",
+      "file:public/Hopeful emotions pic.webp",
+      "file:public/Music-1.webp",
+      "file:public/Music-2.webp",
+      "file:public/Music-3.webp",
+      "file:public/preview.webp",
+      "file:public/Reading-1.webp",
+      "file:public/Reading-2.webp",
+      "file:public/Reading-3.webp",
+      "file:public/Reading-Background.webp",
+      "document:public/robots.txt",
+      "file:public/Ruslan Looking Avatar.webp",
+      "file:public/Ruslan Looking.webp",
+      "file:public/Ruslan Profile Pic.webp",
+      "file:public/Ruslan Profile.webp",
+      "file:public/Sports-1.webp",
+      "file:public/Sports-2.webp",
+      "file:public/Sports-3.webp",
+      "file:public/Thumbnail - Real Estate New.webp",
+      "file:public/Thumbnail Construction.webp",
+      "file:public/Thumbnail Massage New.webp",
+      "file:public/Thumbnail-AMTP-new.webp",
+      "file:public/Thumbnail-Ash.webp",
+      "file:public/Thumbnail-Astrology.webp",
+      "file:public/Thumbnail-DefiLama.webp",
+      "file:public/Thumbnail-ForestResidenceSofia.webp",
+      "file:public/Thumbnail-Lawyer.webp",
+      "file:public/Thumbnail-Maisons.webp"
+    ]
+  },
+  {
+    "id": "layer:config-documentation",
+    "name": "Configuration & Documentation",
+    "description": "Build and tooling configs (Next.js, TypeScript, ESLint, package.json), project README and bundle analysis docs, and Understand Anything tooling files.",
+    "nodeIds": [
+      "document:BUNDLE_ANALYSIS.md",
+      "document:README.md",
+      "config:package.json",
+      "config:tsconfig.json",
+      "file:.understand-anything/.understandignore",
+      "config:.understand-anything/config.json",
+      "file:eslint.config.mjs",
+      "file:next.config.ts",
+      "config:public/sitemap.xml"
+    ]
+  }
+]

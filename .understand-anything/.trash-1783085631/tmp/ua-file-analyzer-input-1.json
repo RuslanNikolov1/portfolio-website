@@ -1,0 +1,80 @@
+{
+  "projectRoot": "c:/Development/portfolio-website-design-taste",
+  "batchFiles": [
+    {
+      "path": "src/app/_components/home-sections.tsx",
+      "language": "typescript",
+      "sizeLines": 82,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/AboutSkeleton.tsx",
+      "language": "typescript",
+      "sizeLines": 27,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/ContactSkeleton.tsx",
+      "language": "typescript",
+      "sizeLines": 73,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/FeedbacksSkeleton.tsx",
+      "language": "typescript",
+      "sizeLines": 20,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/LoadingSkeleton.tsx",
+      "language": "typescript",
+      "sizeLines": 33,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/ProjectsSkeleton.tsx",
+      "language": "typescript",
+      "sizeLines": 89,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/SkillsSkeleton.tsx",
+      "language": "typescript",
+      "sizeLines": 103,
+      "fileCategory": "code"
+    }
+  ],
+  "batchImportData": {
+    "src/app/_components/home-sections.tsx": [
+      "src/app/page.module.scss",
+      "src/components/AboutSkeleton.tsx",
+      "src/components/ContactSkeleton.tsx",
+      "src/components/FeedbacksSkeleton.tsx",
+      "src/components/ProjectsSkeleton.tsx",
+      "src/components/SkillsSkeleton.tsx"
+    ],
+    "src/components/AboutSkeleton.tsx": [
+      "src/components/LoadingSkeleton.module.scss",
+      "src/components/LoadingSkeleton.tsx"
+    ],
+    "src/components/ContactSkeleton.tsx": [
+      "src/components/LoadingSkeleton.module.scss",
+      "src/components/LoadingSkeleton.tsx"
+    ],
+    "src/components/FeedbacksSkeleton.tsx": [
+      "src/components/LoadingSkeleton.module.scss",
+      "src/components/LoadingSkeleton.tsx"
+    ],
+    "src/components/LoadingSkeleton.tsx": [
+      "src/components/LoadingSkeleton.module.scss"
+    ],
+    "src/components/ProjectsSkeleton.tsx": [
+      "src/components/LoadingSkeleton.module.scss",
+      "src/components/LoadingSkeleton.tsx"
+    ],
+    "src/components/SkillsSkeleton.tsx": [
+      "src/components/LoadingSkeleton.module.scss",
+      "src/components/LoadingSkeleton.tsx"
+    ]
+  }
+}

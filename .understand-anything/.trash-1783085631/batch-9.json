@@ -1,0 +1,475 @@
+{
+  "nodes": [
+    {
+      "id": "file:public/Sports-3.webp",
+      "type": "file",
+      "name": "Sports-3.webp",
+      "filePath": "public/Sports-3.webp",
+      "summary": "Static image asset Sports-3.webp served from the public directory.",
+      "complexity": "moderate",
+      "tags": [
+        "static-asset",
+        "public"
+      ]
+    },
+    {
+      "id": "file:public/Thumbnail - Real Estate New.webp",
+      "type": "file",
+      "name": "Thumbnail - Real Estate New.webp",
+      "filePath": "public/Thumbnail - Real Estate New.webp",
+      "summary": "Static image asset Thumbnail - Real Estate New.webp served from the public directory.",
+      "complexity": "moderate",
+      "tags": [
+        "static-asset",
+        "public"
+      ]
+    },
+    {
+      "id": "file:public/Thumbnail Construction.webp",
+      "type": "file",
+      "name": "Thumbnail Construction.webp",
+      "filePath": "public/Thumbnail Construction.webp",
+      "summary": "Static image asset Thumbnail Construction.webp served from the public directory.",
+      "complexity": "moderate",
+      "tags": [
+        "static-asset",
+        "public"
+      ]
+    },
+    {
+      "id": "file:public/Thumbnail Massage New.webp",
+      "type": "file",
+      "name": "Thumbnail Massage New.webp",
+      "filePath": "public/Thumbnail Massage New.webp",
+      "summary": "Static image asset Thumbnail Massage New.webp served from the public directory.",
+      "complexity": "moderate",
+      "tags": [
+        "static-asset",
+        "public"
+      ]
+    },
+    {
+      "id": "file:public/Thumbnail-AMTP-new.webp",
+      "type": "file",
+      "name": "Thumbnail-AMTP-new.webp",
+      "filePath": "public/Thumbnail-AMTP-new.webp",
+      "summary": "Static image asset Thumbnail-AMTP-new.webp served from the public directory.",
+      "complexity": "complex",
+      "tags": [
+        "static-asset",
+        "public"
+      ]
+    },
+    {
+      "id": "file:public/Thumbnail-Ash.webp",
+      "type": "file",
+      "name": "Thumbnail-Ash.webp",
+      "filePath": "public/Thumbnail-Ash.webp",
+      "summary": "Static image asset Thumbnail-Ash.webp served from the public directory.",
+      "complexity": "complex",
+      "tags": [
+        "static-asset",
+        "public"
+      ]
+    },
+    {
+      "id": "file:public/Thumbnail-Astrology.webp",
+      "type": "file",
+      "name": "Thumbnail-Astrology.webp",
+      "filePath": "public/Thumbnail-Astrology.webp",
+      "summary": "Static image asset Thumbnail-Astrology.webp served from the public directory.",
+      "complexity": "moderate",
+      "tags": [
+        "static-asset",
+        "public"
+      ]
+    },
+    {
+      "id": "file:public/Thumbnail-DefiLama.webp",
+      "type": "file",
+      "name": "Thumbnail-DefiLama.webp",
+      "filePath": "public/Thumbnail-DefiLama.webp",
+      "summary": "Static image asset Thumbnail-DefiLama.webp served from the public directory.",
+      "complexity": "moderate",
+      "tags": [
+        "static-asset",
+        "public"
+      ]
+    },
+    {
+      "id": "file:public/Thumbnail-ForestResidenceSofia.webp",
+      "type": "file",
+      "name": "Thumbnail-ForestResidenceSofia.webp",
+      "filePath": "public/Thumbnail-ForestResidenceSofia.webp",
+      "summary": "Static image asset Thumbnail-ForestResidenceSofia.webp served from the public directory.",
+      "complexity": "moderate",
+      "tags": [
+        "static-asset",
+        "public"
+      ]
+    },
+    {
+      "id": "file:public/Thumbnail-Lawyer.webp",
+      "type": "file",
+      "name": "Thumbnail-Lawyer.webp",
+      "filePath": "public/Thumbnail-Lawyer.webp",
+      "summary": "Static image asset Thumbnail-Lawyer.webp served from the public directory.",
+      "complexity": "moderate",
+      "tags": [
+        "static-asset",
+        "public"
+      ]
+    },
+    {
+      "id": "file:public/Thumbnail-Maisons.webp",
+      "type": "file",
+      "name": "Thumbnail-Maisons.webp",
+      "filePath": "public/Thumbnail-Maisons.webp",
+      "summary": "Static image asset Thumbnail-Maisons.webp served from the public directory.",
+      "complexity": "moderate",
+      "tags": [
+        "static-asset",
+        "public"
+      ]
+    },
+    {
+      "id": "file:src/app/error.tsx",
+      "type": "file",
+      "name": "error.tsx",
+      "filePath": "src/app/error.tsx",
+      "summary": "Source file src/app/error.tsx supporting the portfolio application.",
+      "complexity": "simple",
+      "tags": [
+        "source"
+      ]
+    },
+    {
+      "id": "function:src/app/error.tsx:Error",
+      "type": "function",
+      "name": "Error",
+      "filePath": "src/app/error.tsx",
+      "summary": "Error defined in error.tsx.",
+      "complexity": "simple",
+      "tags": [
+        "function",
+        "exported"
+      ]
+    },
+    {
+      "id": "file:src/app/layout.tsx",
+      "type": "file",
+      "name": "layout.tsx",
+      "filePath": "src/app/layout.tsx",
+      "summary": "Root layout defining site metadata, fonts, global styles, and the document shell.",
+      "complexity": "moderate",
+      "tags": [
+        "entry-point",
+        "layout",
+        "nextjs"
+      ]
+    },
+    {
+      "id": "function:src/app/layout.tsx:RootLayout",
+      "type": "function",
+      "name": "RootLayout",
+      "filePath": "src/app/layout.tsx",
+      "summary": "RootLayout defined in layout.tsx.",
+      "complexity": "simple",
+      "tags": [
+        "function",
+        "exported"
+      ]
+    },
+    {
+      "id": "file:src/app/loading.tsx",
+      "type": "file",
+      "name": "loading.tsx",
+      "filePath": "src/app/loading.tsx",
+      "summary": "Source file src/app/loading.tsx supporting the portfolio application.",
+      "complexity": "simple",
+      "tags": [
+        "source"
+      ]
+    },
+    {
+      "id": "function:src/app/loading.tsx:Loading",
+      "type": "function",
+      "name": "Loading",
+      "filePath": "src/app/loading.tsx",
+      "summary": "Loading defined in loading.tsx.",
+      "complexity": "simple",
+      "tags": [
+        "function",
+        "exported"
+      ]
+    },
+    {
+      "id": "file:src/app/not-found.tsx",
+      "type": "file",
+      "name": "not-found.tsx",
+      "filePath": "src/app/not-found.tsx",
+      "summary": "Source file src/app/not-found.tsx supporting the portfolio application.",
+      "complexity": "simple",
+      "tags": [
+        "source"
+      ]
+    },
+    {
+      "id": "function:src/app/not-found.tsx:NotFound",
+      "type": "function",
+      "name": "NotFound",
+      "filePath": "src/app/not-found.tsx",
+      "summary": "NotFound defined in not-found.tsx.",
+      "complexity": "simple",
+      "tags": [
+        "function",
+        "exported"
+      ]
+    },
+    {
+      "id": "file:src/components/About.tsx",
+      "type": "file",
+      "name": "About.tsx",
+      "filePath": "src/components/About.tsx",
+      "summary": "About section with personal bio, interests carousel, and profile imagery.",
+      "complexity": "complex",
+      "tags": [
+        "component",
+        "react",
+        "ui"
+      ]
+    },
+    {
+      "id": "file:src/components/DownloadCVButton.tsx",
+      "type": "file",
+      "name": "DownloadCVButton.tsx",
+      "filePath": "src/components/DownloadCVButton.tsx",
+      "summary": "Source file src/components/DownloadCVButton.tsx supporting the portfolio application.",
+      "complexity": "simple",
+      "tags": [
+        "component",
+        "react",
+        "ui"
+      ]
+    },
+    {
+      "id": "file:src/components/Feedbacks.tsx",
+      "type": "file",
+      "name": "Feedbacks.tsx",
+      "filePath": "src/components/Feedbacks.tsx",
+      "summary": "Client testimonials carousel with navigation controls and responsive layout.",
+      "complexity": "moderate",
+      "tags": [
+        "component",
+        "react",
+        "ui"
+      ]
+    },
+    {
+      "id": "file:src/components/FloatingCTA.tsx",
+      "type": "file",
+      "name": "FloatingCTA.tsx",
+      "filePath": "src/components/FloatingCTA.tsx",
+      "summary": "Source file src/components/FloatingCTA.tsx supporting the portfolio application.",
+      "complexity": "simple",
+      "tags": [
+        "component",
+        "react",
+        "ui"
+      ]
+    },
+    {
+      "id": "file:src/components/HeroSkeleton.tsx",
+      "type": "file",
+      "name": "HeroSkeleton.tsx",
+      "filePath": "src/components/HeroSkeleton.tsx",
+      "summary": "Loading skeleton placeholder mirroring Hero layout during lazy load.",
+      "complexity": "moderate",
+      "tags": [
+        "loading",
+        "component",
+        "skeleton",
+        "react",
+        "ui"
+      ]
+    },
+    {
+      "id": "function:src/components/HeroSkeleton.tsx:HeroSkeleton",
+      "type": "function",
+      "name": "HeroSkeleton",
+      "filePath": "src/components/HeroSkeleton.tsx",
+      "summary": "HeroSkeleton defined in HeroSkeleton.tsx.",
+      "complexity": "moderate",
+      "tags": [
+        "function",
+        "internal"
+      ]
+    },
+    {
+      "id": "file:src/components/NavigationMusicPlayer.tsx",
+      "type": "file",
+      "name": "NavigationMusicPlayer.tsx",
+      "filePath": "src/components/NavigationMusicPlayer.tsx",
+      "summary": "Source file src/components/NavigationMusicPlayer.tsx supporting the portfolio application.",
+      "complexity": "moderate",
+      "tags": [
+        "component",
+        "react",
+        "ui"
+      ]
+    },
+    {
+      "id": "file:src/lib/site.ts",
+      "type": "file",
+      "name": "site.ts",
+      "filePath": "src/lib/site.ts",
+      "summary": "Central site configuration including name, URL, and metadata defaults.",
+      "complexity": "simple",
+      "tags": [
+        "source"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:src/app/error.tsx",
+      "target": "function:src/app/error.tsx:Error",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/app/error.tsx",
+      "target": "function:src/app/error.tsx:Error",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/app/error.tsx",
+      "target": "file:src/app/error.module.scss",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/app/layout.tsx",
+      "target": "function:src/app/layout.tsx:RootLayout",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/app/layout.tsx",
+      "target": "function:src/app/layout.tsx:RootLayout",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/app/layout.tsx",
+      "target": "file:src/app/globals.scss",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/app/layout.tsx",
+      "target": "file:src/lib/site.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/app/loading.tsx",
+      "target": "function:src/app/loading.tsx:Loading",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/app/loading.tsx",
+      "target": "function:src/app/loading.tsx:Loading",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/app/loading.tsx",
+      "target": "file:src/app/page.module.scss",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/app/loading.tsx",
+      "target": "file:src/components/HeroSkeleton.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/app/not-found.tsx",
+      "target": "function:src/app/not-found.tsx:NotFound",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/app/not-found.tsx",
+      "target": "function:src/app/not-found.tsx:NotFound",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/app/not-found.tsx",
+      "target": "file:src/app/not-found.module.scss",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/About.tsx",
+      "target": "file:src/components/About.module.scss",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/Feedbacks.tsx",
+      "target": "file:src/components/Feedbacks.module.scss",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/HeroSkeleton.tsx",
+      "target": "function:src/components/HeroSkeleton.tsx:HeroSkeleton",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/components/HeroSkeleton.tsx",
+      "target": "file:src/components/LoadingSkeleton.module.scss",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/HeroSkeleton.tsx",
+      "target": "file:src/components/LoadingSkeleton.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/NavigationMusicPlayer.tsx",
+      "target": "file:src/components/Navigation.module.scss",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    }
+  ]
+}

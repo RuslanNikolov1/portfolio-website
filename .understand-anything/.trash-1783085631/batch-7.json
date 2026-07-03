@@ -1,0 +1,38 @@
+{
+  "nodes": [
+    {
+      "id": "file:src/styles/_backdrops.scss",
+      "type": "file",
+      "name": "_backdrops.scss",
+      "filePath": "src/styles/_backdrops.scss",
+      "summary": "Shared backdrop and gradient utility styles used across sections.",
+      "complexity": "moderate",
+      "tags": [
+        "source"
+      ]
+    },
+    {
+      "id": "file:src/styles/_home.scss",
+      "type": "file",
+      "name": "_home.scss",
+      "filePath": "src/styles/_home.scss",
+      "summary": "Home page layout utility styles shared across sections.",
+      "complexity": "simple",
+      "tags": [
+        "source"
+      ]
+    },
+    {
+      "id": "file:src/styles/_variables.scss",
+      "type": "file",
+      "name": "_variables.scss",
+      "filePath": "src/styles/_variables.scss",
+      "summary": "Shared SCSS variables for colors, spacing, and typography tokens.",
+      "complexity": "moderate",
+      "tags": [
+        "source"
+      ]
+    }
+  ],
+  "edges": []
+}

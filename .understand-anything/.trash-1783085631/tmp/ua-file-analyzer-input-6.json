@@ -1,0 +1,70 @@
+{
+  "projectRoot": "c:/Development/portfolio-website-design-taste",
+  "batchFiles": [
+    {
+      "path": "src/components/About.module.scss",
+      "language": "css",
+      "sizeLines": 389,
+      "fileCategory": "markup"
+    },
+    {
+      "path": "src/components/Contact.module.scss",
+      "language": "css",
+      "sizeLines": 293,
+      "fileCategory": "markup"
+    },
+    {
+      "path": "src/components/Feedbacks.module.scss",
+      "language": "css",
+      "sizeLines": 286,
+      "fileCategory": "markup"
+    },
+    {
+      "path": "src/components/Footer.module.scss",
+      "language": "css",
+      "sizeLines": 262,
+      "fileCategory": "markup"
+    },
+    {
+      "path": "src/components/Hero.module.scss",
+      "language": "css",
+      "sizeLines": 520,
+      "fileCategory": "markup"
+    },
+    {
+      "path": "src/components/LoadingSkeleton.module.scss",
+      "language": "css",
+      "sizeLines": 611,
+      "fileCategory": "markup"
+    },
+    {
+      "path": "src/components/Navigation.module.scss",
+      "language": "css",
+      "sizeLines": 500,
+      "fileCategory": "markup"
+    },
+    {
+      "path": "src/components/Projects.module.scss",
+      "language": "css",
+      "sizeLines": 414,
+      "fileCategory": "markup"
+    },
+    {
+      "path": "src/components/Skills.module.scss",
+      "language": "css",
+      "sizeLines": 327,
+      "fileCategory": "markup"
+    }
+  ],
+  "batchImportData": {
+    "src/components/About.module.scss": [],
+    "src/components/Contact.module.scss": [],
+    "src/components/Feedbacks.module.scss": [],
+    "src/components/Footer.module.scss": [],
+    "src/components/Hero.module.scss": [],
+    "src/components/LoadingSkeleton.module.scss": [],
+    "src/components/Navigation.module.scss": [],
+    "src/components/Projects.module.scss": [],
+    "src/components/Skills.module.scss": []
+  }
+}

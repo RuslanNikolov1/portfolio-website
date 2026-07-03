@@ -1,0 +1,1981 @@
+{
+  "version": "1.0.0",
+  "project": {
+    "name": "portfolio-website",
+    "languages": [
+      "css",
+      "javascript",
+      "json",
+      "markdown",
+      "txt",
+      "typescript",
+      "unknown",
+      "webp",
+      "xml"
+    ],
+    "frameworks": [
+      "Next.js",
+      "React",
+      "Framer Motion",
+      "Radix UI",
+      "SASS"
+    ],
+    "description": "A modern, responsive portfolio website for Ruslan Nikolov showcasing work as a Frontend Developer, UI Designer, and Electronic Music Producer. Built with Next.js 16, TypeScript, SASS modules, and Framer Motion.",
+    "analyzedAt": "2026-07-03T13:33:44.774Z",
+    "gitCommitHash": "e52bca4e7767f6087f6a2a67cdbf8345316411ba"
+  },
+  "nodes": [
+    {
+      "id": "file:src/app/_components/home-sections.tsx",
+      "type": "file",
+      "name": "home-sections.tsx",
+      "filePath": "src/app/_components/home-sections.tsx",
+      "summary": "Client component lazy-loading About, Skills, Projects, Feedbacks, and Contact sections with skeleton fallbacks.",
+      "complexity": "moderate",
+      "tags": [
+        "source"
+      ]
+    },
+    {
+      "id": "function:src/app/_components/home-sections.tsx:HomeSections",
+      "type": "function",
+      "name": "HomeSections",
+      "filePath": "src/app/_components/home-sections.tsx",
+      "summary": "HomeSections defined in home-sections.tsx.",
+      "complexity": "simple",
+      "tags": [
+        "function",
+        "exported"
+      ]
+    },
+    {
+      "id": "file:src/components/AboutSkeleton.tsx",
+      "type": "file",
+      "name": "AboutSkeleton.tsx",
+      "filePath": "src/components/AboutSkeleton.tsx",
+      "summary": "Loading skeleton placeholder mirroring About layout during lazy load.",
+      "complexity": "simple",
+      "tags": [
+        "loading",
+        "component",
+        "skeleton",
+        "react",
+        "ui"
+      ]
+    },
+    {
+      "id": "function:src/components/AboutSkeleton.tsx:AboutSkeleton",
+      "type": "function",
+      "name": "AboutSkeleton",
+      "filePath": "src/components/AboutSkeleton.tsx",
+      "summary": "AboutSkeleton defined in AboutSkeleton.tsx.",
+      "complexity": "simple",
+      "tags": [
+        "function",
+        "internal"
+      ]
+    },
+    {
+      "id": "file:src/components/ContactSkeleton.tsx",
+      "type": "file",
+      "name": "ContactSkeleton.tsx",
+      "filePath": "src/components/ContactSkeleton.tsx",
+      "summary": "Loading skeleton placeholder mirroring Contact layout during lazy load.",
+      "complexity": "moderate",
+      "tags": [
+        "loading",
+        "component",
+        "skeleton",
+        "react",
+        "ui"
+      ]
+    },
+    {
+      "id": "function:src/components/ContactSkeleton.tsx:ContactSkeleton",
+      "type": "function",
+      "name": "ContactSkeleton",
+      "filePath": "src/components/ContactSkeleton.tsx",
+      "summary": "ContactSkeleton defined in ContactSkeleton.tsx.",
+      "complexity": "moderate",
+      "tags": [
+        "function",
+        "internal"
+      ]
+    },
+    {
+      "id": "file:src/components/FeedbacksSkeleton.tsx",
+      "type": "file",
+      "name": "FeedbacksSkeleton.tsx",
+      "filePath": "src/components/FeedbacksSkeleton.tsx",
+      "summary": "Loading skeleton placeholder mirroring Feedbacks layout during lazy load.",
+      "complexity": "simple",
+      "tags": [
+        "loading",
+        "component",
+        "skeleton",
+        "react",
+        "ui"
+      ]
+    },
+    {
+      "id": "function:src/components/FeedbacksSkeleton.tsx:FeedbacksSkeleton",
+      "type": "function",
+      "name": "FeedbacksSkeleton",
+      "filePath": "src/components/FeedbacksSkeleton.tsx",
+      "summary": "FeedbacksSkeleton defined in FeedbacksSkeleton.tsx.",
+      "complexity": "simple",
+      "tags": [
+        "function",
+        "internal"
+      ]
+    },
+    {
+      "id": "file:src/components/LoadingSkeleton.tsx",
+      "type": "file",
+      "name": "LoadingSkeleton.tsx",
+      "filePath": "src/components/LoadingSkeleton.tsx",
+      "summary": "Loading skeleton placeholder mirroring Loading layout during lazy load.",
+      "complexity": "simple",
+      "tags": [
+        "loading",
+        "component",
+        "skeleton",
+        "react",
+        "ui"
+      ]
+    },
+    {
+      "id": "function:src/components/LoadingSkeleton.tsx:Skeleton",
+      "type": "function",
+      "name": "Skeleton",
+      "filePath": "src/components/LoadingSkeleton.tsx",
+      "summary": "Skeleton defined in LoadingSkeleton.tsx.",
+      "complexity": "simple",
+      "tags": [
+        "function",
+        "internal"
+      ]
+    },
+    {
+      "id": "file:src/components/ProjectsSkeleton.tsx",
+      "type": "file",
+      "name": "ProjectsSkeleton.tsx",
+      "filePath": "src/components/ProjectsSkeleton.tsx",
+      "summary": "Loading skeleton placeholder mirroring Projects layout during lazy load.",
+      "complexity": "moderate",
+      "tags": [
+        "loading",
+        "component",
+        "skeleton",
+        "react",
+        "ui"
+      ]
+    },
+    {
+      "id": "function:src/components/ProjectsSkeleton.tsx:ProjectsSkeleton",
+      "type": "function",
+      "name": "ProjectsSkeleton",
+      "filePath": "src/components/ProjectsSkeleton.tsx",
+      "summary": "ProjectsSkeleton defined in ProjectsSkeleton.tsx.",
+      "complexity": "moderate",
+      "tags": [
+        "function",
+        "internal"
+      ]
+    },
+    {
+      "id": "file:src/components/SkillsSkeleton.tsx",
+      "type": "file",
+      "name": "SkillsSkeleton.tsx",
+      "filePath": "src/components/SkillsSkeleton.tsx",
+      "summary": "Loading skeleton placeholder mirroring Skills layout during lazy load.",
+      "complexity": "moderate",
+      "tags": [
+        "loading",
+        "component",
+        "skeleton",
+        "react",
+        "ui"
+      ]
+    },
+    {
+      "id": "function:src/components/SkillsSkeleton.tsx:SkillsSkeleton",
+      "type": "function",
+      "name": "SkillsSkeleton",
+      "filePath": "src/components/SkillsSkeleton.tsx",
+      "summary": "SkillsSkeleton defined in SkillsSkeleton.tsx.",
+      "complexity": "moderate",
+      "tags": [
+        "function",
+        "internal"
+      ]
+    },
+    {
+      "id": "file:src/app/page.tsx",
+      "type": "file",
+      "name": "page.tsx",
+      "filePath": "src/app/page.tsx",
+      "summary": "Next.js App Router home page composing Hero, Navigation, and lazy-loaded home sections.",
+      "complexity": "simple",
+      "tags": [
+        "entry-point",
+        "page",
+        "nextjs"
+      ]
+    },
+    {
+      "id": "function:src/app/page.tsx:Home",
+      "type": "function",
+      "name": "Home",
+      "filePath": "src/app/page.tsx",
+      "summary": "Home defined in page.tsx.",
+      "complexity": "simple",
+      "tags": [
+        "function",
+        "exported"
+      ]
+    },
+    {
+      "id": "file:src/components/Hero.tsx",
+      "type": "file",
+      "name": "Hero.tsx",
+      "filePath": "src/components/Hero.tsx",
+      "summary": "Hero section with animated headline, profile imagery, and deferred video loading for performance.",
+      "complexity": "moderate",
+      "tags": [
+        "component",
+        "react",
+        "ui"
+      ]
+    },
+    {
+      "id": "file:src/components/Navigation.tsx",
+      "type": "file",
+      "name": "Navigation.tsx",
+      "filePath": "src/components/Navigation.tsx",
+      "summary": "Sticky navigation with scroll-spy section highlighting, mobile menu, and responsive breakpoints.",
+      "complexity": "moderate",
+      "tags": [
+        "component",
+        "react",
+        "ui"
+      ]
+    },
+    {
+      "id": "file:src/components/Projects.tsx",
+      "type": "file",
+      "name": "Projects.tsx",
+      "filePath": "src/components/Projects.tsx",
+      "summary": "Projects showcase with Radix tabs, category filters, and animated project cards.",
+      "complexity": "complex",
+      "tags": [
+        "component",
+        "react",
+        "ui"
+      ]
+    },
+    {
+      "id": "file:src/data/projects.ts",
+      "type": "file",
+      "name": "projects.ts",
+      "filePath": "src/data/projects.ts",
+      "summary": "Static project portfolio data including titles, categories, and thumbnail paths.",
+      "complexity": "moderate",
+      "tags": [
+        "data-model",
+        "static-data"
+      ]
+    },
+    {
+      "id": "file:src/styles/breakpoints.ts",
+      "type": "file",
+      "name": "breakpoints.ts",
+      "filePath": "src/styles/breakpoints.ts",
+      "summary": "Shared responsive breakpoint constants and media query strings.",
+      "complexity": "simple",
+      "tags": [
+        "source"
+      ]
+    },
+    {
+      "id": "file:src/components/Contact.tsx",
+      "type": "file",
+      "name": "Contact.tsx",
+      "filePath": "src/components/Contact.tsx",
+      "summary": "Contact section with social links and mailto call-to-action.",
+      "complexity": "moderate",
+      "tags": [
+        "component",
+        "react",
+        "ui"
+      ]
+    },
+    {
+      "id": "file:src/components/Footer.tsx",
+      "type": "file",
+      "name": "Footer.tsx",
+      "filePath": "src/components/Footer.tsx",
+      "summary": "Site footer with copyright, social links, and navigation anchors.",
+      "complexity": "moderate",
+      "tags": [
+        "component",
+        "react",
+        "ui"
+      ]
+    },
+    {
+      "id": "file:src/components/Skills.tsx",
+      "type": "file",
+      "name": "Skills.tsx",
+      "filePath": "src/components/Skills.tsx",
+      "summary": "Skills section displaying expertise categories with collapsible groups and icons.",
+      "complexity": "complex",
+      "tags": [
+        "component",
+        "react",
+        "ui"
+      ]
+    },
+    {
+      "id": "function:src/components/Skills.tsx:SkillCollapsibleItem",
+      "type": "function",
+      "name": "SkillCollapsibleItem",
+      "filePath": "src/components/Skills.tsx",
+      "summary": "SkillCollapsibleItem defined in Skills.tsx.",
+      "complexity": "moderate",
+      "tags": [
+        "function",
+        "internal"
+      ]
+    },
+    {
+      "id": "file:src/data/skills.ts",
+      "type": "file",
+      "name": "skills.ts",
+      "filePath": "src/data/skills.ts",
+      "summary": "Static skills data grouped by category for the Skills section.",
+      "complexity": "simple",
+      "tags": [
+        "data-model",
+        "static-data"
+      ]
+    },
+    {
+      "id": "file:src/data/social-links.ts",
+      "type": "file",
+      "name": "social-links.ts",
+      "filePath": "src/data/social-links.ts",
+      "summary": "Social media and contact link definitions used across Contact and Footer.",
+      "complexity": "simple",
+      "tags": [
+        "data-model",
+        "static-data"
+      ]
+    },
+    {
+      "id": "file:src/types/index.ts",
+      "type": "file",
+      "name": "index.ts",
+      "filePath": "src/types/index.ts",
+      "summary": "Shared TypeScript interfaces for projects, skills, and social links.",
+      "complexity": "simple",
+      "tags": [
+        "type-definition",
+        "shared-types"
+      ]
+    },
+    {
+      "id": "document:BUNDLE_ANALYSIS.md",
+      "type": "document",
+      "name": "BUNDLE_ANALYSIS.md",
+      "filePath": "BUNDLE_ANALYSIS.md",
+      "summary": "Documentation file BUNDLE_ANALYSIS.md describing project or build details.",
+      "complexity": "simple",
+      "tags": [
+        "documentation"
+      ]
+    },
+    {
+      "id": "document:README.md",
+      "type": "document",
+      "name": "README.md",
+      "filePath": "README.md",
+      "summary": "Project overview documenting features, tech stack, structure, design system, and setup instructions.",
+      "complexity": "moderate",
+      "tags": [
+        "documentation",
+        "entry-point"
+      ]
+    },
+    {
+      "id": "config:package.json",
+      "type": "config",
+      "name": "package.json",
+      "filePath": "package.json",
+      "summary": "NPM manifest defining Next.js 16 dependencies, scripts, and project metadata.",
+      "complexity": "simple",
+      "tags": [
+        "configuration"
+      ]
+    },
+    {
+      "id": "config:tsconfig.json",
+      "type": "config",
+      "name": "tsconfig.json",
+      "filePath": "tsconfig.json",
+      "summary": "TypeScript compiler configuration with strict mode and path aliases.",
+      "complexity": "simple",
+      "tags": [
+        "configuration"
+      ]
+    },
+    {
+      "id": "file:src/app/error.module.scss",
+      "type": "file",
+      "name": "error.module.scss",
+      "filePath": "src/app/error.module.scss",
+      "summary": "Scoped SASS module styling the error component.",
+      "complexity": "moderate",
+      "tags": [
+        "styling",
+        "sass-module"
+      ]
+    },
+    {
+      "id": "file:src/app/globals.scss",
+      "type": "file",
+      "name": "globals.scss",
+      "filePath": "src/app/globals.scss",
+      "summary": "Global design tokens, CSS variables, typography, and base element styles for the dark theme.",
+      "complexity": "complex",
+      "tags": [
+        "styling",
+        "design-system",
+        "global"
+      ]
+    },
+    {
+      "id": "file:src/app/not-found.module.scss",
+      "type": "file",
+      "name": "not-found.module.scss",
+      "filePath": "src/app/not-found.module.scss",
+      "summary": "Scoped SASS module styling the not-found component.",
+      "complexity": "simple",
+      "tags": [
+        "styling",
+        "sass-module"
+      ]
+    },
+    {
+      "id": "file:src/app/page.module.scss",
+      "type": "file",
+      "name": "page.module.scss",
+      "filePath": "src/app/page.module.scss",
+      "summary": "Scoped SASS module styling the page component.",
+      "complexity": "moderate",
+      "tags": [
+        "styling",
+        "sass-module"
+      ]
+    },
+    {
+      "id": "file:src/components/About.module.scss",
+      "type": "file",
+      "name": "About.module.scss",
+      "filePath": "src/components/About.module.scss",
+      "summary": "Scoped SASS module styling the About component.",
+      "complexity": "complex",
+      "tags": [
+        "styling",
+        "sass-module"
+      ]
+    },
+    {
+      "id": "file:src/components/Contact.module.scss",
+      "type": "file",
+      "name": "Contact.module.scss",
+      "filePath": "src/components/Contact.module.scss",
+      "summary": "Scoped SASS module styling the Contact component.",
+      "complexity": "complex",
+      "tags": [
+        "styling",
+        "sass-module"
+      ]
+    },
+    {
+      "id": "file:src/components/Feedbacks.module.scss",
+      "type": "file",
+      "name": "Feedbacks.module.scss",
+      "filePath": "src/components/Feedbacks.module.scss",
+      "summary": "Scoped SASS module styling the Feedbacks component.",
+      "complexity": "complex",
+      "tags": [
+        "styling",
+        "sass-module"
+      ]
+    },
+    {
+      "id": "file:src/components/Footer.module.scss",
+      "type": "file",
+      "name": "Footer.module.scss",
+      "filePath": "src/components/Footer.module.scss",
+      "summary": "Scoped SASS module styling the Footer component.",
+      "complexity": "complex",
+      "tags": [
+        "styling",
+        "sass-module"
+      ]
+    },
+    {
+      "id": "file:src/components/Hero.module.scss",
+      "type": "file",
+      "name": "Hero.module.scss",
+      "filePath": "src/components/Hero.module.scss",
+      "summary": "Scoped SASS module styling the Hero component.",
+      "complexity": "complex",
+      "tags": [
+        "styling",
+        "sass-module"
+      ]
+    },
+    {
+      "id": "file:src/components/LoadingSkeleton.module.scss",
+      "type": "file",
+      "name": "LoadingSkeleton.module.scss",
+      "filePath": "src/components/LoadingSkeleton.module.scss",
+      "summary": "Scoped SASS module styling the LoadingSkeleton component.",
+      "complexity": "complex",
+      "tags": [
+        "loading",
+        "component",
+        "skeleton",
+        "styling",
+        "sass-module"
+      ]
+    },
+    {
+      "id": "file:src/components/Navigation.module.scss",
+      "type": "file",
+      "name": "Navigation.module.scss",
+      "filePath": "src/components/Navigation.module.scss",
+      "summary": "Scoped SASS module styling the Navigation component.",
+      "complexity": "complex",
+      "tags": [
+        "styling",
+        "sass-module"
+      ]
+    },
+    {
+      "id": "file:src/components/Projects.module.scss",
+      "type": "file",
+      "name": "Projects.module.scss",
+      "filePath": "src/components/Projects.module.scss",
+      "summary": "Scoped SASS module styling the Projects component.",
+      "complexity": "complex",
+      "tags": [
+        "styling",
+        "sass-module"
+      ]
+    },
+    {
+      "id": "file:src/components/Skills.module.scss",
+      "type": "file",
+      "name": "Skills.module.scss",
+      "filePath": "src/components/Skills.module.scss",
+      "summary": "Scoped SASS module styling the Skills component.",
+      "complexity": "complex",
+      "tags": [
+        "styling",
+        "sass-module"
+      ]
+    },
+    {
+      "id": "file:src/styles/_backdrops.scss",
+      "type": "file",
+      "name": "_backdrops.scss",
+      "filePath": "src/styles/_backdrops.scss",
+      "summary": "Shared backdrop and gradient utility styles used across sections.",
+      "complexity": "moderate",
+      "tags": [
+        "source"
+      ]
+    },
+    {
+      "id": "file:src/styles/_home.scss",
+      "type": "file",
+      "name": "_home.scss",
+      "filePath": "src/styles/_home.scss",
+      "summary": "Home page layout utility styles shared across sections.",
+      "complexity": "simple",
+      "tags": [
+        "source"
+      ]
+    },
+    {
+      "id": "file:src/styles/_variables.scss",
+      "type": "file",
+      "name": "_variables.scss",
+      "filePath": "src/styles/_variables.scss",
+      "summary": "Shared SCSS variables for colors, spacing, and typography tokens.",
+      "complexity": "moderate",
+      "tags": [
+        "source"
+      ]
+    },
+    {
+      "id": "file:.understand-anything/.understandignore",
+      "type": "file",
+      "name": ".understandignore",
+      "filePath": ".understand-anything/.understandignore",
+      "summary": "Source file .understand-anything/.understandignore supporting the portfolio application.",
+      "complexity": "simple",
+      "tags": [
+        "source"
+      ]
+    },
+    {
+      "id": "config:.understand-anything/config.json",
+      "type": "config",
+      "name": "config.json",
+      "filePath": ".understand-anything/config.json",
+      "summary": "Configuration file config.json controlling build or runtime settings.",
+      "complexity": "simple",
+      "tags": [
+        "configuration"
+      ]
+    },
+    {
+      "id": "file:eslint.config.mjs",
+      "type": "file",
+      "name": "eslint.config.mjs",
+      "filePath": "eslint.config.mjs",
+      "summary": "ESLint flat config extending Next.js recommended rules.",
+      "complexity": "simple",
+      "tags": [
+        "source"
+      ]
+    },
+    {
+      "id": "file:next.config.ts",
+      "type": "file",
+      "name": "next.config.ts",
+      "filePath": "next.config.ts",
+      "summary": "Next.js configuration including image optimization and bundle analyzer setup.",
+      "complexity": "moderate",
+      "tags": [
+        "source"
+      ]
+    },
+    {
+      "id": "file:public/Art-1.webp",
+      "type": "file",
+      "name": "Art-1.webp",
+      "filePath": "public/Art-1.webp",
+      "summary": "Static image asset Art-1.webp served from the public directory.",
+      "complexity": "complex",
+      "tags": [
+        "static-asset",
+        "public"
+      ]
+    },
+    {
+      "id": "file:public/Art-2.webp",
+      "type": "file",
+      "name": "Art-2.webp",
+      "filePath": "public/Art-2.webp",
+      "summary": "Static image asset Art-2.webp served from the public directory.",
+      "complexity": "complex",
+      "tags": [
+        "static-asset",
+        "public"
+      ]
+    },
+    {
+      "id": "file:public/Art-3.webp",
+      "type": "file",
+      "name": "Art-3.webp",
+      "filePath": "public/Art-3.webp",
+      "summary": "Static image asset Art-3.webp served from the public directory.",
+      "complexity": "complex",
+      "tags": [
+        "static-asset",
+        "public"
+      ]
+    },
+    {
+      "id": "file:public/Hero Initial Picture.webp",
+      "type": "file",
+      "name": "Hero Initial Picture.webp",
+      "filePath": "public/Hero Initial Picture.webp",
+      "summary": "Static image asset Hero Initial Picture.webp served from the public directory.",
+      "complexity": "complex",
+      "tags": [
+        "static-asset",
+        "public"
+      ]
+    },
+    {
+      "id": "file:public/Hopeful emotions pic.webp",
+      "type": "file",
+      "name": "Hopeful emotions pic.webp",
+      "filePath": "public/Hopeful emotions pic.webp",
+      "summary": "Static image asset Hopeful emotions pic.webp served from the public directory.",
+      "complexity": "moderate",
+      "tags": [
+        "static-asset",
+        "public"
+      ]
+    },
+    {
+      "id": "file:public/Music-1.webp",
+      "type": "file",
+      "name": "Music-1.webp",
+      "filePath": "public/Music-1.webp",
+      "summary": "Static image asset Music-1.webp served from the public directory.",
+      "complexity": "complex",
+      "tags": [
+        "static-asset",
+        "public"
+      ]
+    },
+    {
+      "id": "file:public/Music-2.webp",
+      "type": "file",
+      "name": "Music-2.webp",
+      "filePath": "public/Music-2.webp",
+      "summary": "Static image asset Music-2.webp served from the public directory.",
+      "complexity": "moderate",
+      "tags": [
+        "static-asset",
+        "public"
+      ]
+    },
+    {
+      "id": "file:public/Music-3.webp",
+      "type": "file",
+      "name": "Music-3.webp",
+      "filePath": "public/Music-3.webp",
+      "summary": "Static image asset Music-3.webp served from the public directory.",
+      "complexity": "moderate",
+      "tags": [
+        "static-asset",
+        "public"
+      ]
+    },
+    {
+      "id": "file:public/preview.webp",
+      "type": "file",
+      "name": "preview.webp",
+      "filePath": "public/preview.webp",
+      "summary": "Static image asset preview.webp served from the public directory.",
+      "complexity": "moderate",
+      "tags": [
+        "static-asset",
+        "public"
+      ]
+    },
+    {
+      "id": "file:public/Reading-1.webp",
+      "type": "file",
+      "name": "Reading-1.webp",
+      "filePath": "public/Reading-1.webp",
+      "summary": "Static image asset Reading-1.webp served from the public directory.",
+      "complexity": "complex",
+      "tags": [
+        "static-asset",
+        "public"
+      ]
+    },
+    {
+      "id": "file:public/Reading-2.webp",
+      "type": "file",
+      "name": "Reading-2.webp",
+      "filePath": "public/Reading-2.webp",
+      "summary": "Static image asset Reading-2.webp served from the public directory.",
+      "complexity": "moderate",
+      "tags": [
+        "static-asset",
+        "public"
+      ]
+    },
+    {
+      "id": "file:public/Reading-3.webp",
+      "type": "file",
+      "name": "Reading-3.webp",
+      "filePath": "public/Reading-3.webp",
+      "summary": "Static image asset Reading-3.webp served from the public directory.",
+      "complexity": "complex",
+      "tags": [
+        "static-asset",
+        "public"
+      ]
+    },
+    {
+      "id": "file:public/Reading-Background.webp",
+      "type": "file",
+      "name": "Reading-Background.webp",
+      "filePath": "public/Reading-Background.webp",
+      "summary": "Static image asset Reading-Background.webp served from the public directory.",
+      "complexity": "moderate",
+      "tags": [
+        "static-asset",
+        "public"
+      ]
+    },
+    {
+      "id": "document:public/robots.txt",
+      "type": "document",
+      "name": "robots.txt",
+      "filePath": "public/robots.txt",
+      "summary": "Documentation file robots.txt describing project or build details.",
+      "complexity": "simple",
+      "tags": [
+        "documentation",
+        "static-asset",
+        "public"
+      ]
+    },
+    {
+      "id": "file:public/Ruslan Looking Avatar.webp",
+      "type": "file",
+      "name": "Ruslan Looking Avatar.webp",
+      "filePath": "public/Ruslan Looking Avatar.webp",
+      "summary": "Static image asset Ruslan Looking Avatar.webp served from the public directory.",
+      "complexity": "complex",
+      "tags": [
+        "static-asset",
+        "public"
+      ]
+    },
+    {
+      "id": "file:public/Ruslan Looking.webp",
+      "type": "file",
+      "name": "Ruslan Looking.webp",
+      "filePath": "public/Ruslan Looking.webp",
+      "summary": "Static image asset Ruslan Looking.webp served from the public directory.",
+      "complexity": "moderate",
+      "tags": [
+        "static-asset",
+        "public"
+      ]
+    },
+    {
+      "id": "file:public/Ruslan Profile Pic.webp",
+      "type": "file",
+      "name": "Ruslan Profile Pic.webp",
+      "filePath": "public/Ruslan Profile Pic.webp",
+      "summary": "Static image asset Ruslan Profile Pic.webp served from the public directory.",
+      "complexity": "moderate",
+      "tags": [
+        "static-asset",
+        "public"
+      ]
+    },
+    {
+      "id": "file:public/Ruslan Profile.webp",
+      "type": "file",
+      "name": "Ruslan Profile.webp",
+      "filePath": "public/Ruslan Profile.webp",
+      "summary": "Static image asset Ruslan Profile.webp served from the public directory.",
+      "complexity": "complex",
+      "tags": [
+        "static-asset",
+        "public"
+      ]
+    },
+    {
+      "id": "config:public/sitemap.xml",
+      "type": "config",
+      "name": "sitemap.xml",
+      "filePath": "public/sitemap.xml",
+      "summary": "Configuration file sitemap.xml controlling build or runtime settings.",
+      "complexity": "simple",
+      "tags": [
+        "configuration",
+        "static-asset",
+        "public"
+      ]
+    },
+    {
+      "id": "file:public/Sports-1.webp",
+      "type": "file",
+      "name": "Sports-1.webp",
+      "filePath": "public/Sports-1.webp",
+      "summary": "Static image asset Sports-1.webp served from the public directory.",
+      "complexity": "complex",
+      "tags": [
+        "static-asset",
+        "public"
+      ]
+    },
+    {
+      "id": "file:public/Sports-2.webp",
+      "type": "file",
+      "name": "Sports-2.webp",
+      "filePath": "public/Sports-2.webp",
+      "summary": "Static image asset Sports-2.webp served from the public directory.",
+      "complexity": "complex",
+      "tags": [
+        "static-asset",
+        "public"
+      ]
+    },
+    {
+      "id": "file:public/Sports-3.webp",
+      "type": "file",
+      "name": "Sports-3.webp",
+      "filePath": "public/Sports-3.webp",
+      "summary": "Static image asset Sports-3.webp served from the public directory.",
+      "complexity": "moderate",
+      "tags": [
+        "static-asset",
+        "public"
+      ]
+    },
+    {
+      "id": "file:public/Thumbnail - Real Estate New.webp",
+      "type": "file",
+      "name": "Thumbnail - Real Estate New.webp",
+      "filePath": "public/Thumbnail - Real Estate New.webp",
+      "summary": "Static image asset Thumbnail - Real Estate New.webp served from the public directory.",
+      "complexity": "moderate",
+      "tags": [
+        "static-asset",
+        "public"
+      ]
+    },
+    {
+      "id": "file:public/Thumbnail Construction.webp",
+      "type": "file",
+      "name": "Thumbnail Construction.webp",
+      "filePath": "public/Thumbnail Construction.webp",
+      "summary": "Static image asset Thumbnail Construction.webp served from the public directory.",
+      "complexity": "moderate",
+      "tags": [
+        "static-asset",
+        "public"
+      ]
+    },
+    {
+      "id": "file:public/Thumbnail Massage New.webp",
+      "type": "file",
+      "name": "Thumbnail Massage New.webp",
+      "filePath": "public/Thumbnail Massage New.webp",
+      "summary": "Static image asset Thumbnail Massage New.webp served from the public directory.",
+      "complexity": "moderate",
+      "tags": [
+        "static-asset",
+        "public"
+      ]
+    },
+    {
+      "id": "file:public/Thumbnail-AMTP-new.webp",
+      "type": "file",
+      "name": "Thumbnail-AMTP-new.webp",
+      "filePath": "public/Thumbnail-AMTP-new.webp",
+      "summary": "Static image asset Thumbnail-AMTP-new.webp served from the public directory.",
+      "complexity": "complex",
+      "tags": [
+        "static-asset",
+        "public"
+      ]
+    },
+    {
+      "id": "file:public/Thumbnail-Ash.webp",
+      "type": "file",
+      "name": "Thumbnail-Ash.webp",
+      "filePath": "public/Thumbnail-Ash.webp",
+      "summary": "Static image asset Thumbnail-Ash.webp served from the public directory.",
+      "complexity": "complex",
+      "tags": [
+        "static-asset",
+        "public"
+      ]
+    },
+    {
+      "id": "file:public/Thumbnail-Astrology.webp",
+      "type": "file",
+      "name": "Thumbnail-Astrology.webp",
+      "filePath": "public/Thumbnail-Astrology.webp",
+      "summary": "Static image asset Thumbnail-Astrology.webp served from the public directory.",
+      "complexity": "moderate",
+      "tags": [
+        "static-asset",
+        "public"
+      ]
+    },
+    {
+      "id": "file:public/Thumbnail-DefiLama.webp",
+      "type": "file",
+      "name": "Thumbnail-DefiLama.webp",
+      "filePath": "public/Thumbnail-DefiLama.webp",
+      "summary": "Static image asset Thumbnail-DefiLama.webp served from the public directory.",
+      "complexity": "moderate",
+      "tags": [
+        "static-asset",
+        "public"
+      ]
+    },
+    {
+      "id": "file:public/Thumbnail-ForestResidenceSofia.webp",
+      "type": "file",
+      "name": "Thumbnail-ForestResidenceSofia.webp",
+      "filePath": "public/Thumbnail-ForestResidenceSofia.webp",
+      "summary": "Static image asset Thumbnail-ForestResidenceSofia.webp served from the public directory.",
+      "complexity": "moderate",
+      "tags": [
+        "static-asset",
+        "public"
+      ]
+    },
+    {
+      "id": "file:public/Thumbnail-Lawyer.webp",
+      "type": "file",
+      "name": "Thumbnail-Lawyer.webp",
+      "filePath": "public/Thumbnail-Lawyer.webp",
+      "summary": "Static image asset Thumbnail-Lawyer.webp served from the public directory.",
+      "complexity": "moderate",
+      "tags": [
+        "static-asset",
+        "public"
+      ]
+    },
+    {
+      "id": "file:public/Thumbnail-Maisons.webp",
+      "type": "file",
+      "name": "Thumbnail-Maisons.webp",
+      "filePath": "public/Thumbnail-Maisons.webp",
+      "summary": "Static image asset Thumbnail-Maisons.webp served from the public directory.",
+      "complexity": "moderate",
+      "tags": [
+        "static-asset",
+        "public"
+      ]
+    },
+    {
+      "id": "file:src/app/error.tsx",
+      "type": "file",
+      "name": "error.tsx",
+      "filePath": "src/app/error.tsx",
+      "summary": "Source file src/app/error.tsx supporting the portfolio application.",
+      "complexity": "simple",
+      "tags": [
+        "source"
+      ]
+    },
+    {
+      "id": "function:src/app/error.tsx:Error",
+      "type": "function",
+      "name": "Error",
+      "filePath": "src/app/error.tsx",
+      "summary": "Error defined in error.tsx.",
+      "complexity": "simple",
+      "tags": [
+        "function",
+        "exported"
+      ]
+    },
+    {
+      "id": "file:src/app/layout.tsx",
+      "type": "file",
+      "name": "layout.tsx",
+      "filePath": "src/app/layout.tsx",
+      "summary": "Root layout defining site metadata, fonts, global styles, and the document shell.",
+      "complexity": "moderate",
+      "tags": [
+        "entry-point",
+        "layout",
+        "nextjs"
+      ]
+    },
+    {
+      "id": "function:src/app/layout.tsx:RootLayout",
+      "type": "function",
+      "name": "RootLayout",
+      "filePath": "src/app/layout.tsx",
+      "summary": "RootLayout defined in layout.tsx.",
+      "complexity": "simple",
+      "tags": [
+        "function",
+        "exported"
+      ]
+    },
+    {
+      "id": "file:src/app/loading.tsx",
+      "type": "file",
+      "name": "loading.tsx",
+      "filePath": "src/app/loading.tsx",
+      "summary": "Source file src/app/loading.tsx supporting the portfolio application.",
+      "complexity": "simple",
+      "tags": [
+        "source"
+      ]
+    },
+    {
+      "id": "function:src/app/loading.tsx:Loading",
+      "type": "function",
+      "name": "Loading",
+      "filePath": "src/app/loading.tsx",
+      "summary": "Loading defined in loading.tsx.",
+      "complexity": "simple",
+      "tags": [
+        "function",
+        "exported"
+      ]
+    },
+    {
+      "id": "file:src/app/not-found.tsx",
+      "type": "file",
+      "name": "not-found.tsx",
+      "filePath": "src/app/not-found.tsx",
+      "summary": "Source file src/app/not-found.tsx supporting the portfolio application.",
+      "complexity": "simple",
+      "tags": [
+        "source"
+      ]
+    },
+    {
+      "id": "function:src/app/not-found.tsx:NotFound",
+      "type": "function",
+      "name": "NotFound",
+      "filePath": "src/app/not-found.tsx",
+      "summary": "NotFound defined in not-found.tsx.",
+      "complexity": "simple",
+      "tags": [
+        "function",
+        "exported"
+      ]
+    },
+    {
+      "id": "file:src/components/About.tsx",
+      "type": "file",
+      "name": "About.tsx",
+      "filePath": "src/components/About.tsx",
+      "summary": "About section with personal bio, interests carousel, and profile imagery.",
+      "complexity": "complex",
+      "tags": [
+        "component",
+        "react",
+        "ui"
+      ]
+    },
+    {
+      "id": "file:src/components/DownloadCVButton.tsx",
+      "type": "file",
+      "name": "DownloadCVButton.tsx",
+      "filePath": "src/components/DownloadCVButton.tsx",
+      "summary": "Source file src/components/DownloadCVButton.tsx supporting the portfolio application.",
+      "complexity": "simple",
+      "tags": [
+        "component",
+        "react",
+        "ui"
+      ]
+    },
+    {
+      "id": "file:src/components/Feedbacks.tsx",
+      "type": "file",
+      "name": "Feedbacks.tsx",
+      "filePath": "src/components/Feedbacks.tsx",
+      "summary": "Client testimonials carousel with navigation controls and responsive layout.",
+      "complexity": "moderate",
+      "tags": [
+        "component",
+        "react",
+        "ui"
+      ]
+    },
+    {
+      "id": "file:src/components/FloatingCTA.tsx",
+      "type": "file",
+      "name": "FloatingCTA.tsx",
+      "filePath": "src/components/FloatingCTA.tsx",
+      "summary": "Source file src/components/FloatingCTA.tsx supporting the portfolio application.",
+      "complexity": "simple",
+      "tags": [
+        "component",
+        "react",
+        "ui"
+      ]
+    },
+    {
+      "id": "file:src/components/HeroSkeleton.tsx",
+      "type": "file",
+      "name": "HeroSkeleton.tsx",
+      "filePath": "src/components/HeroSkeleton.tsx",
+      "summary": "Loading skeleton placeholder mirroring Hero layout during lazy load.",
+      "complexity": "moderate",
+      "tags": [
+        "loading",
+        "component",
+        "skeleton",
+        "react",
+        "ui"
+      ]
+    },
+    {
+      "id": "function:src/components/HeroSkeleton.tsx:HeroSkeleton",
+      "type": "function",
+      "name": "HeroSkeleton",
+      "filePath": "src/components/HeroSkeleton.tsx",
+      "summary": "HeroSkeleton defined in HeroSkeleton.tsx.",
+      "complexity": "moderate",
+      "tags": [
+        "function",
+        "internal"
+      ]
+    },
+    {
+      "id": "file:src/components/NavigationMusicPlayer.tsx",
+      "type": "file",
+      "name": "NavigationMusicPlayer.tsx",
+      "filePath": "src/components/NavigationMusicPlayer.tsx",
+      "summary": "Source file src/components/NavigationMusicPlayer.tsx supporting the portfolio application.",
+      "complexity": "moderate",
+      "tags": [
+        "component",
+        "react",
+        "ui"
+      ]
+    },
+    {
+      "id": "file:src/lib/site.ts",
+      "type": "file",
+      "name": "site.ts",
+      "filePath": "src/lib/site.ts",
+      "summary": "Central site configuration including name, URL, and metadata defaults.",
+      "complexity": "simple",
+      "tags": [
+        "source"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:src/app/_components/home-sections.tsx",
+      "target": "function:src/app/_components/home-sections.tsx:HomeSections",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/app/_components/home-sections.tsx",
+      "target": "function:src/app/_components/home-sections.tsx:HomeSections",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/app/_components/home-sections.tsx",
+      "target": "file:src/app/page.module.scss",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/app/_components/home-sections.tsx",
+      "target": "file:src/components/AboutSkeleton.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/app/_components/home-sections.tsx",
+      "target": "file:src/components/ContactSkeleton.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/app/_components/home-sections.tsx",
+      "target": "file:src/components/FeedbacksSkeleton.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/app/_components/home-sections.tsx",
+      "target": "file:src/components/ProjectsSkeleton.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/app/_components/home-sections.tsx",
+      "target": "file:src/components/SkillsSkeleton.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/AboutSkeleton.tsx",
+      "target": "function:src/components/AboutSkeleton.tsx:AboutSkeleton",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/components/AboutSkeleton.tsx",
+      "target": "file:src/components/LoadingSkeleton.module.scss",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/AboutSkeleton.tsx",
+      "target": "file:src/components/LoadingSkeleton.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/ContactSkeleton.tsx",
+      "target": "function:src/components/ContactSkeleton.tsx:ContactSkeleton",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/components/ContactSkeleton.tsx",
+      "target": "file:src/components/LoadingSkeleton.module.scss",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/ContactSkeleton.tsx",
+      "target": "file:src/components/LoadingSkeleton.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/FeedbacksSkeleton.tsx",
+      "target": "function:src/components/FeedbacksSkeleton.tsx:FeedbacksSkeleton",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/components/FeedbacksSkeleton.tsx",
+      "target": "file:src/components/LoadingSkeleton.module.scss",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/FeedbacksSkeleton.tsx",
+      "target": "file:src/components/LoadingSkeleton.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/LoadingSkeleton.tsx",
+      "target": "function:src/components/LoadingSkeleton.tsx:Skeleton",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/components/LoadingSkeleton.tsx",
+      "target": "file:src/components/LoadingSkeleton.module.scss",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/ProjectsSkeleton.tsx",
+      "target": "function:src/components/ProjectsSkeleton.tsx:ProjectsSkeleton",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/components/ProjectsSkeleton.tsx",
+      "target": "file:src/components/LoadingSkeleton.module.scss",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/ProjectsSkeleton.tsx",
+      "target": "file:src/components/LoadingSkeleton.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/SkillsSkeleton.tsx",
+      "target": "function:src/components/SkillsSkeleton.tsx:SkillsSkeleton",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/components/SkillsSkeleton.tsx",
+      "target": "file:src/components/LoadingSkeleton.module.scss",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/SkillsSkeleton.tsx",
+      "target": "file:src/components/LoadingSkeleton.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/app/page.tsx",
+      "target": "function:src/app/page.tsx:Home",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/app/page.tsx",
+      "target": "function:src/app/page.tsx:Home",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/app/page.tsx",
+      "target": "file:src/app/_components/home-sections.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/app/page.tsx",
+      "target": "file:src/app/page.module.scss",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/app/page.tsx",
+      "target": "file:src/components/Hero.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/app/page.tsx",
+      "target": "file:src/components/Navigation.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/Hero.tsx",
+      "target": "file:src/components/Hero.module.scss",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/Navigation.tsx",
+      "target": "file:src/components/Navigation.module.scss",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/Navigation.tsx",
+      "target": "file:src/styles/breakpoints.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/Projects.tsx",
+      "target": "file:src/components/Projects.module.scss",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/Projects.tsx",
+      "target": "file:src/data/projects.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/Projects.tsx",
+      "target": "file:src/styles/breakpoints.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/data/projects.ts",
+      "target": "file:src/types/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/Contact.tsx",
+      "target": "file:src/components/Contact.module.scss",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/Contact.tsx",
+      "target": "file:src/data/social-links.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/Footer.tsx",
+      "target": "file:src/components/Footer.module.scss",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/Footer.tsx",
+      "target": "file:src/data/social-links.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/Skills.tsx",
+      "target": "function:src/components/Skills.tsx:SkillCollapsibleItem",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/components/Skills.tsx",
+      "target": "file:src/components/Skills.module.scss",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/Skills.tsx",
+      "target": "file:src/data/skills.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/Skills.tsx",
+      "target": "file:src/types/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/data/skills.ts",
+      "target": "file:src/types/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/data/social-links.ts",
+      "target": "file:src/types/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "document:README.md",
+      "target": "file:src/app/page.tsx",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "config:package.json",
+      "target": "file:src/app/page.tsx",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:tsconfig.json",
+      "target": "file:src/app/page.tsx",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:src/app/error.tsx",
+      "target": "file:src/app/error.module.scss",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/app/layout.tsx",
+      "target": "file:src/app/globals.scss",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/app/not-found.tsx",
+      "target": "file:src/app/not-found.module.scss",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/app/loading.tsx",
+      "target": "file:src/app/page.module.scss",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/About.tsx",
+      "target": "file:src/components/About.module.scss",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/Feedbacks.tsx",
+      "target": "file:src/components/Feedbacks.module.scss",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/HeroSkeleton.tsx",
+      "target": "file:src/components/LoadingSkeleton.module.scss",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/NavigationMusicPlayer.tsx",
+      "target": "file:src/components/Navigation.module.scss",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/app/error.tsx",
+      "target": "function:src/app/error.tsx:Error",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/app/error.tsx",
+      "target": "function:src/app/error.tsx:Error",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/app/layout.tsx",
+      "target": "function:src/app/layout.tsx:RootLayout",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/app/layout.tsx",
+      "target": "function:src/app/layout.tsx:RootLayout",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/app/layout.tsx",
+      "target": "file:src/lib/site.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/app/loading.tsx",
+      "target": "function:src/app/loading.tsx:Loading",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/app/loading.tsx",
+      "target": "function:src/app/loading.tsx:Loading",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/app/loading.tsx",
+      "target": "file:src/components/HeroSkeleton.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/app/not-found.tsx",
+      "target": "function:src/app/not-found.tsx:NotFound",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/app/not-found.tsx",
+      "target": "function:src/app/not-found.tsx:NotFound",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/components/HeroSkeleton.tsx",
+      "target": "function:src/components/HeroSkeleton.tsx:HeroSkeleton",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/components/HeroSkeleton.tsx",
+      "target": "file:src/components/LoadingSkeleton.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    }
+  ],
+  "layers": [
+    {
+      "id": "layer:application-shell",
+      "name": "Application Shell",
+      "description": "Next.js App Router entry points including layout, home page, loading/error/not-found boundaries, and the home-sections orchestrator.",
+      "nodeIds": [
+        "file:src/app/_components/home-sections.tsx",
+        "file:src/app/page.tsx",
+        "file:src/app/error.tsx",
+        "file:src/app/layout.tsx",
+        "file:src/app/loading.tsx",
+        "file:src/app/not-found.tsx"
+      ]
+    },
+    {
+      "id": "layer:ui-components",
+      "name": "UI Components",
+      "description": "Portfolio section React components (Hero, About, Skills, Projects, Contact, Navigation) plus skeleton placeholders and shared UI widgets.",
+      "nodeIds": [
+        "file:src/components/AboutSkeleton.tsx",
+        "file:src/components/ContactSkeleton.tsx",
+        "file:src/components/FeedbacksSkeleton.tsx",
+        "file:src/components/LoadingSkeleton.tsx",
+        "file:src/components/ProjectsSkeleton.tsx",
+        "file:src/components/SkillsSkeleton.tsx",
+        "file:src/components/Hero.tsx",
+        "file:src/components/Navigation.tsx",
+        "file:src/components/Projects.tsx",
+        "file:src/components/Contact.tsx",
+        "file:src/components/Footer.tsx",
+        "file:src/components/Skills.tsx",
+        "file:src/components/About.tsx",
+        "file:src/components/DownloadCVButton.tsx",
+        "file:src/components/Feedbacks.tsx",
+        "file:src/components/FloatingCTA.tsx",
+        "file:src/components/HeroSkeleton.tsx",
+        "file:src/components/NavigationMusicPlayer.tsx"
+      ]
+    },
+    {
+      "id": "layer:styling",
+      "name": "Styling",
+      "description": "SASS modules co-located with components, global styles, shared SCSS partials, variables, backdrops, and responsive breakpoint tokens.",
+      "nodeIds": [
+        "file:src/styles/breakpoints.ts",
+        "file:src/app/error.module.scss",
+        "file:src/app/globals.scss",
+        "file:src/app/not-found.module.scss",
+        "file:src/app/page.module.scss",
+        "file:src/components/About.module.scss",
+        "file:src/components/Contact.module.scss",
+        "file:src/components/Feedbacks.module.scss",
+        "file:src/components/Footer.module.scss",
+        "file:src/components/Hero.module.scss",
+        "file:src/components/LoadingSkeleton.module.scss",
+        "file:src/components/Navigation.module.scss",
+        "file:src/components/Projects.module.scss",
+        "file:src/components/Skills.module.scss",
+        "file:src/styles/_backdrops.scss",
+        "file:src/styles/_home.scss",
+        "file:src/styles/_variables.scss"
+      ]
+    },
+    {
+      "id": "layer:data-types",
+      "name": "Data & Types",
+      "description": "Static portfolio content (projects, skills, social links), shared TypeScript interfaces, and centralized site metadata in lib/site.ts.",
+      "nodeIds": [
+        "file:src/data/projects.ts",
+        "file:src/data/skills.ts",
+        "file:src/data/social-links.ts",
+        "file:src/types/index.ts",
+        "file:src/lib/site.ts"
+      ]
+    },
+    {
+      "id": "layer:static-assets-seo",
+      "name": "Static Assets & SEO",
+      "description": "Public WebP images for hero, hobbies, and project thumbnails, plus robots.txt and sitemap.xml for search engine indexing.",
+      "nodeIds": [
+        "file:public/Art-1.webp",
+        "file:public/Art-2.webp",
+        "file:public/Art-3.webp",
+        "file:public/Hero Initial Picture.webp",
+        "file:public/Hopeful emotions pic.webp",
+        "file:public/Music-1.webp",
+        "file:public/Music-2.webp",
+        "file:public/Music-3.webp",
+        "file:public/preview.webp",
+        "file:public/Reading-1.webp",
+        "file:public/Reading-2.webp",
+        "file:public/Reading-3.webp",
+        "file:public/Reading-Background.webp",
+        "document:public/robots.txt",
+        "file:public/Ruslan Looking Avatar.webp",
+        "file:public/Ruslan Looking.webp",
+        "file:public/Ruslan Profile Pic.webp",
+        "file:public/Ruslan Profile.webp",
+        "file:public/Sports-1.webp",
+        "file:public/Sports-2.webp",
+        "file:public/Sports-3.webp",
+        "file:public/Thumbnail - Real Estate New.webp",
+        "file:public/Thumbnail Construction.webp",
+        "file:public/Thumbnail Massage New.webp",
+        "file:public/Thumbnail-AMTP-new.webp",
+        "file:public/Thumbnail-Ash.webp",
+        "file:public/Thumbnail-Astrology.webp",
+        "file:public/Thumbnail-DefiLama.webp",
+        "file:public/Thumbnail-ForestResidenceSofia.webp",
+        "file:public/Thumbnail-Lawyer.webp",
+        "file:public/Thumbnail-Maisons.webp"
+      ]
+    },
+    {
+      "id": "layer:config-documentation",
+      "name": "Configuration & Documentation",
+      "description": "Build and tooling configs (Next.js, TypeScript, ESLint, package.json), project README and bundle analysis docs, and Understand Anything tooling files.",
+      "nodeIds": [
+        "document:BUNDLE_ANALYSIS.md",
+        "document:README.md",
+        "config:package.json",
+        "config:tsconfig.json",
+        "file:.understand-anything/.understandignore",
+        "config:.understand-anything/config.json",
+        "file:eslint.config.mjs",
+        "file:next.config.ts",
+        "config:public/sitemap.xml"
+      ]
+    }
+  ],
+  "tour": [
+    {
+      "order": 1,
+      "title": "Project Overview",
+      "description": "Start with README.md to understand what this portfolio is for: a modern, responsive showcase for Ruslan Nikolov built with Next.js 16, React, and SASS modules. The README documents the tech stack, folder structure, design system tokens, and local setup commands, giving you a roadmap before diving into code.",
+      "nodeIds": [
+        "document:README.md"
+      ]
+    },
+    {
+      "order": 2,
+      "title": "Root Layout Shell",
+      "description": "Every page in the App Router is wrapped by layout.tsx, which defines the HTML document shell, site metadata, font loading, and global styles. It imports globals.scss for the dark-theme design tokens and site.ts for centralized name, URL, and SEO defaults — the foundation every section inherits.",
+      "nodeIds": [
+        "file:src/app/layout.tsx",
+        "file:src/app/globals.scss",
+        "file:src/lib/site.ts"
+      ],
+      "languageLesson": "Next.js App Router layouts are Server Components that persist across navigations. RootLayout wraps all routes and is the single place to set <html>, <body>, fonts, and global CSS imports."
+    },
+    {
+      "order": 3,
+      "title": "Home Page Entry",
+      "description": "page.tsx is the App Router entry point for the home route. It assembles the above-the-fold experience — Hero and Navigation — and delegates the rest of the page to a lazy-loaded HomeSections client component, keeping the initial bundle lean while page.module.scss handles page-level layout.",
+      "nodeIds": [
+        "file:src/app/page.tsx",
+        "file:src/app/page.module.scss"
+      ]
+    },
+    {
+      "order": 4,
+      "title": "Lazy Section Composition",
+      "description": "home-sections.tsx is the performance hub of the home page: a client component that dynamically imports About, Skills, Projects, Feedbacks, and Contact with React.lazy and Suspense. Each section gets a matching skeleton fallback so users see layout placeholders instead of blank space while chunks load.",
+      "nodeIds": [
+        "file:src/app/_components/home-sections.tsx",
+        "file:src/components/LoadingSkeleton.tsx"
+      ],
+      "languageLesson": "React.lazy() splits code at the component boundary. Pairing it with Suspense and skeleton fallbacks is a common Next.js pattern for deferring below-the-fold sections without blocking first paint."
+    },
+    {
+      "order": 5,
+      "title": "Hero & Navigation",
+      "description": "Hero.tsx delivers the first impression — animated headline, profile imagery, and deferred video loading for performance. Navigation.tsx sits alongside it as a sticky header with scroll-spy section highlighting, a mobile menu, and responsive breakpoints shared with other components.",
+      "nodeIds": [
+        "file:src/components/Hero.tsx",
+        "file:src/components/Navigation.tsx"
+      ]
+    },
+    {
+      "order": 6,
+      "title": "Projects Showcase",
+      "description": "Projects.tsx is one of the most complex UI sections, using Radix tabs and category filters to present an animated project card grid. It reads from projects.ts, a static data file holding titles, categories, descriptions, and thumbnail paths — separating content from presentation so new projects can be added without touching component logic.",
+      "nodeIds": [
+        "file:src/components/Projects.tsx",
+        "file:src/data/projects.ts"
+      ]
+    },
+    {
+      "order": 7,
+      "title": "Skills Section",
+      "description": "Skills.tsx displays expertise grouped into collapsible categories with icons, driven by the static skills.ts dataset. The SkillCollapsibleItem sub-component handles expand/collapse interactions, making this section a good example of how data flows from src/data into a rich, interactive UI.",
+      "nodeIds": [
+        "file:src/components/Skills.tsx",
+        "file:src/data/skills.ts"
+      ]
+    },
+    {
+      "order": 8,
+      "title": "Shared Types & Data",
+      "description": "types/index.ts is the most widely imported file in the codebase, defining TypeScript interfaces for Project, Skill, and SocialLink that every data module and consuming component shares. social-links.ts reuses those types to provide link definitions consumed by Contact and Footer, enforcing a single contract across the data layer.",
+      "nodeIds": [
+        "file:src/types/index.ts",
+        "file:src/data/social-links.ts"
+      ],
+      "languageLesson": "Centralizing domain interfaces in a types barrel file lets data modules and UI components share the same shape. When you add a field to Project, TypeScript catches every consumer that needs updating."
+    },
+    {
+      "order": 9,
+      "title": "Styling System",
+      "description": "The styling architecture layers shared SCSS partials under component-scoped modules. _variables.scss holds color, spacing, and typography tokens; breakpoints.ts exports responsive constants used in both TS and SCSS contexts; and _backdrops.scss provides reusable gradient utilities imported across section styles.",
+      "nodeIds": [
+        "file:src/styles/_variables.scss",
+        "file:src/styles/breakpoints.ts",
+        "file:src/styles/_backdrops.scss"
+      ],
+      "languageLesson": "SASS module files (*.module.scss) scope class names locally to prevent collisions. Shared partials prefixed with _ are imported into modules, keeping design tokens DRY while each component owns its layout rules."
+    },
+    {
+      "order": 10,
+      "title": "Project Configuration",
+      "description": "package.json defines the Next.js 16 runtime, React dependencies, and npm scripts for dev, build, and lint. tsconfig.json enables strict TypeScript with path aliases, while next.config.ts configures image optimization and optional bundle analysis — the three files that govern how the project builds and runs.",
+      "nodeIds": [
+        "config:package.json",
+        "config:tsconfig.json",
+        "file:next.config.ts"
+      ],
+      "languageLesson": "Next.js projects typically split configuration across package.json (dependencies and scripts), tsconfig.json (compiler strictness and @/ path aliases), and next.config.ts (framework features like image domains and experimental flags)."
+    }
+  ]
+}

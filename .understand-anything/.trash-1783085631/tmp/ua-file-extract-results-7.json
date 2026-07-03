@@ -1,0 +1,31 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 3,
+  "filesSkipped": [],
+  "results": [
+    {
+      "path": "src/styles/_backdrops.scss",
+      "language": "css",
+      "fileCategory": "markup",
+      "totalLines": 77,
+      "nonEmptyLines": 69,
+      "metrics": {}
+    },
+    {
+      "path": "src/styles/_home.scss",
+      "language": "css",
+      "fileCategory": "markup",
+      "totalLines": 41,
+      "nonEmptyLines": 38,
+      "metrics": {}
+    },
+    {
+      "path": "src/styles/_variables.scss",
+      "language": "css",
+      "fileCategory": "markup",
+      "totalLines": 124,
+      "nonEmptyLines": 107,
+      "metrics": {}
+    }
+  ]
+}

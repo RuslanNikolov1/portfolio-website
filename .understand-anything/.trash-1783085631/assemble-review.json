@@ -1,0 +1,66 @@
+{
+  "fixedSectionOk": true,
+  "nodesRecovered": 0,
+  "edgesRestored": 0,
+  "crossBatchEdgesAdded": 0,
+  "typesRemapped": 0,
+  "complexityRemapped": 0,
+  "issues": [],
+  "warnings": [
+    {
+      "code": "BATCH_EDGE_DEDUP",
+      "severity": "info",
+      "message": "22 duplicate edges across batches were deduplicated during merge (93 input → 71 unique output). All unique edges preserved."
+    },
+    {
+      "code": "IMPORT_RECOVERY_NOOP",
+      "severity": "info",
+      "message": "Import edge recovery added 0 edges; all 48 import-map relationships were already present in batch output."
+    },
+    {
+      "code": "LOW_SYMBOL_COVERAGE",
+      "severity": "warning",
+      "message": "Only 14 function nodes for 86 scanned files. 11 exported symbols from exportsByPath (metadata, viewport, projects, skills, socialLinks, siteConfig, BP_XS/S/M, MQ_BELOW_SM/MD) have no corresponding symbol nodes."
+    },
+    {
+      "code": "MISSING_COMPONENT_FUNCTIONS",
+      "severity": "warning",
+      "message": "17 TS/TSX source files have file nodes but no function nodes, including Hero, Navigation, Projects, About, Contact, Footer, Feedbacks, DownloadCVButton, FloatingCTA, and NavigationMusicPlayer."
+    },
+    {
+      "code": "ORPHAN_NODES",
+      "severity": "info",
+      "message": "42 nodes have no incoming or outgoing edges (36 public/*.webp assets, 3 SCSS partials, eslint.config.mjs, next.config.ts, DownloadCVButton.tsx, FloatingCTA.tsx, .understandignore). Expected for leaf assets and standalone components with no imports."
+    },
+    {
+      "code": "MIXED_NODE_TYPES",
+      "severity": "info",
+      "message": "7 scanned paths use document/config node types instead of file (README.md, BUNDLE_ANALYSIS.md, package.json, tsconfig.json, robots.txt, sitemap.xml, .understand-anything/config.json). All paths covered."
+    }
+  ],
+  "notes": [
+    "Merge report: 9 batches, 100 nodes in/out, 93→71 edges (dedup only, no data loss).",
+    "All 86 scanned file paths represented across file/document/config nodes.",
+    "Zero dangling edge references; all edge source/target IDs resolve.",
+    "All 48 import-map edges verified present; no cross-batch gaps detected.",
+    "No nodes missing id, unknown types, or invalid complexity values.",
+    "No graph modifications required."
+  ],
+  "stats": {
+    "nodes": 100,
+    "edges": 71,
+    "edgeTypes": {
+      "contains": 14,
+      "exports": 6,
+      "imports": 48,
+      "documents": 1,
+      "configures": 2
+    },
+    "nodeTypes": {
+      "file": 79,
+      "function": 14,
+      "document": 3,
+      "config": 4
+    }
+  }
+}

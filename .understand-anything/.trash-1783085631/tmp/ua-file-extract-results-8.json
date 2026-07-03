@@ -1,0 +1,230 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 25,
+  "filesSkipped": [],
+  "results": [
+    {
+      "path": ".understand-anything/.understandignore",
+      "language": "unknown",
+      "fileCategory": "code",
+      "totalLines": 52,
+      "nonEmptyLines": 48,
+      "metrics": {}
+    },
+    {
+      "path": ".understand-anything/config.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 1,
+      "nonEmptyLines": 1,
+      "sections": [
+        {
+          "heading": "outputLanguage",
+          "level": 1,
+          "line": 1
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 1
+      }
+    },
+    {
+      "path": "eslint.config.mjs",
+      "language": "javascript",
+      "fileCategory": "code",
+      "totalLines": 25,
+      "nonEmptyLines": 21,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "next.config.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 57,
+      "nonEmptyLines": 51,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "public/Art-1.webp",
+      "language": "webp",
+      "fileCategory": "code",
+      "totalLines": 308,
+      "nonEmptyLines": 306,
+      "metrics": {}
+    },
+    {
+      "path": "public/Art-2.webp",
+      "language": "webp",
+      "fileCategory": "code",
+      "totalLines": 251,
+      "nonEmptyLines": 250,
+      "metrics": {}
+    },
+    {
+      "path": "public/Art-3.webp",
+      "language": "webp",
+      "fileCategory": "code",
+      "totalLines": 1768,
+      "nonEmptyLines": 1757,
+      "metrics": {}
+    },
+    {
+      "path": "public/Hero Initial Picture.webp",
+      "language": "webp",
+      "fileCategory": "code",
+      "totalLines": 306,
+      "nonEmptyLines": 304,
+      "metrics": {}
+    },
+    {
+      "path": "public/Hopeful emotions pic.webp",
+      "language": "webp",
+      "fileCategory": "code",
+      "totalLines": 163,
+      "nonEmptyLines": 162,
+      "metrics": {}
+    },
+    {
+      "path": "public/Music-1.webp",
+      "language": "webp",
+      "fileCategory": "code",
+      "totalLines": 314,
+      "nonEmptyLines": 312,
+      "metrics": {}
+    },
+    {
+      "path": "public/Music-2.webp",
+      "language": "webp",
+      "fileCategory": "code",
+      "totalLines": 80,
+      "nonEmptyLines": 80,
+      "metrics": {}
+    },
+    {
+      "path": "public/Music-3.webp",
+      "language": "webp",
+      "fileCategory": "code",
+      "totalLines": 107,
+      "nonEmptyLines": 107,
+      "metrics": {}
+    },
+    {
+      "path": "public/preview.webp",
+      "language": "webp",
+      "fileCategory": "code",
+      "totalLines": 187,
+      "nonEmptyLines": 187,
+      "metrics": {}
+    },
+    {
+      "path": "public/Reading-1.webp",
+      "language": "webp",
+      "fileCategory": "code",
+      "totalLines": 273,
+      "nonEmptyLines": 273,
+      "metrics": {}
+    },
+    {
+      "path": "public/Reading-2.webp",
+      "language": "webp",
+      "fileCategory": "code",
+      "totalLines": 144,
+      "nonEmptyLines": 144,
+      "metrics": {}
+    },
+    {
+      "path": "public/Reading-3.webp",
+      "language": "webp",
+      "fileCategory": "code",
+      "totalLines": 385,
+      "nonEmptyLines": 384,
+      "metrics": {}
+    },
+    {
+      "path": "public/Reading-Background.webp",
+      "language": "webp",
+      "fileCategory": "code",
+      "totalLines": 60,
+      "nonEmptyLines": 59,
+      "metrics": {}
+    },
+    {
+      "path": "public/robots.txt",
+      "language": "txt",
+      "fileCategory": "docs",
+      "totalLines": 4,
+      "nonEmptyLines": 3,
+      "metrics": {}
+    },
+    {
+      "path": "public/Ruslan Looking Avatar.webp",
+      "language": "webp",
+      "fileCategory": "code",
+      "totalLines": 272,
+      "nonEmptyLines": 270,
+      "metrics": {}
+    },
+    {
+      "path": "public/Ruslan Looking.webp",
+      "language": "webp",
+      "fileCategory": "code",
+      "totalLines": 162,
+      "nonEmptyLines": 162,
+      "metrics": {}
+    },
+    {
+      "path": "public/Ruslan Profile Pic.webp",
+      "language": "webp",
+      "fileCategory": "code",
+      "totalLines": 139,
+      "nonEmptyLines": 139,
+      "metrics": {}
+    },
+    {
+      "path": "public/Ruslan Profile.webp",
+      "language": "webp",
+      "fileCategory": "code",
+      "totalLines": 1244,
+      "nonEmptyLines": 1236,
+      "metrics": {}
+    },
+    {
+      "path": "public/sitemap.xml",
+      "language": "xml",
+      "fileCategory": "config",
+      "totalLines": 9,
+      "nonEmptyLines": 9,
+      "metrics": {}
+    },
+    {
+      "path": "public/Sports-1.webp",
+      "language": "webp",
+      "fileCategory": "code",
+      "totalLines": 377,
+      "nonEmptyLines": 375,
+      "metrics": {}
+    },
+    {
+      "path": "public/Sports-2.webp",
+      "language": "webp",
+      "fileCategory": "code",
+      "totalLines": 753,
+      "nonEmptyLines": 749,
+      "metrics": {}
+    }
+  ]
+}

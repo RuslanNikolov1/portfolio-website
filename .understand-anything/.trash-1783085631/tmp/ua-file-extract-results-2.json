@@ -1,0 +1,183 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 6,
+  "filesSkipped": [],
+  "results": [
+    {
+      "path": "src/app/page.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 19,
+      "nonEmptyLines": 17,
+      "functions": [
+        {
+          "name": "Home",
+          "startLine": 6,
+          "endLine": 19,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "Home",
+          "line": 6,
+          "isDefault": true
+        }
+      ],
+      "metrics": {
+        "importCount": 4,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/components/Hero.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 143,
+      "nonEmptyLines": 125,
+      "callGraph": [
+        {
+          "caller": "loadVideoAfterPaint",
+          "callee": "requestAnimationFrame",
+          "lineNumber": 14
+        },
+        {
+          "caller": "loadVideoAfterPaint",
+          "callee": "setTimeout",
+          "lineNumber": 15
+        },
+        {
+          "caller": "loadVideoAfterPaint",
+          "callee": "setShouldLoadVideo",
+          "lineNumber": 15
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/components/Navigation.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 198,
+      "nonEmptyLines": 169,
+      "callGraph": [
+        {
+          "caller": "updateMenuMode",
+          "callee": "setIsMobileMenu",
+          "lineNumber": 44
+        },
+        {
+          "caller": "observeSections",
+          "callee": "sections.forEach",
+          "lineNumber": 57
+        },
+        {
+          "caller": "observeSections",
+          "callee": "document.getElementById",
+          "lineNumber": 58
+        },
+        {
+          "caller": "observeSections",
+          "callee": "observer.observe",
+          "lineNumber": 60
+        },
+        {
+          "caller": "handleEscape",
+          "callee": "setIsOpen",
+          "lineNumber": 81
+        },
+        {
+          "caller": "handleEscape",
+          "callee": "mobileToggleRef.current?.focus",
+          "lineNumber": 82
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/components/Projects.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 325,
+      "nonEmptyLines": 292,
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/data/projects.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 123,
+      "nonEmptyLines": 122,
+      "exports": [
+        {
+          "name": "projects",
+          "line": 3,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/styles/breakpoints.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 7,
+      "nonEmptyLines": 6,
+      "exports": [
+        {
+          "name": "BP_XS",
+          "line": 2,
+          "isDefault": false
+        },
+        {
+          "name": "BP_SM",
+          "line": 3,
+          "isDefault": false
+        },
+        {
+          "name": "BP_MD",
+          "line": 4,
+          "isDefault": false
+        },
+        {
+          "name": "MQ_BELOW_SM",
+          "line": 6,
+          "isDefault": false
+        },
+        {
+          "name": "MQ_BELOW_MD",
+          "line": 7,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 5,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    }
+  ]
+}

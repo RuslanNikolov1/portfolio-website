@@ -1,0 +1,67 @@
+[
+  {
+    "order": 1,
+    "title": "Project Overview",
+    "description": "Start with README.md to understand what this portfolio is for: a modern, responsive showcase for Ruslan Nikolov built with Next.js 16, React, and SASS modules. The README documents the tech stack, folder structure, design system tokens, and local setup commands, giving you a roadmap before diving into code.",
+    "nodeIds": ["document:README.md"]
+  },
+  {
+    "order": 2,
+    "title": "Root Layout Shell",
+    "description": "Every page in the App Router is wrapped by layout.tsx, which defines the HTML document shell, site metadata, font loading, and global styles. It imports globals.scss for the dark-theme design tokens and site.ts for centralized name, URL, and SEO defaults — the foundation every section inherits.",
+    "nodeIds": ["file:src/app/layout.tsx", "file:src/app/globals.scss", "file:src/lib/site.ts"],
+    "languageLesson": "Next.js App Router layouts are Server Components that persist across navigations. RootLayout wraps all routes and is the single place to set <html>, <body>, fonts, and global CSS imports."
+  },
+  {
+    "order": 3,
+    "title": "Home Page Entry",
+    "description": "page.tsx is the App Router entry point for the home route. It assembles the above-the-fold experience — Hero and Navigation — and delegates the rest of the page to a lazy-loaded HomeSections client component, keeping the initial bundle lean while page.module.scss handles page-level layout.",
+    "nodeIds": ["file:src/app/page.tsx", "file:src/app/page.module.scss"]
+  },
+  {
+    "order": 4,
+    "title": "Lazy Section Composition",
+    "description": "home-sections.tsx is the performance hub of the home page: a client component that dynamically imports About, Skills, Projects, Feedbacks, and Contact with React.lazy and Suspense. Each section gets a matching skeleton fallback so users see layout placeholders instead of blank space while chunks load.",
+    "nodeIds": ["file:src/app/_components/home-sections.tsx", "file:src/components/LoadingSkeleton.tsx"],
+    "languageLesson": "React.lazy() splits code at the component boundary. Pairing it with Suspense and skeleton fallbacks is a common Next.js pattern for deferring below-the-fold sections without blocking first paint."
+  },
+  {
+    "order": 5,
+    "title": "Hero & Navigation",
+    "description": "Hero.tsx delivers the first impression — animated headline, profile imagery, and deferred video loading for performance. Navigation.tsx sits alongside it as a sticky header with scroll-spy section highlighting, a mobile menu, and responsive breakpoints shared with other components.",
+    "nodeIds": ["file:src/components/Hero.tsx", "file:src/components/Navigation.tsx"]
+  },
+  {
+    "order": 6,
+    "title": "Projects Showcase",
+    "description": "Projects.tsx is one of the most complex UI sections, using Radix tabs and category filters to present an animated project card grid. It reads from projects.ts, a static data file holding titles, categories, descriptions, and thumbnail paths — separating content from presentation so new projects can be added without touching component logic.",
+    "nodeIds": ["file:src/components/Projects.tsx", "file:src/data/projects.ts"]
+  },
+  {
+    "order": 7,
+    "title": "Skills Section",
+    "description": "Skills.tsx displays expertise grouped into collapsible categories with icons, driven by the static skills.ts dataset. The SkillCollapsibleItem sub-component handles expand/collapse interactions, making this section a good example of how data flows from src/data into a rich, interactive UI.",
+    "nodeIds": ["file:src/components/Skills.tsx", "file:src/data/skills.ts"]
+  },
+  {
+    "order": 8,
+    "title": "Shared Types & Data",
+    "description": "types/index.ts is the most widely imported file in the codebase, defining TypeScript interfaces for Project, Skill, and SocialLink that every data module and consuming component shares. social-links.ts reuses those types to provide link definitions consumed by Contact and Footer, enforcing a single contract across the data layer.",
+    "nodeIds": ["file:src/types/index.ts", "file:src/data/social-links.ts"],
+    "languageLesson": "Centralizing domain interfaces in a types barrel file lets data modules and UI components share the same shape. When you add a field to Project, TypeScript catches every consumer that needs updating."
+  },
+  {
+    "order": 9,
+    "title": "Styling System",
+    "description": "The styling architecture layers shared SCSS partials under component-scoped modules. _variables.scss holds color, spacing, and typography tokens; breakpoints.ts exports responsive constants used in both TS and SCSS contexts; and _backdrops.scss provides reusable gradient utilities imported across section styles.",
+    "nodeIds": ["file:src/styles/_variables.scss", "file:src/styles/breakpoints.ts", "file:src/styles/_backdrops.scss"],
+    "languageLesson": "SASS module files (*.module.scss) scope class names locally to prevent collisions. Shared partials prefixed with _ are imported into modules, keeping design tokens DRY while each component owns its layout rules."
+  },
+  {
+    "order": 10,
+    "title": "Project Configuration",
+    "description": "package.json defines the Next.js 16 runtime, React dependencies, and npm scripts for dev, build, and lint. tsconfig.json enables strict TypeScript with path aliases, while next.config.ts configures image optimization and optional bundle analysis — the three files that govern how the project builds and runs.",
+    "nodeIds": ["config:package.json", "config:tsconfig.json", "file:next.config.ts"],
+    "languageLesson": "Next.js projects typically split configuration across package.json (dependencies and scripts), tsconfig.json (compiler strictness and @/ path aliases), and next.config.ts (framework features like image domains and experimental flags)."
+  }
+]

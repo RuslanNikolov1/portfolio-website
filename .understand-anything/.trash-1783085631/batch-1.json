@@ -1,0 +1,366 @@
+{
+  "nodes": [
+    {
+      "id": "file:src/app/_components/home-sections.tsx",
+      "type": "file",
+      "name": "home-sections.tsx",
+      "filePath": "src/app/_components/home-sections.tsx",
+      "summary": "Client component lazy-loading About, Skills, Projects, Feedbacks, and Contact sections with skeleton fallbacks.",
+      "complexity": "moderate",
+      "tags": [
+        "source"
+      ]
+    },
+    {
+      "id": "function:src/app/_components/home-sections.tsx:HomeSections",
+      "type": "function",
+      "name": "HomeSections",
+      "filePath": "src/app/_components/home-sections.tsx",
+      "summary": "HomeSections defined in home-sections.tsx.",
+      "complexity": "simple",
+      "tags": [
+        "function",
+        "exported"
+      ]
+    },
+    {
+      "id": "file:src/components/AboutSkeleton.tsx",
+      "type": "file",
+      "name": "AboutSkeleton.tsx",
+      "filePath": "src/components/AboutSkeleton.tsx",
+      "summary": "Loading skeleton placeholder mirroring About layout during lazy load.",
+      "complexity": "simple",
+      "tags": [
+        "loading",
+        "component",
+        "skeleton",
+        "react",
+        "ui"
+      ]
+    },
+    {
+      "id": "function:src/components/AboutSkeleton.tsx:AboutSkeleton",
+      "type": "function",
+      "name": "AboutSkeleton",
+      "filePath": "src/components/AboutSkeleton.tsx",
+      "summary": "AboutSkeleton defined in AboutSkeleton.tsx.",
+      "complexity": "simple",
+      "tags": [
+        "function",
+        "internal"
+      ]
+    },
+    {
+      "id": "file:src/components/ContactSkeleton.tsx",
+      "type": "file",
+      "name": "ContactSkeleton.tsx",
+      "filePath": "src/components/ContactSkeleton.tsx",
+      "summary": "Loading skeleton placeholder mirroring Contact layout during lazy load.",
+      "complexity": "moderate",
+      "tags": [
+        "loading",
+        "component",
+        "skeleton",
+        "react",
+        "ui"
+      ]
+    },
+    {
+      "id": "function:src/components/ContactSkeleton.tsx:ContactSkeleton",
+      "type": "function",
+      "name": "ContactSkeleton",
+      "filePath": "src/components/ContactSkeleton.tsx",
+      "summary": "ContactSkeleton defined in ContactSkeleton.tsx.",
+      "complexity": "moderate",
+      "tags": [
+        "function",
+        "internal"
+      ]
+    },
+    {
+      "id": "file:src/components/FeedbacksSkeleton.tsx",
+      "type": "file",
+      "name": "FeedbacksSkeleton.tsx",
+      "filePath": "src/components/FeedbacksSkeleton.tsx",
+      "summary": "Loading skeleton placeholder mirroring Feedbacks layout during lazy load.",
+      "complexity": "simple",
+      "tags": [
+        "loading",
+        "component",
+        "skeleton",
+        "react",
+        "ui"
+      ]
+    },
+    {
+      "id": "function:src/components/FeedbacksSkeleton.tsx:FeedbacksSkeleton",
+      "type": "function",
+      "name": "FeedbacksSkeleton",
+      "filePath": "src/components/FeedbacksSkeleton.tsx",
+      "summary": "FeedbacksSkeleton defined in FeedbacksSkeleton.tsx.",
+      "complexity": "simple",
+      "tags": [
+        "function",
+        "internal"
+      ]
+    },
+    {
+      "id": "file:src/components/LoadingSkeleton.tsx",
+      "type": "file",
+      "name": "LoadingSkeleton.tsx",
+      "filePath": "src/components/LoadingSkeleton.tsx",
+      "summary": "Loading skeleton placeholder mirroring Loading layout during lazy load.",
+      "complexity": "simple",
+      "tags": [
+        "loading",
+        "component",
+        "skeleton",
+        "react",
+        "ui"
+      ]
+    },
+    {
+      "id": "function:src/components/LoadingSkeleton.tsx:Skeleton",
+      "type": "function",
+      "name": "Skeleton",
+      "filePath": "src/components/LoadingSkeleton.tsx",
+      "summary": "Skeleton defined in LoadingSkeleton.tsx.",
+      "complexity": "simple",
+      "tags": [
+        "function",
+        "internal"
+      ]
+    },
+    {
+      "id": "file:src/components/ProjectsSkeleton.tsx",
+      "type": "file",
+      "name": "ProjectsSkeleton.tsx",
+      "filePath": "src/components/ProjectsSkeleton.tsx",
+      "summary": "Loading skeleton placeholder mirroring Projects layout during lazy load.",
+      "complexity": "moderate",
+      "tags": [
+        "loading",
+        "component",
+        "skeleton",
+        "react",
+        "ui"
+      ]
+    },
+    {
+      "id": "function:src/components/ProjectsSkeleton.tsx:ProjectsSkeleton",
+      "type": "function",
+      "name": "ProjectsSkeleton",
+      "filePath": "src/components/ProjectsSkeleton.tsx",
+      "summary": "ProjectsSkeleton defined in ProjectsSkeleton.tsx.",
+      "complexity": "moderate",
+      "tags": [
+        "function",
+        "internal"
+      ]
+    },
+    {
+      "id": "file:src/components/SkillsSkeleton.tsx",
+      "type": "file",
+      "name": "SkillsSkeleton.tsx",
+      "filePath": "src/components/SkillsSkeleton.tsx",
+      "summary": "Loading skeleton placeholder mirroring Skills layout during lazy load.",
+      "complexity": "moderate",
+      "tags": [
+        "loading",
+        "component",
+        "skeleton",
+        "react",
+        "ui"
+      ]
+    },
+    {
+      "id": "function:src/components/SkillsSkeleton.tsx:SkillsSkeleton",
+      "type": "function",
+      "name": "SkillsSkeleton",
+      "filePath": "src/components/SkillsSkeleton.tsx",
+      "summary": "SkillsSkeleton defined in SkillsSkeleton.tsx.",
+      "complexity": "moderate",
+      "tags": [
+        "function",
+        "internal"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:src/app/_components/home-sections.tsx",
+      "target": "function:src/app/_components/home-sections.tsx:HomeSections",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/app/_components/home-sections.tsx",
+      "target": "function:src/app/_components/home-sections.tsx:HomeSections",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/app/_components/home-sections.tsx",
+      "target": "file:src/app/page.module.scss",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/app/_components/home-sections.tsx",
+      "target": "file:src/components/AboutSkeleton.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/app/_components/home-sections.tsx",
+      "target": "file:src/components/ContactSkeleton.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/app/_components/home-sections.tsx",
+      "target": "file:src/components/FeedbacksSkeleton.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/app/_components/home-sections.tsx",
+      "target": "file:src/components/ProjectsSkeleton.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/app/_components/home-sections.tsx",
+      "target": "file:src/components/SkillsSkeleton.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/AboutSkeleton.tsx",
+      "target": "function:src/components/AboutSkeleton.tsx:AboutSkeleton",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/components/AboutSkeleton.tsx",
+      "target": "file:src/components/LoadingSkeleton.module.scss",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/AboutSkeleton.tsx",
+      "target": "file:src/components/LoadingSkeleton.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/ContactSkeleton.tsx",
+      "target": "function:src/components/ContactSkeleton.tsx:ContactSkeleton",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/components/ContactSkeleton.tsx",
+      "target": "file:src/components/LoadingSkeleton.module.scss",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/ContactSkeleton.tsx",
+      "target": "file:src/components/LoadingSkeleton.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/FeedbacksSkeleton.tsx",
+      "target": "function:src/components/FeedbacksSkeleton.tsx:FeedbacksSkeleton",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/components/FeedbacksSkeleton.tsx",
+      "target": "file:src/components/LoadingSkeleton.module.scss",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/FeedbacksSkeleton.tsx",
+      "target": "file:src/components/LoadingSkeleton.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/LoadingSkeleton.tsx",
+      "target": "function:src/components/LoadingSkeleton.tsx:Skeleton",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/components/LoadingSkeleton.tsx",
+      "target": "file:src/components/LoadingSkeleton.module.scss",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/ProjectsSkeleton.tsx",
+      "target": "function:src/components/ProjectsSkeleton.tsx:ProjectsSkeleton",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/components/ProjectsSkeleton.tsx",
+      "target": "file:src/components/LoadingSkeleton.module.scss",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/ProjectsSkeleton.tsx",
+      "target": "file:src/components/LoadingSkeleton.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/SkillsSkeleton.tsx",
+      "target": "function:src/components/SkillsSkeleton.tsx:SkillsSkeleton",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/components/SkillsSkeleton.tsx",
+      "target": "file:src/components/LoadingSkeleton.module.scss",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/SkillsSkeleton.tsx",
+      "target": "file:src/components/LoadingSkeleton.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    }
+  ]
+}

@@ -1,0 +1,303 @@
+{
+  "nodes": [
+    {
+      "id": "file:.understand-anything/.understandignore",
+      "type": "file",
+      "name": ".understandignore",
+      "filePath": ".understand-anything/.understandignore",
+      "summary": "Source file .understand-anything/.understandignore supporting the portfolio application.",
+      "complexity": "simple",
+      "tags": [
+        "source"
+      ]
+    },
+    {
+      "id": "config:.understand-anything/config.json",
+      "type": "config",
+      "name": "config.json",
+      "filePath": ".understand-anything/config.json",
+      "summary": "Configuration file config.json controlling build or runtime settings.",
+      "complexity": "simple",
+      "tags": [
+        "configuration"
+      ]
+    },
+    {
+      "id": "file:eslint.config.mjs",
+      "type": "file",
+      "name": "eslint.config.mjs",
+      "filePath": "eslint.config.mjs",
+      "summary": "ESLint flat config extending Next.js recommended rules.",
+      "complexity": "simple",
+      "tags": [
+        "source"
+      ]
+    },
+    {
+      "id": "file:next.config.ts",
+      "type": "file",
+      "name": "next.config.ts",
+      "filePath": "next.config.ts",
+      "summary": "Next.js configuration including image optimization and bundle analyzer setup.",
+      "complexity": "moderate",
+      "tags": [
+        "source"
+      ]
+    },
+    {
+      "id": "file:public/Art-1.webp",
+      "type": "file",
+      "name": "Art-1.webp",
+      "filePath": "public/Art-1.webp",
+      "summary": "Static image asset Art-1.webp served from the public directory.",
+      "complexity": "complex",
+      "tags": [
+        "static-asset",
+        "public"
+      ]
+    },
+    {
+      "id": "file:public/Art-2.webp",
+      "type": "file",
+      "name": "Art-2.webp",
+      "filePath": "public/Art-2.webp",
+      "summary": "Static image asset Art-2.webp served from the public directory.",
+      "complexity": "complex",
+      "tags": [
+        "static-asset",
+        "public"
+      ]
+    },
+    {
+      "id": "file:public/Art-3.webp",
+      "type": "file",
+      "name": "Art-3.webp",
+      "filePath": "public/Art-3.webp",
+      "summary": "Static image asset Art-3.webp served from the public directory.",
+      "complexity": "complex",
+      "tags": [
+        "static-asset",
+        "public"
+      ]
+    },
+    {
+      "id": "file:public/Hero Initial Picture.webp",
+      "type": "file",
+      "name": "Hero Initial Picture.webp",
+      "filePath": "public/Hero Initial Picture.webp",
+      "summary": "Static image asset Hero Initial Picture.webp served from the public directory.",
+      "complexity": "complex",
+      "tags": [
+        "static-asset",
+        "public"
+      ]
+    },
+    {
+      "id": "file:public/Hopeful emotions pic.webp",
+      "type": "file",
+      "name": "Hopeful emotions pic.webp",
+      "filePath": "public/Hopeful emotions pic.webp",
+      "summary": "Static image asset Hopeful emotions pic.webp served from the public directory.",
+      "complexity": "moderate",
+      "tags": [
+        "static-asset",
+        "public"
+      ]
+    },
+    {
+      "id": "file:public/Music-1.webp",
+      "type": "file",
+      "name": "Music-1.webp",
+      "filePath": "public/Music-1.webp",
+      "summary": "Static image asset Music-1.webp served from the public directory.",
+      "complexity": "complex",
+      "tags": [
+        "static-asset",
+        "public"
+      ]
+    },
+    {
+      "id": "file:public/Music-2.webp",
+      "type": "file",
+      "name": "Music-2.webp",
+      "filePath": "public/Music-2.webp",
+      "summary": "Static image asset Music-2.webp served from the public directory.",
+      "complexity": "moderate",
+      "tags": [
+        "static-asset",
+        "public"
+      ]
+    },
+    {
+      "id": "file:public/Music-3.webp",
+      "type": "file",
+      "name": "Music-3.webp",
+      "filePath": "public/Music-3.webp",
+      "summary": "Static image asset Music-3.webp served from the public directory.",
+      "complexity": "moderate",
+      "tags": [
+        "static-asset",
+        "public"
+      ]
+    },
+    {
+      "id": "file:public/preview.webp",
+      "type": "file",
+      "name": "preview.webp",
+      "filePath": "public/preview.webp",
+      "summary": "Static image asset preview.webp served from the public directory.",
+      "complexity": "moderate",
+      "tags": [
+        "static-asset",
+        "public"
+      ]
+    },
+    {
+      "id": "file:public/Reading-1.webp",
+      "type": "file",
+      "name": "Reading-1.webp",
+      "filePath": "public/Reading-1.webp",
+      "summary": "Static image asset Reading-1.webp served from the public directory.",
+      "complexity": "complex",
+      "tags": [
+        "static-asset",
+        "public"
+      ]
+    },
+    {
+      "id": "file:public/Reading-2.webp",
+      "type": "file",
+      "name": "Reading-2.webp",
+      "filePath": "public/Reading-2.webp",
+      "summary": "Static image asset Reading-2.webp served from the public directory.",
+      "complexity": "moderate",
+      "tags": [
+        "static-asset",
+        "public"
+      ]
+    },
+    {
+      "id": "file:public/Reading-3.webp",
+      "type": "file",
+      "name": "Reading-3.webp",
+      "filePath": "public/Reading-3.webp",
+      "summary": "Static image asset Reading-3.webp served from the public directory.",
+      "complexity": "complex",
+      "tags": [
+        "static-asset",
+        "public"
+      ]
+    },
+    {
+      "id": "file:public/Reading-Background.webp",
+      "type": "file",
+      "name": "Reading-Background.webp",
+      "filePath": "public/Reading-Background.webp",
+      "summary": "Static image asset Reading-Background.webp served from the public directory.",
+      "complexity": "moderate",
+      "tags": [
+        "static-asset",
+        "public"
+      ]
+    },
+    {
+      "id": "document:public/robots.txt",
+      "type": "document",
+      "name": "robots.txt",
+      "filePath": "public/robots.txt",
+      "summary": "Documentation file robots.txt describing project or build details.",
+      "complexity": "simple",
+      "tags": [
+        "documentation",
+        "static-asset",
+        "public"
+      ]
+    },
+    {
+      "id": "file:public/Ruslan Looking Avatar.webp",
+      "type": "file",
+      "name": "Ruslan Looking Avatar.webp",
+      "filePath": "public/Ruslan Looking Avatar.webp",
+      "summary": "Static image asset Ruslan Looking Avatar.webp served from the public directory.",
+      "complexity": "complex",
+      "tags": [
+        "static-asset",
+        "public"
+      ]
+    },
+    {
+      "id": "file:public/Ruslan Looking.webp",
+      "type": "file",
+      "name": "Ruslan Looking.webp",
+      "filePath": "public/Ruslan Looking.webp",
+      "summary": "Static image asset Ruslan Looking.webp served from the public directory.",
+      "complexity": "moderate",
+      "tags": [
+        "static-asset",
+        "public"
+      ]
+    },
+    {
+      "id": "file:public/Ruslan Profile Pic.webp",
+      "type": "file",
+      "name": "Ruslan Profile Pic.webp",
+      "filePath": "public/Ruslan Profile Pic.webp",
+      "summary": "Static image asset Ruslan Profile Pic.webp served from the public directory.",
+      "complexity": "moderate",
+      "tags": [
+        "static-asset",
+        "public"
+      ]
+    },
+    {
+      "id": "file:public/Ruslan Profile.webp",
+      "type": "file",
+      "name": "Ruslan Profile.webp",
+      "filePath": "public/Ruslan Profile.webp",
+      "summary": "Static image asset Ruslan Profile.webp served from the public directory.",
+      "complexity": "complex",
+      "tags": [
+        "static-asset",
+        "public"
+      ]
+    },
+    {
+      "id": "config:public/sitemap.xml",
+      "type": "config",
+      "name": "sitemap.xml",
+      "filePath": "public/sitemap.xml",
+      "summary": "Configuration file sitemap.xml controlling build or runtime settings.",
+      "complexity": "simple",
+      "tags": [
+        "configuration",
+        "static-asset",
+        "public"
+      ]
+    },
+    {
+      "id": "file:public/Sports-1.webp",
+      "type": "file",
+      "name": "Sports-1.webp",
+      "filePath": "public/Sports-1.webp",
+      "summary": "Static image asset Sports-1.webp served from the public directory.",
+      "complexity": "complex",
+      "tags": [
+        "static-asset",
+        "public"
+      ]
+    },
+    {
+      "id": "file:public/Sports-2.webp",
+      "type": "file",
+      "name": "Sports-2.webp",
+      "filePath": "public/Sports-2.webp",
+      "summary": "Static image asset Sports-2.webp served from the public directory.",
+      "complexity": "complex",
+      "tags": [
+        "static-asset",
+        "public"
+      ]
+    }
+  ],
+  "edges": []
+}

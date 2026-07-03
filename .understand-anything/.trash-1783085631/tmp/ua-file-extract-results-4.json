@@ -1,0 +1,316 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 4,
+  "filesSkipped": [],
+  "results": [
+    {
+      "path": "BUNDLE_ANALYSIS.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 58,
+      "nonEmptyLines": 43,
+      "sections": [
+        {
+          "heading": "Bundle Analysis Report",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Current Bundle Size",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "Largest Dependencies (Estimated)",
+          "level": 2,
+          "line": 8
+        },
+        {
+          "heading": "1. Framer Motion (~45-50 kB)",
+          "level": 3,
+          "line": 10
+        },
+        {
+          "heading": "2. Lucide React Icons (~10-15 kB)",
+          "level": 3,
+          "line": 15
+        },
+        {
+          "heading": "3. React Hook Form + Zod (~5-10 kB)",
+          "level": 3,
+          "line": 20
+        },
+        {
+          "heading": "4. Next.js Framework (~20-30 kB)",
+          "level": 3,
+          "line": 25
+        },
+        {
+          "heading": "Optimization Opportunities",
+          "level": 2,
+          "line": 30
+        },
+        {
+          "heading": "1. Lazy Load Contact Form",
+          "level": 3,
+          "line": 32
+        },
+        {
+          "heading": "2. Icon Optimization",
+          "level": 3,
+          "line": 36
+        },
+        {
+          "heading": "3. Framer Motion Optimization",
+          "level": 3,
+          "line": 40
+        },
+        {
+          "heading": "4. Code Splitting",
+          "level": 3,
+          "line": 44
+        },
+        {
+          "heading": "Recommendations",
+          "level": 2,
+          "line": 48
+        },
+        {
+          "heading": "Current Performance",
+          "level": 2,
+          "line": 54
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 14
+      }
+    },
+    {
+      "path": "README.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 179,
+      "nonEmptyLines": 138,
+      "sections": [
+        {
+          "heading": "Portfolio Website - Ruslan Nikolov",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "🚀 Features",
+          "level": 2,
+          "line": 5
+        },
+        {
+          "heading": "🛠️ Tech Stack",
+          "level": 2,
+          "line": 13
+        },
+        {
+          "heading": "📁 Project Structure",
+          "level": 2,
+          "line": 23
+        },
+        {
+          "heading": "🎨 Design System",
+          "level": 2,
+          "line": 45
+        },
+        {
+          "heading": "Colors",
+          "level": 3,
+          "line": 47
+        },
+        {
+          "heading": "Typography",
+          "level": 3,
+          "line": 55
+        },
+        {
+          "heading": "🚀 Getting Started",
+          "level": 2,
+          "line": 59
+        },
+        {
+          "heading": "📝 Customization",
+          "level": 2,
+          "line": 80
+        },
+        {
+          "heading": "Personal Information",
+          "level": 3,
+          "line": 82
+        },
+        {
+          "heading": "Styling",
+          "level": 3,
+          "line": 88
+        },
+        {
+          "heading": "Content",
+          "level": 3,
+          "line": 93
+        },
+        {
+          "heading": "🎵 Sections",
+          "level": 2,
+          "line": 98
+        },
+        {
+          "heading": "Hero Section",
+          "level": 3,
+          "line": 100
+        },
+        {
+          "heading": "Projects Section",
+          "level": 3,
+          "line": 105
+        },
+        {
+          "heading": "Skills Section",
+          "level": 3,
+          "line": 110
+        },
+        {
+          "heading": "About Section",
+          "level": 3,
+          "line": 115
+        },
+        {
+          "heading": "Contact Section",
+          "level": 3,
+          "line": 120
+        },
+        {
+          "heading": "🔧 Available Scripts",
+          "level": 2,
+          "line": 125
+        },
+        {
+          "heading": "🎨 SASS Styling",
+          "level": 2,
+          "line": 132
+        },
+        {
+          "heading": "SASS Variables",
+          "level": 3,
+          "line": 136
+        },
+        {
+          "heading": "Component Styling",
+          "level": 3,
+          "line": 145
+        },
+        {
+          "heading": "📱 Responsive Design",
+          "level": 2,
+          "line": 155
+        },
+        {
+          "heading": "🎯 Performance",
+          "level": 2,
+          "line": 162
+        },
+        {
+          "heading": "📄 License",
+          "level": 2,
+          "line": 169
+        },
+        {
+          "heading": "🤝 Contributing",
+          "level": 2,
+          "line": 173
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 26
+      }
+    },
+    {
+      "path": "package.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 33,
+      "nonEmptyLines": 33,
+      "sections": [
+        {
+          "heading": "name",
+          "level": 1,
+          "line": 2
+        },
+        {
+          "heading": "version",
+          "level": 1,
+          "line": 3
+        },
+        {
+          "heading": "private",
+          "level": 1,
+          "line": 4
+        },
+        {
+          "heading": "scripts",
+          "level": 1,
+          "line": 5
+        },
+        {
+          "heading": "dependencies",
+          "level": 1,
+          "line": 12
+        },
+        {
+          "heading": "devDependencies",
+          "level": 1,
+          "line": 23
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 6
+      }
+    },
+    {
+      "path": "tsconfig.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 41,
+      "nonEmptyLines": 41,
+      "sections": [
+        {
+          "heading": "compilerOptions",
+          "level": 1,
+          "line": 2
+        },
+        {
+          "heading": "include",
+          "level": 1,
+          "line": 31
+        },
+        {
+          "heading": "exclude",
+          "level": 1,
+          "line": 38
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 3
+      }
+    }
+  ]
+}

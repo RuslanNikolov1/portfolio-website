@@ -1,0 +1,65 @@
+{
+  "projectRoot": "c:/Development/portfolio-website-design-taste",
+  "batchFiles": [
+    {
+      "path": "src/app/page.tsx",
+      "language": "typescript",
+      "sizeLines": 19,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/Hero.tsx",
+      "language": "typescript",
+      "sizeLines": 143,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/Navigation.tsx",
+      "language": "typescript",
+      "sizeLines": 200,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/Projects.tsx",
+      "language": "typescript",
+      "sizeLines": 325,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/data/projects.ts",
+      "language": "typescript",
+      "sizeLines": 123,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/styles/breakpoints.ts",
+      "language": "typescript",
+      "sizeLines": 7,
+      "fileCategory": "code"
+    }
+  ],
+  "batchImportData": {
+    "src/app/page.tsx": [
+      "src/app/_components/home-sections.tsx",
+      "src/app/page.module.scss",
+      "src/components/Hero.tsx",
+      "src/components/Navigation.tsx"
+    ],
+    "src/components/Hero.tsx": [
+      "src/components/Hero.module.scss"
+    ],
+    "src/components/Navigation.tsx": [
+      "src/components/Navigation.module.scss",
+      "src/styles/breakpoints.ts"
+    ],
+    "src/components/Projects.tsx": [
+      "src/components/Projects.module.scss",
+      "src/data/projects.ts",
+      "src/styles/breakpoints.ts"
+    ],
+    "src/data/projects.ts": [
+      "src/types/index.ts"
+    ],
+    "src/styles/breakpoints.ts": []
+  }
+}

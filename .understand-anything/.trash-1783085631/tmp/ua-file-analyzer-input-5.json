@@ -1,0 +1,35 @@
+{
+  "projectRoot": "c:/Development/portfolio-website-design-taste",
+  "batchFiles": [
+    {
+      "path": "src/app/error.module.scss",
+      "language": "css",
+      "sizeLines": 59,
+      "fileCategory": "markup"
+    },
+    {
+      "path": "src/app/globals.scss",
+      "language": "css",
+      "sizeLines": 254,
+      "fileCategory": "markup"
+    },
+    {
+      "path": "src/app/not-found.module.scss",
+      "language": "css",
+      "sizeLines": 50,
+      "fileCategory": "markup"
+    },
+    {
+      "path": "src/app/page.module.scss",
+      "language": "css",
+      "sizeLines": 82,
+      "fileCategory": "markup"
+    }
+  ],
+  "batchImportData": {
+    "src/app/error.module.scss": [],
+    "src/app/globals.scss": [],
+    "src/app/not-found.module.scss": [],
+    "src/app/page.module.scss": []
+  }
+}

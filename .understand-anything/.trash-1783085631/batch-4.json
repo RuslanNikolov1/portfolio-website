@@ -1,0 +1,72 @@
+{
+  "nodes": [
+    {
+      "id": "document:BUNDLE_ANALYSIS.md",
+      "type": "document",
+      "name": "BUNDLE_ANALYSIS.md",
+      "filePath": "BUNDLE_ANALYSIS.md",
+      "summary": "Documentation file BUNDLE_ANALYSIS.md describing project or build details.",
+      "complexity": "simple",
+      "tags": [
+        "documentation"
+      ]
+    },
+    {
+      "id": "document:README.md",
+      "type": "document",
+      "name": "README.md",
+      "filePath": "README.md",
+      "summary": "Project overview documenting features, tech stack, structure, design system, and setup instructions.",
+      "complexity": "moderate",
+      "tags": [
+        "documentation",
+        "entry-point"
+      ]
+    },
+    {
+      "id": "config:package.json",
+      "type": "config",
+      "name": "package.json",
+      "filePath": "package.json",
+      "summary": "NPM manifest defining Next.js 16 dependencies, scripts, and project metadata.",
+      "complexity": "simple",
+      "tags": [
+        "configuration"
+      ]
+    },
+    {
+      "id": "config:tsconfig.json",
+      "type": "config",
+      "name": "tsconfig.json",
+      "filePath": "tsconfig.json",
+      "summary": "TypeScript compiler configuration with strict mode and path aliases.",
+      "complexity": "simple",
+      "tags": [
+        "configuration"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "document:README.md",
+      "target": "file:src/app/page.tsx",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "config:package.json",
+      "target": "file:src/app/page.tsx",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:tsconfig.json",
+      "target": "file:src/app/page.tsx",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    }
+  ]
+}

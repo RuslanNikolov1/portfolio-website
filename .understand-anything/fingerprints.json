@@ -1,0 +1,1496 @@
+{
+  "version": "1.0.0",
+  "gitCommitHash": "e52bca4e7767f6087f6a2a67cdbf8345316411ba",
+  "generatedAt": "2026-07-03T13:33:51.154Z",
+  "files": {
+    ".understand-anything/.understandignore": {
+      "filePath": ".understand-anything/.understandignore",
+      "contentHash": "03cb5ab2d5d85fa59688f1eb01ce80f396cce7d58f0f5174f222883445d30c5f",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 53,
+      "hasStructuralAnalysis": false
+    },
+    ".understand-anything/config.json": {
+      "filePath": ".understand-anything/config.json",
+      "contentHash": "4b66f98f8a815dfeb2d3a29eeb73418e07c40ed020a1498c07e908b2254f0c8c",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 2,
+      "hasStructuralAnalysis": true
+    },
+    "BUNDLE_ANALYSIS.md": {
+      "filePath": "BUNDLE_ANALYSIS.md",
+      "contentHash": "374c4999e35b7d3a6d12e5cb0649b4ebc9c69edd18b39b3e52355add0c24091b",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 59,
+      "hasStructuralAnalysis": true
+    },
+    "eslint.config.mjs": {
+      "filePath": "eslint.config.mjs",
+      "contentHash": "780ef586c168b5849bf2becda678d266a86899a9e6d18d8197f6a643589ecac9",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "path",
+          "specifiers": [
+            "dirname"
+          ]
+        },
+        {
+          "source": "url",
+          "specifiers": [
+            "fileURLToPath"
+          ]
+        },
+        {
+          "source": "@eslint/eslintrc",
+          "specifiers": [
+            "FlatCompat"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 26,
+      "hasStructuralAnalysis": true
+    },
+    "next.config.ts": {
+      "filePath": "next.config.ts",
+      "contentHash": "3920fb43cd7c2697173c5ccf78c475b0a58ff544733cab5222b63bec85f297af",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "next",
+          "specifiers": [
+            "NextConfig"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 58,
+      "hasStructuralAnalysis": true
+    },
+    "package.json": {
+      "filePath": "package.json",
+      "contentHash": "4a3d84845940fce4419f8f6a0b087b9afc65dc826c93dd2084c7fc5fd5765809",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 34,
+      "hasStructuralAnalysis": true
+    },
+    "public/Art-1.webp": {
+      "filePath": "public/Art-1.webp",
+      "contentHash": "b29589b3eb79a9c6379f6f31d402afcb49a35ce0398473789b614dbaf362ea5f",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 308,
+      "hasStructuralAnalysis": false
+    },
+    "public/Art-2.webp": {
+      "filePath": "public/Art-2.webp",
+      "contentHash": "cf168bfac2a894c9424564e3f4f6af48de85edf95b93e9b2704e9e95c50a0642",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 251,
+      "hasStructuralAnalysis": false
+    },
+    "public/Art-3.webp": {
+      "filePath": "public/Art-3.webp",
+      "contentHash": "6ffa6b5fef6612c6af6564528162e3ff29a13e49cbc6269569c7f92ba846cf00",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 1768,
+      "hasStructuralAnalysis": false
+    },
+    "public/Hero Initial Picture.webp": {
+      "filePath": "public/Hero Initial Picture.webp",
+      "contentHash": "d9985455ec29210f8d0ad1babc2a6c4ff7b2d195ac68e901de3aedce5b597b82",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 306,
+      "hasStructuralAnalysis": false
+    },
+    "public/Hopeful emotions pic.webp": {
+      "filePath": "public/Hopeful emotions pic.webp",
+      "contentHash": "e4fcca8446672e92b108f978b819389b72b2b8f00e90e0f1b8af3de8dc619917",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 163,
+      "hasStructuralAnalysis": false
+    },
+    "public/Music-1.webp": {
+      "filePath": "public/Music-1.webp",
+      "contentHash": "3512231f3789842c4eb55c6d87f64c2980f1d411b829e45f7d89e8a39f917674",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 314,
+      "hasStructuralAnalysis": false
+    },
+    "public/Music-2.webp": {
+      "filePath": "public/Music-2.webp",
+      "contentHash": "42b5e17c90e0a0e18786f016565c0baee168998bef566ce85e630e0c6be1fe6c",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 80,
+      "hasStructuralAnalysis": false
+    },
+    "public/Music-3.webp": {
+      "filePath": "public/Music-3.webp",
+      "contentHash": "3c05fa9c75f1d1997a1c77c8a4d333f8afb989ead5ad896bc796c39b497a3401",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 107,
+      "hasStructuralAnalysis": false
+    },
+    "public/preview.webp": {
+      "filePath": "public/preview.webp",
+      "contentHash": "26cf41ab29ffe2cb0a7170aa89db07c1afe652003bf8f52f7e746b1556a0b2ae",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 187,
+      "hasStructuralAnalysis": false
+    },
+    "public/Reading-1.webp": {
+      "filePath": "public/Reading-1.webp",
+      "contentHash": "2f4586a0067d541804fa2355504fdd763bf564b1f8671a84d5d09e55d6932ad2",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 273,
+      "hasStructuralAnalysis": false
+    },
+    "public/Reading-2.webp": {
+      "filePath": "public/Reading-2.webp",
+      "contentHash": "235a350477ebeb792c4de09755b5575f54d7311878d94797cc428bd367e5e89e",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 144,
+      "hasStructuralAnalysis": false
+    },
+    "public/Reading-3.webp": {
+      "filePath": "public/Reading-3.webp",
+      "contentHash": "afef234ed98ac48f0f0721f9d8344642fe99d916c371090370ad6ac545292b76",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 385,
+      "hasStructuralAnalysis": false
+    },
+    "public/Reading-Background.webp": {
+      "filePath": "public/Reading-Background.webp",
+      "contentHash": "1392d227829451847f628f730b62109bed50c8fe197ff3f8e9ceb7f24b9f33ae",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 60,
+      "hasStructuralAnalysis": false
+    },
+    "public/robots.txt": {
+      "filePath": "public/robots.txt",
+      "contentHash": "9340028ff378f849393ffde1f4649a5bdd111a4dcc9bcde674b7e58ddc4bf4cd",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 5,
+      "hasStructuralAnalysis": false
+    },
+    "public/Ruslan Looking Avatar.webp": {
+      "filePath": "public/Ruslan Looking Avatar.webp",
+      "contentHash": "7e9f74bb798dd0eff3a7f16e5336e413a1ba558085dea413d926213d4051e9eb",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 272,
+      "hasStructuralAnalysis": false
+    },
+    "public/Ruslan Looking.webp": {
+      "filePath": "public/Ruslan Looking.webp",
+      "contentHash": "9fce2d6118adb396e7c6c60f221b93a55f2206a899f50fbbbaef53f35aa5c540",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 162,
+      "hasStructuralAnalysis": false
+    },
+    "public/Ruslan Profile Pic.webp": {
+      "filePath": "public/Ruslan Profile Pic.webp",
+      "contentHash": "1aa0d910623b609543373b8cb6ea4eeb7358f270f90138e6b1a653c51676c69c",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 139,
+      "hasStructuralAnalysis": false
+    },
+    "public/Ruslan Profile.webp": {
+      "filePath": "public/Ruslan Profile.webp",
+      "contentHash": "fe6b5717347c778462215f2cc8c65752c16757aa28d5fc4eacb152f26160cae6",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 1244,
+      "hasStructuralAnalysis": false
+    },
+    "public/sitemap.xml": {
+      "filePath": "public/sitemap.xml",
+      "contentHash": "64b59f2c06fe4f052396bf91d48216c233f93e8107807bbf63176ac69c6e239c",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 10,
+      "hasStructuralAnalysis": false
+    },
+    "public/Sports-1.webp": {
+      "filePath": "public/Sports-1.webp",
+      "contentHash": "4a739d3f216216ab8e304aa973550620e49c91c7d83224fbc570ce4c08370468",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 377,
+      "hasStructuralAnalysis": false
+    },
+    "public/Sports-2.webp": {
+      "filePath": "public/Sports-2.webp",
+      "contentHash": "f1e30a787bb78b79c05275598d4ad26fd6889950e6fd889adbfae2cdb497a4ee",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 753,
+      "hasStructuralAnalysis": false
+    },
+    "public/Sports-3.webp": {
+      "filePath": "public/Sports-3.webp",
+      "contentHash": "ea5c36fd03263fd9357774c28029dd76d5e6c423362a763a11e6c8cc1314abec",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 178,
+      "hasStructuralAnalysis": false
+    },
+    "public/Thumbnail - Real Estate New.webp": {
+      "filePath": "public/Thumbnail - Real Estate New.webp",
+      "contentHash": "8df160eb87b7e8f50d263bf556fdb27e5132337ed35cb05e266f1c13c65f9fad",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 181,
+      "hasStructuralAnalysis": false
+    },
+    "public/Thumbnail Construction.webp": {
+      "filePath": "public/Thumbnail Construction.webp",
+      "contentHash": "3ffa44bc52ade36aede89f7f268a2138e640778083b2e2c4e8938fca13ac34f5",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 157,
+      "hasStructuralAnalysis": false
+    },
+    "public/Thumbnail Massage New.webp": {
+      "filePath": "public/Thumbnail Massage New.webp",
+      "contentHash": "94e13bb8c287effce24d193d222e1097cb7e45145293fcafe16f48137853e501",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 139,
+      "hasStructuralAnalysis": false
+    },
+    "public/Thumbnail-AMTP-new.webp": {
+      "filePath": "public/Thumbnail-AMTP-new.webp",
+      "contentHash": "5aa0d9e8046dca0c5cb093bd295ebbfe9a8ca409610fbd6c77c8843134bfd6e2",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 262,
+      "hasStructuralAnalysis": false
+    },
+    "public/Thumbnail-Ash.webp": {
+      "filePath": "public/Thumbnail-Ash.webp",
+      "contentHash": "812cd3959e7df4fffdc21216683bacfd3c0cb9d0ab758c0ec00c7d74622bd884",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 326,
+      "hasStructuralAnalysis": false
+    },
+    "public/Thumbnail-Astrology.webp": {
+      "filePath": "public/Thumbnail-Astrology.webp",
+      "contentHash": "cd2ab5398c5e88b8f739e8e638d37facdcfe3c8d1f85b7716be75372c3d54cb7",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 195,
+      "hasStructuralAnalysis": false
+    },
+    "public/Thumbnail-DefiLama.webp": {
+      "filePath": "public/Thumbnail-DefiLama.webp",
+      "contentHash": "6212aea72f09afcd073e90fb064a8f03276f72e287af73046fd31d8786a7ee9b",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 81,
+      "hasStructuralAnalysis": false
+    },
+    "public/Thumbnail-ForestResidenceSofia.webp": {
+      "filePath": "public/Thumbnail-ForestResidenceSofia.webp",
+      "contentHash": "86c47e9c721b18aab0866516480a65398020e5cee16d05d2acfddba8438818bf",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 154,
+      "hasStructuralAnalysis": false
+    },
+    "public/Thumbnail-Lawyer.webp": {
+      "filePath": "public/Thumbnail-Lawyer.webp",
+      "contentHash": "e3d62813d5d9fdbec352c3f58ece64a0c3d9e4a32d487d10b2734a8980c6f18e",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 71,
+      "hasStructuralAnalysis": false
+    },
+    "public/Thumbnail-Maisons.webp": {
+      "filePath": "public/Thumbnail-Maisons.webp",
+      "contentHash": "3d0672d024a7edca695a925337889c84c66578afe9238891d10b5287f4596d91",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 114,
+      "hasStructuralAnalysis": false
+    },
+    "README.md": {
+      "filePath": "README.md",
+      "contentHash": "5e1f953af7049f93f2be2b54c3209dea63c7c87ba9be93e9ecdb5a30963094f5",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 179,
+      "hasStructuralAnalysis": true
+    },
+    "src/app/globals.scss": {
+      "filePath": "src/app/globals.scss",
+      "contentHash": "659c3322b253ad9f8867d1c1f82b61dad045d97269380ea8dcd4a6a6010bbc89",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 255,
+      "hasStructuralAnalysis": false
+    },
+    "src/app/layout.tsx": {
+      "filePath": "src/app/layout.tsx",
+      "contentHash": "8adb5fa97df2901fd86b0ba3148d1664ceaebaa0ec86d8e369c003a609d61461",
+      "functions": [
+        {
+          "name": "RootLayout",
+          "params": [
+            "{\n  children,\n}"
+          ],
+          "exported": true,
+          "lineCount": 25
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "next",
+          "specifiers": [
+            "Metadata"
+          ]
+        },
+        {
+          "source": "next/font/google",
+          "specifiers": [
+            "Rubik",
+            "Inter"
+          ]
+        },
+        {
+          "source": "./globals.scss",
+          "specifiers": []
+        }
+      ],
+      "exports": [
+        "metadata",
+        "viewport",
+        "RootLayout"
+      ],
+      "totalLines": 98,
+      "hasStructuralAnalysis": true
+    },
+    "src/app/page.module.scss": {
+      "filePath": "src/app/page.module.scss",
+      "contentHash": "85880f175dbc06958c7c27a4cc3965723c3f133a76fffcd06b9c4423bbe00a6c",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 83,
+      "hasStructuralAnalysis": false
+    },
+    "src/app/page.tsx": {
+      "filePath": "src/app/page.tsx",
+      "contentHash": "916509ff9ffd5f2d91c7b2e75bcc813cf6a032aec11689d8e0a8128ec2355f43",
+      "functions": [
+        {
+          "name": "Home",
+          "params": [],
+          "exported": true,
+          "lineCount": 14
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@/components/Navigation",
+          "specifiers": [
+            "Navigation"
+          ]
+        },
+        {
+          "source": "@/components/Hero",
+          "specifiers": [
+            "Hero"
+          ]
+        },
+        {
+          "source": "@/components/HomeSections",
+          "specifiers": [
+            "HomeSections"
+          ]
+        },
+        {
+          "source": "./page.module.scss",
+          "specifiers": [
+            "styles"
+          ]
+        }
+      ],
+      "exports": [
+        "Home"
+      ],
+      "totalLines": 20,
+      "hasStructuralAnalysis": true
+    },
+    "src/components/About.module.scss": {
+      "filePath": "src/components/About.module.scss",
+      "contentHash": "adb9c9a565a8d9d3138ee1e4c50042da36561c9dd5138a7f03493edff753d8d8",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 390,
+      "hasStructuralAnalysis": false
+    },
+    "src/components/About.tsx": {
+      "filePath": "src/components/About.tsx",
+      "contentHash": "c54c1c1403c2309343ffd5f4620c08a5f3a3259333f592cfb5ded134ebcfa04f",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "framer-motion",
+          "specifiers": [
+            "motion",
+            "useReducedMotion"
+          ]
+        },
+        {
+          "source": "react",
+          "specifiers": [
+            "memo"
+          ]
+        },
+        {
+          "source": "@radix-ui/react-tabs",
+          "specifiers": [
+            "* as Tabs"
+          ]
+        },
+        {
+          "source": "next/image",
+          "specifiers": [
+            "Image"
+          ]
+        },
+        {
+          "source": "next/link",
+          "specifiers": [
+            "Link"
+          ]
+        },
+        {
+          "source": "./About.module.scss",
+          "specifiers": [
+            "styles"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 263,
+      "hasStructuralAnalysis": true
+    },
+    "src/components/AboutSkeleton.tsx": {
+      "filePath": "src/components/AboutSkeleton.tsx",
+      "contentHash": "36c6eaa435b8d02635f5ebc2180488189abe97c1ac6b3b20307ca3810022a23f",
+      "functions": [
+        {
+          "name": "AboutSkeleton",
+          "params": [],
+          "exported": false,
+          "lineCount": 22
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "./LoadingSkeleton",
+          "specifiers": [
+            "Skeleton"
+          ]
+        },
+        {
+          "source": "./LoadingSkeleton.module.scss",
+          "specifiers": [
+            "styles"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 28,
+      "hasStructuralAnalysis": true
+    },
+    "src/components/Contact.module.scss": {
+      "filePath": "src/components/Contact.module.scss",
+      "contentHash": "69a8c874362146ed523d1e163b85df06f0ff89d4ff73d4b20adf7b5c561314c0",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 294,
+      "hasStructuralAnalysis": false
+    },
+    "src/components/Contact.tsx": {
+      "filePath": "src/components/Contact.tsx",
+      "contentHash": "c7fc4a81e52175159d81817896a7367deae34a83a34350d60aec399b8b4b6199",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "framer-motion",
+          "specifiers": [
+            "motion"
+          ]
+        },
+        {
+          "source": "react",
+          "specifiers": [
+            "memo"
+          ]
+        },
+        {
+          "source": "lucide-react",
+          "specifiers": [
+            "Mail",
+            "Github",
+            "Linkedin",
+            "Music",
+            "MessageCircle",
+            "Phone"
+          ]
+        },
+        {
+          "source": "next/link",
+          "specifiers": [
+            "Link"
+          ]
+        },
+        {
+          "source": "@/data/social-links",
+          "specifiers": [
+            "socialLinks"
+          ]
+        },
+        {
+          "source": "./Contact.module.scss",
+          "specifiers": [
+            "styles"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 107,
+      "hasStructuralAnalysis": true
+    },
+    "src/components/ContactSkeleton.tsx": {
+      "filePath": "src/components/ContactSkeleton.tsx",
+      "contentHash": "1c69a02f3b1193d3de7a891cd0636000c7d043816e09e728828fc2d2c519da41",
+      "functions": [
+        {
+          "name": "ContactSkeleton",
+          "params": [],
+          "exported": false,
+          "lineCount": 67
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "./LoadingSkeleton",
+          "specifiers": [
+            "Skeleton"
+          ]
+        },
+        {
+          "source": "./LoadingSkeleton.module.scss",
+          "specifiers": [
+            "styles"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 74,
+      "hasStructuralAnalysis": true
+    },
+    "src/components/DownloadCVButton.tsx": {
+      "filePath": "src/components/DownloadCVButton.tsx",
+      "contentHash": "52296071e34dec81e48e22f848a838e0c3edddaeb4fac32d82a3416b39a6f594",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "framer-motion",
+          "specifiers": [
+            "motion"
+          ]
+        },
+        {
+          "source": "react",
+          "specifiers": [
+            "memo"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 45,
+      "hasStructuralAnalysis": true
+    },
+    "src/components/Feedbacks.module.scss": {
+      "filePath": "src/components/Feedbacks.module.scss",
+      "contentHash": "d05dc75431a98f8539b47d7ad7574adcef26a2205009b5e4583ea68ba212a1ef",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 287,
+      "hasStructuralAnalysis": false
+    },
+    "src/components/Feedbacks.tsx": {
+      "filePath": "src/components/Feedbacks.tsx",
+      "contentHash": "c021ed1e2a1a9c1e339a61c60bcbf71bb01cb2471833c77495163e2e33672940",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "framer-motion",
+          "specifiers": [
+            "AnimatePresence",
+            "motion",
+            "useReducedMotion"
+          ]
+        },
+        {
+          "source": "react",
+          "specifiers": [
+            "memo",
+            "useCallback",
+            "useState"
+          ]
+        },
+        {
+          "source": "lucide-react",
+          "specifiers": [
+            "ChevronLeft",
+            "ChevronRight"
+          ]
+        },
+        {
+          "source": "./Feedbacks.module.scss",
+          "specifiers": [
+            "styles"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 198,
+      "hasStructuralAnalysis": true
+    },
+    "src/components/FeedbacksSkeleton.tsx": {
+      "filePath": "src/components/FeedbacksSkeleton.tsx",
+      "contentHash": "c69d4e525aea1d2fa9c87247c0da45f6de5a48c9d3d08c0c37983a7f2630cde4",
+      "functions": [
+        {
+          "name": "FeedbacksSkeleton",
+          "params": [],
+          "exported": false,
+          "lineCount": 15
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "./LoadingSkeleton",
+          "specifiers": [
+            "Skeleton"
+          ]
+        },
+        {
+          "source": "./LoadingSkeleton.module.scss",
+          "specifiers": [
+            "styles"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 21,
+      "hasStructuralAnalysis": true
+    },
+    "src/components/FloatingCTA.tsx": {
+      "filePath": "src/components/FloatingCTA.tsx",
+      "contentHash": "baa9e672c54b4d28a9373be797d75807bf28a35b4308a30f91d811c9a8b5d7e6",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "framer-motion",
+          "specifiers": [
+            "motion"
+          ]
+        },
+        {
+          "source": "react",
+          "specifiers": [
+            "useCallback",
+            "memo"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 47,
+      "hasStructuralAnalysis": true
+    },
+    "src/components/Footer.module.scss": {
+      "filePath": "src/components/Footer.module.scss",
+      "contentHash": "cf284dd09b3204ddd62eeb4e092f7f4f976b511c6bcb45319af805cb5e8ac4bf",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 263,
+      "hasStructuralAnalysis": false
+    },
+    "src/components/Footer.tsx": {
+      "filePath": "src/components/Footer.tsx",
+      "contentHash": "c67f932155f098af1c171f82de29421f65ebfc2db96af937972334351db992a4",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "framer-motion",
+          "specifiers": [
+            "motion"
+          ]
+        },
+        {
+          "source": "lucide-react",
+          "specifiers": [
+            "Github",
+            "Linkedin",
+            "Mail",
+            "Music"
+          ]
+        },
+        {
+          "source": "next/image",
+          "specifiers": [
+            "Image"
+          ]
+        },
+        {
+          "source": "next/link",
+          "specifiers": [
+            "Link"
+          ]
+        },
+        {
+          "source": "@/data/social-links",
+          "specifiers": [
+            "socialLinks"
+          ]
+        },
+        {
+          "source": "react",
+          "specifiers": [
+            "memo",
+            "useCallback"
+          ]
+        },
+        {
+          "source": "./Footer.module.scss",
+          "specifiers": [
+            "styles"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 120,
+      "hasStructuralAnalysis": true
+    },
+    "src/components/Hero.module.scss": {
+      "filePath": "src/components/Hero.module.scss",
+      "contentHash": "499e8bfe9187c18aa5bee892cfac672f467479746e4a5cddefd442ed640c27f4",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 521,
+      "hasStructuralAnalysis": false
+    },
+    "src/components/Hero.tsx": {
+      "filePath": "src/components/Hero.tsx",
+      "contentHash": "c623bd3a4664fd4e8cf130d632f5cffb22647bfc5a4ddd3d6f1072364b069fd0",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "react",
+          "specifiers": [
+            "useState",
+            "useEffect",
+            "useCallback",
+            "memo",
+            "useRef"
+          ]
+        },
+        {
+          "source": "next/image",
+          "specifiers": [
+            "Image"
+          ]
+        },
+        {
+          "source": "./Hero.module.scss",
+          "specifiers": [
+            "styles"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 144,
+      "hasStructuralAnalysis": true
+    },
+    "src/components/HeroSkeleton.tsx": {
+      "filePath": "src/components/HeroSkeleton.tsx",
+      "contentHash": "88345b21d758bb3291af43b84574242add5282d01d1ef1213e7ee07bf9a5a3be",
+      "functions": [
+        {
+          "name": "HeroSkeleton",
+          "params": [],
+          "exported": false,
+          "lineCount": 53
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "./LoadingSkeleton",
+          "specifiers": [
+            "Skeleton"
+          ]
+        },
+        {
+          "source": "./LoadingSkeleton.module.scss",
+          "specifiers": [
+            "styles"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 60,
+      "hasStructuralAnalysis": true
+    },
+    "src/components/LoadingSkeleton.module.scss": {
+      "filePath": "src/components/LoadingSkeleton.module.scss",
+      "contentHash": "3339bf83ba2bd5b4458ef4fb57c3f7a6e7dfd3b866e95e4b18e15ff7c178a11f",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 612,
+      "hasStructuralAnalysis": false
+    },
+    "src/components/LoadingSkeleton.tsx": {
+      "filePath": "src/components/LoadingSkeleton.tsx",
+      "contentHash": "f2fc3d0d1a754faf22be3663801b5704445fb9b912594a51898f9301c6c2182a",
+      "functions": [
+        {
+          "name": "Skeleton",
+          "params": [
+            "{\n  width = '100%',\n  height = '20px',\n  borderRadius = '4px',\n  className = '',\n  animation = 'pulse',\n  delay = 0,\n}"
+          ],
+          "exported": false,
+          "lineCount": 20
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "./LoadingSkeleton.module.scss",
+          "specifiers": [
+            "styles"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 34,
+      "hasStructuralAnalysis": true
+    },
+    "src/components/Navigation.module.scss": {
+      "filePath": "src/components/Navigation.module.scss",
+      "contentHash": "1bd7b8aeb97f33a485fd11c5812ad0cf04c52e1334372f43c8b7d0e6e4d85461",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 501,
+      "hasStructuralAnalysis": false
+    },
+    "src/components/Navigation.tsx": {
+      "filePath": "src/components/Navigation.tsx",
+      "contentHash": "69fa947a87c9aa175c3dd0204832f847963700c0e6a597cdca944e678db95d4e",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "next/dynamic",
+          "specifiers": [
+            "dynamic"
+          ]
+        },
+        {
+          "source": "react",
+          "specifiers": [
+            "useState",
+            "useEffect",
+            "useCallback",
+            "useMemo",
+            "useRef",
+            "memo"
+          ]
+        },
+        {
+          "source": "lucide-react",
+          "specifiers": [
+            "Menu",
+            "X",
+            "Home",
+            "Briefcase",
+            "Zap",
+            "User",
+            "Mail"
+          ]
+        },
+        {
+          "source": "next/image",
+          "specifiers": [
+            "Image"
+          ]
+        },
+        {
+          "source": "@/styles/breakpoints",
+          "specifiers": [
+            "MQ_BELOW_MD"
+          ]
+        },
+        {
+          "source": "./Navigation.module.scss",
+          "specifiers": [
+            "styles"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 203,
+      "hasStructuralAnalysis": true
+    },
+    "src/components/NavigationMusicPlayer.tsx": {
+      "filePath": "src/components/NavigationMusicPlayer.tsx",
+      "contentHash": "816bf8801970274b588d8153ee72675a9da8c231586e7fb1abe6b17be6f41b43",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "framer-motion",
+          "specifiers": [
+            "motion"
+          ]
+        },
+        {
+          "source": "react",
+          "specifiers": [
+            "memo",
+            "useCallback",
+            "useState"
+          ]
+        },
+        {
+          "source": "lucide-react",
+          "specifiers": [
+            "Play",
+            "Pause"
+          ]
+        },
+        {
+          "source": "next/image",
+          "specifiers": [
+            "Image"
+          ]
+        },
+        {
+          "source": "./Navigation.module.scss",
+          "specifiers": [
+            "styles"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 90,
+      "hasStructuralAnalysis": true
+    },
+    "src/components/Projects.module.scss": {
+      "filePath": "src/components/Projects.module.scss",
+      "contentHash": "347b86680c14a936f76e5f7ad5e92c37a3f86c59ac5a37a655abfb2b32ce713c",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 415,
+      "hasStructuralAnalysis": false
+    },
+    "src/components/Projects.tsx": {
+      "filePath": "src/components/Projects.tsx",
+      "contentHash": "e29a9cbaff7db6a5864fa413a39bcd4fbfaeb49e83de4a72f06bf63ef9fbabfa",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "react",
+          "specifiers": [
+            "useState",
+            "useEffect",
+            "useCallback",
+            "useMemo",
+            "useRef",
+            "memo"
+          ]
+        },
+        {
+          "source": "framer-motion",
+          "specifiers": [
+            "motion",
+            "AnimatePresence",
+            "useReducedMotion"
+          ]
+        },
+        {
+          "source": "lucide-react",
+          "specifiers": [
+            "ExternalLink",
+            "Github",
+            "ChevronLeft",
+            "ChevronRight"
+          ]
+        },
+        {
+          "source": "next/image",
+          "specifiers": [
+            "Image"
+          ]
+        },
+        {
+          "source": "next/link",
+          "specifiers": [
+            "Link"
+          ]
+        },
+        {
+          "source": "@/data/projects",
+          "specifiers": [
+            "projects"
+          ]
+        },
+        {
+          "source": "@/styles/breakpoints",
+          "specifiers": [
+            "BP_SM",
+            "MQ_BELOW_SM"
+          ]
+        },
+        {
+          "source": "./Projects.module.scss",
+          "specifiers": [
+            "styles"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 326,
+      "hasStructuralAnalysis": true
+    },
+    "src/components/ProjectsSkeleton.tsx": {
+      "filePath": "src/components/ProjectsSkeleton.tsx",
+      "contentHash": "637bd84c2c5b5207ba9ab1ce453b26f061714fd77bbfbffde435411d126faa36",
+      "functions": [
+        {
+          "name": "ProjectsSkeleton",
+          "params": [],
+          "exported": false,
+          "lineCount": 83
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "./LoadingSkeleton",
+          "specifiers": [
+            "Skeleton"
+          ]
+        },
+        {
+          "source": "./LoadingSkeleton.module.scss",
+          "specifiers": [
+            "styles"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 90,
+      "hasStructuralAnalysis": true
+    },
+    "src/components/Skills.module.scss": {
+      "filePath": "src/components/Skills.module.scss",
+      "contentHash": "26ffc811f2c5e4dfb28509b6a4fea61ac52c782142e7fd21b2aa516cf4f7304a",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 328,
+      "hasStructuralAnalysis": false
+    },
+    "src/components/Skills.tsx": {
+      "filePath": "src/components/Skills.tsx",
+      "contentHash": "b719ed19694b185b74aff71e8e59260f637dde55bbf9e0d230afa215d491c642",
+      "functions": [
+        {
+          "name": "SkillCollapsibleItem",
+          "params": [
+            "{\n  skillKey,\n  skill,\n  iconColor,\n  index,\n  SkillIcon,\n}"
+          ],
+          "exported": false,
+          "lineCount": 60
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "react",
+          "specifiers": [
+            "React",
+            "useRef",
+            "useMemo",
+            "memo"
+          ]
+        },
+        {
+          "source": "framer-motion",
+          "specifiers": [
+            "motion"
+          ]
+        },
+        {
+          "source": "@radix-ui/react-collapsible",
+          "specifiers": [
+            "* as Collapsible"
+          ]
+        },
+        {
+          "source": "lucide-react",
+          "specifiers": [
+            "ReactIcon",
+            "TypeScript",
+            "JavaScript",
+            "Html5",
+            "Css3",
+            "Sass",
+            "Git",
+            "Github",
+            "Gitlab",
+            "Npm",
+            "Yarn",
+            "Webpack",
+            "Wrench",
+            "Vite",
+            "Nextjs",
+            "Vercel",
+            "Netlify",
+            "Figma",
+            "Adobe",
+            "Photoshop",
+            "Illustrator",
+            "AfterEffects",
+            "Premiere",
+            "Zap",
+            "BarChart3",
+            "FileText",
+            "Users",
+            "MessageCircle",
+            "Calendar",
+            "Brain",
+            "BookOpen",
+            "Clock",
+            "Search",
+            "Heart",
+            "GraduationCap",
+            "ChevronDown"
+          ]
+        },
+        {
+          "source": "@/data/skills",
+          "specifiers": [
+            "skills"
+          ]
+        },
+        {
+          "source": "@/types",
+          "specifiers": [
+            "Skill"
+          ]
+        },
+        {
+          "source": "./Skills.module.scss",
+          "specifiers": [
+            "styles"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 358,
+      "hasStructuralAnalysis": true
+    },
+    "src/components/SkillsSkeleton.tsx": {
+      "filePath": "src/components/SkillsSkeleton.tsx",
+      "contentHash": "96d03bb08c93cd2e5fe05e2eb912737558007980b45081000c4633f8037f924d",
+      "functions": [
+        {
+          "name": "SkillsSkeleton",
+          "params": [],
+          "exported": false,
+          "lineCount": 97
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "./LoadingSkeleton",
+          "specifiers": [
+            "Skeleton"
+          ]
+        },
+        {
+          "source": "./LoadingSkeleton.module.scss",
+          "specifiers": [
+            "styles"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 104,
+      "hasStructuralAnalysis": true
+    },
+    "src/data/projects.ts": {
+      "filePath": "src/data/projects.ts",
+      "contentHash": "091d51ad90ffa4969beb8501bdbc0fb1d7d1f288b597ff751bf14ee63d6f8bb7",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@/types",
+          "specifiers": [
+            "Project"
+          ]
+        }
+      ],
+      "exports": [
+        "projects"
+      ],
+      "totalLines": 124,
+      "hasStructuralAnalysis": true
+    },
+    "src/data/skills.ts": {
+      "filePath": "src/data/skills.ts",
+      "contentHash": "0a287acf402d1c52117f633c8cb9dc72bd34a10ccb859f6f0313a6250bb57db5",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@/types",
+          "specifiers": [
+            "Skill"
+          ]
+        }
+      ],
+      "exports": [
+        "skills"
+      ],
+      "totalLines": 51,
+      "hasStructuralAnalysis": true
+    },
+    "src/data/social-links.ts": {
+      "filePath": "src/data/social-links.ts",
+      "contentHash": "16e32c96ec177270a8286651bcfc282f69942d81efd6297e067ffd391681809d",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@/types",
+          "specifiers": [
+            "SocialLink"
+          ]
+        }
+      ],
+      "exports": [
+        "socialLinks"
+      ],
+      "totalLines": 35,
+      "hasStructuralAnalysis": true
+    },
+    "src/styles/_backdrops.scss": {
+      "filePath": "src/styles/_backdrops.scss",
+      "contentHash": "b1589fd1b78b30260df61462c63aff0333fcd4575dc6df28b952b3a308dbbb4d",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 78,
+      "hasStructuralAnalysis": false
+    },
+    "src/styles/_home.scss": {
+      "filePath": "src/styles/_home.scss",
+      "contentHash": "88e1c96c5d2540e0b6bd8ee4bd02db650af49ef1b53973621e98b07529940521",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 42,
+      "hasStructuralAnalysis": false
+    },
+    "src/styles/_variables.scss": {
+      "filePath": "src/styles/_variables.scss",
+      "contentHash": "bfda4a7e0bd912b016aab414a96ad3093f605b757ccef6c33d8acb660a8b1f6c",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 124,
+      "hasStructuralAnalysis": false
+    },
+    "src/styles/breakpoints.ts": {
+      "filePath": "src/styles/breakpoints.ts",
+      "contentHash": "45763f94133aeadfa279a74b952634f17527769afce1f7b455e44fce9d54b495",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [
+        "BP_XS",
+        "BP_SM",
+        "BP_MD",
+        "MQ_BELOW_SM",
+        "MQ_BELOW_MD"
+      ],
+      "totalLines": 8,
+      "hasStructuralAnalysis": true
+    },
+    "src/types/index.ts": {
+      "filePath": "src/types/index.ts",
+      "contentHash": "c3d15f81e7dc9e1491455dca8977442a7cd59edb67a628b844c5ea2f63b59a38",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 33,
+      "hasStructuralAnalysis": true
+    },
+    "tsconfig.json": {
+      "filePath": "tsconfig.json",
+      "contentHash": "7d2be6e70d0136ffae35a824d0be122b4d4d033443868eb411bb3ff5a06c8ecf",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 42,
+      "hasStructuralAnalysis": true
+    }
+  }
+}

@@ -1,0 +1,1198 @@
+{
+  "schemaVersion": 1,
+  "algorithm": "louvain",
+  "totalFiles": 86,
+  "totalBatches": 9,
+  "exportsByPath": {
+    ".understand-anything/.understandignore": [],
+    "eslint.config.mjs": [],
+    "next.config.ts": [],
+    "public/Art-1.webp": [],
+    "public/Art-2.webp": [],
+    "public/Art-3.webp": [],
+    "public/Hero Initial Picture.webp": [],
+    "public/Hopeful emotions pic.webp": [],
+    "public/Music-1.webp": [],
+    "public/Music-2.webp": [],
+    "public/Music-3.webp": [],
+    "public/preview.webp": [],
+    "public/Reading-1.webp": [],
+    "public/Reading-2.webp": [],
+    "public/Reading-3.webp": [],
+    "public/Reading-Background.webp": [],
+    "public/Ruslan Looking Avatar.webp": [],
+    "public/Ruslan Looking.webp": [],
+    "public/Ruslan Profile Pic.webp": [],
+    "public/Ruslan Profile.webp": [],
+    "public/Sports-1.webp": [],
+    "public/Sports-2.webp": [],
+    "public/Sports-3.webp": [],
+    "public/Thumbnail - Real Estate New.webp": [],
+    "public/Thumbnail Construction.webp": [],
+    "public/Thumbnail Massage New.webp": [],
+    "public/Thumbnail-AMTP-new.webp": [],
+    "public/Thumbnail-Ash.webp": [],
+    "public/Thumbnail-Astrology.webp": [],
+    "public/Thumbnail-DefiLama.webp": [],
+    "public/Thumbnail-ForestResidenceSofia.webp": [],
+    "public/Thumbnail-Lawyer.webp": [],
+    "public/Thumbnail-Maisons.webp": [],
+    "src/app/_components/home-sections.tsx": [
+      "HomeSections"
+    ],
+    "src/app/error.tsx": [
+      "Error"
+    ],
+    "src/app/layout.tsx": [
+      "metadata",
+      "viewport",
+      "RootLayout"
+    ],
+    "src/app/loading.tsx": [
+      "Loading"
+    ],
+    "src/app/not-found.tsx": [
+      "NotFound"
+    ],
+    "src/app/page.tsx": [
+      "Home"
+    ],
+    "src/components/About.tsx": [],
+    "src/components/AboutSkeleton.tsx": [],
+    "src/components/Contact.tsx": [],
+    "src/components/ContactSkeleton.tsx": [],
+    "src/components/DownloadCVButton.tsx": [],
+    "src/components/Feedbacks.tsx": [],
+    "src/components/FeedbacksSkeleton.tsx": [],
+    "src/components/FloatingCTA.tsx": [],
+    "src/components/Footer.tsx": [],
+    "src/components/Hero.tsx": [],
+    "src/components/HeroSkeleton.tsx": [],
+    "src/components/LoadingSkeleton.tsx": [],
+    "src/components/Navigation.tsx": [],
+    "src/components/NavigationMusicPlayer.tsx": [],
+    "src/components/Projects.tsx": [],
+    "src/components/ProjectsSkeleton.tsx": [],
+    "src/components/Skills.tsx": [],
+    "src/components/SkillsSkeleton.tsx": [],
+    "src/data/projects.ts": [
+      "projects"
+    ],
+    "src/data/skills.ts": [
+      "skills"
+    ],
+    "src/data/social-links.ts": [
+      "socialLinks"
+    ],
+    "src/lib/site.ts": [
+      "siteConfig"
+    ],
+    "src/styles/breakpoints.ts": [
+      "BP_XS",
+      "BP_SM",
+      "BP_MD",
+      "MQ_BELOW_SM",
+      "MQ_BELOW_MD"
+    ],
+    "src/types/index.ts": []
+  },
+  "batches": [
+    {
+      "batchIndex": 1,
+      "files": [
+        {
+          "path": "src/app/_components/home-sections.tsx",
+          "language": "typescript",
+          "sizeLines": 82,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/AboutSkeleton.tsx",
+          "language": "typescript",
+          "sizeLines": 27,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/ContactSkeleton.tsx",
+          "language": "typescript",
+          "sizeLines": 73,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/FeedbacksSkeleton.tsx",
+          "language": "typescript",
+          "sizeLines": 20,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/LoadingSkeleton.tsx",
+          "language": "typescript",
+          "sizeLines": 33,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/ProjectsSkeleton.tsx",
+          "language": "typescript",
+          "sizeLines": 89,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/SkillsSkeleton.tsx",
+          "language": "typescript",
+          "sizeLines": 103,
+          "fileCategory": "code"
+        }
+      ],
+      "batchImportData": {
+        "src/app/_components/home-sections.tsx": [
+          "src/app/page.module.scss",
+          "src/components/AboutSkeleton.tsx",
+          "src/components/ContactSkeleton.tsx",
+          "src/components/FeedbacksSkeleton.tsx",
+          "src/components/ProjectsSkeleton.tsx",
+          "src/components/SkillsSkeleton.tsx"
+        ],
+        "src/components/AboutSkeleton.tsx": [
+          "src/components/LoadingSkeleton.module.scss",
+          "src/components/LoadingSkeleton.tsx"
+        ],
+        "src/components/ContactSkeleton.tsx": [
+          "src/components/LoadingSkeleton.module.scss",
+          "src/components/LoadingSkeleton.tsx"
+        ],
+        "src/components/FeedbacksSkeleton.tsx": [
+          "src/components/LoadingSkeleton.module.scss",
+          "src/components/LoadingSkeleton.tsx"
+        ],
+        "src/components/LoadingSkeleton.tsx": [
+          "src/components/LoadingSkeleton.module.scss"
+        ],
+        "src/components/ProjectsSkeleton.tsx": [
+          "src/components/LoadingSkeleton.module.scss",
+          "src/components/LoadingSkeleton.tsx"
+        ],
+        "src/components/SkillsSkeleton.tsx": [
+          "src/components/LoadingSkeleton.module.scss",
+          "src/components/LoadingSkeleton.tsx"
+        ]
+      },
+      "neighborMap": {
+        "src/app/_components/home-sections.tsx": [
+          {
+            "path": "src/app/page.module.scss",
+            "batchIndex": 5,
+            "symbols": []
+          },
+          {
+            "path": "src/app/page.tsx",
+            "batchIndex": 2,
+            "symbols": [
+              "Home"
+            ]
+          }
+        ],
+        "src/components/AboutSkeleton.tsx": [
+          {
+            "path": "src/components/LoadingSkeleton.module.scss",
+            "batchIndex": 6,
+            "symbols": []
+          }
+        ],
+        "src/components/ContactSkeleton.tsx": [
+          {
+            "path": "src/components/LoadingSkeleton.module.scss",
+            "batchIndex": 6,
+            "symbols": []
+          }
+        ],
+        "src/components/FeedbacksSkeleton.tsx": [
+          {
+            "path": "src/components/LoadingSkeleton.module.scss",
+            "batchIndex": 6,
+            "symbols": []
+          }
+        ],
+        "src/components/LoadingSkeleton.tsx": [
+          {
+            "path": "src/components/LoadingSkeleton.module.scss",
+            "batchIndex": 6,
+            "symbols": []
+          },
+          {
+            "path": "src/components/HeroSkeleton.tsx",
+            "batchIndex": 9,
+            "symbols": []
+          }
+        ],
+        "src/components/ProjectsSkeleton.tsx": [
+          {
+            "path": "src/components/LoadingSkeleton.module.scss",
+            "batchIndex": 6,
+            "symbols": []
+          }
+        ],
+        "src/components/SkillsSkeleton.tsx": [
+          {
+            "path": "src/components/LoadingSkeleton.module.scss",
+            "batchIndex": 6,
+            "symbols": []
+          }
+        ]
+      }
+    },
+    {
+      "batchIndex": 2,
+      "files": [
+        {
+          "path": "src/app/page.tsx",
+          "language": "typescript",
+          "sizeLines": 19,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/Hero.tsx",
+          "language": "typescript",
+          "sizeLines": 143,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/Navigation.tsx",
+          "language": "typescript",
+          "sizeLines": 200,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/Projects.tsx",
+          "language": "typescript",
+          "sizeLines": 325,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/data/projects.ts",
+          "language": "typescript",
+          "sizeLines": 123,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/styles/breakpoints.ts",
+          "language": "typescript",
+          "sizeLines": 7,
+          "fileCategory": "code"
+        }
+      ],
+      "batchImportData": {
+        "src/app/page.tsx": [
+          "src/app/_components/home-sections.tsx",
+          "src/app/page.module.scss",
+          "src/components/Hero.tsx",
+          "src/components/Navigation.tsx"
+        ],
+        "src/components/Hero.tsx": [
+          "src/components/Hero.module.scss"
+        ],
+        "src/components/Navigation.tsx": [
+          "src/components/Navigation.module.scss",
+          "src/styles/breakpoints.ts"
+        ],
+        "src/components/Projects.tsx": [
+          "src/components/Projects.module.scss",
+          "src/data/projects.ts",
+          "src/styles/breakpoints.ts"
+        ],
+        "src/data/projects.ts": [
+          "src/types/index.ts"
+        ],
+        "src/styles/breakpoints.ts": []
+      },
+      "neighborMap": {
+        "src/app/page.tsx": [
+          {
+            "path": "src/app/_components/home-sections.tsx",
+            "batchIndex": 1,
+            "symbols": [
+              "HomeSections"
+            ]
+          },
+          {
+            "path": "src/app/page.module.scss",
+            "batchIndex": 5,
+            "symbols": []
+          }
+        ],
+        "src/components/Hero.tsx": [
+          {
+            "path": "src/components/Hero.module.scss",
+            "batchIndex": 6,
+            "symbols": []
+          }
+        ],
+        "src/components/Navigation.tsx": [
+          {
+            "path": "src/components/Navigation.module.scss",
+            "batchIndex": 6,
+            "symbols": []
+          }
+        ],
+        "src/components/Projects.tsx": [
+          {
+            "path": "src/components/Projects.module.scss",
+            "batchIndex": 6,
+            "symbols": []
+          }
+        ],
+        "src/data/projects.ts": [
+          {
+            "path": "src/types/index.ts",
+            "batchIndex": 3,
+            "symbols": []
+          }
+        ]
+      }
+    },
+    {
+      "batchIndex": 3,
+      "files": [
+        {
+          "path": "src/components/Contact.tsx",
+          "language": "typescript",
+          "sizeLines": 106,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/Footer.tsx",
+          "language": "typescript",
+          "sizeLines": 119,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/Skills.tsx",
+          "language": "typescript",
+          "sizeLines": 357,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/data/skills.ts",
+          "language": "typescript",
+          "sizeLines": 50,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/data/social-links.ts",
+          "language": "typescript",
+          "sizeLines": 34,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/types/index.ts",
+          "language": "typescript",
+          "sizeLines": 32,
+          "fileCategory": "code"
+        }
+      ],
+      "batchImportData": {
+        "src/components/Contact.tsx": [
+          "src/components/Contact.module.scss",
+          "src/data/social-links.ts"
+        ],
+        "src/components/Footer.tsx": [
+          "src/components/Footer.module.scss",
+          "src/data/social-links.ts"
+        ],
+        "src/components/Skills.tsx": [
+          "src/components/Skills.module.scss",
+          "src/data/skills.ts",
+          "src/types/index.ts"
+        ],
+        "src/data/skills.ts": [
+          "src/types/index.ts"
+        ],
+        "src/data/social-links.ts": [
+          "src/types/index.ts"
+        ],
+        "src/types/index.ts": []
+      },
+      "neighborMap": {
+        "src/components/Contact.tsx": [
+          {
+            "path": "src/components/Contact.module.scss",
+            "batchIndex": 6,
+            "symbols": []
+          }
+        ],
+        "src/components/Footer.tsx": [
+          {
+            "path": "src/components/Footer.module.scss",
+            "batchIndex": 6,
+            "symbols": []
+          }
+        ],
+        "src/components/Skills.tsx": [
+          {
+            "path": "src/components/Skills.module.scss",
+            "batchIndex": 6,
+            "symbols": []
+          }
+        ],
+        "src/types/index.ts": [
+          {
+            "path": "src/data/projects.ts",
+            "batchIndex": 2,
+            "symbols": [
+              "projects"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "batchIndex": 4,
+      "files": [
+        {
+          "path": "BUNDLE_ANALYSIS.md",
+          "language": "markdown",
+          "sizeLines": 58,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "README.md",
+          "language": "markdown",
+          "sizeLines": 178,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "package.json",
+          "language": "json",
+          "sizeLines": 33,
+          "fileCategory": "config"
+        },
+        {
+          "path": "tsconfig.json",
+          "language": "json",
+          "sizeLines": 41,
+          "fileCategory": "config"
+        }
+      ],
+      "batchImportData": {
+        "BUNDLE_ANALYSIS.md": [],
+        "README.md": [],
+        "package.json": [],
+        "tsconfig.json": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 5,
+      "files": [
+        {
+          "path": "src/app/error.module.scss",
+          "language": "css",
+          "sizeLines": 59,
+          "fileCategory": "markup"
+        },
+        {
+          "path": "src/app/globals.scss",
+          "language": "css",
+          "sizeLines": 254,
+          "fileCategory": "markup"
+        },
+        {
+          "path": "src/app/not-found.module.scss",
+          "language": "css",
+          "sizeLines": 50,
+          "fileCategory": "markup"
+        },
+        {
+          "path": "src/app/page.module.scss",
+          "language": "css",
+          "sizeLines": 82,
+          "fileCategory": "markup"
+        }
+      ],
+      "batchImportData": {
+        "src/app/error.module.scss": [],
+        "src/app/globals.scss": [],
+        "src/app/not-found.module.scss": [],
+        "src/app/page.module.scss": []
+      },
+      "neighborMap": {
+        "src/app/error.module.scss": [
+          {
+            "path": "src/app/error.tsx",
+            "batchIndex": 9,
+            "symbols": [
+              "Error"
+            ]
+          }
+        ],
+        "src/app/globals.scss": [
+          {
+            "path": "src/app/layout.tsx",
+            "batchIndex": 9,
+            "symbols": [
+              "metadata",
+              "viewport",
+              "RootLayout"
+            ]
+          }
+        ],
+        "src/app/not-found.module.scss": [
+          {
+            "path": "src/app/not-found.tsx",
+            "batchIndex": 9,
+            "symbols": [
+              "NotFound"
+            ]
+          }
+        ],
+        "src/app/page.module.scss": [
+          {
+            "path": "src/app/_components/home-sections.tsx",
+            "batchIndex": 1,
+            "symbols": [
+              "HomeSections"
+            ]
+          },
+          {
+            "path": "src/app/loading.tsx",
+            "batchIndex": 9,
+            "symbols": [
+              "Loading"
+            ]
+          },
+          {
+            "path": "src/app/page.tsx",
+            "batchIndex": 2,
+            "symbols": [
+              "Home"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "batchIndex": 6,
+      "files": [
+        {
+          "path": "src/components/About.module.scss",
+          "language": "css",
+          "sizeLines": 389,
+          "fileCategory": "markup"
+        },
+        {
+          "path": "src/components/Contact.module.scss",
+          "language": "css",
+          "sizeLines": 293,
+          "fileCategory": "markup"
+        },
+        {
+          "path": "src/components/Feedbacks.module.scss",
+          "language": "css",
+          "sizeLines": 286,
+          "fileCategory": "markup"
+        },
+        {
+          "path": "src/components/Footer.module.scss",
+          "language": "css",
+          "sizeLines": 262,
+          "fileCategory": "markup"
+        },
+        {
+          "path": "src/components/Hero.module.scss",
+          "language": "css",
+          "sizeLines": 520,
+          "fileCategory": "markup"
+        },
+        {
+          "path": "src/components/LoadingSkeleton.module.scss",
+          "language": "css",
+          "sizeLines": 611,
+          "fileCategory": "markup"
+        },
+        {
+          "path": "src/components/Navigation.module.scss",
+          "language": "css",
+          "sizeLines": 500,
+          "fileCategory": "markup"
+        },
+        {
+          "path": "src/components/Projects.module.scss",
+          "language": "css",
+          "sizeLines": 414,
+          "fileCategory": "markup"
+        },
+        {
+          "path": "src/components/Skills.module.scss",
+          "language": "css",
+          "sizeLines": 327,
+          "fileCategory": "markup"
+        }
+      ],
+      "batchImportData": {
+        "src/components/About.module.scss": [],
+        "src/components/Contact.module.scss": [],
+        "src/components/Feedbacks.module.scss": [],
+        "src/components/Footer.module.scss": [],
+        "src/components/Hero.module.scss": [],
+        "src/components/LoadingSkeleton.module.scss": [],
+        "src/components/Navigation.module.scss": [],
+        "src/components/Projects.module.scss": [],
+        "src/components/Skills.module.scss": []
+      },
+      "neighborMap": {
+        "src/components/About.module.scss": [
+          {
+            "path": "src/components/About.tsx",
+            "batchIndex": 9,
+            "symbols": []
+          }
+        ],
+        "src/components/Contact.module.scss": [
+          {
+            "path": "src/components/Contact.tsx",
+            "batchIndex": 3,
+            "symbols": []
+          }
+        ],
+        "src/components/Feedbacks.module.scss": [
+          {
+            "path": "src/components/Feedbacks.tsx",
+            "batchIndex": 9,
+            "symbols": []
+          }
+        ],
+        "src/components/Footer.module.scss": [
+          {
+            "path": "src/components/Footer.tsx",
+            "batchIndex": 3,
+            "symbols": []
+          }
+        ],
+        "src/components/Hero.module.scss": [
+          {
+            "path": "src/components/Hero.tsx",
+            "batchIndex": 2,
+            "symbols": []
+          }
+        ],
+        "src/components/LoadingSkeleton.module.scss": [
+          {
+            "path": "src/components/AboutSkeleton.tsx",
+            "batchIndex": 1,
+            "symbols": []
+          },
+          {
+            "path": "src/components/ContactSkeleton.tsx",
+            "batchIndex": 1,
+            "symbols": []
+          },
+          {
+            "path": "src/components/FeedbacksSkeleton.tsx",
+            "batchIndex": 1,
+            "symbols": []
+          },
+          {
+            "path": "src/components/HeroSkeleton.tsx",
+            "batchIndex": 9,
+            "symbols": []
+          },
+          {
+            "path": "src/components/LoadingSkeleton.tsx",
+            "batchIndex": 1,
+            "symbols": []
+          },
+          {
+            "path": "src/components/ProjectsSkeleton.tsx",
+            "batchIndex": 1,
+            "symbols": []
+          },
+          {
+            "path": "src/components/SkillsSkeleton.tsx",
+            "batchIndex": 1,
+            "symbols": []
+          }
+        ],
+        "src/components/Navigation.module.scss": [
+          {
+            "path": "src/components/Navigation.tsx",
+            "batchIndex": 2,
+            "symbols": []
+          },
+          {
+            "path": "src/components/NavigationMusicPlayer.tsx",
+            "batchIndex": 9,
+            "symbols": []
+          }
+        ],
+        "src/components/Projects.module.scss": [
+          {
+            "path": "src/components/Projects.tsx",
+            "batchIndex": 2,
+            "symbols": []
+          }
+        ],
+        "src/components/Skills.module.scss": [
+          {
+            "path": "src/components/Skills.tsx",
+            "batchIndex": 3,
+            "symbols": []
+          }
+        ]
+      }
+    },
+    {
+      "batchIndex": 7,
+      "files": [
+        {
+          "path": "src/styles/_backdrops.scss",
+          "language": "css",
+          "sizeLines": 77,
+          "fileCategory": "markup"
+        },
+        {
+          "path": "src/styles/_home.scss",
+          "language": "css",
+          "sizeLines": 41,
+          "fileCategory": "markup"
+        },
+        {
+          "path": "src/styles/_variables.scss",
+          "language": "css",
+          "sizeLines": 123,
+          "fileCategory": "markup"
+        }
+      ],
+      "batchImportData": {
+        "src/styles/_backdrops.scss": [],
+        "src/styles/_home.scss": [],
+        "src/styles/_variables.scss": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 8,
+      "files": [
+        {
+          "path": ".understand-anything/.understandignore",
+          "language": "unknown",
+          "sizeLines": 52,
+          "fileCategory": "code"
+        },
+        {
+          "path": ".understand-anything/config.json",
+          "language": "json",
+          "sizeLines": 1,
+          "fileCategory": "config"
+        },
+        {
+          "path": "eslint.config.mjs",
+          "language": "javascript",
+          "sizeLines": 25,
+          "fileCategory": "code"
+        },
+        {
+          "path": "next.config.ts",
+          "language": "typescript",
+          "sizeLines": 57,
+          "fileCategory": "code"
+        },
+        {
+          "path": "public/Art-1.webp",
+          "language": "webp",
+          "sizeLines": 307,
+          "fileCategory": "code"
+        },
+        {
+          "path": "public/Art-2.webp",
+          "language": "webp",
+          "sizeLines": 250,
+          "fileCategory": "code"
+        },
+        {
+          "path": "public/Art-3.webp",
+          "language": "webp",
+          "sizeLines": 1767,
+          "fileCategory": "code"
+        },
+        {
+          "path": "public/Hero Initial Picture.webp",
+          "language": "webp",
+          "sizeLines": 305,
+          "fileCategory": "code"
+        },
+        {
+          "path": "public/Hopeful emotions pic.webp",
+          "language": "webp",
+          "sizeLines": 162,
+          "fileCategory": "code"
+        },
+        {
+          "path": "public/Music-1.webp",
+          "language": "webp",
+          "sizeLines": 313,
+          "fileCategory": "code"
+        },
+        {
+          "path": "public/Music-2.webp",
+          "language": "webp",
+          "sizeLines": 79,
+          "fileCategory": "code"
+        },
+        {
+          "path": "public/Music-3.webp",
+          "language": "webp",
+          "sizeLines": 106,
+          "fileCategory": "code"
+        },
+        {
+          "path": "public/preview.webp",
+          "language": "webp",
+          "sizeLines": 186,
+          "fileCategory": "code"
+        },
+        {
+          "path": "public/Reading-1.webp",
+          "language": "webp",
+          "sizeLines": 272,
+          "fileCategory": "code"
+        },
+        {
+          "path": "public/Reading-2.webp",
+          "language": "webp",
+          "sizeLines": 143,
+          "fileCategory": "code"
+        },
+        {
+          "path": "public/Reading-3.webp",
+          "language": "webp",
+          "sizeLines": 384,
+          "fileCategory": "code"
+        },
+        {
+          "path": "public/Reading-Background.webp",
+          "language": "webp",
+          "sizeLines": 59,
+          "fileCategory": "code"
+        },
+        {
+          "path": "public/robots.txt",
+          "language": "txt",
+          "sizeLines": 4,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "public/Ruslan Looking Avatar.webp",
+          "language": "webp",
+          "sizeLines": 271,
+          "fileCategory": "code"
+        },
+        {
+          "path": "public/Ruslan Looking.webp",
+          "language": "webp",
+          "sizeLines": 161,
+          "fileCategory": "code"
+        },
+        {
+          "path": "public/Ruslan Profile Pic.webp",
+          "language": "webp",
+          "sizeLines": 138,
+          "fileCategory": "code"
+        },
+        {
+          "path": "public/Ruslan Profile.webp",
+          "language": "webp",
+          "sizeLines": 1243,
+          "fileCategory": "code"
+        },
+        {
+          "path": "public/sitemap.xml",
+          "language": "xml",
+          "sizeLines": 9,
+          "fileCategory": "config"
+        },
+        {
+          "path": "public/Sports-1.webp",
+          "language": "webp",
+          "sizeLines": 376,
+          "fileCategory": "code"
+        },
+        {
+          "path": "public/Sports-2.webp",
+          "language": "webp",
+          "sizeLines": 752,
+          "fileCategory": "code"
+        }
+      ],
+      "batchImportData": {
+        ".understand-anything/.understandignore": [],
+        ".understand-anything/config.json": [],
+        "eslint.config.mjs": [],
+        "next.config.ts": [],
+        "public/Art-1.webp": [],
+        "public/Art-2.webp": [],
+        "public/Art-3.webp": [],
+        "public/Hero Initial Picture.webp": [],
+        "public/Hopeful emotions pic.webp": [],
+        "public/Music-1.webp": [],
+        "public/Music-2.webp": [],
+        "public/Music-3.webp": [],
+        "public/preview.webp": [],
+        "public/Reading-1.webp": [],
+        "public/Reading-2.webp": [],
+        "public/Reading-3.webp": [],
+        "public/Reading-Background.webp": [],
+        "public/robots.txt": [],
+        "public/Ruslan Looking Avatar.webp": [],
+        "public/Ruslan Looking.webp": [],
+        "public/Ruslan Profile Pic.webp": [],
+        "public/Ruslan Profile.webp": [],
+        "public/sitemap.xml": [],
+        "public/Sports-1.webp": [],
+        "public/Sports-2.webp": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 9,
+      "files": [
+        {
+          "path": "public/Sports-3.webp",
+          "language": "webp",
+          "sizeLines": 177,
+          "fileCategory": "code"
+        },
+        {
+          "path": "public/Thumbnail - Real Estate New.webp",
+          "language": "webp",
+          "sizeLines": 180,
+          "fileCategory": "code"
+        },
+        {
+          "path": "public/Thumbnail Construction.webp",
+          "language": "webp",
+          "sizeLines": 156,
+          "fileCategory": "code"
+        },
+        {
+          "path": "public/Thumbnail Massage New.webp",
+          "language": "webp",
+          "sizeLines": 138,
+          "fileCategory": "code"
+        },
+        {
+          "path": "public/Thumbnail-AMTP-new.webp",
+          "language": "webp",
+          "sizeLines": 261,
+          "fileCategory": "code"
+        },
+        {
+          "path": "public/Thumbnail-Ash.webp",
+          "language": "webp",
+          "sizeLines": 325,
+          "fileCategory": "code"
+        },
+        {
+          "path": "public/Thumbnail-Astrology.webp",
+          "language": "webp",
+          "sizeLines": 194,
+          "fileCategory": "code"
+        },
+        {
+          "path": "public/Thumbnail-DefiLama.webp",
+          "language": "webp",
+          "sizeLines": 80,
+          "fileCategory": "code"
+        },
+        {
+          "path": "public/Thumbnail-ForestResidenceSofia.webp",
+          "language": "webp",
+          "sizeLines": 153,
+          "fileCategory": "code"
+        },
+        {
+          "path": "public/Thumbnail-Lawyer.webp",
+          "language": "webp",
+          "sizeLines": 70,
+          "fileCategory": "code"
+        },
+        {
+          "path": "public/Thumbnail-Maisons.webp",
+          "language": "webp",
+          "sizeLines": 113,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/app/error.tsx",
+          "language": "typescript",
+          "sizeLines": 35,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/app/layout.tsx",
+          "language": "typescript",
+          "sizeLines": 86,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/app/loading.tsx",
+          "language": "typescript",
+          "sizeLines": 14,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/app/not-found.tsx",
+          "language": "typescript",
+          "sizeLines": 19,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/About.tsx",
+          "language": "typescript",
+          "sizeLines": 262,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/DownloadCVButton.tsx",
+          "language": "typescript",
+          "sizeLines": 44,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/Feedbacks.tsx",
+          "language": "typescript",
+          "sizeLines": 197,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/FloatingCTA.tsx",
+          "language": "typescript",
+          "sizeLines": 46,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/HeroSkeleton.tsx",
+          "language": "typescript",
+          "sizeLines": 59,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/NavigationMusicPlayer.tsx",
+          "language": "typescript",
+          "sizeLines": 89,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/lib/site.ts",
+          "language": "typescript",
+          "sizeLines": 10,
+          "fileCategory": "code"
+        }
+      ],
+      "batchImportData": {
+        "public/Sports-3.webp": [],
+        "public/Thumbnail - Real Estate New.webp": [],
+        "public/Thumbnail Construction.webp": [],
+        "public/Thumbnail Massage New.webp": [],
+        "public/Thumbnail-AMTP-new.webp": [],
+        "public/Thumbnail-Ash.webp": [],
+        "public/Thumbnail-Astrology.webp": [],
+        "public/Thumbnail-DefiLama.webp": [],
+        "public/Thumbnail-ForestResidenceSofia.webp": [],
+        "public/Thumbnail-Lawyer.webp": [],
+        "public/Thumbnail-Maisons.webp": [],
+        "src/app/error.tsx": [
+          "src/app/error.module.scss"
+        ],
+        "src/app/layout.tsx": [
+          "src/app/globals.scss",
+          "src/lib/site.ts"
+        ],
+        "src/app/loading.tsx": [
+          "src/app/page.module.scss",
+          "src/components/HeroSkeleton.tsx"
+        ],
+        "src/app/not-found.tsx": [
+          "src/app/not-found.module.scss"
+        ],
+        "src/components/About.tsx": [
+          "src/components/About.module.scss"
+        ],
+        "src/components/DownloadCVButton.tsx": [],
+        "src/components/Feedbacks.tsx": [
+          "src/components/Feedbacks.module.scss"
+        ],
+        "src/components/FloatingCTA.tsx": [],
+        "src/components/HeroSkeleton.tsx": [
+          "src/components/LoadingSkeleton.module.scss",
+          "src/components/LoadingSkeleton.tsx"
+        ],
+        "src/components/NavigationMusicPlayer.tsx": [
+          "src/components/Navigation.module.scss"
+        ],
+        "src/lib/site.ts": []
+      },
+      "neighborMap": {
+        "src/app/error.tsx": [
+          {
+            "path": "src/app/error.module.scss",
+            "batchIndex": 5,
+            "symbols": []
+          }
+        ],
+        "src/app/layout.tsx": [
+          {
+            "path": "src/app/globals.scss",
+            "batchIndex": 5,
+            "symbols": []
+          }
+        ],
+        "src/app/loading.tsx": [
+          {
+            "path": "src/app/page.module.scss",
+            "batchIndex": 5,
+            "symbols": []
+          }
+        ],
+        "src/app/not-found.tsx": [
+          {
+            "path": "src/app/not-found.module.scss",
+            "batchIndex": 5,
+            "symbols": []
+          }
+        ],
+        "src/components/About.tsx": [
+          {
+            "path": "src/components/About.module.scss",
+            "batchIndex": 6,
+            "symbols": []
+          }
+        ],
+        "src/components/Feedbacks.tsx": [
+          {
+            "path": "src/components/Feedbacks.module.scss",
+            "batchIndex": 6,
+            "symbols": []
+          }
+        ],
+        "src/components/HeroSkeleton.tsx": [
+          {
+            "path": "src/components/LoadingSkeleton.module.scss",
+            "batchIndex": 6,
+            "symbols": []
+          },
+          {
+            "path": "src/components/LoadingSkeleton.tsx",
+            "batchIndex": 1,
+            "symbols": []
+          }
+        ],
+        "src/components/NavigationMusicPlayer.tsx": [
+          {
+            "path": "src/components/Navigation.module.scss",
+            "batchIndex": 6,
+            "symbols": []
+          }
+        ]
+      }
+    }
+  ]
+}

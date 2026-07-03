@@ -1,0 +1,97 @@
+{
+  "nodes": [
+    {
+      "id": "file:src/app/error.module.scss",
+      "type": "file",
+      "name": "error.module.scss",
+      "filePath": "src/app/error.module.scss",
+      "summary": "Scoped SASS module styling the error component.",
+      "complexity": "moderate",
+      "tags": [
+        "styling",
+        "sass-module"
+      ]
+    },
+    {
+      "id": "file:src/app/globals.scss",
+      "type": "file",
+      "name": "globals.scss",
+      "filePath": "src/app/globals.scss",
+      "summary": "Global design tokens, CSS variables, typography, and base element styles for the dark theme.",
+      "complexity": "complex",
+      "tags": [
+        "styling",
+        "design-system",
+        "global"
+      ]
+    },
+    {
+      "id": "file:src/app/not-found.module.scss",
+      "type": "file",
+      "name": "not-found.module.scss",
+      "filePath": "src/app/not-found.module.scss",
+      "summary": "Scoped SASS module styling the not-found component.",
+      "complexity": "simple",
+      "tags": [
+        "styling",
+        "sass-module"
+      ]
+    },
+    {
+      "id": "file:src/app/page.module.scss",
+      "type": "file",
+      "name": "page.module.scss",
+      "filePath": "src/app/page.module.scss",
+      "summary": "Scoped SASS module styling the page component.",
+      "complexity": "moderate",
+      "tags": [
+        "styling",
+        "sass-module"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:src/app/error.tsx",
+      "target": "file:src/app/error.module.scss",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/app/layout.tsx",
+      "target": "file:src/app/globals.scss",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/app/not-found.tsx",
+      "target": "file:src/app/not-found.module.scss",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/app/_components/home-sections.tsx",
+      "target": "file:src/app/page.module.scss",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/app/loading.tsx",
+      "target": "file:src/app/page.module.scss",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/app/page.tsx",
+      "target": "file:src/app/page.module.scss",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    }
+  ]
+}

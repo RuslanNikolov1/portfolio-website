@@ -1,0 +1,339 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 22,
+  "filesSkipped": [],
+  "results": [
+    {
+      "path": "public/Sports-3.webp",
+      "language": "webp",
+      "fileCategory": "code",
+      "totalLines": 178,
+      "nonEmptyLines": 176,
+      "metrics": {}
+    },
+    {
+      "path": "public/Thumbnail - Real Estate New.webp",
+      "language": "webp",
+      "fileCategory": "code",
+      "totalLines": 181,
+      "nonEmptyLines": 179,
+      "metrics": {}
+    },
+    {
+      "path": "public/Thumbnail Construction.webp",
+      "language": "webp",
+      "fileCategory": "code",
+      "totalLines": 157,
+      "nonEmptyLines": 157,
+      "metrics": {}
+    },
+    {
+      "path": "public/Thumbnail Massage New.webp",
+      "language": "webp",
+      "fileCategory": "code",
+      "totalLines": 139,
+      "nonEmptyLines": 137,
+      "metrics": {}
+    },
+    {
+      "path": "public/Thumbnail-AMTP-new.webp",
+      "language": "webp",
+      "fileCategory": "code",
+      "totalLines": 262,
+      "nonEmptyLines": 262,
+      "metrics": {}
+    },
+    {
+      "path": "public/Thumbnail-Ash.webp",
+      "language": "webp",
+      "fileCategory": "code",
+      "totalLines": 326,
+      "nonEmptyLines": 323,
+      "metrics": {}
+    },
+    {
+      "path": "public/Thumbnail-Astrology.webp",
+      "language": "webp",
+      "fileCategory": "code",
+      "totalLines": 195,
+      "nonEmptyLines": 193,
+      "metrics": {}
+    },
+    {
+      "path": "public/Thumbnail-DefiLama.webp",
+      "language": "webp",
+      "fileCategory": "code",
+      "totalLines": 81,
+      "nonEmptyLines": 81,
+      "metrics": {}
+    },
+    {
+      "path": "public/Thumbnail-ForestResidenceSofia.webp",
+      "language": "webp",
+      "fileCategory": "code",
+      "totalLines": 154,
+      "nonEmptyLines": 154,
+      "metrics": {}
+    },
+    {
+      "path": "public/Thumbnail-Lawyer.webp",
+      "language": "webp",
+      "fileCategory": "code",
+      "totalLines": 71,
+      "nonEmptyLines": 71,
+      "metrics": {}
+    },
+    {
+      "path": "public/Thumbnail-Maisons.webp",
+      "language": "webp",
+      "fileCategory": "code",
+      "totalLines": 114,
+      "nonEmptyLines": 114,
+      "metrics": {}
+    },
+    {
+      "path": "src/app/error.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 35,
+      "nonEmptyLines": 31,
+      "functions": [
+        {
+          "name": "Error",
+          "startLine": 11,
+          "endLine": 35,
+          "params": [
+            "{ error, reset }"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "Error",
+          "line": 11,
+          "isDefault": true
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "Error",
+          "callee": "useEffect",
+          "lineNumber": 12
+        },
+        {
+          "caller": "Error",
+          "callee": "console.error",
+          "lineNumber": 13
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/app/layout.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 86,
+      "nonEmptyLines": 81,
+      "functions": [
+        {
+          "name": "RootLayout",
+          "startLine": 71,
+          "endLine": 86,
+          "params": [
+            "{\n  children,\n}"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "metadata",
+          "line": 24,
+          "isDefault": false
+        },
+        {
+          "name": "viewport",
+          "line": 64,
+          "isDefault": false
+        },
+        {
+          "name": "RootLayout",
+          "line": 71,
+          "isDefault": true
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 3,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/app/loading.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 14,
+      "nonEmptyLines": 13,
+      "functions": [
+        {
+          "name": "Loading",
+          "startLine": 4,
+          "endLine": 14,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "Loading",
+          "line": 4,
+          "isDefault": true
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/app/not-found.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 19,
+      "nonEmptyLines": 18,
+      "functions": [
+        {
+          "name": "NotFound",
+          "startLine": 4,
+          "endLine": 19,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "NotFound",
+          "line": 4,
+          "isDefault": true
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/components/About.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 262,
+      "nonEmptyLines": 247,
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/components/DownloadCVButton.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 44,
+      "nonEmptyLines": 38,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/components/Feedbacks.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 197,
+      "nonEmptyLines": 180,
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/components/FloatingCTA.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 46,
+      "nonEmptyLines": 39,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/components/HeroSkeleton.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 59,
+      "nonEmptyLines": 52,
+      "functions": [
+        {
+          "name": "HeroSkeleton",
+          "startLine": 4,
+          "endLine": 56,
+          "params": []
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 0,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/components/NavigationMusicPlayer.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 89,
+      "nonEmptyLines": 81,
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/lib/site.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 10,
+      "nonEmptyLines": 10,
+      "exports": [
+        {
+          "name": "siteConfig",
+          "line": 1,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    }
+  ]
+}

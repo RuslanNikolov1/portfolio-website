@@ -1,0 +1,39 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 4,
+  "filesSkipped": [],
+  "results": [
+    {
+      "path": "src/app/error.module.scss",
+      "language": "css",
+      "fileCategory": "markup",
+      "totalLines": 59,
+      "nonEmptyLines": 51,
+      "metrics": {}
+    },
+    {
+      "path": "src/app/globals.scss",
+      "language": "css",
+      "fileCategory": "markup",
+      "totalLines": 254,
+      "nonEmptyLines": 224,
+      "metrics": {}
+    },
+    {
+      "path": "src/app/not-found.module.scss",
+      "language": "css",
+      "fileCategory": "markup",
+      "totalLines": 50,
+      "nonEmptyLines": 44,
+      "metrics": {}
+    },
+    {
+      "path": "src/app/page.module.scss",
+      "language": "css",
+      "fileCategory": "markup",
+      "totalLines": 82,
+      "nonEmptyLines": 71,
+      "metrics": {}
+    }
+  ]
+}

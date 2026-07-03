@@ -1,0 +1,182 @@
+{
+  "projectRoot": "c:/Development/portfolio-website-design-taste",
+  "batchFiles": [
+    {
+      "path": ".understand-anything/.understandignore",
+      "language": "unknown",
+      "sizeLines": 52,
+      "fileCategory": "code"
+    },
+    {
+      "path": ".understand-anything/config.json",
+      "language": "json",
+      "sizeLines": 1,
+      "fileCategory": "config"
+    },
+    {
+      "path": "eslint.config.mjs",
+      "language": "javascript",
+      "sizeLines": 25,
+      "fileCategory": "code"
+    },
+    {
+      "path": "next.config.ts",
+      "language": "typescript",
+      "sizeLines": 57,
+      "fileCategory": "code"
+    },
+    {
+      "path": "public/Art-1.webp",
+      "language": "webp",
+      "sizeLines": 307,
+      "fileCategory": "code"
+    },
+    {
+      "path": "public/Art-2.webp",
+      "language": "webp",
+      "sizeLines": 250,
+      "fileCategory": "code"
+    },
+    {
+      "path": "public/Art-3.webp",
+      "language": "webp",
+      "sizeLines": 1767,
+      "fileCategory": "code"
+    },
+    {
+      "path": "public/Hero Initial Picture.webp",
+      "language": "webp",
+      "sizeLines": 305,
+      "fileCategory": "code"
+    },
+    {
+      "path": "public/Hopeful emotions pic.webp",
+      "language": "webp",
+      "sizeLines": 162,
+      "fileCategory": "code"
+    },
+    {
+      "path": "public/Music-1.webp",
+      "language": "webp",
+      "sizeLines": 313,
+      "fileCategory": "code"
+    },
+    {
+      "path": "public/Music-2.webp",
+      "language": "webp",
+      "sizeLines": 79,
+      "fileCategory": "code"
+    },
+    {
+      "path": "public/Music-3.webp",
+      "language": "webp",
+      "sizeLines": 106,
+      "fileCategory": "code"
+    },
+    {
+      "path": "public/preview.webp",
+      "language": "webp",
+      "sizeLines": 186,
+      "fileCategory": "code"
+    },
+    {
+      "path": "public/Reading-1.webp",
+      "language": "webp",
+      "sizeLines": 272,
+      "fileCategory": "code"
+    },
+    {
+      "path": "public/Reading-2.webp",
+      "language": "webp",
+      "sizeLines": 143,
+      "fileCategory": "code"
+    },
+    {
+      "path": "public/Reading-3.webp",
+      "language": "webp",
+      "sizeLines": 384,
+      "fileCategory": "code"
+    },
+    {
+      "path": "public/Reading-Background.webp",
+      "language": "webp",
+      "sizeLines": 59,
+      "fileCategory": "code"
+    },
+    {
+      "path": "public/robots.txt",
+      "language": "txt",
+      "sizeLines": 4,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "public/Ruslan Looking Avatar.webp",
+      "language": "webp",
+      "sizeLines": 271,
+      "fileCategory": "code"
+    },
+    {
+      "path": "public/Ruslan Looking.webp",
+      "language": "webp",
+      "sizeLines": 161,
+      "fileCategory": "code"
+    },
+    {
+      "path": "public/Ruslan Profile Pic.webp",
+      "language": "webp",
+      "sizeLines": 138,
+      "fileCategory": "code"
+    },
+    {
+      "path": "public/Ruslan Profile.webp",
+      "language": "webp",
+      "sizeLines": 1243,
+      "fileCategory": "code"
+    },
+    {
+      "path": "public/sitemap.xml",
+      "language": "xml",
+      "sizeLines": 9,
+      "fileCategory": "config"
+    },
+    {
+      "path": "public/Sports-1.webp",
+      "language": "webp",
+      "sizeLines": 376,
+      "fileCategory": "code"
+    },
+    {
+      "path": "public/Sports-2.webp",
+      "language": "webp",
+      "sizeLines": 752,
+      "fileCategory": "code"
+    }
+  ],
+  "batchImportData": {
+    ".understand-anything/.understandignore": [],
+    ".understand-anything/config.json": [],
+    "eslint.config.mjs": [],
+    "next.config.ts": [],
+    "public/Art-1.webp": [],
+    "public/Art-2.webp": [],
+    "public/Art-3.webp": [],
+    "public/Hero Initial Picture.webp": [],
+    "public/Hopeful emotions pic.webp": [],
+    "public/Music-1.webp": [],
+    "public/Music-2.webp": [],
+    "public/Music-3.webp": [],
+    "public/preview.webp": [],
+    "public/Reading-1.webp": [],
+    "public/Reading-2.webp": [],
+    "public/Reading-3.webp": [],
+    "public/Reading-Background.webp": [],
+    "public/robots.txt": [],
+    "public/Ruslan Looking Avatar.webp": [],
+    "public/Ruslan Looking.webp": [],
+    "public/Ruslan Profile Pic.webp": [],
+    "public/Ruslan Profile.webp": [],
+    "public/sitemap.xml": [],
+    "public/Sports-1.webp": [],
+    "public/Sports-2.webp": []
+  }
+}
