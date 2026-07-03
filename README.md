@@ -13,8 +13,6 @@
   ·
   <a href="#getting-started">Getting started</a>
   ·
-  <a href="#customization">Customization</a>
-  ·
   <a href="#testing">Testing</a>
   ·
   <a href="#architecture-dashboard">Architecture</a>
@@ -37,9 +35,6 @@
 This project is a performance-focused portfolio built with the Next.js App Router. It combines a cinematic hero, interactive project showcase, expandable skills section, career timeline, client testimonials, and direct contact links — all styled with scoped SASS modules and animated with Framer Motion.
 
 The layout is mobile-first, accessibility-aware (skip link, semantic landmarks, reduced-motion support), and optimized for fast first paint through lazy-loaded sections, skeleton placeholders, and aggressive static asset caching. The codebase maintains **80% unit test coverage** across components and data modules, enforced by Vitest coverage thresholds.
-
-> [!TIP]
-> Use this repository as a starting point for your own portfolio. Most personal content lives in a handful of data files under `src/data/`.
 
 ## Features
 
@@ -160,41 +155,6 @@ In Cursor, run `/understand-dashboard` to launch the local dashboard against thi
 | **About** | Education and work timeline, hobbies, and downloadable CV |
 | **Feedbacks** | Colleague and client testimonials in a swipeable carousel |
 | **Contact** | Direct links to phone, email, GitHub, LinkedIn, SoundCloud, and Viber |
-
-## Customization
-
-Update these files to make the site yours:
-
-| What to change | Where |
-| --- | --- |
-| Projects, thumbnails, and links | `src/data/projects.ts` |
-| Skills and proficiency notes | `src/data/skills.ts` |
-| Social and contact links | `src/data/social-links.ts` |
-| SEO title, description, Open Graph | `src/app/layout.tsx` |
-| Testimonials | `src/components/Feedbacks.tsx` |
-| Career timeline and hobbies | `src/components/About.tsx` |
-| Images and media | `public/` |
-
-> [!NOTE]
-> Project images use WebP assets in `public/`. Keep filenames in sync with the `imageUrl` fields in `projects.ts`.
-
-### Design system
-
-Colors and typography are centralized in `src/styles/_variables.scss` under the **Vibrant Digital Pulse** palette:
-
-- Background: `#0d0f11`
-- Surface: `#171a1e`
-- Primary accent (CTA): `#FFD644`
-- Highlight / links: `#5DB7FF`
-- Success / active: `#7CFFB2`
-
-Fonts are loaded in `layout.tsx` via `next/font/google`: **Rubik** for display headings and **Inter** for body text.
-
-Responsive breakpoints (shared between SASS and TypeScript):
-
-- Mobile: up to `768px`
-- Tablet: `768px` – `1024px`
-- Desktop: `1024px` and above
 
 ## Testing
 
