@@ -88,7 +88,7 @@ const Feedbacks = memo(() => {
   return (
     <section id="feedbacks" className={styles.feedbacks} aria-labelledby="feedbacks-heading">
       <div className={styles.container}>
-        {/* <motion.header
+        <motion.header
           className={styles.header}
           initial={reduceMotion ? false : { opacity: 0, x: -24 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -98,9 +98,14 @@ const Feedbacks = memo(() => {
           <h2 id="feedbacks-heading" className={styles.title}>
             What People Say
           </h2>
-        </motion.header> */}
+        </motion.header>
 
-        <div className={styles.stage}>
+        <div
+          className={styles.stage}
+          role="region"
+          aria-roledescription="carousel"
+          aria-label="Testimonials"
+        >
           <div className={styles.quoteShell}>
             <div className={styles.counter} role="group" aria-label="Testimonial counter">
               {FEEDBACKS.map((feedback, index) => {
@@ -121,7 +126,10 @@ const Feedbacks = memo(() => {
               })}
             </div>
 
-            <div className={styles.carousel}>
+            <div
+              className={styles.carousel}
+              aria-label={`Testimonial ${activeIndex + 1} of ${FEEDBACKS.length}`}
+            >
               <button
                 type="button"
                 className={styles.navButton}
@@ -131,7 +139,7 @@ const Feedbacks = memo(() => {
                 <ChevronLeft size={20} aria-hidden="true" />
               </button>
 
-              <div className={styles.quoteViewport}>
+              <div className={styles.quoteViewport} aria-live="polite" aria-atomic="true">
                 <AnimatePresence mode="wait" custom={direction} initial={false}>
                   <motion.article
                     key={activeFeedback.name}

@@ -72,7 +72,7 @@ const Contact = memo(() => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className={styles.socialLink}
-                  aria-label={link.name}
+                  aria-label={`${link.name} (opens in new tab)`}
                 >
                   <motion.div
                     className={styles.socialIcon}

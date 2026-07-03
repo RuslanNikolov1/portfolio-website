@@ -58,7 +58,7 @@ const Hero = memo(() => {
   const handleVideoLoad = useCallback(() => setVideoLoaded(true), []);
 
   return (
-    <section className={styles.hero} aria-label="Hero section">
+    <div className={styles.hero}>
       <div className={styles.background} role="img" aria-label="Animated background video">
         {!videoLoaded && !videoError && (
           <>
@@ -134,7 +134,7 @@ const Hero = memo(() => {
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 });
 

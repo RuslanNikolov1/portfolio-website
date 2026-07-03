@@ -67,7 +67,7 @@ const Projects = memo(() => {
     (idx: number) => {
       setSelectedIndex(idx);
 
-      const target = document.getElementById('project-preview');
+      const target = document.getElementById('project-preview-panel');
       const isMobile = window.matchMedia(MQ_BELOW_SM).matches;
 
       if (!isMobile || !target) return;
@@ -86,6 +86,33 @@ const Projects = memo(() => {
       else if (info.offset.x < -SWIPE_THRESHOLD) goToNext();
     },
     [goToPrevious, goToNext],
+  );
+
+  const handleTabKeyDown = useCallback(
+    (event: React.KeyboardEvent<HTMLButtonElement>, index: number) => {
+      const { key } = event;
+      let nextIndex: number | null = null;
+
+      if (key === 'ArrowRight' || key === 'ArrowDown') {
+        nextIndex = (index + 1) % totalProjects;
+      } else if (key === 'ArrowLeft' || key === 'ArrowUp') {
+        nextIndex = index === 0 ? totalProjects - 1 : index - 1;
+      } else if (key === 'Home') {
+        nextIndex = 0;
+      } else if (key === 'End') {
+        nextIndex = totalProjects - 1;
+      }
+
+      if (nextIndex === null) return;
+
+      event.preventDefault();
+      handleRailSelect(nextIndex);
+
+      const rail = railRef.current;
+      const nextTab = rail?.querySelectorAll('[role="tab"]')[nextIndex] as HTMLElement | undefined;
+      nextTab?.focus();
+    },
+    [handleRailSelect, totalProjects],
   );
 
   const dockVariants = {
@@ -150,10 +177,14 @@ const Projects = memo(() => {
               <motion.button
                 key={item.id}
                 type="button"
+                id={`project-tab-${item.id}`}
                 role="tab"
                 aria-selected={idx === selectedIndex}
+                aria-controls="project-preview-panel"
+                tabIndex={idx === selectedIndex ? 0 : -1}
                 className={`${styles.railItem} ${idx === selectedIndex ? styles.railItemActive : ''}`}
                 onClick={() => handleRailSelect(idx)}
+                onKeyDown={(event) => handleTabKeyDown(event, idx)}
                 aria-label={`Select ${item.title}`}
                 initial={reduceMotion ? false : { opacity: 0, x: -24 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -180,7 +211,13 @@ const Projects = memo(() => {
             ))}
           </nav>
 
-          <div className={styles.theater} id="project-preview" tabIndex={-1}>
+          <div
+            className={styles.theater}
+            id="project-preview-panel"
+            role="tabpanel"
+            aria-labelledby={`project-tab-${selected.id}`}
+            tabIndex={0}
+          >
             <button
               type="button"
               className={`${styles.theaterNav} ${styles.theaterNavPrev}`}
@@ -256,8 +293,9 @@ const Projects = memo(() => {
                         whileHover={reduceMotion ? undefined : { scale: 1.04, y: -2 }}
                         whileTap={reduceMotion ? undefined : { scale: 0.97 }}
                       >
-                        <ExternalLink size={16} strokeWidth={2.5} />
+                        <ExternalLink size={16} strokeWidth={2.5} aria-hidden="true" />
                         Visit Project
+                        <span className="visually-hidden"> (opens in new tab)</span>
                       </motion.span>
                     </Link>
                     <Link href={selected.codeUrl} target="_blank" rel="noopener noreferrer">
@@ -266,8 +304,9 @@ const Projects = memo(() => {
                         whileHover={reduceMotion ? undefined : { scale: 1.04, y: -2 }}
                         whileTap={reduceMotion ? undefined : { scale: 0.97 }}
                       >
-                        <Github size={16} strokeWidth={2.5} />
+                        <Github size={16} strokeWidth={2.5} aria-hidden="true" />
                         View Code
+                        <span className="visually-hidden"> (opens in new tab)</span>
                       </motion.span>
                     </Link>
                   </div>

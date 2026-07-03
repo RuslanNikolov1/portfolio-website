@@ -9,6 +9,39 @@
   }
 }
 
+// Skip link and screen-reader-only text
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 0.75rem;
+  z-index: 10000;
+  padding: 0.75rem 1rem;
+  background: var(--home-yellow);
+  color: var(--home-ink);
+  font-weight: 600;
+  border: 2px solid var(--home-ink);
+  border-radius: 0.5rem;
+  text-decoration: none;
+
+  &:focus {
+    top: 0.75rem;
+    outline: 2px solid var(--home-accent-deep);
+    outline-offset: 2px;
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 // Accessibility and Focus Management
 
 html {

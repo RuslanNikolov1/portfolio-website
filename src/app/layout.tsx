@@ -87,6 +87,9 @@ export default function RootLayout({
         />
       </head>
       <body className={`${rubik.variable} ${inter.variable} antialiased`}>
+        <a href="#main-content" className="skip-link">
+          Skip to main content
+        </a>
         {children}
       </body>
     </html>
