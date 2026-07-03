@@ -1,4 +1,5 @@
 @use "../styles/variables" as *;
+@use "../styles/backdrops" as backdrops;
 
 // SASS Variables
 $background: #0F172A;
@@ -15,30 +16,19 @@ $border: #334155;
   padding: clamp(3.5rem, 8vw, 6rem) 0;
   position: relative;
   min-height: min(100dvh, 900px);
-  background: linear-gradient(180deg, var(--home-accent) 0%, var(--home-accent-light) 100%);
-}
-
-.contact::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100vw; // full-bleed divider spanning viewport
-  height: 8px; // thinner white divider
-  background: #ffffff;
-  z-index: 0;
-  pointer-events: none;
+  overflow: hidden;
+  background:
+    backdrops.home-light-mesh-layers(),
+    linear-gradient(180deg, var(--home-surface-light) 0%, var(--home-surface) 100%);
 }
 
 .bottomDivider {
   position: absolute;
   bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100vw; // full-bleed divider spanning viewport
-  height: 8px; // white divider
-  background: #ffffff;
+  left: 0;
+  width: 100%;
+  height: clamp(10px, 1.6vw, 14px);
+  background: var(--home-navy);
   z-index: 0;
   pointer-events: none;
 }
@@ -48,6 +38,7 @@ $border: #334155;
   margin: 0 auto;
   padding: 0 2rem;
   position: relative;
+  z-index: 1;
 }
 
 .header {
@@ -62,7 +53,7 @@ $border: #334155;
   color: var(--home-ink);
   line-height: $line-height-tight;
   letter-spacing: $letter-spacing-tight;
-  max-width: 18ch;
+  max-width: 22ch;
 }
 
 .titleAccent {
@@ -71,13 +62,13 @@ $border: #334155;
   background: var(--home-yellow);
   padding: 0.05em 0.18em 0.1em;
   border: 4px solid var(--home-ink);
-  box-shadow: 5px 5px 0 var(--home-surface);
+  box-shadow: 5px 5px 0 var(--home-accent);
 }
 
 .subtitle {
   font-family: $font-satoshi;
   font-size: clamp($font-size-base, 1.6vw, $font-size-lg);
-  color: var(--home-ink-muted);
+  color: var(--home-navy);
   line-height: $line-height-relaxed;
   letter-spacing: $letter-spacing-normal;
   margin: 0;
@@ -91,11 +82,11 @@ $border: #334155;
   align-items: center;
   justify-content: center;
   height: 100%;
-  padding: clamp(1.25rem, 2.5vw, 2rem);
-  background: var(--home-surface);
+  padding: clamp(1rem, 2vw, 1.5rem);
+  background: #ccedfe;
   border: 4px solid var(--home-ink);
   border-radius: var(--home-radius-lg);
-  box-shadow: 8px 8px 0 var(--home-navy);
+  box-shadow: 10px 10px 0 var(--home-navy);
 }
 
 .content {

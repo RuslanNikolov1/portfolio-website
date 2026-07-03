@@ -38,7 +38,10 @@ export default function Home() {
           <Hero />
         </section>
 
-        <div className={styles.sectionDivider} aria-hidden="true" />
+        <div
+          className={`${styles.sectionDivider} ${styles.sectionDivider_cutNavyWhite}`}
+          aria-hidden="true"
+        />
 
         <div className={styles.sectionShell}>
           <Suspense fallback={<ProjectsSkeleton />}>
@@ -46,7 +49,10 @@ export default function Home() {
           </Suspense>
         </div>
 
-        <div className={styles.sectionDivider} aria-hidden="true" />
+        <div
+          className={`${styles.sectionDivider} ${styles.sectionDivider_cutYellow}`}
+          aria-hidden="true"
+        />
 
         <div className={styles.sectionShell}>
           <Suspense fallback={<SkillsSkeleton />}>
@@ -54,17 +60,32 @@ export default function Home() {
           </Suspense>
         </div>
 
+        <div
+          className={`${styles.sectionDivider} ${styles.sectionDivider_cutNavyWhite}`}
+          aria-hidden="true"
+        />
+
         <div className={styles.sectionShell}>
           <Suspense fallback={<AboutSkeleton />}>
             <AboutLazy />
           </Suspense>
         </div>
 
+        <div
+          className={`${styles.sectionDivider} ${styles.sectionDivider_cutYellowNavy}`}
+          aria-hidden="true"
+        />
+
         <div className={styles.sectionShell}>
           <Suspense fallback={<FeedbacksSkeleton />}>
             <FeedbacksLazy />
           </Suspense>
         </div>
+
+        <div
+          className={`${styles.sectionDivider} ${styles.sectionDivider_cutNavySky}`}
+          aria-hidden="true"
+        />
 
         <div className={styles.sectionShell}>
           <Suspense fallback={<ContactSkeleton />}>

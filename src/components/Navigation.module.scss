@@ -19,26 +19,15 @@ $font-weight-medium: 500;
   left: 0;
   right: 0;
   z-index: 1000;
-  background: var(--home-navy);
-  border-bottom: 4px solid var(--home-accent);
+  background: var(--home-header);
   overflow: visible;
-  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+  transition: box-shadow 0.3s ease;
   height: 72px;
 }
 
 .nav.scrolled {
-  background: var(--home-navy);
+  background: var(--home-header);
   box-shadow: 0 8px 28px var(--home-shadow);
-  border-bottom-color: var(--home-yellow);
-}
-
-// Hide bottom border on mobile and tablet
-@media (max-width: 1025px) {
-
-  .nav,
-  .nav.scrolled {
-    border-bottom: 0 !important;
-  }
 }
 
 .container {
@@ -90,7 +79,6 @@ $font-weight-medium: 500;
   height: 100%;
   object-fit: cover;
   border-radius: 50%;
-  border: 3px solid var(--home-accent);
   box-shadow: 3px 3px 0 var(--home-yellow);
 }
 

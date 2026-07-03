@@ -5,8 +5,6 @@ import {
   motion,
   AnimatePresence,
   useReducedMotion,
-  useScroll,
-  useTransform,
 } from 'framer-motion';
 import { ExternalLink, Github, ChevronLeft, ChevronRight } from 'lucide-react';
 import Image from 'next/image';
@@ -32,18 +30,10 @@ const SWIPE_THRESHOLD = 72;
 const Projects = memo(() => {
   const [selectedIndex, setSelectedIndex] = useState(0);
   const reduceMotion = useReducedMotion();
-  const sectionRef = useRef<HTMLElement>(null);
   const railRef = useRef<HTMLElement>(null);
 
   const selected = useMemo(() => SHOWCASE_ITEMS[selectedIndex], [selectedIndex]);
   const totalProjects = SHOWCASE_ITEMS.length;
-
-  const { scrollYProgress } = useScroll({
-    target: sectionRef,
-    offset: ['start end', 'end start'],
-  });
-
-  const blobCoolY = useTransform(scrollYProgress, [0, 1], [-30, 90]);
 
   useEffect(() => {
     const activeTab = railRef.current?.querySelector('[aria-selected="true"]');
@@ -123,13 +113,7 @@ const Projects = memo(() => {
   );
 
   return (
-    <section ref={sectionRef} id="projects" className={styles.projects}>
-      <motion.div
-        className={styles.blobCool}
-        style={reduceMotion ? undefined : { y: blobCoolY }}
-        aria-hidden="true"
-      />
-
+    <section id="projects" className={styles.projects}>
       <div className={styles.container}>
         <motion.header
           className={styles.masthead}

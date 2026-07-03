@@ -96,7 +96,7 @@ const Feedbacks = memo(() => {
           viewport={{ once: true, amount: 0.4 }}
         >
           <h2 id="feedbacks-heading" className={styles.title}>
-            What People <span className={styles.titleAccent}>Say</span>
+            What People Say
           </h2>
         </motion.header> */}
 

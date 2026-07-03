@@ -4,11 +4,31 @@
 .feedbacks {
   position: relative;
   padding: clamp(3.5rem, 8vw, 6rem) 0;
-  background: linear-gradient(180deg, var(--home-yellow-light) 0%, var(--home-bg-warm-light) 100%);
   overflow: hidden;
+  background:
+    linear-gradient(180deg, rgb(254 227 120 / 0.38) 0%, transparent 55%),
+    var(--home-surface);
+
+  &::before {
+    content: '\201C';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -52%);
+    font-family: var(--font-rubik, 'Rubik', sans-serif);
+    font-size: clamp(12rem, 28vw, 22rem);
+    font-weight: 700;
+    line-height: 1;
+    color: rgb(25 41 108 / 0.045);
+    pointer-events: none;
+    z-index: 0;
+    user-select: none;
+  }
 }
 
 .container {
+  position: relative;
+  z-index: 1;
   max-width: 1320px;
   margin: 0 auto;
   padding: 0 clamp(1rem, 3vw, 2.5rem);

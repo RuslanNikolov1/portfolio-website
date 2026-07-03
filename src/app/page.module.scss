@@ -1,5 +1,9 @@
+@use "../styles/backdrops" as backdrops;
+
 .page {
+  position: relative;
   background: var(--home-surface);
+  @include backdrops.home-page-grain;
 }
 
 .heroSection {
@@ -10,14 +14,59 @@
   position: relative;
 }
 
+// Thick stepped "color cuts" between sections (replaces 2px hairlines)
 .sectionDivider {
-  height: 6px;
   width: 100%;
+  flex-shrink: 0;
+  pointer-events: none;
+}
+
+.sectionDivider_cutNavyYellow {
+  height: clamp(12px, 2vw, 16px);
   background: linear-gradient(
-    90deg,
+    180deg,
+    var(--home-navy) 0%,
+    var(--home-navy) 50%,
+    var(--home-yellow) 50%,
+    var(--home-yellow) 100%
+  );
+}
+
+.sectionDivider_cutYellow {
+  height: clamp(10px, 1.6vw, 14px);
+  background: var(--home-yellow);
+}
+
+.sectionDivider_cutNavyWhite {
+  height: clamp(12px, 2vw, 16px);
+  background: linear-gradient(
+    180deg,
+    var(--home-navy) 0%,
+    var(--home-navy) 50%,
+    var(--home-surface) 50%,
+    var(--home-surface) 100%
+  );
+}
+
+.sectionDivider_cutYellowNavy {
+  height: clamp(12px, 2vw, 16px);
+  background: linear-gradient(
+    180deg,
     var(--home-yellow) 0%,
-    var(--home-accent) 50%,
+    var(--home-yellow) 50%,
+    var(--home-navy) 50%,
     var(--home-navy) 100%
+  );
+}
+
+.sectionDivider_cutNavySky {
+  height: clamp(12px, 2vw, 16px);
+  background: linear-gradient(
+    180deg,
+    var(--home-navy) 0%,
+    var(--home-navy) 50%,
+    var(--home-accent-light) 50%,
+    var(--home-accent-light) 100%
   );
 }
 

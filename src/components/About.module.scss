@@ -1,11 +1,17 @@
 @use "../styles/variables" as *;
 @use "../styles/home" as home;
+@use "../styles/backdrops" as backdrops;
 
 .about {
   position: relative;
   padding: clamp(3.5rem, 8vw, 6rem) 0;
-  background: linear-gradient(180deg, var(--home-bg) 0%, var(--home-bg-light) 100%);
   overflow: hidden;
+  background:
+    radial-gradient(ellipse 55% 45% at 95% 8%, rgb(56 189 248 / 0.12), transparent 52%),
+    radial-gradient(ellipse 45% 40% at 4% 94%, rgb(167 243 208 / 0.14), transparent 48%),
+    backdrops.home-cross-grid-layer(),
+    linear-gradient(180deg, var(--home-surface-light) 0%, var(--home-surface) 100%);
+  background-size: auto, auto, auto, auto;
 }
 
 .container {
@@ -267,7 +273,8 @@
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 0.65rem;
-  align-content: start;
+  align-self: center;
+  align-content: center;
 }
 
 .hobbyImageWrap {

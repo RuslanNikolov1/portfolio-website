@@ -1,0 +1,77 @@
+// Decorative backdrop layers for homepage sections (light + maximalist)
+
+@function home-light-mesh-layers() {
+  @return
+    radial-gradient(ellipse 80% 60% at 10% 20%, rgb(56 189 248 / 0.16), transparent 55%),
+    radial-gradient(ellipse 70% 50% at 92% 78%, rgb(250 204 21 / 0.12), transparent 50%);
+}
+
+@function home-dot-grid-layer($opacity: 0.055) {
+  @return radial-gradient(rgb(15 45 74 / #{$opacity}) 1px, transparent 1px);
+}
+
+@function home-diagonal-stripes-layer($opacity: 0.035) {
+  @return repeating-linear-gradient(
+    135deg,
+    rgb(15 45 74 / #{$opacity}) 0,
+    rgb(15 45 74 / #{$opacity}) 1px,
+    transparent 1px,
+    transparent 14px
+  );
+}
+
+@function home-cross-grid-layer($opacity: 0.03) {
+  @return
+    repeating-linear-gradient(
+      0deg,
+      rgb(15 45 74 / #{$opacity}) 0,
+      rgb(15 45 74 / #{$opacity}) 1px,
+      transparent 1px,
+      transparent 20px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      rgb(15 45 74 / #{$opacity}) 0,
+      rgb(15 45 74 / #{$opacity}) 1px,
+      transparent 1px,
+      transparent 20px
+    );
+}
+
+@mixin home-radial-blob($color, $size: 28rem, $opacity: 0.35) {
+  width: clamp(12rem, #{$size}, 34rem);
+  height: clamp(12rem, #{$size}, 34rem);
+  border-radius: 50%;
+  background: radial-gradient(circle, #{$color} 0%, transparent 70%);
+  opacity: $opacity;
+  pointer-events: none;
+}
+
+@mixin home-hard-block($bg, $rotate: -6deg) {
+  border: 4px solid var(--home-ink);
+  background: $bg;
+  transform: rotate($rotate);
+  pointer-events: none;
+}
+
+@mixin home-page-grain($selector: '&::after') {
+  #{$selector} {
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: 90;
+    pointer-events: none;
+    opacity: 0.038;
+    mix-blend-mode: multiply;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.55'/%3E%3C/svg%3E");
+    background-repeat: repeat;
+    background-size: 180px 180px;
+  }
+
+  @media (prefers-reduced-transparency: reduce) {
+    #{$selector} {
+      opacity: 0;
+      mix-blend-mode: normal;
+    }
+  }
+}
