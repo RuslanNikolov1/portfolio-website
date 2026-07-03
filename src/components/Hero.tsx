@@ -112,21 +112,16 @@ const Hero = memo(() => {
             <div className={styles.titleRow}>
               <div className={styles.titleContainer}>
                 <h1 className={`${styles.title} ${styles.titleReveal}`}>
-                  ruslan nikolov
+                  Ruslan Nikolov
                 </h1>
               </div>
 
-              <div
-                className={`${styles.highlightedContainer} ${styles.descriptionContainer} ${styles.descriptionReveal}`}
-              >
-                <p className={styles.description}>
-                  Web developer, seeking to expand opportunities and contribute to diverse
-                  projects.
-                </p>
-              </div>
+              <p className={`${styles.tagline} ${styles.descriptionReveal}`}>
+                FULL STACK | JS | AI
+              </p>
             </div>
 
-            <div className={`${styles.credentials} ${styles.credentialsReveal}`}>
+            {/* <div className={`${styles.credentials} ${styles.credentialsReveal}`}>
               <div className={styles.credential}>
                 <span className={styles.credentialNumber}>7+</span>
                 <span className={styles.credentialLabel}>Years Of Experience</span>
@@ -135,7 +130,7 @@ const Hero = memo(() => {
                 <span className={styles.credentialNumber}>22</span>
                 <span className={styles.credentialLabel}>Projects Delivered</span>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

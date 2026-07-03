@@ -119,13 +119,13 @@ $font-weight-semibold: 600;
 }
 
 .heroLayout {
-  padding-top: 85px;
+  padding-top: 16vh;
 }
 
 .content {
   margin-top: 1.75rem;
 
-  @media (max-width: 968px) {
+  @include below-md {
     max-width: 100%;
   }
 }
@@ -172,25 +172,19 @@ $font-weight-semibold: 600;
   font-size: 5rem;
   font-weight: 800;
   color: white;
-  -webkit-text-stroke: 6px transparent;
-  background: linear-gradient(90deg, #1E3A8A, #059669);
+  -webkit-text-stroke: 8px transparent;
   /* deeper blue → deeper green */
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   margin-bottom: 0;
+  padding-right: 4px;
   line-height: $line-height-tight;
-  letter-spacing: $letter-spacing-tight;
+  letter-spacing: $letter-spacing-wide;
   position: relative;
   -webkit-text-fill-color: white;
 
   /* Create the gradient for the stroke */
-  background: linear-gradient(90deg, #0070f3, #00ff99);
-  -webkit-background-clip: text;
+  background: #205695;
   background-clip: text;
-  background-color: #020617;
 }
-
 
 .titleRow {
   display: flex;
@@ -243,7 +237,7 @@ $font-weight-semibold: 600;
   display: inline-block;
 }
 
-@media (max-width: 426px) {
+@include below-xs {
   .highlightedContainer {
     background: rgba(255, 255, 255, 0.825);
     backdrop-filter: blur(0px);
@@ -290,6 +284,24 @@ $font-weight-semibold: 600;
     0 -1px #ffffff;
 }
 
+.tagline {
+  font-family: $font-rubik;
+  font-size: clamp($font-size-lg, 2.8vw, $font-size-2xl);
+  font-weight: 800;
+  color: var(--home-accent-deep);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin: 0.5rem 0 0;
+  line-height: $line-height-tight;
+  -webkit-text-stroke: 0.8px #ffffff;
+  paint-order: stroke fill;
+  text-shadow:
+    2px 0 #ffffff,
+    -2px 0 #ffffff,
+    0 2px #ffffff,
+    0 -2px #ffffff;
+}
+
 .description {
   font-family: $font-satoshi;
   font-size: clamp($font-size-lg, 3vw, $font-size-xl);
@@ -321,7 +333,7 @@ $font-weight-semibold: 600;
 // keeping "Years Experience" on the far left and "Client Satisfaction" centered
 // Keep the two metrics centered with slight spacing
 
-@media (max-width: 769px) {
+@include below-sm {
   .credentials {
     display: flex;
     justify-content: center;
@@ -422,7 +434,12 @@ $font-weight-semibold: 600;
   color: $primary;
 }
 
-@media (max-width: 769px) {
+@include below-sm {
+  .tagline {
+    font-size: clamp($font-size-xl, 5vw, $font-size-3xl);
+    -webkit-text-stroke: 1px #ffffff;
+  }
+
   .titleRow {
     flex-wrap: wrap;
   }
@@ -485,19 +502,19 @@ $font-weight-semibold: 600;
   }
 }
 
-@media (max-width: 480px) {
+@include below-xs {
   .hero {
     padding-top: 60px; // match smaller header height
   }
 }
 
-@media (max-width: 1025px) and (min-width: 769px) {
+@include between-sm-md {
   .credentials {
     margin-top: 3vh;
   }
 }
 
-@media (max-width: 1025px) and (min-width: 425px) {
+@include between-xs-md {
   .heroLayout {
     padding-top: 12vw;
   }

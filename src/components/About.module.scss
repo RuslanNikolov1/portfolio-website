@@ -297,7 +297,7 @@
   }
 }
 
-@media (max-width: 1024px) {
+@include below-md {
   .introRow {
     grid-template-columns: 1fr;
     justify-items: center;
@@ -313,7 +313,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@include below-sm {
   .about {
     padding: 4rem 0;
   }
@@ -350,10 +350,13 @@
   .hobbyTab {
     scroll-snap-align: start;
     flex-shrink: 0;
+    min-height: $touch-target-min;
+    display: inline-flex;
+    align-items: center;
   }
 }
 
-@media (max-width: 520px) {
+@include below-xs {
   .hobbyGallery {
     grid-template-columns: 1fr 1fr;
   }

@@ -221,7 +221,7 @@
   }
 }
 
-@media (max-width: 1024px) {
+@include below-md {
   .quoteViewport {
     min-height: 280px;
   }
@@ -231,18 +231,50 @@
   }
 }
 
-@media (max-width: 768px) {
+@include below-sm {
   .feedbacks {
     padding: 4rem 0;
   }
 
+  .carousel {
+    position: relative;
+    display: block;
+  }
+
+  .quoteViewport {
+    min-height: auto;
+    width: 100%;
+  }
+
   .quoteCard {
-    padding: 1.25rem;
+    padding: 1.25rem 3rem;
+    width: 100%;
+  }
+
+  .counterItem {
+    width: $touch-target-min;
+    height: $touch-target-min;
   }
 
   .navButton {
+    position: absolute;
+    top: 50%;
+    margin-top: -1.375rem;
+    z-index: 2;
     width: 2.75rem;
     height: 2.75rem;
+
+    &:first-of-type {
+      left: 0;
+    }
+
+    &:last-of-type {
+      right: 0;
+    }
+
+    &:hover {
+      transform: translateY(-2px);
+    }
   }
 }
 

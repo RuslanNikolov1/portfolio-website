@@ -10,6 +10,7 @@ import { ExternalLink, Github, ChevronLeft, ChevronRight } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { projects } from '@/data/projects';
+import { BP_SM, MQ_BELOW_SM } from '@/styles/breakpoints';
 import styles from './Projects.module.scss';
 
 const SHOWCASE_ITEMS = projects
@@ -40,7 +41,7 @@ const Projects = memo(() => {
     const activeTab = rail?.querySelector('[aria-selected="true"]') as HTMLElement | null;
     if (!rail || !activeTab) return;
 
-    const isHorizontal = window.matchMedia('(max-width: 768px)').matches;
+    const isHorizontal = window.matchMedia(MQ_BELOW_SM).matches;
     const behavior = reduceMotion ? 'auto' : 'smooth';
 
     if (isHorizontal) {
@@ -67,7 +68,7 @@ const Projects = memo(() => {
       setSelectedIndex(idx);
 
       const target = document.getElementById('project-preview');
-      const isMobile = window.matchMedia('(max-width: 768px)').matches;
+      const isMobile = window.matchMedia(MQ_BELOW_SM).matches;
 
       if (!isMobile || !target) return;
 
@@ -116,7 +117,7 @@ const Projects = memo(() => {
       alt={selected.title}
       width={1200}
       height={750}
-      sizes="(max-width: 768px) 100vw, 70vw"
+      sizes={`(max-width: ${BP_SM}px) 100vw, 70vw`}
       className={styles.previewMedia}
       priority={selectedIndex === 0}
     />

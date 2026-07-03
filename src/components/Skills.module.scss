@@ -258,13 +258,13 @@ $slate-dark: #1E293B;
 
 
 
-@media (max-width: 1024px) {
+@include below-md {
   .categories {
     grid-template-columns: 1fr;
   }
 }
 
-@media (max-width: 768px) {
+@include below-sm {
   .skills {
     padding: 4rem 0;
   }
@@ -299,9 +299,16 @@ $slate-dark: #1E293B;
   .summaryText {
     font-size: 1rem;
   }
+
+  .skillToggle {
+    min-height: $touch-target-min;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 }
 
-@media (max-width: 480px) {
+@include below-xs {
   .category {
     margin: 0 0.5rem;
   }

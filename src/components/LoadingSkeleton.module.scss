@@ -586,7 +586,7 @@
 }
 
 // Responsive design
-@media (max-width: 768px) {
+@include below-sm {
   .aboutHeader {
     margin-bottom: 1.25rem;
   }

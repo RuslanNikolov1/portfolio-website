@@ -259,9 +259,6 @@
   display: flex;
   flex-wrap: wrap;
   gap: 0.4rem;
-  max-height: 5.5rem;
-  overflow-y: auto;
-  scrollbar-width: thin;
 }
 
 .techBadge {
@@ -326,7 +323,7 @@
   }
 }
 
-@media (max-width: 1024px) {
+@include below-md {
   .dock {
     grid-template-columns: 1fr;
     margin-left: 0.75rem;
@@ -334,7 +331,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@include below-sm {
   .stage {
     grid-template-columns: 1fr;
   }
@@ -350,9 +347,18 @@
   }
 
   .railItem {
-    flex: 0 0 min(78vw, 16rem);
+    flex: 0 0 min(52vw, 10.75rem);
     scroll-snap-align: center;
-    grid-template-columns: 4.25rem minmax(0, 1fr);
+    grid-template-columns: 3.25rem minmax(0, 1fr);
+    align-items: start;
+    padding: 0.45rem;
+  }
+
+  .railLabel {
+    -webkit-line-clamp: 2;
+    font-size: $font-size-sm;
+    line-height: $line-height-snug;
+    white-space: normal;
   }
 
   .title {

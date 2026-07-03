@@ -60,3 +60,65 @@ $letter-spacing-tight: -0.025em;
 $letter-spacing-normal: 0;
 $letter-spacing-wide: 0.025em;
 $letter-spacing-wider: 0.05em;
+
+// Breakpoints — unified mobile-first scale
+$bp-xs: 480px; // small phones
+$bp-sm: 768px; // phones / small tablets
+$bp-md: 1024px; // tablets / small desktops
+
+@mixin below-xs {
+  @media (max-width: $bp-xs) {
+    @content;
+  }
+}
+
+@mixin below-sm {
+  @media (max-width: $bp-sm) {
+    @content;
+  }
+}
+
+@mixin below-md {
+  @media (max-width: $bp-md) {
+    @content;
+  }
+}
+
+@mixin above-sm {
+  @media (min-width: ($bp-sm + 1px)) {
+    @content;
+  }
+}
+
+@mixin above-md {
+  @media (min-width: ($bp-md + 1px)) {
+    @content;
+  }
+}
+
+@mixin between-sm-md {
+  @media (min-width: ($bp-sm + 1px)) and (max-width: $bp-md) {
+    @content;
+  }
+}
+
+@mixin between-xs-md {
+  @media (min-width: ($bp-xs + 1px)) and (max-width: $bp-md) {
+    @content;
+  }
+}
+
+// Minimum interactive target (WCAG 2.5.5 — 44×44px)
+$touch-target-min: 2.75rem;
+
+@mixin touch-target {
+  min-width: $touch-target-min;
+  min-height: $touch-target-min;
+}
+
+@mixin touch-target-flex {
+  @include touch-target;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}

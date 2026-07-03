@@ -1,4 +1,6 @@
 // SASS Variables
+@use "../styles/variables" as *;
+
 $background: #0F172A;
 $background-secondary: #1E293B;
 $foreground: #F9FAFB;
@@ -187,7 +189,7 @@ $font-weight-bold: 700;
   margin: 0;
 }
 
-@media (max-width: 968px) {
+@include below-md {
   .content {
     grid-template-columns: 1fr;
     gap: 3rem;
@@ -199,7 +201,7 @@ $font-weight-bold: 700;
   }
 }
 
-@media (max-width: 768px) {
+@include below-sm {
   .footer {
     padding: 3rem 0 2rem;
   }
@@ -227,7 +229,7 @@ $font-weight-bold: 700;
   }
 }
 
-@media (max-width: 480px) {
+@include below-xs {
   .footer {
     padding: 2rem 0 1.5rem;
   }
