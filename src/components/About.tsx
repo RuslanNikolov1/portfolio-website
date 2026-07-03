@@ -184,7 +184,7 @@ const About = memo(() => {
         </motion.div>
 
         <div className={styles.timelineSection}>
-          <h3 className={styles.subsectionTitle}>Career timeline</h3>
+          {/* <h3 className={styles.subsectionTitle}>Career timeline</h3> */}
 
           <ol className={styles.timeline}>
             {TIMELINE.map((item, index) => (

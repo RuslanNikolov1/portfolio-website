@@ -14,19 +14,6 @@ import Link from 'next/link';
 import { projects } from '@/data';
 import styles from './Projects.module.scss';
 
-const PREVIEW_URLS: Record<string, string> = {
-  '10': '/Thumbnail - Real Estate New.webp',
-  '1': '/Knyazhevo app.mp4',
-  '13': '/Thumbnail Construction.webp',
-  '11': '/Thumbnail Massage New.webp',
-  '12': '/Thumbnail-Lawyer.webp',
-  '3': '/Preview-4.mp4',
-  '5': '/Preview-Video-3.mp4',
-  '6': '/Thumbnail-AMTP-new.webp',
-  '7': '/Preview-Video%202.mp4',
-  '8': '/Preview-Video-6.mp4',
-};
-
 const SHOWCASE_ITEMS = projects
   .filter((project) => project.id !== '2')
   .map((project) => ({
@@ -36,7 +23,7 @@ const SHOWCASE_ITEMS = projects
     technologies: project.technologies,
     liveUrl: project.liveUrl,
     codeUrl: project.codeUrl,
-    previewUrl: PREVIEW_URLS[project.id] ?? project.imageUrl,
+    previewUrl: project.imageUrl,
     thumbUrl: project.imageUrl,
   }));
 
@@ -122,37 +109,18 @@ const Projects = memo(() => {
     visible: { opacity: 1, y: 0 },
   };
 
-  const renderPreview = () => {
-    if (selected.previewUrl.endsWith('.mp4')) {
-      return (
-        <video
-          key={selected.id}
-          src={selected.previewUrl}
-          autoPlay
-          loop
-          muted
-          playsInline
-          preload="none"
-          className={styles.previewMedia}
-        >
-          Your browser does not support the video tag.
-        </video>
-      );
-    }
-
-    return (
-      <Image
-        key={selected.id}
-        src={selected.previewUrl}
-        alt={selected.title}
-        width={1200}
-        height={750}
-        sizes="(max-width: 768px) 100vw, 70vw"
-        className={styles.previewMedia}
-        priority={selectedIndex === 0}
-      />
-    );
-  };
+  const renderPreview = () => (
+    <Image
+      key={selected.id}
+      src={selected.previewUrl}
+      alt={selected.title}
+      width={1200}
+      height={750}
+      sizes="(max-width: 768px) 100vw, 70vw"
+      className={styles.previewMedia}
+      priority={selectedIndex === 0}
+    />
+  );
 
   return (
     <section ref={sectionRef} id="projects" className={styles.projects}>

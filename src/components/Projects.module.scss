@@ -151,9 +151,7 @@
   border-radius: var(--projects-radius-lg);
   overflow: hidden;
   background: var(--projects-navy);
-  box-shadow:
-    12px 12px 0 var(--projects-accent),
-    0 28px 56px var(--projects-shadow);
+  box-shadow: 0 28px 56px var(--projects-shadow);
 }
 
 .previewStage {
@@ -190,7 +188,7 @@
 
 .theaterNav {
   position: absolute;
-  top: 50%;
+  top: clamp(8rem, 19vw, 14rem);
   z-index: 3;
   translate: 0 -50%;
   width: 48px;
@@ -224,9 +222,9 @@
 .dock {
   position: relative;
   z-index: 2;
-  margin-top: var(--projects-dock-overlap);
-  margin-left: clamp(0.5rem, 4vw, 3.5rem);
-  margin-right: clamp(0.5rem, 2vw, 1.5rem);
+  margin-top: -2rem;
+  margin-left: clamp(0.5rem, 3vw, 2rem);
+  margin-right: clamp(0.5rem, 3vw, 2rem);
   padding: clamp(1.1rem, 2.5vw, 1.6rem);
   background: var(--projects-surface);
   border: 4px solid var(--projects-ink);
@@ -380,6 +378,10 @@
 
   .previewInner {
     height: clamp(14rem, 52vw, 20rem);
+  }
+
+  .theaterNav {
+    top: clamp(7rem, 26vw, 10rem);
   }
 
   .theaterNavPrev {
