@@ -66,6 +66,17 @@ export const projects: Project[] = [
     category: 'web'
   },
   {
+    id: '14',
+    title: 'DRD Beauty Studio',
+    description:
+      'A place where my client can showcase their hair salon and upload live beauty courses.',
+    technologies: ['Sanity', 'Next.js', 'Sass', 'TypeScript'],
+    imageUrl: '/Thumbnail-Hairdresser.png',
+    liveUrl: 'https://www.drdbeautystudio.com/',
+    codeUrl: 'https://github.com/RuslanNikolov1/hairdresser-app',
+    category: 'web'
+  },
+  {
     id: '3',
     title: 'Astrology App',
     description:
