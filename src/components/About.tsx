@@ -10,7 +10,8 @@ import styles from './About.module.scss';
 interface TimelineEntry {
   year: string;
   title: string;
-  text: string;
+  text?: string;
+  bullets?: string[];
   cluster: 'foundation' | 'early' | 'growth' | 'recent';
 }
 
@@ -44,37 +45,79 @@ const TIMELINE: TimelineEntry[] = [
   {
     year: 'May 2018 – Sep 2018',
     title: 'Orbis Digital Services – Frontend Developer Intern',
-    text: 'Developed app for chocolate provider with reusable components. Wrote SASS CSS and implemented responsive design. Performed cross-browser development and error handling. Created comprehensive unit tests. Technologies: TypeScript, Angular, SASS, Bootstrap.',
+    bullets: [
+      'Developed app for chocolate provider with reusable components.',
+      'Wrote SASS CSS and implemented responsive design.',
+      'Performed cross-browser development and error handling.',
+      'Created comprehensive unit tests.',
+      'Technologies: TypeScript, Angular, SASS, Bootstrap.',
+    ],
     cluster: 'early',
   },
   {
     year: 'Nov 2018 – Nov 2019',
     title: 'EPAM Systems – Junior Frontend Developer',
-    text: 'Developed dynamic UI components and comprehensive unit tests. Set up projects and researched best practices. Created utility functions and UI designs in Adobe XD. Built responsive and accessible user interfaces. Technologies: TypeScript, React, Next.js, SASS, Styleguidist.',
+    bullets: [
+      'Developed dynamic UI components and comprehensive unit tests.',
+      'Set up projects and researched best practices.',
+      'Created utility functions and UI designs in Adobe XD.',
+      'Built responsive and accessible user interfaces.',
+      'Technologies: TypeScript, React, Next.js, SASS, Styleguidist.',
+    ],
     cluster: 'early',
   },
   {
     year: 'Nov 2019 – Jul 2021',
     title: 'EPAM Systems – Frontend Developer',
-    text: 'Built complex UI components and authentication systems. Developed comprehensive unit and integration tests. Optimized rendering performance and refactored legacy code. Performed cross-browser development and error handling. Created comprehensive unit tests. Contributed to React PDF Library and implemented ANTLR-based formula parsing. Technologies: TypeScript, React, Redux, Material UI, SASS.',
+    bullets: [
+      'Built complex UI components and authentication systems.',
+      'Developed comprehensive unit and integration tests.',
+      'Optimized rendering performance and refactored legacy code.',
+      'Performed cross-browser development and error handling.',
+      'Contributed to React PDF Library and implemented ANTLR-based formula parsing.',
+      'Technologies: TypeScript, React, Redux, Material UI, SASS.',
+    ],
     cluster: 'growth',
   },
   {
     year: 'Jul 2021 – Aug 2023',
-    title: 'EPAM Systems – Frontend Developer',
-    text: 'Acted as client-facing technical senior: proposing features and maintaining clear communication throughout project lifecycle. Contributed to system architecture decisions for modular, maintainable fin-tech applications. Developed scalable UI components and integrated complex REST APIs. Improved performance in fin-tech projects and in an e-commerce project: lowered the initial render time up to ~30% and memory usage up to ~25%. Assured that agile methodologies and best practices are followed in my team. Divided big development work into isolated tasks for developers to work on. Led a subteam of 3 developers and distributed work among them. Mentored through code reviews and pair programming. Managed CI/CD pipelines end-to-end with Jenkins and Github Actions to ensure smooth, reliable deployments. Technologies: TypeScript, React, Material UI, CI/CD.',
+    title: 'EPAM Systems – Senior Frontend Developer',
+    text: 'Led client-facing delivery as technical senior, proposing features and maintaining clear communication throughout the project lifecycle.',
+    bullets: [
+      'Contributed to 12+ fin-tech and ecommerce applications within an Nx monorepo spanning dozens of apps, following established frontend architecture and engineering standards alongside 50 developers.',
+      'Led a subteam of 3 developers, mentoring 2 through ~4–5 PR reviews weekly and pair programming; conducted 2 technical interviews while maintaining 90%+ frontend test coverage.',
+      'Built an Excel formula parser supporting 6 custom financial formulas used by analysts, enabling faster report generation.',
+      'Developed dozens of reusable UI components with complex REST API integrations, reused across several teams.',
+      'Optimized fin-tech application performance, reducing initial load time from 3s to 1s.',
+      'Managed CI/CD pipelines end-to-end with Jenkins and GitHub Actions for smooth, reliable deployments.',
+    ],
     cluster: 'growth',
   },
   {
     year: 'Sep 2023 – Mar 2025',
     title: 'Urban Planning Web Interface – Frontend Developer',
-    text: 'Built geospatial interfaces for municipal planning, enabling visualization of zoning changes, street closures, and overlays. Delivered performant and intuitive front-end solutions for complex geospatial datasets. Technologies: React, TypeScript, Mapbox, SASS.',
+    bullets: [
+      'Built geospatial interfaces for municipal planning, enabling visualization of zoning changes, street closures, and overlays.',
+      'Delivered performant and intuitive front-end solutions for complex geospatial datasets.',
+      'Technologies: React, TypeScript, Mapbox, SASS.',
+    ],
     cluster: 'recent',
   },
   {
     year: 'March 2025 – Present',
     title: 'Freelance Frontend Developer & UI/UX Designer',
-    text: 'Designed and delivered high-performance, secure, accessible, responsive web applications across multiple industries. Created wireframes and aesthetic intuitive UI designs with Figma. Worked with translations, animations, theming, SEO, CMS. Worked with Supabase for database integration. Managed end-to-end project lifecycle: requirement gathering, prototyping, implementation, deployment, and post-launch support. Collaborated with clients to translate vision into maintainable, modern web applications. Leveraged AI tools (Cursor, ChatGPT) to accelerate development and ensure high-quality, bug-free code. Technologies: React, TypeScript, Next.js, Tailwind, SASS, AI-assisted Development, Supabase, Jest, Vercel.',
+    text: 'Architected and delivered high-performance, secure, accessible, and responsive web applications for clients in real estate, construction, and law.',
+    bullets: [
+      'Orchestrated AI-assisted development (Cursor, Claude Code, Codex, MCP) with scoped prompts, tight context management, and selective tool use — accelerating delivery by ~50% while reviewing generated code for bugs, bloat, and maintainability before shipping.',
+      'Worked with design inspirations, created design systems, and followed design principles, creating wireframes and intuitive UI designs with Figma and translating designs to code through Figma MCP and Agent skill.',
+      'Partnered with several clients from discovery through launch — proposing features that shipped into production and earning repeat business from 2 clients on second projects.',
+      'Managed end-to-end project lifecycle: requirement gathering, pricing calculation and invoice creation, prototyping, implementation, deployment, and post-launch support.',
+      'Improved SEO for a massage therapy project, increasing click-through rate by 50%.',
+      'Worked with Supabase for database integration and used Next.js API Routes to create backend endpoints. I also used MongoDB with Express.js for a decentralized finance dashboard.',
+      'Built a private AI-powered job landing app with RAG pipelines (LangChain.js, LangGraph.js, Vercel AI) on PostgreSQL, Prisma, and Express — containerized with Docker and Socket.io for real-time updates, enabling contextual job discovery from private datasets.',
+      'Implemented i18n across 2–4 languages, theming on 2 projects, and GSAP animations on 2 projects, improving user engagement on localized and interactive experiences.',
+      'Implemented Sanity CMS to enable clients to manage their content independently.',
+    ],
     cluster: 'recent',
   },
 ].reverse() as TimelineEntry[];
@@ -200,7 +243,20 @@ const About = memo(() => {
                     <span className={styles.timelineYear}>{item.year}</span>
                     <h4 className={styles.timelineTitle}>{item.title}</h4>
                   </div>
-                  <p className={styles.paragraph}>{item.text}</p>
+                  {item.bullets ? (
+                    <>
+                      {item.text ? <p className={styles.paragraph}>{item.text}</p> : null}
+                      <ul className={styles.timelineBullets}>
+                        {item.bullets.map((bullet) => (
+                          <li key={bullet} className={styles.paragraph}>
+                            {bullet}
+                          </li>
+                        ))}
+                      </ul>
+                    </>
+                  ) : (
+                    <p className={styles.paragraph}>{item.text}</p>
+                  )}
                 </article>
               </motion.li>
             ))}

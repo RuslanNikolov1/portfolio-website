@@ -39,7 +39,9 @@ import {
   Search,
   Heart,
   GraduationCap,
-  ChevronDown
+  ChevronDown,
+  Database,
+  Container,
 } from 'lucide-react';
 import { skills } from '@/data/skills';
 import type { Skill } from '@/types';
@@ -193,6 +195,12 @@ const Skills = memo(() => {
     GraphQL: Zap,
     'Next.js': Nextjs,
     Supabase: Webpack,
+    PostgreSQL: Database,
+    'Prisma ORM': TypeScript,
+    'Socket.IO': Zap,
+    Docker: Container,
+    LangChain: Brain,
+    'Vercel AI': Vercel,
     GSAP: Zap,
     Storybook: BookOpen,
     Git: Git,

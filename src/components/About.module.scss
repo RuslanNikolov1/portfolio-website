@@ -204,6 +204,37 @@
   }
 }
 
+.timelineBullets {
+  margin: 0.75rem 0 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  li {
+    position: relative;
+    padding-left: 1.2rem;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.58em;
+      width: 0.42rem;
+      height: 0.42rem;
+      border-radius: 50%;
+      background: var(--home-yellow);
+      border: 2px solid var(--home-ink);
+      box-shadow: 0 0 0 1px var(--home-navy);
+    }
+  }
+}
+
 .hobbyTabs {
   display: flex;
   flex-wrap: wrap;
